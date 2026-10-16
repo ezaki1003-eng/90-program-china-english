@@ -168,6 +168,10 @@ body.gw-open .search{position:static}
 .rx-chip{display:inline-block;background:#2b2d31;border:1px solid #4e5058;border-radius:8px;padding:0 8px;font-size:15px;color:#dbdee1;margin-top:6px}
 .rx-chip.on{background:rgba(88,101,242,.3);border-color:#5865f2}
 .rx-tabs{display:flex;gap:6px;padding:0 4px 4px}
+.cp-row{margin-top:6px;display:flex;flex-direction:column;gap:6px}
+.cp-btn{width:100%;font:inherit;font-size:16px;font-weight:700;padding:10px 12px;border-radius:10px;border:1.5px dashed var(--accent);background:transparent;color:var(--accent-ink);cursor:pointer}
+.cp-btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.cp-msg{margin:0;font-size:15px;font-weight:700;color:var(--accent-ink);word-break:break-all}
 .rd-top{display:flex;align-items:center;gap:6px;background:#f2f3f5;border-radius:12px;padding:8px}
 .rd-sq{display:flex;align-items:center;justify-content:center;min-width:38px;height:38px;border-radius:10px;background:#6d6f78;color:#fff;font-size:16px;font-weight:700}
 .rd-sq.on{outline:3px solid #f0b232;background:#4e5058}
@@ -261,7 +265,7 @@ body.gw-open .search{position:static}
 
   <section id="seminar">
     <h2><svg aria-hidden="true"><use href="#i-video"/></svg>セミナー</h2>
-    <details data-y="せみなー あんない つうち いべんと すすみぐあい おくれてる しょしんしゃ はじめたばかり まいつき だれでも さんか でられない でれない いけない やすむ けっせき れんらく あーかいぶ ろくが みのがし ちなこーち" data-k="セミナー 案内 通知 イベント 進み具合 遅れ 初心者 始めたばかり 毎月 だれでも 誰でも 参加 出られない 欠席 キャンセル 行けない 休む 連絡 アーカイブ 録画">
+    <details id="q-t1" data-y="せみなー あんない つうち いべんと すすみぐあい おくれてる しょしんしゃ はじめたばかり まいつき だれでも さんか でられない でれない いけない やすむ けっせき れんらく あーかいぶ ろくが みのがし ちなこーち" data-k="セミナー 案内 通知 イベント 進み具合 遅れ 初心者 始めたばかり 毎月 だれでも 誰でも 参加 出られない 欠席 キャンセル 行けない 休む 連絡 アーカイブ 録画">
       <summary data-t="1">セミナーってなに？だれでも参加できる？</summary>
       <div class="ans">
         <p class="lead" data-t="58">毎月、ちなコーチがセミナーをしています。受講生なら、どなたでも、いつでも参加できます。</p>
@@ -275,7 +279,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="ちこく とちゅう たいしゅつ おくれる ぬける みみだけ きくだけ いやほん とちゅうさんか せみなー" data-k="遅刻 途中 退出 遅れる 抜ける 耳だけ">
+    <details id="q-t2" data-y="ちこく とちゅう たいしゅつ おくれる ぬける みみだけ きくだけ いやほん とちゅうさんか せみなー" data-k="遅刻 途中 退出 遅れる 抜ける 耳だけ">
       <summary data-t="2">遅れて入っても、途中で抜けてもいい？</summary>
       <div class="ans">
         <p class="lead" data-t="60">どちらも大丈夫です。</p>
@@ -286,7 +290,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="かおだし かおをだす かお かめら まいく がめんおふ はずかしい うつりたくない せみなー" data-k="顔出し カメラ マイク 画面オフ">
+    <details id="q-t3" data-y="かおだし かおをだす かお かめら まいく がめんおふ はずかしい うつりたくない せみなー" data-k="顔出し カメラ マイク 画面オフ">
       <summary data-t="3">顔を出さないといけない？</summary>
       <div class="ans">
         <p class="lead" data-t="61">顔出しはおすすめですが、決まりではありません。</p>
@@ -297,7 +301,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="はいれない ずーむ ゆーあーるえる りんく さんかできない つながらない ひらかない とまる ふりーず せみなー" data-k="入れない URL Zoom ズーム 入室 フリーズ 参加できない">
+    <details id="q-t4" data-y="はいれない ずーむ ゆーあーるえる りんく さんかできない つながらない ひらかない とまる ふりーず せみなー" data-k="入れない URL Zoom ズーム 入室 フリーズ 参加できない">
       <summary data-t="4">参加のURLから入れない</summary>
       <div class="ans">
         <ol class="steps">
@@ -342,7 +346,7 @@ body.gw-open .search{position:static}
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1350354533448155187" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>Discordの「はじめに」を開く</a>
       </div>
     </details>
-    <details data-y="すたんぷ りあくしょん えーる おうえん でぃすこーど でぃすこ へや ちゃんねる みていい みてもいい あたらしい しんじん えんりょ ざつだん にっぽう しゅうほう せいか おふかい がくや てをふりあおう" data-k="スタンプ リアクション エール 応援 Discord ディスコード 部屋 チャンネル 見ていい 見てもいい 新しい 新人 遠慮 雑談 日報 週報 成果 オフ会 楽屋">
+    <details id="q-t7" data-y="すたんぷ りあくしょん えーる おうえん でぃすこーど でぃすこ へや ちゃんねる みていい みてもいい あたらしい しんじん えんりょ ざつだん にっぽう しゅうほう せいか おふかい がくや てをふりあおう" data-k="スタンプ リアクション エール 応援 Discord ディスコード 部屋 チャンネル 見ていい 見てもいい 新しい 新人 遠慮 雑談 日報 週報 成果 オフ会 楽屋">
       <summary data-t="7">Discordの部屋は、見てもいいの？</summary>
       <div class="ans">
         <p class="lead" data-t="65">どの部屋も、自由に見て大丈夫です。入ったばかりの方も、遠慮なくのぞいてみてください。</p>
@@ -368,7 +372,7 @@ body.gw-open .search{position:static}
         </ul>
       </div>
     </details>
-    <details data-y="へやがきえた へやがない へやがみえない へやがなくなった へやがみつからない ちゃんねるがきえた ひょうじがきえた でぃすこーど へや きえた なくなった みえない みつからない かくれた ひょうじ でない ちゃんねる おふかい もうしこみ かてごりー とじた おりたたみ やじるし" data-k="Discord ディスコード 部屋 消えた なくなった 見えない 見つからない 隠れた 表示 チャンネル オフ会 申し込み カテゴリー 閉じた 折りたたみ">
+    <details id="q-t401" data-y="へやがきえた へやがない へやがみえない へやがなくなった へやがみつからない ちゃんねるがきえた ひょうじがきえた でぃすこーど へや きえた なくなった みえない みつからない かくれた ひょうじ でない ちゃんねる おふかい もうしこみ かてごりー とじた おりたたみ やじるし" data-k="Discord ディスコード 部屋 消えた なくなった 見えない 見つからない 隠れた 表示 チャンネル オフ会 申し込み カテゴリー 閉じた 折りたたみ">
       <summary data-t="401">Discordの部屋が、急に見えなくなった</summary>
       <div class="ans">
         <p class="lead" data-t="402">部屋が消えたのではなく、まとまりが閉じて、隠れているだけのことがほとんどです。</p>
@@ -382,7 +386,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="でぃすこーど でぃすこ はじめかた つくりかた あかうんと とうろく いんすとーる だうんろーど あぷり わからない" data-k="Discord ディスコード はじめかた 作り方 アカウント 登録 インストール ダウンロード アプリ">
+    <details id="q-t8" data-y="でぃすこーど でぃすこ はじめかた つくりかた あかうんと とうろく いんすとーる だうんろーど あぷり わからない" data-k="Discord ディスコード はじめかた 作り方 アカウント 登録 インストール ダウンロード アプリ">
       <summary data-t="8">Discordのはじめかたが分からない</summary>
       <div class="ans">
         <p class="lead" data-t="68">作り方の説明があります。順番に進めれば大丈夫です。</p>
@@ -394,7 +398,7 @@ body.gw-open .search{position:static}
         <p class="cheer" data-t="297">最初はだれでも迷います。ひとつずつ、ゆっくりで大丈夫です。</p>
       </div>
     </details>
-    <details data-y="でぃすこーど でぃすこ ともだちしんせい ともだち しんせい こない みつからない ゆーざーめい なまえ しょうたい さんかできない はいれない" data-k="Discord ディスコード 友だち申請 見つからない ユーザー名 招待">
+    <details id="q-t9" data-y="でぃすこーど でぃすこ ともだちしんせい ともだち しんせい こない みつからない ゆーざーめい なまえ しょうたい さんかできない はいれない" data-k="Discord ディスコード 友だち申請 見つからない ユーザー名 招待">
       <summary data-t="9">Discordで友だち申請が来ない</summary>
       <div class="ans">
         <p class="lead" data-t="69">申請フォームを送ってから24時間以内に、運営サポーターから申請が届きます。</p>
@@ -405,7 +409,7 @@ body.gw-open .search{position:static}
         </ol>
       </div>
     </details>
-    <details data-y="でぃすこーど でぃすこ へんしん すたんぷ りあくしょん おしかた めんしょん あっと なまえ よびかけ そうさ やりかた あおもじ あおくならない あおいもじ ぜんかく はんかく つうちがいかない とどかない えいごのあっと にほんごのあっと こうほ でない めんしょんできない" data-k="Discord ディスコード 返信 スタンプ リアクション 押し方 メンション @ ＠ 名前 呼びかけ 操作 やり方 青文字 青くならない 青い文字 全角 半角 通知が行かない 届かない">
+    <details id="q-t10" data-y="でぃすこーど でぃすこ へんしん すたんぷ りあくしょん おしかた めんしょん あっと なまえ よびかけ そうさ やりかた あおもじ あおくならない あおいもじ ぜんかく はんかく つうちがいかない とどかない えいごのあっと にほんごのあっと こうほ でない めんしょんできない" data-k="Discord ディスコード 返信 スタンプ リアクション 押し方 メンション @ ＠ 名前 呼びかけ 操作 やり方 青文字 青くならない 青い文字 全角 半角 通知が行かない 届かない">
       <summary data-t="10">Discordで、返信やスタンプはどうやるの？</summary>
       <div class="ans">
         <p class="lead" data-t="70">スマホでの、かんたんなやり方です。</p>
@@ -630,7 +634,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="らいん べんきょう どこで おんくら おんくらす めにゅー はじめに なにをする" data-k="LINE 勉強 どこで オンクラス メニュー はじめに">
+    <details id="q-t12" data-y="らいん べんきょう どこで おんくら おんくらす めにゅー はじめに なにをする" data-k="LINE 勉強 どこで オンクラス メニュー はじめに">
       <summary data-t="12">英語の勉強はLINEでするの？</summary>
       <div class="ans">
         <p class="lead" data-t="73">勉強は「オンクラス」でします。LINEは入口です。</p>
@@ -642,7 +646,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="おんくら おんくらす ろぐいん はいれない ひらかない あかない ぱすわーど わすれた めーる しんきとうろく とうろく" data-k="オンクラス ログイン ログインできない 入れない 開かない 新規登録 パスワード メール">
+    <details id="q-t13" data-y="おんくら おんくらす ろぐいん はいれない ひらかない あかない ぱすわーど わすれた めーる しんきとうろく とうろく" data-k="オンクラス ログイン ログインできない 入れない 開かない 新規登録 パスワード メール">
       <summary data-t="13">オンクラスに入れない・新規登録の画面が出る</summary>
       <div class="ans">
         <ol class="steps">
@@ -655,7 +659,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="あいぱっど たぶれっと めにゅー でない みえない ひょうじ おんくら" data-k="iPad アイパッド メニュー 出ない 表示">
+    <details id="q-t14" data-y="あいぱっど たぶれっと めにゅー でない みえない ひょうじ おんくら" data-k="iPad アイパッド メニュー 出ない 表示">
       <summary data-t="14">iPadでオンクラスのメニューが出ない</summary>
       <div class="ans">
         <ol class="steps">
@@ -666,7 +670,7 @@ body.gw-open .search{position:static}
         <a class="btn" href="https://app.the-online-class.com/" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>オンクラスを開く</a>
       </div>
     </details>
-    <details data-y="どうが みれない みられない うつらない とまる さいせい されない ひらかない くるくる よみこみ" data-k="動画 見れない 見られない 映らない 止まる 再生 されない 開かない 読み込み">
+    <details id="q-t15" data-y="どうが みれない みられない うつらない とまる さいせい されない ひらかない くるくる よみこみ" data-k="動画 見れない 見られない 映らない 止まる 再生 されない 開かない 読み込み">
       <summary data-t="15">動画が見られない・とちゅうで止まる</summary>
       <div class="ans">
         <p class="lead" data-t="74">LINEの中で開いた画面だと、動画が止まることがあります。</p>
@@ -677,7 +681,7 @@ body.gw-open .search{position:static}
         </ol>
       </div>
     </details>
-    <details data-y="じまく でる でてくる きえない けしたい けす しーしー せってい みえない かくれる ぼーど ゆーちゅーぶ どうが もじ" data-k="字幕 出る 消えない 消したい CC 設定 見えない 隠れる ボード YouTube 動画 文字">
+    <details id="q-t16" data-y="じまく でる でてくる きえない けしたい けす しーしー せってい みえない かくれる ぼーど ゆーちゅーぶ どうが もじ" data-k="字幕 出る 消えない 消したい CC 設定 見えない 隠れる ボード YouTube 動画 文字">
       <summary data-t="16">動画に字幕が出て、画面が見えにくい</summary>
       <div class="ans">
         <p class="lead" data-t="75">字幕は、見る人それぞれの設定です。自分で消せます。</p>
@@ -690,7 +694,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="でぃすこーど でぃすこ つうち おと うるさい とめたい けしたい" data-k="Discord 通知 音 うるさい">
+    <details id="q-t17" data-y="でぃすこーど でぃすこ つうち おと うるさい とめたい けしたい" data-k="Discord 通知 音 うるさい">
       <summary data-t="17">Discordの通知の音を止めたい</summary>
       <div class="ans">
         <p class="lead" data-t="427">いちばん簡単なのは、通知を「自分あてのときだけ」にする方法です。</p>
@@ -705,7 +709,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="いつから はじめる かいこうび すたーと いそがしい まだはじめてない" data-k="いつから 始める 開講日 スタート 忙しい">
+    <details id="q-t18" data-y="いつから はじめる かいこうび すたーと いそがしい まだはじめてない" data-k="いつから 始める 開講日 スタート 忙しい">
       <summary data-t="18">いつから始めればいい？</summary>
       <div class="ans">
         <p class="lead" data-t="77">決まった開講日はありません。「始めよう」と思った日がスタートです。</p>
@@ -813,7 +817,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん さくぶん しつもん なぜ こたえ ちがう かいとう わからない ぱーと もんだい" data-k="瞬間英作文 Q&amp;A 質問 なぜ 答え 違う 解答 一覧 Part パート 問題 わからない">
+    <details id="q-t23" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん さくぶん しつもん なぜ こたえ ちがう かいとう わからない ぱーと もんだい" data-k="瞬間英作文 Q&amp;A 質問 なぜ 答え 違う 解答 一覧 Part パート 問題 わからない">
       <summary data-t="23">瞬間英作文で「なぜこの答えになるの？」と思ったら</summary>
       <div class="ans">
         <p class="lead" data-t="88">オンクラスに「瞬間英作文 Q&amp;A一覧」があります。</p>
@@ -827,7 +831,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん いつから はじめる たいみんぐ ぶんぽうどりる" data-k="瞬間英作文 いつから 始める タイミング スタート 文法ドリル 並行">
+    <details id="q-t24" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん いつから はじめる たいみんぐ ぶんぽうどりる" data-k="瞬間英作文 いつから 始める タイミング スタート 文法ドリル 並行">
       <summary data-t="24">瞬間英作文は、いつから始めればいい？</summary>
       <div class="ans">
         <p class="lead" data-t="90"><a class="in" href="#q-drill">文法ドリル</a>で、英語の基本のルールが分かってから始めるのがおすすめです。</p>
@@ -839,7 +843,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん たんご しらない わからない しらべる いみ" data-k="瞬間英作文 単語 知らない わからない 調べる 意味">
+    <details id="q-t25" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん たんご しらない わからない しらべる いみ" data-k="瞬間英作文 単語 知らない わからない 調べる 意味">
       <summary data-t="25">瞬間英作文で、知らない単語が出てきたら？</summary>
       <div class="ans">
         <p class="lead" data-t="91">深追いしなくて大丈夫です。軽く調べて、先へ進みましょう。</p>
@@ -851,7 +855,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん ぱーとさん ぱーと むずかしい できない でてこない とまる ざせつ" data-k="瞬間英作文 Part3 パート3 難しい むずかしい できない 出てこない 止まる">
+    <details id="q-t26" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん ぱーとさん ぱーと むずかしい できない でてこない とまる ざせつ" data-k="瞬間英作文 Part3 パート3 難しい むずかしい できない 出てこない 止まる">
       <summary data-t="26">瞬間英作文のPart3がむずかしい</summary>
       <div class="ans">
         <p class="lead" data-t="92">Part3の後半は、英語を見て意味が分かれば、まずはOKです。</p>
@@ -866,7 +870,7 @@ body.gw-open .search{position:static}
         <p class="cheer" data-t="300">むずかしく感じるのは、ちゃんと階段をのぼっているからです。</p>
       </div>
     </details>
-    <details data-y="むずかしい ぶんぽう わからない かんけいだいめいし かていほう じせい ふくざつ ながいぶん" data-k="難しい むずかしい 文法 分からない 関係代名詞 仮定法 時制 複雑 長い文">
+    <details id="q-t27" data-y="むずかしい ぶんぽう わからない かんけいだいめいし かていほう じせい ふくざつ ながいぶん" data-k="難しい むずかしい 文法 分からない 関係代名詞 仮定法 時制 複雑 長い文">
       <summary data-t="27">むずかしい文法が出てきて、分からない</summary>
       <div class="ans">
         <p class="lead" data-t="94">読んだり聞いたりして「こういう意味だな」と分かれば、それで十分です。</p>
@@ -879,7 +883,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="ごーる そつぎょう めやす ざせつ つづける かんきょう もくひょう えいかいわ はなせる どこまで さんじゅっぷん" data-k="ゴール 卒業 目安 挫折 続ける 環境 目標 英会話 話せる どこまで 30分">
+    <details id="q-t28" data-y="ごーる そつぎょう めやす ざせつ つづける かんきょう もくひょう えいかいわ はなせる どこまで さんじゅっぷん" data-k="ゴール 卒業 目安 挫折 続ける 環境 目標 英会話 話せる どこまで 30分">
       <summary data-t="28">90プログラムのゴールは？</summary>
       <div class="ans">
         <p class="lead" data-t="96">挫折しない英語学習を身につけることが、ゴールです。その先の目安は、外国の方と30分間、ストレスなく英会話ができる状態です。</p>
@@ -913,7 +917,7 @@ body.gw-open .search{position:static}
         <p class="cheer" data-t="657">理由は、人の数だけあります。あなたの「やってみたい」も、大切な理由ですよ。</p>
       </div>
     </details>
-    <details data-y="なにから じゅんばん すすめかた やりかた がくしゅう べんきょう ろーどまっぷ きょうざい どりる きょうかしょ しゃしん" data-k="学習の進め方 勉強の進め方 進め方 やり方 順番 何から ロードマップ 教材 ドリル 瞬間英作文 見落とし 学習 どうやったらいい どうやって どうしたらいい どうすればいい 勉強法 学習法 教科書 写真 全体像 資料">
+    <details id="q-t29" data-y="なにから じゅんばん すすめかた やりかた がくしゅう べんきょう ろーどまっぷ きょうざい どりる きょうかしょ しゃしん" data-k="学習の進め方 勉強の進め方 進め方 やり方 順番 何から ロードマップ 教材 ドリル 瞬間英作文 見落とし 学習 どうやったらいい どうやって どうしたらいい どうすればいい 勉強法 学習法 教科書 写真 全体像 資料">
       <summary data-t="29">何から、どの順番でやればいい？</summary>
       <div class="ans">
         <p class="lead" data-t="98">順番は決まっています。最初の90日は「文法の土台」づくりです。</p>
@@ -939,7 +943,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="どりる ぶんぽうどりる かんぺき わからない なんしゅう ふくしゅう にしゅうめ まちがえる" data-k="ドリル 完璧 わからない 何周 復習">
+    <details id="q-t30" data-y="どりる ぶんぽうどりる かんぺき わからない なんしゅう ふくしゅう にしゅうめ まちがえる" data-k="ドリル 完璧 わからない 何周 復習">
       <summary data-t="30">文法ドリル（『中学英語をもう一度ひとつひとつわかりやすく。』の本）は、完ぺきにしてから次へ進むの？</summary>
       <div class="ans">
         <p class="lead" data-t="100">いいえ。5〜8割わかれば、どんどん先へ進みます。</p>
@@ -952,7 +956,7 @@ body.gw-open .search{position:static}
         <p class="cheer" data-t="299">完ぺきじゃなくて大丈夫。前に進んでいる自分に、120点をあげてください。</p>
       </div>
     </details>
-    <details data-y="にしゅうめ にしゅう ふくしゅう まわる しゅうかい もり き わからないぺーじ くりかえす" data-k="2周目 周回 復習 森を見て木を見る 分からないページ くり返す">
+    <details id="q-t31" data-y="にしゅうめ にしゅう ふくしゅう まわる しゅうかい もり き わからないぺーじ くりかえす" data-k="2周目 周回 復習 森を見て木を見る 分からないページ くり返す">
       <summary data-t="31">文法ドリルの2周目は、どうやって進めればいい？</summary>
       <div class="ans">
         <p class="lead" data-t="434">「森を見て、木を見る」がおすすめです。「森」は本全体、「木」は1つ1つのレッスンのことです。</p>
@@ -968,14 +972,14 @@ body.gw-open .search{position:static}
         <a class="btn" href="https://app.the-online-class.com/lessons/oQMwkjNwUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>「2周目以降」の効率的な進め方（オンクラス）</a>
       </div>
     </details>
-    <details data-y="かんたん かんたんすぎる わかってる しってる とばす とばしていい つぎ れべる" data-k="簡単 簡単すぎる 分かっている 知っている 飛ばす 次 レベル i+1">
+    <details id="q-t32" data-y="かんたん かんたんすぎる わかってる しってる とばす とばしていい つぎ れべる" data-k="簡単 簡単すぎる 分かっている 知っている 飛ばす 次 レベル i+1">
       <summary data-t="32">簡単すぎる・もう分かっているところは？</summary>
       <div class="ans">
         <p class="lead" data-t="103">簡単すぎると感じたら、次のレベルへ進んで大丈夫です。</p>
         <p class="note"><span data-t="215">今の自分より「少しだけむずかしい」くらいが、いちばん力がつきます。</span></p>
       </div>
     </details>
-    <details data-y="のーと かく まとめる ひっき せいり よこになって ねながら つくえ かいてもいい だめ こたえ めも" data-k="ノート 書く まとめる 筆記 整理 横になって 寝ながら 机 書いてもいい ダメ 答え メモ">
+    <details id="q-t33" data-y="のーと かく まとめる ひっき せいり よこになって ねながら つくえ かいてもいい だめ こたえ めも" data-k="ノート 書く まとめる 筆記 整理 横になって 寝ながら 机 書いてもいい ダメ 答え メモ">
       <summary data-t="33">ノートはとったほうがいい？</summary>
       <div class="ans">
         <p class="lead" data-t="104">ノートをとらなくても、英語の力は十分のびます。</p>
@@ -987,7 +991,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん つぎ りーでぃんぐ めやす いつまで" data-k="瞬間英作文 次 リーディング 目安 Part">
+    <details id="q-t34" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん つぎ りーでぃんぐ めやす いつまで" data-k="瞬間英作文 次 リーディング 目安 Part">
       <summary data-t="34">瞬間英作文から次へ進む目安は？</summary>
       <div class="ans">
         <ol class="steps">
@@ -1027,7 +1031,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="りーでぃんぐ よむ よみかた せいどく たどく きゅうきょく ほん ぶーこ おんせい" data-k="リーディング 精読 多読 究極 本 booco 音声 読む">
+    <details id="q-t36" data-y="りーでぃんぐ よむ よみかた せいどく たどく きゅうきょく ほん ぶーこ おんせい" data-k="リーディング 精読 多読 究極 本 booco 音声 読む">
       <summary data-t="36">リーディング（読む）は、どう進める？</summary>
       <div class="ans">
         <ol class="steps">
@@ -1090,7 +1094,7 @@ body.gw-open .search{position:static}
         <p class="cheer" data-t="590">読んで分かったお話が、耳でも分かるようになると、とてもうれしいものですよ。</p>
       </div>
     </details>
-    <details data-y="はつおん れんしゅう いつ はつおんから きこえない りゆう" data-k="発音 練習 いつ 発音から 聞こえない 理由">
+    <details id="q-t38" data-y="はつおん れんしゅう いつ はつおんから きこえない りゆう" data-k="発音 練習 いつ 発音から 聞こえない 理由">
       <summary data-t="38">発音の練習は、いつするの？</summary>
       <div class="ans">
         <p class="lead" data-t="107">発音より先に、リーディング（読む）をします。</p>
@@ -1229,7 +1233,7 @@ body.gw-open .search{position:static}
         </ul></div>
       </div>
     </details>
-    <details data-y="えいが どらま あにめ じぶり ねっとふりっくす じまく えいごじまく にほんごじまく たのしみ みかた" data-k="映画 ドラマ アニメ ジブリ Netflix 字幕 英語字幕 日本語字幕 楽しみ 見方">
+    <details id="q-t39" data-y="えいが どらま あにめ じぶり ねっとふりっくす じまく えいごじまく にほんごじまく たのしみ みかた" data-k="映画 ドラマ アニメ ジブリ Netflix 字幕 英語字幕 日本語字幕 楽しみ 見方">
       <summary data-t="39">映画やドラマで、英語を楽しみたい</summary>
       <div class="ans">
         <p class="lead" data-t="108">「たまのお楽しみ」として取り入れるのは、とてもいいことです。</p>
@@ -1295,7 +1299,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="ちゃっとじーぴーてぃー ちゃっぴー じぇみに えーあい" data-k="ChatGPT チャッピー Gemini AI">
+    <details id="q-t41" data-y="ちゃっとじーぴーてぃー ちゃっぴー じぇみに えーあい" data-k="ChatGPT チャッピー Gemini AI">
       <summary data-t="41">ChatGPTやGemini（AI）を使ってもいい？</summary>
       <div class="ans">
         <p class="lead" data-t="112">どんどん使ってください。使いやすいほうで大丈夫です。</p>
@@ -1307,7 +1311,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="おなじしつもん かこ けんさく さがす しらべる まえのしつもん しつもんべや" data-k="同じ質問 過去 検索 探す Can I a the when many some">
+    <details id="q-t42" data-y="おなじしつもん かこ けんさく さがす しらべる まえのしつもん しつもんべや" data-k="同じ質問 過去 検索 探す Can I a the when many some">
       <summary data-t="42">同じ疑問を、前にだれかが聞いていないか探したい</summary>
       <div class="ans">
         <p class="lead" data-t="113"><a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">質問部屋</a>には、ちなコーチがこれまでにていねいに答えてきた質問がたくさんあります。同じところで迷った方が、きっといるはずです。</p>
@@ -1339,7 +1343,7 @@ body.gw-open .search{position:static}
   <section id="other">
     <h2><svg aria-hidden="true"><use href="#i-heart"/></svg>そのほか</h2>
 
-    <details data-y="いちにち どれくらい のるま りょう つづかない じかんがない いそがしい やるき やすんだ さぼった つかれた" data-k="続かない 時間がない 5分 やる気 休んだ">
+    <details id="q-t44" data-y="いちにち どれくらい のるま りょう つづかない じかんがない いそがしい やるき やすんだ さぼった つかれた" data-k="続かない 時間がない 5分 やる気 休んだ">
       <summary data-t="44">続かない・時間がとれない</summary>
       <div class="ans">
         <p class="lead" data-t="116">「5分しかできなかった」ではなく「5分でも、今日できた！」です。</p>
@@ -1513,7 +1517,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="きゅうじゅうにち すぎ おわり つかえる にしゅうめ そつぎょう そのあと" data-k="90日 過ぎ 終わり Discord 使える 2周目">
+    <details id="q-t47" data-y="きゅうじゅうにち すぎ おわり つかえる にしゅうめ そつぎょう そのあと" data-k="90日 過ぎ 終わり Discord 使える 2周目">
       <summary data-t="47">90日を過ぎたら、どうなるの？</summary>
       <div class="ans">
         <p class="lead" data-t="124">ずっと使えます。</p>
@@ -1525,7 +1529,7 @@ body.gw-open .search{position:static}
         <p class="cheer" data-t="303">90日に早くたどり着かなくても大丈夫です。90日を過ぎても、ここはずっとあなたの場所です。自分のペースで、ゆっくり続けていきましょう。</p>
       </div>
     </details>
-    <details data-y="きゅうじゅういちにちめ にっぽう どこ へや かわる すぎた ひゃくはちじゅういち さんびゃくろくじゅうろく にしゅうめ" data-k="91日目 日報 どこ 部屋 変わる 過ぎた 181日目 366日目 2周目">
+    <details id="q-t48" data-y="きゅうじゅういちにちめ にっぽう どこ へや かわる すぎた ひゃくはちじゅういち さんびゃくろくじゅうろく にしゅうめ" data-k="91日目 日報 どこ 部屋 変わる 過ぎた 181日目 366日目 2周目">
       <summary data-t="48">91日目からは、日報をどこに書くの？</summary>
       <div class="ans">
         <p class="lead" data-t="125">日数ごとに、日報の部屋が分かれています。</p>
@@ -1539,7 +1543,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="おんせい おと とまる がめん きえる らじお すりーぷ くらくなる ゆーちゅーぶ" data-k="音声 止まる 画面 消える ラジオ スリープ">
+    <details id="q-t49" data-y="おんせい おと とまる がめん きえる らじお すりーぷ くらくなる ゆーちゅーぶ" data-k="音声 止まる 画面 消える ラジオ スリープ">
       <summary data-t="49">スマホの画面が消えると音声が止まる</summary>
       <div class="ans">
         <ol class="steps">
@@ -1550,7 +1554,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="じぶんのとうこう にっぽう あうとぷっと まとめて けんさく みる" data-k="自分の投稿 日報 アウトプット まとめて 検索 見る">
+    <details id="q-t50" data-y="じぶんのとうこう にっぽう あうとぷっと まとめて けんさく みる" data-k="自分の投稿 日報 アウトプット まとめて 検索 見る">
       <summary data-t="50">自分の投稿だけをまとめて見たい</summary>
       <div class="ans">
         <ol class="steps">
@@ -1628,7 +1632,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details data-y="やってみたい いけん あいでぃあ ていあん きかく みんなで こんなこと きぼう ようぼう おねがい" data-k="やってみたい 意見 アイデア 提案 企画 みんなで こんなこと 希望 要望">
+    <details id="q-t52" data-y="やってみたい いけん あいでぃあ ていあん きかく みんなで こんなこと きぼう ようぼう おねがい" data-k="やってみたい 意見 アイデア 提案 企画 みんなで こんなこと 希望 要望">
       <summary data-t="52">「こんなこと、やってみたい！」があるときは？</summary>
       <div class="ans">
         <p class="lead" data-t="128">大歓迎です！思いついたことは、どんどん教えてください。</p>
@@ -1700,7 +1704,7 @@ body.gw-open .search{position:static}
         <p class="note" data-t="532">90プログラムだけでも、英語の力はしっかりつきます。「もっと近くで見てほしい」と思ったときの道のひとつとして、知っておいてくださいね。</p>
       </div>
     </details>
-    <details data-y="ちなこーち ちなさん せんせい ちょくせつ れんらく でぃーえむ いんすた いんすたぐらむ あっと あっとまーく めんしょん よびかけ こえをかける あおい あおくならない" data-k="ちなコーチ 直接 連絡 DM インスタ @ アットマーク メンション 呼びかけ 青い">
+    <details id="q-t54" data-y="ちなこーち ちなさん せんせい ちょくせつ れんらく でぃーえむ いんすた いんすたぐらむ あっと あっとまーく めんしょん よびかけ こえをかける あおい あおくならない" data-k="ちなコーチ 直接 連絡 DM インスタ @ アットマーク メンション 呼びかけ 青い">
       <summary data-t="54">ちなコーチに直接連絡したい</summary>
       <div class="ans">
         <ol class="steps">
@@ -1835,7 +1839,20 @@ document.getElementById('pick').addEventListener('click',function(){
     d.addEventListener('toggle',function(){ if(d.open) save(i); });
     d.addEventListener('click',function(e){ if(e.target.closest('a[target="_top"]')) save(i); });
   });
-  try{
+  // 質問ごとのリンク（…/#q-xxx）で開いたら、その質問を開いて見せる
+  function openHash(){
+    var h=''; try{ h=decodeURIComponent(location.hash.slice(1)); }catch(e){}
+    var t=/^q-/.test(h)&&document.getElementById(h);
+    if(!t||t.tagName!=='DETAILS') return false;
+    if(q.value){ q.value=''; run(); }
+    t.open=true;
+    var go=function(){ t.scrollIntoView({block:'start'}); };
+    setTimeout(go,50); window.addEventListener('load',function(){ setTimeout(go,150); });
+    return true;
+  }
+  var byHash=openHash();
+  window.addEventListener('hashchange',openHash);
+  if(!byHash) try{
     var last=JSON.parse(localStorage.getItem(KEY)||'null');
     var hit=last&&items.filter(function(x){return x.querySelector('summary').getAttribute('data-s')===last.s;})[0];
     if(hit && Date.now()-last.t<60*60*1000){
@@ -1844,6 +1861,31 @@ document.getElementById('pick').addEventListener('click',function(){
       setTimeout(go,50); window.addEventListener('load',function(){ setTimeout(go,100); });
     }
   }catch(e){}
+  // 「この質問のリンクをコピー」ボタン（受講生に「ここだよ」と送るため）。リンクはいつも受講生向けの公開ページにする
+  var BASE='https://english-90days.vercel.app/';
+  function copyText(txt,ok,ng){
+    function old(){
+      var ta=document.createElement('textarea'); ta.value=txt; ta.setAttribute('readonly','');
+      ta.style.position='fixed'; ta.style.top='-1000px'; document.body.appendChild(ta);
+      ta.select(); ta.setSelectionRange(0,txt.length);
+      var done=false; try{ done=document.execCommand('copy'); }catch(e){}
+      document.body.removeChild(ta); done?ok():ng();
+    }
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(ok,old); } else old();
+  }
+  items.forEach(function(d){
+    var ans=d.querySelector('.ans'); if(!ans||!d.id) return;
+    var row=document.createElement('div'); row.className='cp-row';
+    var b=document.createElement('button'); b.type='button'; b.className='cp-btn'; b.textContent='🔗 この質問のリンクをコピー';
+    var m=document.createElement('p'); m.className='cp-msg'; m.hidden=true;
+    b.addEventListener('click',function(){
+      var url=BASE+'#'+d.id;
+      copyText(url,function(){ m.textContent='コピーしました！Discordなどに貼りつけると、この質問が開いた状態で見られます。'; m.hidden=false; },
+        function(){ m.textContent='うまくコピーできませんでした。下のリンクを長押ししてコピーしてください：'+url; m.hidden=false; });
+      setTimeout(function(){ m.hidden=true; },8000);
+    });
+    row.appendChild(b); row.appendChild(m); ans.appendChild(row);
+  });
 })();
 </script>
 <script>
