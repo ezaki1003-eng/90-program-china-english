@@ -179,6 +179,12 @@ body.gw-open .search{position:static}
 .theme-btns button small{display:block;font-size:13px;font-weight:500;color:var(--sub)}
 .th-ic{font-size:22px;flex:none}
 .theme-btns button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.list-back{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:20;font:inherit;font-size:17px;font-weight:700;padding:12px 20px;border-radius:999px;border:0;background:var(--accent);color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer;white-space:nowrap}
+.list-back[hidden]{display:none}
+.list-back:focus-visible{outline:3px solid var(--accent-ink);outline-offset:2px}
+.hits-list button.last{border-width:3px;box-shadow:0 0 0 3px #f0b23266}
+.hits-list button.last{position:relative;margin-top:8px}
+.hits-list button.last::before{content:"いま見ていた項目";position:absolute;top:-11px;left:12px;font-size:12px;font-weight:700;line-height:1.6;background:#f0b232;color:#111;border-radius:6px;padding:0 8px}
 .rd-top{display:flex;align-items:center;gap:6px;background:#f2f3f5;border-radius:12px;padding:8px}
 .rd-sq{display:flex;align-items:center;justify-content:center;min-width:38px;height:38px;border-radius:10px;background:#6d6f78;color:#fff;font-size:16px;font-weight:700}
 .rd-sq.on{outline:3px solid #f0b232;background:#4e5058}
@@ -2223,6 +2229,8 @@ body.gw-open .search{position:static}
   var found=[];
   function show(d){
     d.hidden=false; d.open=true;
+    // 一覧（検索・テーマ）から開いた項目を覚えておき、「一覧にもどる」で印をつける
+    window.__lastOpened=d.id;
     d.scrollIntoView({behavior:'smooth',block:'start'});
   }
   function run(){
@@ -2249,7 +2257,7 @@ body.gw-open .search{position:static}
     found.forEach(function(f){
       var b=document.createElement('button'); b.type='button';
       b.textContent=f.d.querySelector('summary').textContent;
-      b.addEventListener('click',function(){ show(f.d); });
+      b.dataset.id=f.d.id; b.addEventListener('click',function(){ show(f.d); });
       hitsList.appendChild(b);
     });
     if(hitsBox.getBoundingClientRect().top<0) hitsBox.scrollIntoView({block:"start"});
@@ -2303,7 +2311,7 @@ document.getElementById('pick').addEventListener('click',function(){
       list.forEach(function(d){
         var x=document.createElement('button'); x.type='button';
         x.textContent=d.querySelector('summary').textContent;
-        x.addEventListener('click',function(){ show(d); });
+        x.dataset.id=d.id; x.addEventListener('click',function(){ show(d); });
         hitsList.appendChild(x);
       });
       empty.hidden=true; hitsBox.hidden=false;
@@ -6236,17 +6244,39 @@ y:{4:'セミナーに参加する青い文字（リンク）を押しても入�
 (function(){
   // 答えを読み終わったら、閉じて元の場所へもどるボタン
   var hits=document.getElementById('hits');
+  // 一覧（検索・テーマ）が出ているときは、一覧へもどる。さっき開いた項目のボタンに印をつける
+  function backToList(){
+    if(!hits||hits.hidden) return false;
+    hits.scrollIntoView({block:'start'});
+    var last=window.__lastOpened;
+    hits.querySelectorAll('#hits-list button').forEach(function(x){ x.classList.toggle('last', !!last && x.dataset.id===last); });
+    return true;
+  }
   document.querySelectorAll('details').forEach(function(d){
     var ans=d.querySelector(':scope > .ans'); if(!ans) return;
     var b=document.createElement('button'); b.type='button'; b.className='back-btn';
     b.textContent='▲ 閉じて、もどる';
     b.addEventListener('click',function(){
       d.open=false;
-      var target=(document.body.classList.contains('searching')&&hits&&!hits.hidden)?hits:d;
-      target.scrollIntoView({behavior:'smooth',block:'center'});
+      if(!backToList()) d.scrollIntoView({behavior:'smooth',block:'center'});
     });
     ans.appendChild(b);
   });
+  // 一覧が出ているあいだ、画面の下に「さっきの一覧にもどる」をずっと出しておく（一覧が見えているときはかくす）
+  if(hits){
+    var fb=document.createElement('button'); fb.type='button'; fb.className='list-back'; fb.hidden=true;
+    fb.textContent='↩ さっきの一覧にもどる';
+    fb.addEventListener('click',backToList);
+    document.body.appendChild(fb);
+    var inView=false;
+    function upd(){ fb.hidden = hits.hidden || inView; }
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){ inView=es[0].isIntersecting; upd(); }).observe(hits);
+    } else {
+      window.addEventListener('scroll',function(){ var r=hits.getBoundingClientRect(); inView=r.bottom>0&&r.top<innerHeight; upd(); },{passive:true});
+    }
+    new MutationObserver(upd).observe(hits,{attributes:true,attributeFilter:['hidden']});
+  }
 })();
 </script>
 
