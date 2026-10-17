@@ -258,15 +258,8 @@ body.gw-open .search{position:static}
     <button type="button" class="hits-clear" id="hits-clear">検索をやめて、ぜんぶ表示する</button>
   </div>
 
-  <nav class="chips" aria-label="なかま分け">
-    <a class="chip" href="#seminar"><svg aria-hidden="true"><use href="#i-video"/></svg><span>セミナー<small>だれでも参加・顔出し・録画</small></span></a>
-    <a class="chip" href="#start"><svg aria-hidden="true"><use href="#i-start"/></svg><span>はじめる準備<small>Discord・音声・オンクラス</small></span></a>
-    <a class="chip" href="#study"><svg aria-hidden="true"><use href="#i-book"/></svg><span>勉強の進め方<small>順番・ドリル・次の目安</small></span></a>
-    <a class="chip" href="#eigo"><svg aria-hidden="true"><use href="#i-book"/></svg><span>英語の疑問<small>a・the・Can I など</small></span></a>
-    <a class="chip" href="#other"><svg aria-hidden="true"><use href="#i-heart"/></svg><span>そのほか<small>続かない・連絡先</small></span></a>
-  </nav>
   <div class="themes" role="group" aria-labelledby="themes-h">
-    <p class="themes-h" id="themes-h">テーマから探す（押すと、その項目が一覧で出ます）</p>
+    <p class="themes-h" id="themes-h">テーマから探す（押すと、そのテーマの項目が一覧で出ます）</p>
     <div class="theme-btns" id="theme-btns"></div>
   </div>
 
@@ -1928,6 +1921,38 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
+    <details id="q-day90" data-y="きゅうじゅうにちめ でいきゅうじゅう でい90 さいごのひ めんしょん あっと ちなこーちに めっせーじ おくる あうとぷっと なにをする" data-k="90日目 Day90 Day 90 最後の日 メンション @ ちなコーチに メッセージ 送る アウトプット 何をする">
+      <summary data-t="840">90日目（Day90）の日は、なにをするの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="841">Day90の90audioを聞いたら、いつもの「90audio_アウトプット」の部屋に、ちなコーチへのメッセージを送りましょう。</p>
+        <ol class="steps">
+          <li><span data-t="842">投稿のはじめに「@ちなコーチ」をつけます（メンション）。こうすると、ちなコーチにお知らせが届きます。</span></li>
+          <li><span data-t="843">続けて、90日間をふり返った気持ちや、これからやりたいことを、自由に書きます。</span></li>
+          <li><span data-t="844">書けたら、送信します。</span></li>
+        </ol>
+        <p class="at-h" data-t="845">@のつけ方</p>
+        <figure class="at-fig" aria-label="Discordで@ちなコーチをつけるときの画面の絵">
+          <div class="at-step">
+            <p class="at-cap">① 英語の「@」と「ち」を打って、出てきた「ちなコーチ」を押す</p>
+            <div class="at-pop">
+              <div class="at-pop-h">メンバー</div>
+              <div class="at-row on"><span class="at-av"></span>ちなコーチ<span class="at-tap">👆 ここを押す</span></div>
+            </div>
+            <div class="at-in">@ち<i></i></div>
+          </div>
+          <div class="at-step">
+            <p class="at-cap">② 名前が青い文字になったら、続けてメッセージを書く</p>
+            <div class="at-in"><span class="at-men">@ちなコーチ</span> Day90 90日間、ありがとうございました！</div>
+          </div>
+        </figure>
+        <p class="note" data-t="846">名前が青くならないときは、「@」が日本語の「＠」（全角）になっているかもしれません。くわしくは、下の「@のつけ方」のボタンから見られます。</p>
+        <p class="note" data-t="847"><b>91日目からは</b>　90audioは、もう一度Day1から聞くこともできます（LINEを一度ブロックして、同じ日のうちに解除します）。2周目のアウトプットは「90audio（2周目〜）アウトプット」、日報は「日報（91日目〜）」の部屋に書きます。</p>
+        <a class="btn" href="#q-t10"><svg aria-hidden="true"><use href="#i-link"/></svg>@のつけ方（くわしく・絵つき）</a>
+        <a class="btn" href="#q-audioagain"><svg aria-hidden="true"><use href="#i-link"/></svg>90audioを、もう一度Day1から聞く方法</a>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1277162300217757738" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>「90audio_アウトプット」の部屋を開く</a>
+        <p class="cheer" data-t="848">90日間、本当におつかれさまでした。ここまで続けてきたあなたに、大きな拍手を送ります。</p>
+      </div>
+    </details>
     <details id="q-t47" data-y="きゅうじゅうにち すぎ おわり つかえる にしゅうめ そつぎょう そのあと" data-k="90日 過ぎ 終わり Discord 使える 2周目">
       <summary data-t="47">90日を過ぎたら、どうなるの？</summary>
       <div class="ans">
@@ -2253,13 +2278,14 @@ document.getElementById('pick').addEventListener('click',function(){
   // テーマから探す：ボタンを押すと、そのテーマの項目を一覧（検索結果と同じ箱）に並べる。1つの項目が複数のテーマに入ってよい
   var THEMES=[
     ['🔰','はじめたばかり',['q-t18','q-tools','q-t8','q-t12','q-t13','q-typelist','q-t29','q-master','q-drill','q-studyplus','q-all','q-words','q-t28']],
-    ['📅','90日を過ぎたら',['q-t47','q-t48','q-audioagain','q-t34','q-reading','q-t36','q-readhow','q-tadoku','q-listening','q-ultlisten','q-tango','q-exam','q-othertext']],
+    ['📅','90日を過ぎたら',['q-day90','q-t47','q-t48','q-audioagain','q-t34','q-reading','q-t36','q-readhow','q-tadoku','q-listening','q-ultlisten','q-tango','q-exam','q-othertext']],
     ['💬','Discordの使い方',['q-t7','q-t401','q-t8','q-t9','q-t10','q-whoreact','q-mymention','q-wrongroom','q-t17','q-t50','q-nippo','q-others','q-weekly','q-question','q-t42']],
-    ['🎧','90audio（毎朝の音声）',['q-90audio','q-audioagain','q-audiotime','q-t49','q-goal','q-t48']],
+    ['🎧','90audio（毎朝の音声）',['q-90audio','q-day90','q-audioagain','q-audiotime','q-t49','q-goal','q-t48']],
     ['💻','オンクラス・LINE',['q-tools','q-t12','q-t13','q-t14','q-t15','q-t16','q-archive','q-bangai','q-t54']],
     ['📘','文法ドリル・マスター講座',['q-master','q-drill','q-t30','q-t31','q-drillaudio','q-howdeep','q-level','q-t32','q-bangai','q-t33','q-t27']],
     ['🗣️','瞬間英作文',['q-shunkan','q-shunkan-ver','q-t24','q-t23','q-otherans','q-t25','q-shunkan-many','q-t26','q-whose','q-t34']],
-    ['📖','読む・聞く・発音',['q-reading','q-t36','q-readhow','q-tadoku','q-wpm','q-ultlisten','q-listening','q-tacho','q-t38','q-phonetic','q-eigomimi','q-japanese','q-t39']],
+    ['📖','読む・聞く・発音',['q-skipahead','q-reading','q-t36','q-readhow','q-tadoku','q-wpm','q-ultlisten','q-listening','q-tacho','q-t38','q-phonetic','q-eigomimi','q-japanese','q-t39']],
+    ['📝','単語・AI・資格試験',['q-tango','q-duo','q-ownwords','q-exam','q-t41','q-othertext']],
     ['🔤','英語の疑問（文法）',['q-otherans','q-e-article','q-e-cani','q-e-polite','q-e-many','q-e-see','q-e-gohome','q-e-have','q-e-when','q-e-than','q-e-toing','q-e-in','q-e-would','q-e-best','q-e-your','q-e-prep','q-e-bedo','q-e-good','q-e-meet','q-e-fine','q-e-spell','q-e-told','q-e-omit']],
     ['🌱','気持ち・続け方',['q-t44','q-bored','q-sick','q-dayskip','q-compare','q-forget','q-comeback','q-drive']],
     ['🎤','セミナー・ラジオ',['q-t1','q-t2','q-t3','q-t4','q-archive','q-radio','q-radiohow','q-offkai','q-t52']],
@@ -3051,7 +3077,16 @@ n:{1:'セミナーってなに？だれでも参加できるんかね？',
 836:'迷ったら、その人が実際に言ったセリフを思い浮かべてみてちょう。',
 837:'that や、関係代名詞の which・whom は、はぶいてもええの？',
 838:'I think (that) 〜 の that や、「〜が…する（名詞）」の which・whom は、はぶくことができるでね。会話では、はぶくことがえらい多いがね。',
-839:'名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置くでね。'},
+839:'名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置くでね。',
+840:'90日目（Day90）の日は、なにをするの？',
+841:'Day90の90audioを聞いたら、いつもの「90audio_アウトプット」の部屋に、ちなコーチへのメッセージを送ってちょう。',
+842:'投稿のはじめに「@ちなコーチ」をつけるでね（メンション）。こうすると、ちなコーチにお知らせが届くがね。',
+843:'続けて、90日間をふり返った気持ちや、これからやりたいことを、自由に書くでね。',
+844:'書けたら、送信するでね。',
+845:'@のつけ方',
+846:'名前が青くならんときは、「@」が日本語の「＠」（全角）になっとるかもしれんでね。くわしくは、下の「@のつけ方」のボタンから見れるがね。',
+847:'<b>91日目からは<\/b>　90audioは、もう一回Day1から聞くこともできるでね（LINEを一回ブロックして、同じ日のうちに解除するがね）。2周目のアウトプットは「90audio（2周目〜）アウトプット」、日報は「日報（91日目〜）」の部屋に書くでね。',
+848:'90日間、ほんとにおつかれさまでした。ここまで続けてきたあんたに、大きな拍手を送るでね。'},
 o:{1:'セミナーってなんなん？だれでも参加できるん？',
 2:'遅れて入っても、途中で抜けてもええのん？',
 3:'顔を出さなあかんの？',
@@ -3765,7 +3800,16 @@ o:{1:'セミナーってなんなん？だれでも参加できるん？',
 836:'迷たら、その人がほんまに言うたセリフを思い浮かべてみてな。',
 837:'that や、関係代名詞の which・whom は、はぶいてもええの？',
 838:'I think (that) 〜 の that や、「〜が…する（名詞）」の which・whom は、はぶくことができるで。会話では、はぶくことがめっちゃ多いで。',
-839:'名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置くで。'},
+839:'名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置くで。',
+840:'90日目（Day90）の日は、なにするん？',
+841:'Day90の90audio聞いたら、いつもの「90audio_アウトプット」の部屋に、ちなコーチへのメッセージ送ろな。',
+842:'投稿のはじめに「@ちなコーチ」をつけるで（メンション）。こうしたら、ちなコーチにお知らせが届くねん。',
+843:'続けて、90日間をふり返った気持ちや、これからやりたいことを、自由に書くで。',
+844:'書けたら、送信するで。',
+845:'@のつけ方',
+846:'名前が青ならへんときは、「@」が日本語の「＠」（全角）になってるかもしれへんで。くわしくは、下の「@のつけ方」のボタンから見られるで。',
+847:'<b>91日目からは<\/b>　90audioは、もういっぺんDay1から聞くこともできるで（LINEをいっぺんブロックして、同じ日のうちに解除するねん）。2周目のアウトプットは「90audio（2周目〜）アウトプット」、日報は「日報（91日目〜）」の部屋に書くで。',
+848:'90日間、ほんまにおつかれさまでした。ここまで続けてきたあんたに、大きな拍手を送るで。'},
 k:{1:'セミナーってなんね？だれでも参加できると？',
 2:'遅れて入っても、途中で抜けてもよかと？',
 3:'顔ば出さんといかんと？',
@@ -4479,7 +4523,16 @@ k:{1:'セミナーってなんね？だれでも参加できると？',
 836:'迷ったら、その人のほんなこつ言ったセリフば思い浮かべてみて。',
 837:'that や、関係代名詞の which・whom は、はぶいてもよかと？',
 838:'I think (that) 〜 の that や、「〜が…する（名詞）」の which・whom は、はぶくことのできるとよ。会話では、はぶくことのとても多かよ。',
-839:'名詞ば説明する言葉の1つだけのときは名詞の前（the sleeping baby）、長かときは名詞の後ろ（the baby sleeping in the car）に置くとよ。'},
+839:'名詞ば説明する言葉の1つだけのときは名詞の前（the sleeping baby）、長かときは名詞の後ろ（the baby sleeping in the car）に置くとよ。',
+840:'90日目（Day90）の日は、なんばすると？',
+841:'Day90の90audioば聞いたら、いつもの「90audio_アウトプット」の部屋に、ちなコーチへのメッセージば送ろうや。',
+842:'投稿のはじめに「@ちなコーチ」ばつけるとよ（メンション）。こげんすると、ちなコーチにお知らせの届くけん。',
+843:'続けて、90日間ばふり返った気持ちや、これからやりたかことば、自由に書くと。',
+844:'書けたら、送信すると。',
+845:'@のつけ方',
+846:'名前の青くならんときは、「@」が日本語の「＠」（全角）になっとるかもしれんよ。くわしくは、下の「@のつけ方」のボタンから見らるっけん。',
+847:'<b>91日目からは<\/b>　90audioは、もういっぺんDay1から聞くこともできるとよ（LINEばいっぺんブロックして、同じ日のうちに解除すると）。2周目のアウトプットは「90audio（2周目〜）アウトプット」、日報は「日報（91日目〜）」の部屋に書くと。',
+848:'90日間、ほんなこつおつかれさまでした。ここまで続けてきたあなたに、大きな拍手ば送るけん。'},
 h:{1:'セミナーってなんなのさ？だれでも参加できるのかい？',
 2:'遅れて入っても、途中で抜けてもいいのかい？',
 3:'顔を出さないとダメなのかい？',
@@ -5193,7 +5246,16 @@ h:{1:'セミナーってなんなのさ？だれでも参加できるのかい�
 836:'迷ったら、その人がほんとに言ったセリフを思い浮かべてみてね。',
 837:'that や、関係代名詞の which・whom は、はぶいてもいいのかい？',
 838:'I think (that) 〜 の that や、「〜が…する（名詞）」の which・whom は、はぶくことができるよ。会話では、はぶくことがとっても多いんだわ。',
-839:'名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置くよ。'},
+839:'名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置くよ。',
+840:'90日目（Day90）の日は、なにをするのさ？',
+841:'Day90の90audioを聞いたら、いつもの「90audio_アウトプット」の部屋に、ちなコーチへのメッセージを送ろうね。',
+842:'投稿のはじめに「@ちなコーチ」をつけるよ（メンション）。こうすると、ちなコーチにお知らせが届くんだわ。',
+843:'続けて、90日間をふり返った気持ちや、これからやりたいことを、自由に書くよ。',
+844:'書けたら、送信するよ。',
+845:'@のつけ方',
+846:'名前が青くならないときは、「@」が日本語の「＠」（全角）になってるかもしれないよ。くわしくは、下の「@のつけ方」のボタンから見られるんだわ。',
+847:'<b>91日目からは<\/b>　90audioは、もう一回Day1から聞くこともできるよ（LINEを一回ブロックして、同じ日のうちに解除するんだわ）。2周目のアウトプットは「90audio（2周目〜）アウトプット」、日報は「日報（91日目〜）」の部屋に書くよ。',
+848:'90日間、ほんとにおつかれさまでした。ここまで続けてきたあなたに、大きな拍手を送るよ。'},
 q:{1:'セミナーて、なんどすか？どなたはんでも参加できますのん？',
 2:'遅れて入っても、途中で抜けても、よろしおすか？',
 3:'顔を出さなあきまへんのん？',
@@ -5907,7 +5969,16 @@ q:{1:'セミナーて、なんどすか？どなたはんでも参加できま�
 836:'迷わはったら、その人がほんまに言わはったセリフを思い浮かべてみておくれやす。',
 837:'that や、関係代名詞の which・whom は、はぶいてもよろしおすか？',
 838:'I think (that) 〜 の that や、「〜が…する（名詞）」の which・whom は、はぶくことができます。会話では、はぶくことがえらい多おす。',
-839:'名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置きます。'},
+839:'名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置きます。',
+840:'90日目（Day90）の日は、なにをするんどすか？',
+841:'Day90の90audioを聞かはったら、いつもの「90audio_アウトプット」のお部屋に、ちなコーチへのメッセージを送っておくれやす。',
+842:'投稿のはじめに「@ちなコーチ」をつけます（メンション）。こうすると、ちなコーチにお知らせが届きますえ。',
+843:'続けて、90日間をふり返らはったお気持ちや、これからやりたいことを、自由に書いておくれやす。',
+844:'書けたら、送信しておくれやす。',
+845:'@のつけ方',
+846:'名前が青うならへんときは、「@」が日本語の「＠」（全角）になってるかもしれまへん。くわしゅうは、下の「@のつけ方」のボタンから見られますえ。',
+847:'<b>91日目からは<\/b>　90audioは、もういっぺんDay1から聞くこともできます（LINEをいっぺんブロックして、同じ日のうちに解除します）。2周目のアウトプットは「90audio（2周目〜）アウトプット」、日報は「日報（91日目〜）」のお部屋に書いておくれやす。',
+848:'90日間、ほんまにおつかれさまどした。ここまで続けてきはったあなたに、大きな拍手を送りますえ。'},
 y:{4:'セミナーに参加する青い文字（リンク）を押しても入れない',
 10:'Discordで、返事を書いたり、気持ちのマーク（スタンプ）を付けたりするには？',
 13:'オンクラスに入れない・「新しく登録」の画面が出てしまう',
