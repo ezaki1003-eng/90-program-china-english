@@ -172,6 +172,13 @@ body.gw-open .search{position:static}
 .cp-btn{width:100%;font:inherit;font-size:16px;font-weight:700;padding:10px 12px;border-radius:10px;border:1.5px dashed var(--accent);background:transparent;color:var(--accent-ink);cursor:pointer}
 .cp-btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .cp-msg{margin:0;font-size:15px;font-weight:700;color:var(--accent-ink);word-break:break-all}
+.themes{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.themes-h{margin:0;font-weight:700;font-size:17px;color:var(--accent-ink)}
+.theme-btns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.theme-btns button{display:flex;align-items:center;gap:8px;text-align:left;padding:10px;border-radius:12px;border:1.5px solid var(--accent);background:var(--accent-soft);color:var(--ink);font:inherit;font-size:16px;font-weight:700;line-height:1.35;cursor:pointer}
+.theme-btns button small{display:block;font-size:13px;font-weight:500;color:var(--sub)}
+.th-ic{font-size:22px;flex:none}
+.theme-btns button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .rd-top{display:flex;align-items:center;gap:6px;background:#f2f3f5;border-radius:12px;padding:8px}
 .rd-sq{display:flex;align-items:center;justify-content:center;min-width:38px;height:38px;border-radius:10px;background:#6d6f78;color:#fff;font-size:16px;font-weight:700}
 .rd-sq.on{outline:3px solid #f0b232;background:#4e5058}
@@ -255,8 +262,13 @@ body.gw-open .search{position:static}
     <a class="chip" href="#seminar"><svg aria-hidden="true"><use href="#i-video"/></svg><span>セミナー<small>だれでも参加・顔出し・録画</small></span></a>
     <a class="chip" href="#start"><svg aria-hidden="true"><use href="#i-start"/></svg><span>はじめる準備<small>Discord・音声・オンクラス</small></span></a>
     <a class="chip" href="#study"><svg aria-hidden="true"><use href="#i-book"/></svg><span>勉強の進め方<small>順番・ドリル・次の目安</small></span></a>
+    <a class="chip" href="#eigo"><svg aria-hidden="true"><use href="#i-book"/></svg><span>英語の疑問<small>a・the・Can I など</small></span></a>
     <a class="chip" href="#other"><svg aria-hidden="true"><use href="#i-heart"/></svg><span>そのほか<small>続かない・連絡先</small></span></a>
   </nav>
+  <div class="themes" role="group" aria-labelledby="themes-h">
+    <p class="themes-h" id="themes-h">テーマから探す（押すと、その項目が一覧で出ます）</p>
+    <div class="theme-btns" id="theme-btns"></div>
+  </div>
 
   <a class="pick" href="#study" id="pick">
     <span class="pick-label">いちばん多い質問</span>
@@ -633,6 +645,15 @@ body.gw-open .search{position:static}
         <p class="cheer" data-t="614">2回目は、1回目には気づかなかった言葉に出会えるかもしれません。</p>
       </div>
     </details>
+    <details id="q-audiotime" data-y="きゅうじゅうおーでぃお おんせい とどくじかん しちじ じかんをかえたい はやく あさはやい しゅっきん へんこう ずらす" data-k="90audio 音声 届く時間 7時 時間を変えたい 早く 朝早い 出勤 変更 ずらす 配信時間">
+      <summary data-t="752">90audioの届く時間（朝7時）を変えたい</summary>
+      <div class="ans">
+        <p class="lead" data-t="753">届く時間は全員いっしょの設定なので、一人ずつ変えることはできません。</p>
+        <ol class="steps">
+          <li><span data-t="754">朝早く出かける方は、前の日に届いた音声を次の朝に聞くように、1日ずらして進めるのもおすすめです。通知は切っておいて大丈夫です。</span></li>
+        </ol>
+      </div>
+    </details>
 
     <details id="q-t12" data-y="らいん べんきょう どこで おんくら おんくらす めにゅー はじめに なにをする" data-k="LINE 勉強 どこで オンクラス メニュー はじめに">
       <summary data-t="12">英語の勉強はLINEでするの？</summary>
@@ -830,6 +851,17 @@ body.gw-open .search{position:static}
         <a class="btn" href="https://app.the-online-class.com/lessons/oQNwkTOyQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>瞬間英作文 Q&amp;A一覧（オンクラス）</a>
       </div>
     </details>
+    <details id="q-otherans" data-y="こたえとちがう もはんかいとう ちがう まちがい せいかい いいかえ べつのいいかた じぶんのこたえ いちじいっく" data-k="答えと違う 模範解答 違う 間違い 正解 言い換え 別の言い方 自分の答え 一字一句 解答例">
+      <summary data-t="715">答えとちがう英文を作ったけど、まちがい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="716">文法が正しくて、意味が通じれば、正解です。答えと一字一句同じでなくて大丈夫です。</p>
+        <ol class="steps">
+          <li><span data-t="717">テキストの答えは、たくさんある正解のうちの1つです。</span></li>
+          <li><span data-t="718">「自分は思いつかなかったけど、こんな言い方もあるんだ」と、答えの英文も新しい表現として覚えておきましょう。将来、話す相手が使ってくるかもしれません。</span></li>
+          <li><span data-t="719">合っているか分からないものは、いったん印をつけて先へ進み、あとでまとめてAIや質問部屋で確かめるのもおすすめです。</span></li>
+        </ol>
+      </div>
+    </details>
 
     <details id="q-t24" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん いつから はじめる たいみんぐ ぶんぽうどりる" data-k="瞬間英作文 いつから 始める タイミング スタート 文法ドリル 並行">
       <summary data-t="24">瞬間英作文は、いつから始めればいい？</summary>
@@ -854,6 +886,19 @@ body.gw-open .search{position:static}
         <a class="btn" href="https://app.the-online-class.com/lessons/ogM2QjNwUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>英単語との向き合い方（セミナー録画）</a>
       </div>
     </details>
+    <details id="q-shunkan-many" data-y="しゅんかんえいさくぶん でてこない くちからでない なんかい なんしゅう くりかえし おぼえられない じかんがかかる ひゃっかい おんどく すすめかた" data-k="瞬間英作文 出てこない 口から出ない 何回 何周 繰り返し 覚えられない 時間がかかる 100回 音読 進め方">
+      <summary data-t="738">瞬間英作文が口から出てこない・何回くり返せばいい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="739">「見れば分かるのに、口から出ない」のは自然なことです。理解することと、話すことは、別の力だからです。</p>
+        <ol class="steps">
+          <li><span data-t="740">目安は、最低5周です。1〜2周で出てこないのは、ふつうです。</span></li>
+          <li><span data-t="741">必ず声に出してください。頭の中だけでやるより、ずっと身につきます。</span></li>
+          <li><span data-t="742">1つの項目（10問）は、1回10〜15分くらいで区切ります。1回で100％を目指さず、何日かに分けてくり返します。</span></li>
+          <li><span data-t="743">小さく区切って何周かくり返し、8割くらい言えるようになったら、次へ進んで大丈夫です。</span></li>
+        </ol>
+        <p class="note" data-t="744">瞬間英作文は「口と頭の筋トレ」です。回数を重ねるほど、必ず口が慣れてきます。</p>
+      </div>
+    </details>
 
     <details id="q-t26" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん ぱーとさん ぱーと むずかしい できない でてこない とまる ざせつ" data-k="瞬間英作文 Part3 パート3 難しい むずかしい できない 出てこない 止まる">
       <summary data-t="26">瞬間英作文のPart3がむずかしい</summary>
@@ -868,6 +913,17 @@ body.gw-open .search{position:static}
         <a class="btn" href="https://app.the-online-class.com/lessons/owN4kDNwUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>Part3に入る前に見る動画（オンクラス）</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/ogN0EDOzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>Q&amp;A「Part3が難しすぎて、挫折しそうです」（オンクラス）</a>
         <p class="cheer" data-t="300">むずかしく感じるのは、ちゃんと階段をのぼっているからです。</p>
+      </div>
+    </details>
+    <details id="q-whose" data-y="ふーず おぶうぃっち かんけいだいめいし しょゆうかく わからない むずかしい ぱーとすりー せみなー" data-k="whose of which 関係代名詞 所有格 分からない 難しい Part3 セミナー">
+      <summary data-t="745">瞬間英作文の whose・of which が、どうしても分からない</summary>
+      <div class="ans">
+        <p class="lead" data-t="746">たくさんの方がつまずくところです。文法ドリルには、このための回がありません。</p>
+        <ol class="steps">
+          <li><span data-t="747">2026年2月22日のセミナー（関係代名詞・関係副詞）で、ちなコーチがくわしく解説しています。オンクラスの「英語セミナー アーカイブ一覧」から見られます。</span></li>
+          <li><span data-t="748">Part3の後半は、まずは「英語を見て意味が分かればOK」です。ゆっくり、階段をのぼるように進めましょう。</span></li>
+        </ol>
+        <a class="btn" href="#q-archive"><svg aria-hidden="true"><use href="#i-video"/></svg>前のセミナーの見かた</a>
       </div>
     </details>
     <details id="q-t27" data-y="むずかしい ぶんぽう わからない かんけいだいめいし かていほう じせい ふくざつ ながいぶん" data-k="難しい むずかしい 文法 分からない 関係代名詞 仮定法 時制 複雑 長い文">
@@ -972,6 +1028,42 @@ body.gw-open .search{position:static}
         <a class="btn" href="https://app.the-online-class.com/lessons/oQMwkjNwUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>「2周目以降」の効率的な進め方（オンクラス）</a>
       </div>
     </details>
+    <details id="q-drillaudio" data-y="ぶんぽうどりる おんせい しーでぃー まいおとも あぷり いつから はつおん すぴーきんぐ きく" data-k="文法ドリル 音声 CD マイオトモ my-oto-mo アプリ いつから 発音 スピーキング 聞く">
+      <summary data-t="720">文法ドリルの音声（CD・アプリ）は、いつから使うの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="721">1周目は使わなくて大丈夫です。2周目か3周目から、プラスαで取り入れましょう。</p>
+        <ol class="steps">
+          <li><span data-t="722">はじめは「マスター講座を見る → ドリルの左のページ（説明）を読む → 右のページ（EXERCISE）を解く」の3つで十分です。</span></li>
+          <li><span data-t="723">中身が少し分かってきたころに音声を足すと、リズムや発音がつかみやすく、覚えるのもぐっと進みます。音声は、ドリルの3ページ目で案内されている「マイオトモ」というアプリで聞けます。</span></li>
+        </ol>
+      </div>
+    </details>
+    <details id="q-howdeep" data-y="きになる しらべる ふかぼり どこまで ぎもん もやもや すすめない ぴんくのじ ひんと するー" data-k="気になる 調べる 深掘り どこまで 疑問 モヤモヤ 進めない ピンクの字 ヒント スルー">
+      <summary data-t="724">気になったことは、どこまで調べればいい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="725">答えや解説が分からないところは、その場で調べましょう。それ以外は「こういう言い方もあるんだね」くらいで先へ進んで大丈夫です。</p>
+        <ol class="steps">
+          <li><span data-t="726">いちばん大事なのは、文法ドリルの問題（EXERCISE）を解けるようになることです。</span></li>
+          <li><span data-t="727">1〜2周目は、気になることがあっても先へ進み、3〜5周目で、じっくり深めるのがスムーズです。</span></li>
+          <li><span data-t="728">ドリルのピンクの字のヒントがついているところは、「今は気にしなくていいところ」です。深追いしなくて大丈夫です。</span></li>
+        </ol>
+        <p class="note" data-t="729">「気になって眠れない！」くらいのことだけ調べて、あとは一度スルーする。それくらいの気持ちで大丈夫です。全体が見えてくると、あとから自然に分かることもたくさんあります。</p>
+      </div>
+    </details>
+    <details id="q-level" data-y="みについた ていちゃく めやす どのくらい できている りかい だんかい おしえられる" data-k="身についた 定着 目安 どのくらい できている 理解 段階 教えられる">
+      <summary data-t="730">文法が「身についた」と言えるのは、どのくらい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="731">今は、下の③〜④を目指せば十分です。</p>
+        <ol class="steps">
+          <li><span data-t="732"><b>聞いたことがある</b>：用語やルールを、見たことがある・聞いたことがある。</span></li>
+          <li><span data-t="733"><b>説明を読めば分かる</b>：解説や例文を見れば「そういうことね」と分かるけれど、自分ひとりでは使えない。</span></li>
+          <li><span data-t="734"><b>問題なら解ける</b>：ドリルの問題は解けるけれど、会話や瞬間英作文ではパッと出てこない。</span></li>
+          <li><span data-t="735"><b>自然に使える</b>：説明を思い出さなくても、会話や瞬間英作文で使える。</span></li>
+          <li><span data-t="736"><b>人に教えられる</b>：なぜそうなるのかを説明できる。ここは最後のゴールで、時間をかけて自然にたどりつくところです。</span></li>
+        </ol>
+        <p class="note" data-t="737">③から④に近づくときに、瞬間英作文が大きな力になります。瞬間英作文でつまずいたら、文法ドリルに戻ればOK。行ったり来たりしながら身についていきます。</p>
+      </div>
+    </details>
     <details id="q-t32" data-y="かんたん かんたんすぎる わかってる しってる とばす とばしていい つぎ れべる" data-k="簡単 簡単すぎる 分かっている 知っている 飛ばす 次 レベル i+1">
       <summary data-t="32">簡単すぎる・もう分かっているところは？</summary>
       <div class="ans">
@@ -979,7 +1071,16 @@ body.gw-open .search{position:static}
         <p class="note"><span data-t="215">今の自分より「少しだけむずかしい」くらいが、いちばん力がつきます。</span></p>
       </div>
     </details>
-    <details id="q-t33" data-y="のーと かく まとめる ひっき せいり よこになって ねながら つくえ かいてもいい だめ こたえ めも" data-k="ノート 書く まとめる 筆記 整理 横になって 寝ながら 机 書いてもいい ダメ 答え メモ">
+    <details id="q-bangai" data-y="ばんがいへん せみなー ながいどうが ぜんぶみる ぜんちし じょどうし ますたーこうざ にしゅうめ" data-k="番外編 セミナー 長い動画 全部見る 前置詞 助動詞 マスター講座 2周目">
+      <summary data-t="749">マスター講座の「番外編」（長いセミナー動画）は、全部見てから次へ進むの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="750">見なくても大丈夫です。そのまま2周目に入って問題ありません。</p>
+        <ol class="steps">
+          <li><span data-t="751">番外編（前置詞セミナー・助動詞セミナーなど）は、どれも60分をこえる長い動画です。週末など時間がとれるときに、気になるテーマから見れば十分です。</span></li>
+        </ol>
+      </div>
+    </details>
+    <details id="q-t33" data-y="のーと かく まとめる ひっき せいり よこになって ねながら つくえ かいてもいい だめ こたえ めも かいておぼえる おんどく" data-k="ノート 書く まとめる 筆記 整理 横になって 寝ながら 机 書いてもいい ダメ 答え メモ">
       <summary data-t="33">ノートはとったほうがいい？</summary>
       <div class="ans">
         <p class="lead" data-t="104">ノートをとらなくても、英語の力は十分のびます。</p>
@@ -988,6 +1089,7 @@ body.gw-open .search{position:static}
           <li><span data-t="218">マスター講座は動画なので、スマホとイヤホンがあれば、横になったままでも学べます。</span></li>
         </ol>
         <p class="note" data-t="665"><b>書くことが、ダメなわけではありません</b>　文法ドリルの答えだけを書いたり、頭の中を整理したりするために書くのは、役に立ちます。きれいなノートを作ることが目的にならなければ、大丈夫です。</p>
+        <p class="note" data-t="773"><b>覚えるときは「書く」より「声に出す」</b>　英語を覚えるために、ノートにたくさん書くのは、時間がかかるわりに身につきにくい方法です。覚えたいときは、声に出して読む「音読」がおすすめです。</p>
       </div>
     </details>
 
@@ -1246,6 +1348,15 @@ body.gw-open .search{position:static}
         <p class="note" data-t="110">分からない言葉を全部ノートに書かなくて大丈夫です。「使ってみたい！」と思ったものを、1回に1〜2個だけメモするくらいで十分です。</p>
       </div>
     </details>
+    <details id="q-othertext" data-y="ほかのきょうざい まえからつかっている ほん えほん ようしょ つかってもいい しかく" data-k="ほかの教材 前から使っている 本 絵本 洋書 使ってもいい 資格">
+      <summary data-t="755">前から使っている本や、ほかの教材を使ってもいい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="756">「文法 → 読む → 聞く → 話す」の順番がくずれなければ、使って大丈夫です。</p>
+        <ol class="steps">
+          <li><span data-t="757">「この本も読みたい」という気持ちは大切にしてください。ただ、今のステップの学習（文法ドリルや瞬間英作文など）が中心になるように、時間を調整しながら進めましょう。</span></li>
+        </ol>
+      </div>
+    </details>
 
     <details id="q-tango" data-y="たんご たんごちょう おぼえかた ごい おぼえられない" data-k="単語 単語帳 覚え方 語彙">
       <summary data-t="40">単語帳は使ったほうがいい？</summary>
@@ -1325,7 +1436,7 @@ body.gw-open .search{position:static}
       </div>
     </details>
 
-    <details id="q-question" data-y="しつもん どこで しつもんべや きく ききたい わからない そうだん" data-k="質問 どこで 質問部屋 聞きたい">
+    <details id="q-question" data-y="しつもん どこで しつもんべや きく ききたい わからない そうだん しつもんのしかた かきかた こつ ぺーじ" data-k="質問 どこで 質問部屋 聞きたい 質問のしかた 書き方 コツ ページ">
       <summary data-t="43">英語の質問はどこでするの？</summary>
       <div class="ans">
         <p class="lead" data-t="115">Discordの「<a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">質問部屋</a>」です。</p>
@@ -1334,8 +1445,285 @@ body.gw-open .search{position:static}
           <li><span data-t="242">ほかの人の質問と答えも読めるので、さかのぼると解決することもあります。</span></li>
           <li><span data-t="243">送る前に、英文や教材のページがまちがっていないか、一度だけ見直してもらえると、正しく答えやすくなります。</span></li>
         </ol>
+        <p class="note" data-t="769"><b>答えてもらいやすい質問のしかた</b></p>
+        <ul class="words">
+          <li data-t="770">教材の名前と、ページやLessonの番号を書く。</li>
+          <li data-t="771">問題文・テキストの答え・自分の答えを、いっしょに書く。</li>
+          <li data-t="772">分かっているところと、分からないところを書く。自分はどうしようと考えているかも書くと、もっと的確に答えてもらえます。</li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>質問部屋（英語について）を開く</a>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>質問部屋（システムについて）を開く</a>
+      </div>
+    </details>
+  </section>
+
+  <section id="eigo">
+    <h2><svg aria-hidden="true"><use href="#i-book"/></svg>英語のよくある疑問</h2>
+    <p class="note" data-t="774">質問部屋で、ちなコーチがこれまで答えてきた英語の疑問です。どれも、完ぺきに覚えなくて大丈夫。「そういうものなんだ」と知っておくだけで十分です。</p>
+
+    <details id="q-e-article" data-y="えー ざ かんし つかいわけ えーとざ ふとくてい とくてい" data-k="a the 冠詞 使い分け aとthe 不特定 特定">
+      <summary data-t="775">「a」と「the」は、どう使い分けるの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="776">初めて話に出すもの・どれと決まっていないものは a、話し手と聞き手の間で「あれね」と分かっているものは the です。</p>
+        <ul class="words">
+          <li>I'd like to make <b>a</b> reservation.（初めて話に出す予約）</li>
+          <li>Have you made <b>the</b> reservation?（「例の予約」として分かっている）</li>
+          <li>play <b>the</b> piano ／ go to <b>the</b> gym（the を使うことが多い言い方）</li>
+        </ul>
+        <p class="note" data-t="777">日本人にはつかみにくい感覚なので、今は「このときは、こう言うんだ」くらいで大丈夫です。ドリルで空らんになっていない a・the は、今は気にしなくてOKです。</p>
+      </div>
+    </details>
+
+    <details id="q-e-cani" data-y="きゃんあい きゃんゆー きょか いらい もらえますか してくれますか しゅご" data-k="Can I Can you 許可 依頼 もらえますか してくれますか 主語">
+      <summary data-t="778">「Can I 〜？」と「Can you 〜？」の使い分けは？</summary>
+      <div class="ans">
+        <p class="lead" data-t="779">その動作をするのが「自分」なら Can I、「相手」なら Can you です。</p>
+        <ul class="words">
+          <li><b>Can I</b> get a blanket?（毛布をいただけますか？＝受け取るのは自分）</li>
+          <li><b>Can you</b> bring me a blanket?（毛布を持ってきてくれますか？＝動くのは相手）</li>
+        </ul>
+        <p class="note" data-t="780">日本語は「だれが」をはぶくことが多いので、迷いやすいところです。動詞の動きをするのはだれかを考えてみましょう。</p>
+      </div>
+    </details>
+
+    <details id="q-e-polite" data-y="めいあい くっどゆー うっどゆー あいどらいく ていねい しつれい ちゅうもん" data-k="May I Could you Would you I'd like Will you 丁寧 失礼 注文">
+      <summary data-t="781">May I・Could you・I'd like…丁寧な言い方は、どれを使えばいい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="782">まずは Can I 〜？と Can you 〜？が使えれば十分です。やさしく言えば、失礼にはなりません。</p>
+        <ul class="words">
+          <li>I'd like a coffee, please.（コーヒーをください）</li>
+          <li>Can I have a coffee?（コーヒーをもらえますか？）</li>
+        </ul>
+        <p class="note" data-t="783">May I はていねいですが、ふだんの会話では Can I の方がずっとよく使われます。注文するときも、I'd like と Can I は、どちらを使っても大丈夫です。</p>
+      </div>
+    </details>
+
+    <details id="q-e-many" data-y="さむ えに めに まっち あろっとおぶ たくさん すこし かぞえられる かさんめいし" data-k="some any many much a lot of たくさん 少し 数えられる 可算名詞 不可算名詞">
+      <summary data-t="784">some・any／many・much・a lot of の使い分けは？</summary>
+      <div class="ans">
+        <p class="lead" data-t="785">some はふつうの文、any は「？」の文や「〜ない」の文で使うのが基本です。many は数えられるもの、much は数えられないもの、a lot of はどちらにも使えます。</p>
+        <ul class="words">
+          <li>I have <b>some</b> friends. ／ Do you have <b>any</b> questions?</li>
+          <li>There are <b>many</b> people. ／ I don't have <b>much</b> time.</li>
+          <li>I have <b>a lot of</b> books. ／ I drink <b>a lot of</b> water.</li>
+        </ul>
+        <p class="note" data-t="786">迷ったら、会話では a lot of を使えば大丈夫です。数えられるかどうかを、毎回考えなくてすみます。</p>
+      </div>
+    </details>
+
+    <details id="q-e-see" data-y="しー るっく うぉっち しょー みる つかいわけ" data-k="see look watch show 見る 使い分け">
+      <summary data-t="787">see・look・watch（見る）は、どう違うの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="788">see は自然に目に入る、look は意識して目を向ける、watch は動きをじっと見続ける、です。</p>
+        <ul class="words">
+          <li>I <b>saw</b> a bird in the sky.（空に鳥が見えた）</li>
+          <li><b>Look</b> at that picture!（あの絵を見て！）</li>
+          <li>I <b>watch</b> TV every night.（毎晩テレビを見ます）</li>
+        </ul>
+        <p class="note" data-t="789">show は「見せる」なので、自分が見るときには使いません。ルールで覚えるより、正しい英文を何度も口に出すうちに、感覚でつかめてきます。</p>
+      </div>
+    </details>
+
+    <details id="q-e-gohome" data-y="ごーほーむ とぅー つかない ごーとぅー ごーあぶろーど びじっと" data-k="go home to つかない go to go abroad visit">
+      <summary data-t="790">go home には、なぜ to がつかないの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="791">home は「家へ」という意味もある言葉なので、to がいりません。work や bed には to がつきます。</p>
+        <ul class="words">
+          <li>go home ／ go abroad（外国へ行く）</li>
+          <li>go to work ／ go to bed</li>
+          <li>visit Kyoto（visit to Kyoto とは言いません）</li>
+        </ul>
+        <p class="note" data-t="792">visit も「訪れる」という意味の中に「〜へ」が入っているので、to はつけません。何度もまちがえやすいところなので、「visit＋場所」の形で覚えてしまうのが早いです。</p>
+      </div>
+    </details>
+
+    <details id="q-e-have" data-y="はぶ しんこうけい はびんぐ たべる もっている らんち ゆうしょく いーと" data-k="have 進行形 having 食べる 持っている lunch dinner eat">
+      <summary data-t="793">have は進行形にしない、と習ったのに I'm having lunch と言うのはなぜ？</summary>
+      <div class="ans">
+        <p class="lead" data-t="794">have には「持っている」と「食べる・する」の2つの意味があるからです。「持っている」のときは進行形にしませんが、「食べる・体験する」のときは進行形にできます。</p>
+        <ul class="words">
+          <li>I <b>have</b> a car.（車を持っている）</li>
+          <li>She <b>is having</b> lunch.（昼ごはんを食べている）</li>
+          <li>We <b>are having</b> a party.（パーティーをしている）</li>
+        </ul>
+        <p class="note" data-t="795">食事は have breakfast・have dinner のように have を使うことが多いです。eat でも、まちがいではありません。</p>
+      </div>
+    </details>
+
+    <details id="q-e-when" data-y="うぇん いふ いち まえ うしろ ぶんとう もし みらい うぃる げんざいけい" data-k="when if 位置 前 後ろ 文頭 もし 未来 will 現在形">
+      <summary data-t="796">when や if は、文の前に置く？後ろに置く？</summary>
+      <div class="ans">
+        <p class="lead" data-t="797">どちらでも正解です。会話では、先に「どうだったか」を言って、あとから when を足す形が多めです。</p>
+        <ul class="words">
+          <li>She was very happy <b>when</b> she saw him again.</li>
+          <li><b>When</b> I saw him again, I was very happy.</li>
+          <li><b>If</b> it <b>is</b> fine tomorrow, we will go on a picnic.</li>
+        </ul>
+        <p class="note" data-t="798">「もし〜なら」の if の中では、未来のことでも will を使わず、今の形（is など）にします。</p>
+      </div>
+    </details>
+
+    <details id="q-e-than" data-y="ざんみー ざんあいどぅー ひかく ひかくきゅう より" data-k="than me than I do 比較 比較級 より">
+      <summary data-t="799">than me と than I do、どちらが正しいの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="800">どちらも正解です。ふだんの会話では than me がよく使われ、than I do は少していねいな言い方です。</p>
+        <ul class="words">
+          <li>He can swim faster <b>than me</b>.</li>
+          <li>He can swim faster <b>than I do</b>.</li>
+        </ul>
+        <p class="note" data-t="801">文の最後の do・does・were は、前に出てきた動詞をくり返す代わりに使っています。</p>
+      </div>
+    </details>
+
+    <details id="q-e-toing" data-y="ふていし どうめいし とぅー いんぐ すたーと えんじょい うぉんと" data-k="不定詞 動名詞 to ing start enjoy want decide">
+      <summary data-t="802">to play と playing、どちらを使えばいい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="803">start や like のように、どちらでもほぼ同じ意味になる動詞が多いので、最初は「どちらでもOK」で大丈夫です。</p>
+        <ul class="words">
+          <li>I started <b>using</b> this phone. ／ I started <b>to use</b> this phone.</li>
+          <li>I enjoy <b>playing</b> tennis.（enjoy は ing だけ）</li>
+          <li>I want <b>to play</b> tennis.（want は to だけ）</li>
+        </ul>
+        <p class="note" data-t="804">enjoy のように ing だけの動詞や、want・decide のように to だけの動詞もあります。こうした動詞だけ、出会うたびに覚えていきましょう。</p>
+      </div>
+    </details>
+
+    <details id="q-e-in" data-y="いん あふたー ふんご ごに さんじゅっぷんご あと" data-k="in after 分後 後に 30分後 あと">
+      <summary data-t="805">「30分後に」は in？after？</summary>
+      <div class="ans">
+        <p class="lead" data-t="806">「今から30分後」なら in を使います。after は「ある出来事や期間のあとで」というときに使います。</p>
+        <ul class="words">
+          <li>I'll call you <b>in</b> 30 minutes.（30分後に電話しますね）</li>
+          <li>I'll go shopping <b>after</b> lunch.（お昼のあとに買い物に行きます）</li>
+        </ul>
+      </div>
+    </details>
+
+    <details id="q-e-would" data-y="うっどらいく うぉんと ほしい ていねい こどもっぽい" data-k="would like want ほしい 丁寧 子どもっぽい I'd like">
+      <summary data-t="807">would like と want は、どう違うの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="808">would like は want（ほしい）のていねいな言い方です。would like to want とは言いません。</p>
+        <ul class="words">
+          <li>Which one <b>would you like</b>?（どちらがいいですか？）</li>
+          <li>I'd like to drink coffee.（コーヒーを飲みたいです）</li>
+          <li>She <b>wants</b> to be a teacher.（彼女は先生になりたがっている）</li>
+        </ul>
+        <p class="note" data-t="809">would like は「自分の気持ち」を相手に伝える言い方です。「彼女は先生になりたがっている」のように、ほかの人のことを言うときは want を使います。</p>
+      </div>
+    </details>
+
+    <details id="q-e-best" data-y="さいじょうきゅう ざ まいべすとふれんど しんゆう つかない" data-k="最上級 the my best friend 親友 つかない">
+      <summary data-t="810">最上級には the がつくのに、my best friend には、なぜつかないの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="811">my や your と the は、いっしょに並べて使えないからです。</p>
+        <ul class="words">
+          <li>He is <b>the</b> best player.</li>
+          <li>She is <b>my</b> best friend.（my the best friend とは言いません）</li>
+        </ul>
+      </div>
+    </details>
+
+    <details id="q-e-your" data-y="ゆあ まい だれの しょゆう てをあらう はをみがく しゅくだい" data-k="your my their だれの 所有 所有格 手を洗う 歯を磨く 宿題">
+      <summary data-t="812">wash your hands のように、英語では「だれの」をよくつけるのはなぜ？</summary>
+      <div class="ans">
+        <p class="lead" data-t="813">英語は、日本語より「だれのものか」をはっきりさせる言葉だからです。</p>
+        <ul class="words">
+          <li>wash <b>your</b> hands ／ brush <b>your</b> teeth</li>
+          <li>do <b>your</b> homework ／ charge <b>your</b> phone</li>
+        </ul>
+        <p class="note" data-t="814">体の部分、持ち物、宿題などその人の用事には、your・my・their などをつけることが多いです。全部を覚えなくて大丈夫。出会うたびに覚えていきましょう。</p>
+      </div>
+    </details>
+
+    <details id="q-e-prep" data-y="ぜんちし いん おん あっと おぼえられない こんがらがる ふろむ" data-k="前置詞 in on at 覚えられない こんがらがる from to">
+      <summary data-t="815">in・on・at などの前置詞が、なかなか覚えられない</summary>
+      <div class="ans">
+        <p class="lead" data-t="816">前置詞は、たくさんの英語学習者が悩むところです。ピンとこなくても大丈夫です。</p>
+        <ol class="steps">
+          <li><span data-t="817">まずは「in＝中に入っている」「on＝くっついている」「at＝点」のように、ざっくりしたイメージをつかみます。</span></li>
+          <li><span data-t="818">よく使う形を、セットで覚えます（in the box、on the table、at the station など）。</span></li>
+          <li><span data-t="819">英語を読むときに「ここでは at を使うのか」と観察していくと、少しずつ感覚が身についていきます。</span></li>
+        </ol>
+        <p class="note" data-t="820">前置詞は、英語の中心ではありません。気になりすぎるときは、うまくスルーすることも大切です。</p>
+      </div>
+    </details>
+
+    <details id="q-e-bedo" data-y="びーどうし いっぱんどうし みわけかた ぎもんぶん どぅー だず いず あー" data-k="be動詞 一般動詞 見分け方 疑問文 Do Does Is Are">
+      <summary data-t="821">be動詞と一般動詞の見分け方は？</summary>
+      <div class="ans">
+        <p class="lead" data-t="822">まず、文の中に動詞（play・like・get など）があるかを探します。あれば、疑問文は Do・Does を使います。見つからなければ、be動詞（am・are・is）が入ります。</p>
+        <ul class="words">
+          <li><b>Do</b> you like coffee?（like がある）</li>
+          <li><b>Does</b> Emma play golf?（play がある）</li>
+          <li><b>Is</b> she a good singer?（動詞がない → be動詞）</li>
+        </ul>
+        <p class="note" data-t="823">英語の文には、必ず動詞が1つ入っています。この判断を何度もくり返すうちに、すぐに分かるようになります。</p>
+      </div>
+    </details>
+
+    <details id="q-e-good" data-y="ぐっど うぇる よい じょうず つかいわけ" data-k="good well 良い 上手 使い分け very good very well">
+      <summary data-t="824">good と well は、どう違うの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="825">good は「人・もの」が良い、well は「動作」が上手、です。</p>
+        <ul class="words">
+          <li>He is a <b>good</b> teacher. ／ Your English is <b>good</b>.</li>
+          <li>I speak English very <b>well</b>.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details id="q-e-meet" data-y="みーと しー あう つかいわけ" data-k="meet see 会う 使い分け">
+      <summary data-t="826">「会う」は meet？see？</summary>
+      <div class="ans">
+        <p class="lead" data-t="827">初めて会うときや、待ち合わせて会うときは meet、もう知っている人と会うときは see がよく使われます。</p>
+        <ul class="words">
+          <li>Nice to <b>meet</b> you.（はじめまして）</li>
+          <li>I was happy to <b>see</b> him again.（また彼に会えてうれしかった）</li>
+        </ul>
+      </div>
+    </details>
+
+    <details id="q-e-fine" data-y="ふぁいん さにー はれ てんき いっつふぁいんとぅでい" data-k="fine sunny 晴れ 天気 It's fine today">
+      <summary data-t="828">「今日は晴れ」は It's fine today. でいいの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="829">まちがいではありませんが、ふだんの会話では It's sunny today. のように、もっと具体的に言うことが多いです。</p>
+        <p class="note" data-t="830">fine には「悪くはない・ふつう」という意味もあるからです。瞬間英作文の答えに fine が出てきたら、sunny でも正解と考えて大丈夫です。</p>
+      </div>
+    </details>
+
+    <details id="q-e-spell" data-y="さんたんげん えす かこけい いーでぃー いんぐ つづり すぺる わいをあいにかえる" data-k="三単現 s 過去形 ed ing つづり スペル yをiに 重ねる">
+      <summary data-t="831">3人称の s や、過去形の ed、ing のつけ方（つづり）で迷う</summary>
+      <div class="ans">
+        <p class="lead" data-t="832">ルールはありますが、覚えるのがしんどいときは、よく使う単語から1つずつ覚えていけば大丈夫です。</p>
+        <ul class="words">
+          <li>study → stud<b>ied</b> ／ swim → swi<b>mming</b></li>
+        </ul>
+        <p class="note" data-t="833">1つずつ覚えていくうちに、「こういうときは y が i になるんだな」と、自然にルールが分かってきます。</p>
+      </div>
+    </details>
+
+    <details id="q-e-told" data-y="とーるどみーざっと いった しゅご へー あい いれかわる" data-k="told me that he said 言った 主語 he I 入れかわる">
+      <summary data-t="834">He told me that he was tired. の he が、I にならないのはなぜ？</summary>
+      <div class="ans">
+        <p class="lead" data-t="835">彼が言ったことを、あとから自分が人に伝えている文だからです。</p>
+        <ul class="words">
+          <li>彼のセリフ："<b>I</b> am tired."</li>
+          <li>それを伝えると：He told me that <b>he</b> was tired.</li>
+        </ul>
+        <p class="note" data-t="836">迷ったら、その人が実際に言ったセリフを思い浮かべてみましょう。</p>
+      </div>
+    </details>
+
+    <details id="q-e-omit" data-y="ざっと しょうりゃく はぶく かんけいだいめいし ふー ういっち ふーむ うしろからせつめい" data-k="that 省略 はぶく 関係代名詞 who which whom 後ろから説明 分詞">
+      <summary data-t="837">that や、関係代名詞の which・whom は、はぶいてもいいの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="838">I think (that) 〜 の that や、「〜が…する（名詞）」の which・whom は、はぶくことができます。会話では、はぶくことがとても多いです。</p>
+        <ul class="words">
+          <li>I think (<b>that</b>) he is kind.</li>
+          <li>Is the book (<b>which</b>) he wants to read expensive?</li>
+          <li>the sleeping baby ／ the baby sleeping in the car</li>
+        </ul>
+        <p class="note" data-t="839">名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置きます。</p>
       </div>
     </details>
   </section>
@@ -1362,6 +1750,29 @@ body.gw-open .search{position:static}
         <a class="btn" href="https://app.the-online-class.com/lessons/ogMxUzMzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ラジオ「量が大事なのはわかった。でも時間も気力もない…」</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/oQO2ETMzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ラジオ「忙しさと孤独に押しつぶされそうな日は…」</a>
         <p class="cheer" data-t="301">このページを開いたことも、ちゃんと一歩です。</p>
+      </div>
+    </details>
+    <details id="q-drive" data-y="うんてんちゅう くるま かじ ききながし ながら いどうちゅう きけるもの おんせい えぬえいちけー きそえいご" data-k="運転中 車 家事 聞き流し ながら 移動中 聞けるもの 音声 NHK 基礎英語 マイオトモ">
+      <summary data-t="758">車の運転中や家事の間に、聞けるものはある？</summary>
+      <div class="ans">
+        <p class="lead" data-t="759">あります。耳と頭が空いている時間は、音声の学習にぴったりです。</p>
+        <ol class="steps">
+          <li><span data-t="760">文法ドリルの音声アプリ「マイオトモ」や、瞬間英作文アプリの自動再生（設定で「自動再生」をON）がおすすめです。</span></li>
+          <li><span data-t="761">90プログラムの教材ではありませんが、NHKの語学アプリ「中学生の基礎英語」（1回15分ほど）も聞きやすいです。</span></li>
+        </ol>
+        <p class="note" data-t="762">考えごとをしながらの作業中は、音声が頭に入りにくくなります。家事や移動など、頭が空いているときに聞くのが効果的です。運転中は、安全第一でお願いします。</p>
+      </div>
+    </details>
+    <details id="q-bored" data-y="あきた あきる きぶんがのらない おなじことのくりかえし きぶんてんかん やるき もちべーしょん" data-k="飽きた 飽きる 気分が乗らない 同じことの繰り返し 気分転換 やる気 モチベーション">
+      <summary data-t="763">毎日同じくり返しで、飽きてしまった・気分が乗らない</summary>
+      <div class="ans">
+        <p class="lead" data-t="764">そんな日は、軽めにできることで気分を変えてみましょう。英語にふれる習慣を切らさないことが、いちばん大切です。</p>
+        <ol class="steps">
+          <li><span data-t="765">すでにやった瞬間英作文や、文法ドリルの音声を「聞くだけ」にして復習する。</span></li>
+          <li><span data-t="766">次のステップの「読む」学習を、少しだけのぞいてみる。</span></li>
+          <li><span data-t="767">タイマーを使って、スピードを意識してやってみる。</span></li>
+          <li><span data-t="768">英語の旅行vlogや、海外のYouTuberの動画を見て楽しむ。</span></li>
+        </ol>
       </div>
     </details>
     <details id="q-sick" data-y="たいちょう たいちょうふりょう ぐあい びょうき かぜ ねつ つかれ できない やすみ やすむ おやすみ あやまる ごめんなさい もうしわけない ざいあくかん きにする つらい しんどい" data-k="体調 体調不良 具合 病気 風邪 熱 疲れ できない 休み 休む お休み 謝る ごめんなさい 申し訳ない 罪悪感 気にする つらい しんどい">
@@ -1838,6 +2249,43 @@ document.getElementById('pick').addEventListener('click',function(){
   items.forEach(function(d,i){
     d.addEventListener('toggle',function(){ if(d.open) save(i); });
     d.addEventListener('click',function(e){ if(e.target.closest('a[target="_top"]')) save(i); });
+  });
+  // テーマから探す：ボタンを押すと、そのテーマの項目を一覧（検索結果と同じ箱）に並べる。1つの項目が複数のテーマに入ってよい
+  var THEMES=[
+    ['🔰','はじめたばかり',['q-t18','q-tools','q-t8','q-t12','q-t13','q-typelist','q-t29','q-master','q-drill','q-studyplus','q-all','q-words','q-t28']],
+    ['📅','90日を過ぎたら',['q-t47','q-t48','q-audioagain','q-t34','q-reading','q-t36','q-readhow','q-tadoku','q-listening','q-ultlisten','q-tango','q-exam','q-othertext']],
+    ['💬','Discordの使い方',['q-t7','q-t401','q-t8','q-t9','q-t10','q-whoreact','q-mymention','q-wrongroom','q-t17','q-t50','q-nippo','q-others','q-weekly','q-question','q-t42']],
+    ['🎧','90audio（毎朝の音声）',['q-90audio','q-audioagain','q-audiotime','q-t49','q-goal','q-t48']],
+    ['💻','オンクラス・LINE',['q-tools','q-t12','q-t13','q-t14','q-t15','q-t16','q-archive','q-bangai','q-t54']],
+    ['📘','文法ドリル・マスター講座',['q-master','q-drill','q-t30','q-t31','q-drillaudio','q-howdeep','q-level','q-t32','q-bangai','q-t33','q-t27']],
+    ['🗣️','瞬間英作文',['q-shunkan','q-shunkan-ver','q-t24','q-t23','q-otherans','q-t25','q-shunkan-many','q-t26','q-whose','q-t34']],
+    ['📖','読む・聞く・発音',['q-reading','q-t36','q-readhow','q-tadoku','q-wpm','q-ultlisten','q-listening','q-tacho','q-t38','q-phonetic','q-eigomimi','q-japanese','q-t39']],
+    ['🔤','英語の疑問（文法）',['q-otherans','q-e-article','q-e-cani','q-e-polite','q-e-many','q-e-see','q-e-gohome','q-e-have','q-e-when','q-e-than','q-e-toing','q-e-in','q-e-would','q-e-best','q-e-your','q-e-prep','q-e-bedo','q-e-good','q-e-meet','q-e-fine','q-e-spell','q-e-told','q-e-omit']],
+    ['🌱','気持ち・続け方',['q-t44','q-bored','q-sick','q-dayskip','q-compare','q-forget','q-comeback','q-drive']],
+    ['🎤','セミナー・ラジオ',['q-t1','q-t2','q-t3','q-t4','q-archive','q-radio','q-radiohow','q-offkai','q-t52']],
+    ['🌈','ちなコーチのこと',['q-coachwho','q-tasse','q-withyou','q-t54','q-t28','q-reasons','q-t47']]
+  ];
+  var tbox=document.getElementById('theme-btns');
+  if(tbox) THEMES.forEach(function(t){
+    var list=t[2].map(function(id){return document.getElementById(id);}).filter(Boolean);
+    if(!list.length) return;
+    var b=document.createElement('button'); b.type='button';
+    b.innerHTML='<span class="th-ic" aria-hidden="true">'+t[0]+'</span><span>'+t[1]+'<small>'+list.length+'件</small></span>';
+    b.addEventListener('click',function(){
+      if(q.value){ q.value=''; run(); }
+      items.forEach(function(d){d.classList.remove('matched');});
+      hitsHead.textContent='「'+t[1]+'」の項目です（'+list.length+'件）。押すと開きます。';
+      hitsList.innerHTML='';
+      list.forEach(function(d){
+        var x=document.createElement('button'); x.type='button';
+        x.textContent=d.querySelector('summary').textContent;
+        x.addEventListener('click',function(){ show(d); });
+        hitsList.appendChild(x);
+      });
+      empty.hidden=true; hitsBox.hidden=false;
+      hitsBox.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+    tbox.appendChild(b);
   });
   // 質問ごとのリンク（…/#q-xxx）で開いたら、その質問を開いて見せる
   function openHash(){
@@ -2478,7 +2926,132 @@ n:{1:'セミナーってなに？だれでも参加できるんかね？',
 710:'進め方は、オンクラスの「1.文法を学ぶ」→「瞬間英作文 進め方と資料」にある動画で見れるでね。',
 712:'<b>チャットの見方<\/b>：ラジオの画面の<b>いちばん右上<\/b>にある、吹き出しのマーク（💬）を押すと、チャット（文字）の画面に切りかわるでね。下に並んだボタンの中にはないで、気をつけてちょうね。ラジオを聞きながら、感想を書きこめるがね。',
 713:'<b>聞いたあとは<\/b>：「<a class="in" href="https://discord.com/channels/1214839485364305960/1559722865945870446" target="_top">きまぐれラジオ_アウトプット<\/a>」の部屋に、感想や気づきを書いてみてちょう。部屋は、「90audio（2周目〜）アウトプット」のすぐ下にあるでね。',
-714:'<b>アウトプットの書き方の例<\/b>　はじめに日付と回のタイトル（例：10/14「無理にポジティブにならなくていい」）を書いて、心に残ったことや、自分に置きかえて思ったことを書くでね。あとからアーカイブで聞いた回の感想でも大丈夫だがね。'},
+714:'<b>アウトプットの書き方の例<\/b>　はじめに日付と回のタイトル（例：10/14「無理にポジティブにならなくていい」）を書いて、心に残ったことや、自分に置きかえて思ったことを書くでね。あとからアーカイブで聞いた回の感想でも大丈夫だがね。',
+715:'答えとちがう英文を作ったけど、まちがいなん？',
+716:'文法が正しくて、意味が通じれば、正解だでね。答えと一字一句おんなじじゃなくても大丈夫だがね。',
+717:'テキストの答えは、ようけある正解のうちの1つだでね。',
+718:'「自分は思いつかんかったけど、こんな言い方もあるんだ」って、答えの英文も新しい表現として覚えといてちょう。将来、話す相手が使ってくるかもしれんでね。',
+719:'合っとるか分からんもんは、いったん印をつけて先へ進んで、あとでまとめてAIや質問部屋で確かめるのもおすすめだがね。',
+720:'文法ドリルの音声（CD・アプリ）は、いつから使うの？',
+721:'1周目は使わんでも大丈夫だでね。2周目か3周目から、プラスαで取り入れてちょう。',
+722:'はじめは「マスター講座を見る → ドリルの左のページ（説明）を読む → 右のページ（EXERCISE）を解く」の3つで十分だがね。',
+723:'中身がちょっと分かってきたころに音声を足すと、リズムや発音がつかみやすくて、覚えるのもぐっと進むでね。音声は、ドリルの3ページ目で案内されとる「マイオトモ」っていうアプリで聞けるがね。',
+724:'気になったことは、どこまで調べればええ？',
+725:'答えや解説が分からんところは、その場で調べてちょう。それ以外は「こういう言い方もあるんだね」くらいで先へ進んで大丈夫だでね。',
+726:'いちばん大事なのは、文法ドリルの問題（EXERCISE）を解けるようになることだがね。',
+727:'1〜2周目は、気になることがあっても先へ進んで、3〜5周目で、じっくり深めるのがスムーズだでね。',
+728:'ドリルのピンクの字のヒントがついとるところは、「今は気にせんでええところ」だでね。深追いせんでも大丈夫だがね。',
+729:'「気になって眠れん！」くらいのことだけ調べて、あとは一回スルーする。それくらいの気持ちで大丈夫だでね。全体が見えてくると、あとから自然に分かることもようけあるがね。',
+730:'文法が「身についた」って言えるのは、どのくらい？',
+731:'今は、下の③〜④を目指せば十分だでね。',
+732:'<b>聞いたことがある<\/b>：用語やルールを、見たことがある・聞いたことがある。',
+733:'<b>説明を読めば分かる<\/b>：解説や例文を見れば「そういうことね」と分かるけど、自分ひとりでは使えん。',
+734:'<b>問題なら解ける<\/b>：ドリルの問題は解けるけど、会話や瞬間英作文ではパッと出てこん。',
+735:'<b>自然に使える<\/b>：説明を思い出さんでも、会話や瞬間英作文で使える。',
+736:'<b>人に教えられる<\/b>：なんでそうなるのかを説明できる。ここは最後のゴールで、時間をかけて自然にたどりつくところだでね。',
+737:'③から④に近づくときに、瞬間英作文が大きな力になるでね。瞬間英作文でつまずいたら、文法ドリルに戻ればOK。行ったり来たりしながら身についていくがね。',
+738:'瞬間英作文が口から出てこん・何回くり返せばええ？',
+739:'「見れば分かるのに、口から出てこん」のは自然なことだでね。理解することと、話すことは、別の力だでね。',
+740:'目安は、最低5周だがね。1〜2周で出てこんのは、ふつうだでね。',
+741:'必ず声に出してちょう。頭の中だけでやるより、ずっと身につくでね。',
+742:'1つの項目（10問）は、1回10〜15分くらいで区切るでね。1回で100％を目指さんと、何日かに分けてくり返すがね。',
+743:'ちょっとずつ区切って何周かくり返して、8割くらい言えるようになったら、次へ進んで大丈夫だでね。',
+744:'瞬間英作文は「口と頭の筋トレ」だでね。回数を重ねるほど、必ず口が慣れてくるがね。',
+745:'瞬間英作文の whose・of which が、どうしても分からん',
+746:'ようけの人がつまずくところだでね。文法ドリルには、このための回がないがね。',
+747:'2026年2月22日のセミナー（関係代名詞・関係副詞）で、ちなコーチがくわしく解説しとるでね。オンクラスの「英語セミナー アーカイブ一覧」から見れるがね。',
+748:'Part3の後半は、まずは「英語を見て意味が分かればOK」だでね。ゆっくり、階段をのぼるように進めてこまい。',
+749:'マスター講座の「番外編」（長いセミナー動画）は、全部見てから次へ進むの？',
+750:'見んでも大丈夫だでね。そのまま2周目に入って問題ないがね。',
+751:'番外編（前置詞セミナー・助動詞セミナーなど）は、どれも60分をこえる長い動画だでね。週末とか時間がとれるときに、気になるテーマから見れば十分だがね。',
+752:'90audioの届く時間（朝7時）を変えたいがね',
+753:'届く時間はみんないっしょの設定だで、一人ずつ変えることはできんのだわ。',
+754:'朝早く出かける人は、前の日に届いた音声を次の朝に聞くように、1日ずらして進めるのもおすすめだでね。通知は切っといて大丈夫だがね。',
+755:'前から使っとる本や、ほかの教材を使ってもええ？',
+756:'「文法 → 読む → 聞く → 話す」の順番がくずれんかったら、使って大丈夫だでね。',
+757:'「この本も読みたい」って気持ちは大事にしてちょう。ただ、今のステップの学習（文法ドリルや瞬間英作文など）が中心になるように、時間を調整しながら進めてちょうね。',
+758:'車の運転中や家事の間に、聞けるもんはある？',
+759:'あるでね。耳と頭が空いとる時間は、音声の学習にぴったりだがね。',
+760:'文法ドリルの音声アプリ「マイオトモ」や、瞬間英作文アプリの自動再生（設定で「自動再生」をON）がおすすめだでね。',
+761:'90プログラムの教材じゃないけど、NHKの語学アプリ「中学生の基礎英語」（1回15分ほど）も聞きやすいでね。',
+762:'考えごとをしながらの作業中は、音声が頭に入りにくなるでね。家事や移動など、頭が空いとるときに聞くのが効果的だがね。運転中は、安全第一でお願いするでね。',
+763:'毎日おんなじくり返しで、飽きてまった・気分が乗らん',
+764:'そんな日は、軽めにできることで気分を変えてみてちょう。英語にふれる習慣を切らさんことが、いちばん大事だでね。',
+765:'もうやった瞬間英作文や、文法ドリルの音声を「聞くだけ」にして復習する。',
+766:'次のステップの「読む」学習を、ちょっとだけのぞいてみる。',
+767:'タイマーを使って、スピードを意識してやってみる。',
+768:'英語の旅行vlogや、海外のYouTuberの動画を見て楽しむ。',
+769:'<b>答えてもらいやすい質問のしかた<\/b>',
+770:'教材の名前と、ページやLessonの番号を書く。',
+771:'問題文・テキストの答え・自分の答えを、いっしょに書く。',
+772:'分かっとるところと、分からんところを書く。自分はどうしようと考えとるかも書くと、もっと的確に答えてもらえるでね。',
+773:'<b>覚えるときは「書く」より「声に出す」<\/b>　英語を覚えるために、ノートにようけ書くのは、時間がかかるわりに身につきにくいやり方だでね。覚えたいときは、声に出して読む「音読」がおすすめだがね。',
+774:'質問部屋で、ちなコーチがこれまで答えてきた英語の疑問だでね。どれも、完ぺきに覚えんでも大丈夫。「そういうもんなんだ」って知っとくだけで十分だがね。',
+775:'「a」と「the」は、どう使い分けるの？',
+776:'初めて話に出すもん・どれと決まっとらんもんは a、話し手と聞き手の間で「あれね」と分かっとるもんは the だでね。',
+777:'日本人にはつかみにくい感覚だで、今は「このときは、こう言うんだ」くらいで大丈夫だでね。ドリルで空らんになっとらん a・the は、今は気にせんでOKだがね。',
+778:'「Can I 〜？」と「Can you 〜？」の使い分けは？',
+779:'その動作をするのが「自分」なら Can I、「相手」なら Can you だでね。',
+780:'日本語は「だれが」をはぶくことが多いで、迷いやすいところだでね。動詞の動きをするのはだれかを考えてみてちょう。',
+781:'May I・Could you・I\'d like…丁寧な言い方は、どれを使えばええ？',
+782:'まずは Can I 〜？と Can you 〜？が使えれば十分だでね。やさしく言えば、失礼にはならんがね。',
+783:'May I はていねいだけど、ふだんの会話では Can I の方がずっとよう使われるでね。注文するときも、I\'d like と Can I は、どっちを使っても大丈夫だがね。',
+784:'some・any／many・much・a lot of の使い分けは？',
+785:'some はふつうの文、any は「？」の文や「〜ない」の文で使うのが基本だでね。many は数えれるもん、much は数えれんもん、a lot of はどっちにも使えるがね。',
+786:'迷ったら、会話では a lot of を使えば大丈夫だでね。数えれるかどうかを、毎回考えんですむがね。',
+787:'see・look・watch（見る）は、どう違うの？',
+788:'see は自然に目に入る、look は意識して目を向ける、watch は動きをじっと見続ける、だでね。',
+789:'show は「見せる」だで、自分が見るときには使わんでね。ルールで覚えるより、正しい英文を何回も口に出すうちに、感覚でつかめてくるがね。',
+790:'go home には、なんで to がつかんの？',
+791:'home は「家へ」って意味もある言葉だで、to がいらんのだわ。work や bed には to がつくでね。',
+792:'visit も「訪れる」って意味の中に「〜へ」が入っとるで、to はつけんでね。何回もまちがえやすいところだで、「visit＋場所」の形で覚えてまうのが早いがね。',
+793:'have は進行形にせん、って習ったのに I\'m having lunch って言うのはなんで？',
+794:'have には「持っとる」と「食べる・する」の2つの意味があるでだわ。「持っとる」のときは進行形にせんけど、「食べる・体験する」のときは進行形にできるでね。',
+795:'食事は have breakfast・have dinner みたいに have を使うことが多いでね。eat でも、まちがいじゃないがね。',
+796:'when や if は、文の前に置く？後ろに置く？',
+797:'どっちでも正解だでね。会話では、先に「どうだったか」を言って、あとから when を足す形が多めだがね。',
+798:'「もし〜なら」の if の中では、未来のことでも will を使わんと、今の形（is など）にするでね。',
+799:'than me と than I do、どっちが正しいの？',
+800:'どっちも正解だでね。ふだんの会話では than me がよう使われて、than I do はちょっとていねいな言い方だがね。',
+801:'文の最後の do・does・were は、前に出てきた動詞をくり返す代わりに使っとるでね。',
+802:'to play と playing、どっちを使えばええ？',
+803:'start や like みたいに、どっちでもほぼおんなじ意味になる動詞が多いで、最初は「どっちでもOK」で大丈夫だでね。',
+804:'enjoy みたいに ing だけの動詞や、want・decide みたいに to だけの動詞もあるでね。こういう動詞だけ、出会うたびに覚えていってちょう。',
+805:'「30分後に」は in？after？',
+806:'「今から30分後」なら in を使うでね。after は「ある出来事や期間のあとで」っていうときに使うがね。',
+807:'would like と want は、どう違うの？',
+808:'would like は want（ほしい）のていねいな言い方だでね。would like to want とは言わんがね。',
+809:'would like は「自分の気持ち」を相手に伝える言い方だでね。「彼女は先生になりたがっとる」みたいに、ほかの人のことを言うときは want を使うがね。',
+810:'最上級には the がつくのに、my best friend には、なんでつかんの？',
+811:'my や your と the は、いっしょに並べて使えんでだわ。',
+812:'wash your hands みたいに、英語では「だれの」をようつけるのはなんで？',
+813:'英語は、日本語より「だれのもんか」をはっきりさせる言葉だでだわ。',
+814:'体の部分、持ち物、宿題とかその人の用事には、your・my・their などをつけることが多いでね。全部を覚えんでも大丈夫。出会うたびに覚えていってちょう。',
+815:'in・on・at などの前置詞が、なかなか覚えれん',
+816:'前置詞は、ようけの英語学習者が悩むところだでね。ピンとこんでも大丈夫だがね。',
+817:'まずは「in＝中に入っとる」「on＝くっついとる」「at＝点」みたいに、ざっくりしたイメージをつかむでね。',
+818:'よう使う形を、セットで覚えるでね（in the box、on the table、at the station など）。',
+819:'英語を読むときに「ここでは at を使うのか」って観察していくと、ちょっとずつ感覚が身についていくがね。',
+820:'前置詞は、英語の中心じゃないでね。気になりすぎるときは、うまくスルーすることも大事だがね。',
+821:'be動詞と一般動詞の見分け方は？',
+822:'まず、文の中に動詞（play・like・get など）があるかを探すでね。あったら、疑問文は Do・Does を使うがね。見つからんかったら、be動詞（am・are・is）が入るでね。',
+823:'英語の文には、必ず動詞が1つ入っとるでね。この判断を何回もくり返すうちに、すぐ分かるようになるがね。',
+824:'good と well は、どう違うの？',
+825:'good は「人・もん」がええ、well は「動作」が上手、だでね。',
+826:'「会う」は meet？see？',
+827:'初めて会うときや、待ち合わせて会うときは meet、もう知っとる人と会うときは see がよう使われるでね。',
+828:'「今日は晴れ」は It\'s fine today. でええの？',
+829:'まちがいじゃないけど、ふだんの会話では It\'s sunny today. みたいに、もっと具体的に言うことが多いでね。',
+830:'fine には「悪くはない・ふつう」って意味もあるでだわ。瞬間英作文の答えに fine が出てきたら、sunny でも正解と考えて大丈夫だでね。',
+831:'3人称の s や、過去形の ed、ing のつけ方（つづり）で迷う',
+832:'ルールはあるけど、覚えるのがえらいときは、よう使う単語から1つずつ覚えていけば大丈夫だでね。',
+833:'1つずつ覚えていくうちに、「こういうときは y が i になるんだな」って、自然にルールが分かってくるがね。',
+834:'He told me that he was tired. の he が、I にならんのはなんで？',
+835:'彼が言ったことを、あとから自分が人に伝えとる文だでだわ。',
+836:'迷ったら、その人が実際に言ったセリフを思い浮かべてみてちょう。',
+837:'that や、関係代名詞の which・whom は、はぶいてもええの？',
+838:'I think (that) 〜 の that や、「〜が…する（名詞）」の which・whom は、はぶくことができるでね。会話では、はぶくことがえらい多いがね。',
+839:'名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置くでね。'},
 o:{1:'セミナーってなんなん？だれでも参加できるん？',
 2:'遅れて入っても、途中で抜けてもええのん？',
 3:'顔を出さなあかんの？',
@@ -3067,7 +3640,132 @@ o:{1:'セミナーってなんなん？だれでも参加できるん？',
 710:'進め方は、オンクラスの「1.文法を学ぶ」→「瞬間英作文 進め方と資料」にある動画で見られるで。',
 712:'<b>チャットの見方<\/b>：ラジオの画面の<b>いちばん右上<\/b>にある、吹き出しのマーク（💬）押したら、チャット（文字）の画面に切りかわるで。下に並んだボタンの中にはないから、気ぃつけてな。ラジオ聞きながら、感想書きこめるで。',
 713:'<b>聞いたあとは<\/b>：「<a class="in" href="https://discord.com/channels/1214839485364305960/1559722865945870446" target="_top">きまぐれラジオ_アウトプット<\/a>」の部屋に、感想や気づき書いてみてな。部屋は、「90audio（2周目〜）アウトプット」のすぐ下にあるで。',
-714:'<b>アウトプットの書き方の例<\/b>　はじめに日付と回のタイトル（例：10/14「無理にポジティブにならなくていい」）書いて、心に残ったことや、自分に置きかえて思たこと書くねん。あとからアーカイブで聞いた回の感想でも大丈夫やで。'},
+714:'<b>アウトプットの書き方の例<\/b>　はじめに日付と回のタイトル（例：10/14「無理にポジティブにならなくていい」）書いて、心に残ったことや、自分に置きかえて思たこと書くねん。あとからアーカイブで聞いた回の感想でも大丈夫やで。',
+715:'答えとちゃう英文作ったけど、まちがいなん？',
+716:'文法が正しくて、意味が通じたら、正解やで。答えと一字一句おんなじやなくても大丈夫やで。',
+717:'テキストの答えは、ぎょうさんある正解のうちの1つやねん。',
+718:'「自分は思いつかへんかったけど、こんな言い方もあるんや」って、答えの英文も新しい表現として覚えといてな。将来、話す相手が使てくるかもしれへんで。',
+719:'合うてるか分からへんもんは、いったん印つけて先へ進んで、あとでまとめてAIや質問部屋で確かめるんもおすすめやで。',
+720:'文法ドリルの音声（CD・アプリ）は、いつから使うん？',
+721:'1周目は使わんでも大丈夫やで。2周目か3周目から、プラスαで取り入れてな。',
+722:'はじめは「マスター講座を見る → ドリルの左のページ（説明）を読む → 右のページ（EXERCISE）を解く」の3つで十分やで。',
+723:'中身がちょっと分かってきたころに音声足したら、リズムや発音がつかみやすうて、覚えるんもぐっと進むで。音声は、ドリルの3ページ目で案内されてる「マイオトモ」っていうアプリで聞けるで。',
+724:'気になったことは、どこまで調べたらええの？',
+725:'答えや解説が分からへんところは、その場で調べてな。それ以外は「こういう言い方もあるんやね」くらいで先へ進んで大丈夫やで。',
+726:'いちばん大事なんは、文法ドリルの問題（EXERCISE）を解けるようになることやねん。',
+727:'1〜2周目は、気になることがあっても先へ進んで、3〜5周目で、じっくり深めるんがスムーズやで。',
+728:'ドリルのピンクの字のヒントがついてるところは、「今は気にせんでええところ」やねん。深追いせんでも大丈夫やで。',
+729:'「気になって眠られへん！」くらいのことだけ調べて、あとはいっぺんスルーする。それくらいの気持ちで大丈夫やで。全体が見えてきたら、あとから自然に分かることもぎょうさんあるで。',
+730:'文法が「身についた」って言えるんは、どのくらい？',
+731:'今は、下の③〜④を目指したら十分やで。',
+732:'<b>聞いたことがある<\/b>：用語やルールを、見たことある・聞いたことある。',
+733:'<b>説明を読めば分かる<\/b>：解説や例文を見たら「そういうことね」と分かるけど、自分ひとりでは使われへん。',
+734:'<b>問題なら解ける<\/b>：ドリルの問題は解けるけど、会話や瞬間英作文ではパッと出てけえへん。',
+735:'<b>自然に使える<\/b>：説明を思い出さんでも、会話や瞬間英作文で使える。',
+736:'<b>人に教えられる<\/b>：なんでそうなるんかを説明できる。ここは最後のゴールで、時間かけて自然にたどりつくところやで。',
+737:'③から④に近づくときに、瞬間英作文が大きな力になるで。瞬間英作文でつまずいたら、文法ドリルに戻ったらOK。行ったり来たりしながら身についていくねん。',
+738:'瞬間英作文が口から出てけえへん・何回くり返したらええの？',
+739:'「見たら分かるのに、口から出えへん」のは自然なことやで。理解することと、話すことは、別の力やからや。',
+740:'目安は、最低5周やで。1〜2周で出てけえへんのは、ふつうやねん。',
+741:'必ず声に出してな。頭の中だけでやるより、ずっと身につくで。',
+742:'1つの項目（10問）は、1回10〜15分くらいで区切るで。1回で100％を目指さんと、何日かに分けてくり返すねん。',
+743:'ちょっとずつ区切って何周かくり返して、8割くらい言えるようになったら、次へ進んで大丈夫やで。',
+744:'瞬間英作文は「口と頭の筋トレ」やで。回数重ねるほど、必ず口が慣れてくるで。',
+745:'瞬間英作文の whose・of which が、どないしても分からへん',
+746:'ぎょうさんの人がつまずくところやで。文法ドリルには、このための回があらへんねん。',
+747:'2026年2月22日のセミナー（関係代名詞・関係副詞）で、ちなコーチがくわしく解説してるで。オンクラスの「英語セミナー アーカイブ一覧」から見られるで。',
+748:'Part3の後半は、まずは「英語を見て意味が分かったらOK」やで。ゆっくり、階段のぼるように進めていこな。',
+749:'マスター講座の「番外編」（長いセミナー動画）は、全部見てから次へ進むん？',
+750:'見んでも大丈夫やで。そのまま2周目に入って問題あらへんで。',
+751:'番外編（前置詞セミナー・助動詞セミナーとか）は、どれも60分こえる長い動画やねん。週末とか時間とれるときに、気になるテーマから見たら十分やで。',
+752:'90audioの届く時間（朝7時）を変えたいねん',
+753:'届く時間はみんな一緒の設定やから、一人ずつ変えることはでけへんねん。',
+754:'朝早く出かける人は、前の日に届いた音声を次の朝に聞くみたいに、1日ずらして進めるんもおすすめやで。通知は切っといて大丈夫やで。',
+755:'前から使てる本や、ほかの教材を使てもええの？',
+756:'「文法 → 読む → 聞く → 話す」の順番がくずれへんかったら、使て大丈夫やで。',
+757:'「この本も読みたい」って気持ちは大事にしてな。ただ、今のステップの学習（文法ドリルや瞬間英作文とか）が中心になるように、時間を調整しながら進めてな。',
+758:'車の運転中や家事の間に、聞けるもんある？',
+759:'あるで。耳と頭が空いてる時間は、音声の学習にぴったりやで。',
+760:'文法ドリルの音声アプリ「マイオトモ」や、瞬間英作文アプリの自動再生（設定で「自動再生」をON）がおすすめやで。',
+761:'90プログラムの教材ちゃうけど、NHKの語学アプリ「中学生の基礎英語」（1回15分ほど）も聞きやすいで。',
+762:'考えごとしながらの作業中は、音声が頭に入りにくなるで。家事や移動とか、頭が空いてるときに聞くんが効果的やで。運転中は、安全第一でお願いな。',
+763:'毎日おんなじくり返しで、飽きてもうた・気分が乗らへん',
+764:'そんな日は、軽めにできることで気分変えてみよか。英語にふれる習慣を切らさへんことが、いちばん大事やで。',
+765:'もうやった瞬間英作文や、文法ドリルの音声を「聞くだけ」にして復習する。',
+766:'次のステップの「読む」学習を、ちょっとだけのぞいてみる。',
+767:'タイマー使て、スピードを意識してやってみる。',
+768:'英語の旅行vlogや、海外のYouTuberの動画見て楽しむ。',
+769:'<b>答えてもらいやすい質問のしかた<\/b>',
+770:'教材の名前と、ページやLessonの番号を書く。',
+771:'問題文・テキストの答え・自分の答えを、いっしょに書く。',
+772:'分かってるところと、分からへんところを書く。自分はどうしようと考えてるかも書いたら、もっと的確に答えてもらえるで。',
+773:'<b>覚えるときは「書く」より「声に出す」<\/b>　英語覚えるために、ノートにぎょうさん書くんは、時間かかるわりに身につきにくいやり方やねん。覚えたいときは、声に出して読む「音読」がおすすめやで。',
+774:'質問部屋で、ちなコーチがこれまで答えてきた英語の疑問やで。どれも、完ぺきに覚えんでも大丈夫。「そういうもんなんや」って知っとくだけで十分やで。',
+775:'「a」と「the」は、どう使い分けるん？',
+776:'初めて話に出すもん・どれと決まってへんもんは a、話し手と聞き手の間で「あれね」と分かってるもんは the やで。',
+777:'日本人にはつかみにくい感覚やから、今は「このときは、こう言うんや」くらいで大丈夫やで。ドリルで空らんになってへん a・the は、今は気にせんでOKやで。',
+778:'「Can I 〜？」と「Can you 〜？」の使い分けは？',
+779:'その動作するんが「自分」なら Can I、「相手」なら Can you やで。',
+780:'日本語は「だれが」をはぶくことが多いから、迷いやすいところやねん。動詞の動きをするんはだれかを考えてみてな。',
+781:'May I・Could you・I\'d like…丁寧な言い方は、どれ使たらええの？',
+782:'まずは Can I 〜？と Can you 〜？が使えたら十分やで。やさしゅう言うたら、失礼にはならへんで。',
+783:'May I はていねいやけど、ふだんの会話では Can I の方がずっとよう使われるで。注文するときも、I\'d like と Can I は、どっち使ても大丈夫やで。',
+784:'some・any／many・much・a lot of の使い分けは？',
+785:'some はふつうの文、any は「？」の文や「〜ない」の文で使うんが基本やで。many は数えられるもん、much は数えられへんもん、a lot of はどっちにも使えるで。',
+786:'迷たら、会話では a lot of 使たら大丈夫やで。数えられるかどうかを、毎回考えんですむで。',
+787:'see・look・watch（見る）は、どう違うん？',
+788:'see は自然に目に入る、look は意識して目を向ける、watch は動きをじっと見続ける、やで。',
+789:'show は「見せる」やから、自分が見るときには使わへんで。ルールで覚えるより、正しい英文を何回も口に出すうちに、感覚でつかめてくるで。',
+790:'go home には、なんで to がつかへんの？',
+791:'home は「家へ」って意味もある言葉やから、to がいらへんねん。work や bed には to がつくで。',
+792:'visit も「訪れる」って意味の中に「〜へ」が入ってるから、to はつけへんで。何回もまちがえやすいところやから、「visit＋場所」の形で覚えてまうんが早いで。',
+793:'have は進行形にせえへん、って習たのに I\'m having lunch って言うんはなんで？',
+794:'have には「持ってる」と「食べる・する」の2つの意味があるからやねん。「持ってる」のときは進行形にせえへんけど、「食べる・体験する」のときは進行形にできるで。',
+795:'食事は have breakfast・have dinner みたいに have を使うことが多いで。eat でも、まちがいちゃうで。',
+796:'when や if は、文の前に置く？後ろに置く？',
+797:'どっちでも正解やで。会話では、先に「どうやったか」を言うて、あとから when を足す形が多めやね。',
+798:'「もし〜なら」の if の中では、未来のことでも will を使わんと、今の形（is とか）にするで。',
+799:'than me と than I do、どっちが正しいん？',
+800:'どっちも正解やで。ふだんの会話では than me がよう使われて、than I do はちょっとていねいな言い方やねん。',
+801:'文の最後の do・does・were は、前に出てきた動詞をくり返す代わりに使てるねん。',
+802:'to play と playing、どっち使たらええの？',
+803:'start や like みたいに、どっちでもほぼおんなじ意味になる動詞が多いから、最初は「どっちでもOK」で大丈夫やで。',
+804:'enjoy みたいに ing だけの動詞や、want・decide みたいに to だけの動詞もあるで。こういう動詞だけ、出会うたびに覚えていこな。',
+805:'「30分後に」は in？after？',
+806:'「今から30分後」なら in を使うで。after は「ある出来事や期間のあとで」っていうときに使うねん。',
+807:'would like と want は、どう違うん？',
+808:'would like は want（ほしい）のていねいな言い方やで。would like to want とは言わへんで。',
+809:'would like は「自分の気持ち」を相手に伝える言い方やねん。「彼女は先生になりたがってる」みたいに、ほかの人のこと言うときは want を使うで。',
+810:'最上級には the がつくのに、my best friend には、なんでつかへんの？',
+811:'my や your と the は、いっしょに並べて使われへんからやねん。',
+812:'wash your hands みたいに、英語では「だれの」をようつけるんはなんで？',
+813:'英語は、日本語より「だれのもんか」をはっきりさせる言葉やからやねん。',
+814:'体の部分、持ち物、宿題とかその人の用事には、your・my・their とかをつけることが多いで。全部覚えんでも大丈夫。出会うたびに覚えていこな。',
+815:'in・on・at とかの前置詞が、なかなか覚えられへん',
+816:'前置詞は、ぎょうさんの英語学習者が悩むところやで。ピンとけえへんでも大丈夫やで。',
+817:'まずは「in＝中に入ってる」「on＝くっついてる」「at＝点」みたいに、ざっくりしたイメージをつかむで。',
+818:'よう使う形を、セットで覚えるで（in the box、on the table、at the station とか）。',
+819:'英語読むときに「ここでは at 使うんか」って観察していったら、ちょっとずつ感覚が身についていくで。',
+820:'前置詞は、英語の中心ちゃうねん。気になりすぎるときは、うまいことスルーするんも大事やで。',
+821:'be動詞と一般動詞の見分け方は？',
+822:'まず、文の中に動詞（play・like・get とか）があるかを探すで。あったら、疑問文は Do・Does を使うねん。見つからへんかったら、be動詞（am・are・is）が入るで。',
+823:'英語の文には、必ず動詞が1つ入ってるねん。この判断を何回もくり返すうちに、すぐ分かるようになるで。',
+824:'good と well は、どう違うん？',
+825:'good は「人・もん」がええ、well は「動作」が上手、やで。',
+826:'「会う」は meet？see？',
+827:'初めて会うときや、待ち合わせて会うときは meet、もう知ってる人と会うときは see がよう使われるで。',
+828:'「今日は晴れ」は It\'s fine today. でええの？',
+829:'まちがいちゃうけど、ふだんの会話では It\'s sunny today. みたいに、もっと具体的に言うことが多いで。',
+830:'fine には「悪うはない・ふつう」って意味もあるからやねん。瞬間英作文の答えに fine が出てきたら、sunny でも正解と考えて大丈夫やで。',
+831:'3人称の s や、過去形の ed、ing のつけ方（つづり）で迷う',
+832:'ルールはあるけど、覚えるんがしんどいときは、よう使う単語から1つずつ覚えていったら大丈夫やで。',
+833:'1つずつ覚えていくうちに、「こういうときは y が i になるんやな」って、自然にルールが分かってくるで。',
+834:'He told me that he was tired. の he が、I にならへんのはなんで？',
+835:'彼が言うたことを、あとから自分が人に伝えてる文やからやねん。',
+836:'迷たら、その人がほんまに言うたセリフを思い浮かべてみてな。',
+837:'that や、関係代名詞の which・whom は、はぶいてもええの？',
+838:'I think (that) 〜 の that や、「〜が…する（名詞）」の which・whom は、はぶくことができるで。会話では、はぶくことがめっちゃ多いで。',
+839:'名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置くで。'},
 k:{1:'セミナーってなんね？だれでも参加できると？',
 2:'遅れて入っても、途中で抜けてもよかと？',
 3:'顔ば出さんといかんと？',
@@ -3656,7 +4354,132 @@ k:{1:'セミナーってなんね？だれでも参加できると？',
 710:'進め方は、オンクラスの「1.文法を学ぶ」→「瞬間英作文 進め方と資料」にある動画で見らるっとよ。',
 712:'<b>チャットの見方<\/b>：ラジオの画面の<b>いちばん右上<\/b>にある、吹き出しのマーク（💬）ば押すと、チャット（文字）の画面に切りかわるとよ。下に並んだボタンの中にはなかけん、気をつけてね。ラジオば聞きながら、感想ば書きこめるけん。',
 713:'<b>聞いたあとは<\/b>：「<a class="in" href="https://discord.com/channels/1214839485364305960/1559722865945870446" target="_top">きまぐれラジオ_アウトプット<\/a>」の部屋に、感想や気づきば書いてみてね。部屋は、「90audio（2周目〜）アウトプット」のすぐ下にあるとよ。',
-714:'<b>アウトプットの書き方の例<\/b>　はじめに日付と回のタイトル（例：10/14「無理にポジティブにならなくていい」）ば書いて、心に残ったことや、自分に置きかえて思ったことば書くとよ。あとからアーカイブで聞いた回の感想でも大丈夫たい。'},
+714:'<b>アウトプットの書き方の例<\/b>　はじめに日付と回のタイトル（例：10/14「無理にポジティブにならなくていい」）ば書いて、心に残ったことや、自分に置きかえて思ったことば書くとよ。あとからアーカイブで聞いた回の感想でも大丈夫たい。',
+715:'答えと違う英文ば作ったばってん、まちがいね？',
+716:'文法の正しくて、意味の通じれば、正解たい。答えと一字一句おんなじじゃなくても大丈夫よ。',
+717:'テキストの答えは、たくさんある正解のうちの1つたい。',
+718:'「自分は思いつかんかったばってん、こげな言い方もあるとね」て、答えの英文も新しか表現として覚えとってね。将来、話す相手の使ってくるかもしれんけん。',
+719:'合っとるか分からんとは、いったん印ばつけて先へ進んで、あとでまとめてAIや質問部屋で確かめるとも、おすすめよ。',
+720:'文法ドリルの音声（CD・アプリ）は、いつから使うと？',
+721:'1周目は使わんでも大丈夫よ。2周目か3周目から、プラスαで取り入れてみて。',
+722:'はじめは「マスター講座ば見る → ドリルの左のページ（説明）ば読む → 右のページ（EXERCISE）ば解く」の3つで十分たい。',
+723:'中身のちょっと分かってきたころに音声ば足すと、リズムや発音のつかみやすくて、覚えるとも、ぐっと進むけん。音声は、ドリルの3ページ目で案内されとる「マイオトモ」て言うアプリで聞けるとよ。',
+724:'気になったことは、どこまで調べればよか？',
+725:'答えや解説の分からんところは、その場で調べてね。それ以外は「こげな言い方もあるとね」くらいで先へ進んで大丈夫よ。',
+726:'いちばん大事なとは、文法ドリルの問題（EXERCISE）ば解けるようになることたい。',
+727:'1〜2周目は、気になることのあっても先へ進んで、3〜5周目で、じっくり深めるとがスムーズよ。',
+728:'ドリルのピンクの字のヒントのついとるところは、「今は気にせんでよかところ」たい。深追いせんでも大丈夫よ。',
+729:'「気になって眠れん！」くらいのことだけ調べて、あとはいっぺんスルーする。それくらいの気持ちで大丈夫よ。全体の見えてくると、あとから自然に分かることもたくさんあるけん。',
+730:'文法の「身についた」て言えるとは、どのくらい？',
+731:'今は、下の③〜④ば目指せば十分よ。',
+732:'<b>聞いたことがある<\/b>：用語やルールば、見たことのある・聞いたことのある。',
+733:'<b>説明を読めば分かる<\/b>：解説や例文ば見れば「そういうことね」と分かるばってん、自分ひとりでは使えん。',
+734:'<b>問題なら解ける<\/b>：ドリルの問題は解けるばってん、会話や瞬間英作文ではパッと出てこん。',
+735:'<b>自然に使える<\/b>：説明ば思い出さんでも、会話や瞬間英作文で使える。',
+736:'<b>人に教えられる<\/b>：なんでそうなるとかば説明できる。ここは最後のゴールで、時間ばかけて自然にたどりつくところたい。',
+737:'③から④に近づくときに、瞬間英作文の大きな力になるとよ。瞬間英作文でつまずいたら、文法ドリルに戻ればOK。行ったり来たりしながら身についていくけん。',
+738:'瞬間英作文の口から出てこん・何回くり返せばよか？',
+739:'「見れば分かるとに、口から出てこん」とは自然なことよ。理解することと、話すことは、別の力やけんね。',
+740:'目安は、最低5周たい。1〜2周で出てこんとは、ふつうよ。',
+741:'必ず声に出してね。頭の中だけでやるより、ずっと身につくけん。',
+742:'1つの項目（10問）は、1回10〜15分くらいで区切るとよ。1回で100％ば目指さんで、何日かに分けてくり返すと。',
+743:'ちょっとずつ区切って何周かくり返して、8割くらい言えるようになったら、次へ進んで大丈夫よ。',
+744:'瞬間英作文は「口と頭の筋トレ」たい。回数ば重ねるほど、必ず口の慣れてくるけん。',
+745:'瞬間英作文の whose・of which が、どげんしても分からん',
+746:'たくさんの人のつまずくところよ。文法ドリルには、このための回のなかと。',
+747:'2026年2月22日のセミナー（関係代名詞・関係副詞）で、ちなコーチがくわしく解説しとるよ。オンクラスの「英語セミナー アーカイブ一覧」から見らるっけん。',
+748:'Part3の後半は、まずは「英語ば見て意味の分かればOK」たい。ゆっくり、階段ばのぼるごと進めていこうや。',
+749:'マスター講座の「番外編」（長かセミナー動画）は、全部見てから次へ進むと？',
+750:'見らんでも大丈夫よ。そのまま2周目に入って問題なかよ。',
+751:'番外編（前置詞セミナー・助動詞セミナーなど）は、どれも60分ばこえる長か動画たい。週末とか時間のとるるときに、気になるテーマから見れば十分よ。',
+752:'90audioの届く時間（朝7時）ば変えたか',
+753:'届く時間はみんないっしょの設定やけん、一人ずつ変えることはできんとよ。',
+754:'朝早く出かける人は、前の日に届いた音声ば次の朝に聞くごと、1日ずらして進めるとも、おすすめよ。通知は切っとって大丈夫たい。',
+755:'前から使いよる本や、ほかの教材ば使ってもよか？',
+756:'「文法 → 読む → 聞く → 話す」の順番のくずれんなら、使って大丈夫よ。',
+757:'「この本も読みたか」て気持ちは大事にしてね。ただ、今のステップの学習（文法ドリルや瞬間英作文など）が中心になるごと、時間ば調整しながら進めてね。',
+758:'車の運転中や家事の間に、聞けるもんはある？',
+759:'あるよ。耳と頭の空いとる時間は、音声の学習にぴったりたい。',
+760:'文法ドリルの音声アプリ「マイオトモ」や、瞬間英作文アプリの自動再生（設定で「自動再生」ばON）がおすすめよ。',
+761:'90プログラムの教材じゃなかばってん、NHKの語学アプリ「中学生の基礎英語」（1回15分ほど）も聞きやすかよ。',
+762:'考えごとばしながらの作業中は、音声の頭に入りにくくなるとよ。家事や移動など、頭の空いとるときに聞くとが効果的たい。運転中は、安全第一でお願いね。',
+763:'毎日おんなじくり返しで、飽きてしもうた・気分の乗らん',
+764:'そげな日は、軽めにできることで気分ば変えてみよう。英語にふるる習慣ば切らさんことが、いちばん大事たい。',
+765:'もうやった瞬間英作文や、文法ドリルの音声ば「聞くだけ」にして復習する。',
+766:'次のステップの「読む」学習ば、ちょっとだけのぞいてみる。',
+767:'タイマーば使って、スピードば意識してやってみる。',
+768:'英語の旅行vlogや、海外のYouTuberの動画ば見て楽しむ。',
+769:'<b>答えてもらいやすい質問のしかた<\/b>',
+770:'教材の名前と、ページやLessonの番号ば書く。',
+771:'問題文・テキストの答え・自分の答えば、いっしょに書く。',
+772:'分かっとるところと、分からんところば書く。自分はどげんしようと考えとるかも書くと、もっと的確に答えてもらえるけん。',
+773:'<b>覚えるときは「書く」より「声に出す」<\/b>　英語ば覚えるために、ノートにたくさん書くとは、時間のかかるわりに身につきにくかやり方たい。覚えたかときは、声に出して読む「音読」がおすすめよ。',
+774:'質問部屋で、ちなコーチがこれまで答えてきた英語の疑問たい。どれも、完ぺきに覚えんでも大丈夫。「そげなもんなんやね」て知っとくだけで十分よ。',
+775:'「a」と「the」は、どう使い分けると？',
+776:'初めて話に出すもん・どれと決まっとらんもんは a、話し手と聞き手の間で「あれね」と分かっとるもんは the たい。',
+777:'日本人にはつかみにくか感覚やけん、今は「このときは、こう言うとね」くらいで大丈夫よ。ドリルで空らんになっとらん a・the は、今は気にせんでOKたい。',
+778:'「Can I 〜？」と「Can you 〜？」の使い分けは？',
+779:'その動作ばするとが「自分」なら Can I、「相手」なら Can you たい。',
+780:'日本語は「だれが」ばはぶくことの多かけん、迷いやすかところよ。動詞の動きばするとはだれかば考えてみて。',
+781:'May I・Could you・I\'d like…丁寧な言い方は、どれば使えばよか？',
+782:'まずは Can I 〜？と Can you 〜？が使えれば十分よ。やさしく言えば、失礼にはならんけん。',
+783:'May I はていねいばってん、ふだんの会話では Can I の方がずっとよう使わるっとよ。注文するときも、I\'d like と Can I は、どっちば使っても大丈夫たい。',
+784:'some・any／many・much・a lot of の使い分けは？',
+785:'some はふつうの文、any は「？」の文や「〜ない」の文で使うとが基本たい。many は数えらるるもん、much は数えられんもん、a lot of はどっちにも使えるとよ。',
+786:'迷ったら、会話では a lot of ば使えば大丈夫よ。数えらるるかどうかば、毎回考えんですむけん。',
+787:'see・look・watch（見る）は、どう違うと？',
+788:'see は自然に目に入る、look は意識して目ば向ける、watch は動きばじっと見続ける、たい。',
+789:'show は「見せる」やけん、自分が見るときには使わんとよ。ルールで覚えるより、正しか英文ば何回も口に出すうちに、感覚でつかめてくるけん。',
+790:'go home には、なんで to のつかんと？',
+791:'home は「家へ」て意味もある言葉やけん、to のいらんとよ。work や bed には to のつくと。',
+792:'visit も「訪れる」て意味の中に「〜へ」の入っとるけん、to はつけんとよ。何回もまちがえやすかところやけん、「visit＋場所」の形で覚えてしまうとが早かよ。',
+793:'have は進行形にせん、て習ったとに I\'m having lunch て言うとはなんで？',
+794:'have には「持っとる」と「食べる・する」の2つの意味のあるけんたい。「持っとる」のときは進行形にせんばってん、「食べる・体験する」のときは進行形にできるとよ。',
+795:'食事は have breakfast・have dinner のごと have ば使うことの多かよ。eat でも、まちがいじゃなかけん。',
+796:'when や if は、文の前に置く？後ろに置く？',
+797:'どっちでも正解たい。会話では、先に「どげんやったか」ば言って、あとから when ば足す形の多めよ。',
+798:'「もし〜なら」の if の中では、未来のことでも will ば使わんで、今の形（is など）にすると。',
+799:'than me と than I do、どっちが正しかと？',
+800:'どっちも正解たい。ふだんの会話では than me がよう使われて、than I do はちょっとていねいな言い方よ。',
+801:'文の最後の do・does・were は、前に出てきた動詞ばくり返す代わりに使いよるとよ。',
+802:'to play と playing、どっちば使えばよか？',
+803:'start や like のごと、どっちでもほぼおんなじ意味になる動詞の多かけん、最初は「どっちでもOK」で大丈夫よ。',
+804:'enjoy のごと ing だけの動詞や、want・decide のごと to だけの動詞もあるとよ。こげな動詞だけ、出会うたびに覚えていこうや。',
+805:'「30分後に」は in？after？',
+806:'「今から30分後」なら in ば使うと。after は「ある出来事や期間のあとで」て言うときに使うとよ。',
+807:'would like と want は、どう違うと？',
+808:'would like は want（ほしか）のていねいな言い方たい。would like to want とは言わんとよ。',
+809:'would like は「自分の気持ち」ば相手に伝える言い方たい。「彼女は先生になりたがっとる」のごと、ほかの人のことば言うときは want ば使うとよ。',
+810:'最上級には the のつくとに、my best friend には、なんでつかんと？',
+811:'my や your と the は、いっしょに並べて使えんけんたい。',
+812:'wash your hands のごと、英語では「だれの」ばようつけるとはなんで？',
+813:'英語は、日本語より「だれのもんか」ばはっきりさせる言葉やけんたい。',
+814:'体の部分、持ち物、宿題とかその人の用事には、your・my・their などばつけることの多かよ。全部ば覚えんでも大丈夫。出会うたびに覚えていこうや。',
+815:'in・on・at などの前置詞の、なかなか覚えられん',
+816:'前置詞は、たくさんの英語学習者の悩むところよ。ピンとこんでも大丈夫たい。',
+817:'まずは「in＝中に入っとる」「on＝くっついとる」「at＝点」のごと、ざっくりしたイメージばつかむとよ。',
+818:'よう使う形ば、セットで覚えると（in the box、on the table、at the station など）。',
+819:'英語ば読むときに「ここでは at ば使うとね」て観察していくと、ちょっとずつ感覚の身についていくけん。',
+820:'前置詞は、英語の中心じゃなかとよ。気になりすぎるときは、うまくスルーすることも大事たい。',
+821:'be動詞と一般動詞の見分け方は？',
+822:'まず、文の中に動詞（play・like・get など）のあるかば探すと。あったら、疑問文は Do・Does ば使うとよ。見つからんなら、be動詞（am・are・is）の入るけん。',
+823:'英語の文には、必ず動詞の1つ入っとるとよ。この判断ば何回もくり返すうちに、すぐ分かるようになるけん。',
+824:'good と well は、どう違うと？',
+825:'good は「人・もん」のよか、well は「動作」の上手、たい。',
+826:'「会う」は meet？see？',
+827:'初めて会うときや、待ち合わせて会うときは meet、もう知っとる人と会うときは see がよう使わるっとよ。',
+828:'「今日は晴れ」は It\'s fine today. でよかと？',
+829:'まちがいじゃなかばってん、ふだんの会話では It\'s sunny today. のごと、もっと具体的に言うことの多かよ。',
+830:'fine には「悪くはなか・ふつう」て意味もあるけんたい。瞬間英作文の答えに fine の出てきたら、sunny でも正解と考えて大丈夫よ。',
+831:'3人称の s や、過去形の ed、ing のつけ方（つづり）で迷う',
+832:'ルールはあるばってん、覚えるとがきつかときは、よう使う単語から1つずつ覚えていけば大丈夫よ。',
+833:'1つずつ覚えていくうちに、「こげなときは y が i になるとね」て、自然にルールの分かってくるけん。',
+834:'He told me that he was tired. の he が、I にならんとはなんで？',
+835:'彼の言ったことば、あとから自分が人に伝えよる文やけんたい。',
+836:'迷ったら、その人のほんなこつ言ったセリフば思い浮かべてみて。',
+837:'that や、関係代名詞の which・whom は、はぶいてもよかと？',
+838:'I think (that) 〜 の that や、「〜が…する（名詞）」の which・whom は、はぶくことのできるとよ。会話では、はぶくことのとても多かよ。',
+839:'名詞ば説明する言葉の1つだけのときは名詞の前（the sleeping baby）、長かときは名詞の後ろ（the baby sleeping in the car）に置くとよ。'},
 h:{1:'セミナーってなんなのさ？だれでも参加できるのかい？',
 2:'遅れて入っても、途中で抜けてもいいのかい？',
 3:'顔を出さないとダメなのかい？',
@@ -4245,7 +5068,132 @@ h:{1:'セミナーってなんなのさ？だれでも参加できるのかい�
 710:'進め方は、オンクラスの「1.文法を学ぶ」→「瞬間英作文 進め方と資料」にある動画で見られるよ。',
 712:'<b>チャットの見方<\/b>：ラジオの画面の<b>いちばん右上<\/b>にある、吹き出しのマーク（💬）を押すと、チャット（文字）の画面に切りかわるよ。下に並んだボタンの中にはないから、気をつけてね。ラジオを聞きながら、感想を書きこめるんだわ。',
 713:'<b>聞いたあとは<\/b>：「<a class="in" href="https://discord.com/channels/1214839485364305960/1559722865945870446" target="_top">きまぐれラジオ_アウトプット<\/a>」の部屋に、感想や気づきを書いてみてね。部屋は、「90audio（2周目〜）アウトプット」のすぐ下にあるよ。',
-714:'<b>アウトプットの書き方の例<\/b>　はじめに日付と回のタイトル（例：10/14「無理にポジティブにならなくていい」）を書いて、心に残ったことや、自分に置きかえて思ったことを書くんだよ。あとからアーカイブで聞いた回の感想でもだいじょうぶだよ。'},
+714:'<b>アウトプットの書き方の例<\/b>　はじめに日付と回のタイトル（例：10/14「無理にポジティブにならなくていい」）を書いて、心に残ったことや、自分に置きかえて思ったことを書くんだよ。あとからアーカイブで聞いた回の感想でもだいじょうぶだよ。',
+715:'答えとちがう英文を作ったけど、まちがいなのかい？',
+716:'文法が正しくて、意味が通じれば、正解だよ。答えと一字一句おんなじじゃなくてもだいじょうぶだよ。',
+717:'テキストの答えは、たくさんある正解のうちの1つなんだわ。',
+718:'「自分は思いつかなかったけど、こんな言い方もあるんだ」って、答えの英文も新しい表現として覚えておくといいよ。将来、話す相手が使ってくるかもしれないからね。',
+719:'合ってるかわからないものは、いったん印をつけて先へ進んで、あとでまとめてAIや質問部屋で確かめるのもおすすめだよ。',
+720:'文法ドリルの音声（CD・アプリ）は、いつから使うのさ？',
+721:'1周目は使わなくてもだいじょうぶだよ。2周目か3周目から、プラスαで取り入れようね。',
+722:'はじめは「マスター講座を見る → ドリルの左のページ（説明）を読む → 右のページ（EXERCISE）を解く」の3つで十分だよ。',
+723:'中身が少しわかってきたころに音声を足すと、リズムや発音がつかみやすくて、覚えるのもぐっと進むよ。音声は、ドリルの3ページ目で案内されてる「マイオトモ」っていうアプリで聞けるんだわ。',
+724:'気になったことは、どこまで調べればいいのさ？',
+725:'答えや解説がわからないところは、その場で調べようね。それ以外は「こういう言い方もあるんだね」くらいで先へ進んでだいじょうぶだよ。',
+726:'いちばん大事なのは、文法ドリルの問題（EXERCISE）を解けるようになることなんだわ。',
+727:'1〜2周目は、気になることがあっても先へ進んで、3〜5周目で、じっくり深めるのがスムーズだよ。',
+728:'ドリルのピンクの字のヒントがついてるところは、「今は気にしなくていいところ」なんだわ。深追いしなくてだいじょうぶだよ。',
+729:'「気になって眠れない！」くらいのことだけ調べて、あとは一回スルーする。それくらいの気持ちでだいじょうぶだよ。全体が見えてくると、あとから自然にわかることもたくさんあるからね。',
+730:'文法が「身についた」って言えるのは、どのくらいなのさ？',
+731:'今は、下の③〜④を目指せば十分だよ。',
+732:'<b>聞いたことがある<\/b>：用語やルールを、見たことがある・聞いたことがある。',
+733:'<b>説明を読めば分かる<\/b>：解説や例文を見れば「そういうことね」とわかるけど、自分ひとりでは使えない。',
+734:'<b>問題なら解ける<\/b>：ドリルの問題は解けるけど、会話や瞬間英作文ではパッと出てこない。',
+735:'<b>自然に使える<\/b>：説明を思い出さなくても、会話や瞬間英作文で使える。',
+736:'<b>人に教えられる<\/b>：なんでそうなるのかを説明できる。ここは最後のゴールで、時間をかけて自然にたどりつくところなんだわ。',
+737:'③から④に近づくときに、瞬間英作文が大きな力になるよ。瞬間英作文でつまずいたら、文法ドリルに戻ればOK。行ったり来たりしながら身についていくんだわ。',
+738:'瞬間英作文が口から出てこない・何回くり返せばいいのさ？',
+739:'「見ればわかるのに、口から出てこない」のは自然なことだよ。理解することと、話すことは、別の力だからね。',
+740:'目安は、最低5周だよ。1〜2周で出てこないのは、ふつうなんだわ。',
+741:'必ず声に出してね。頭の中だけでやるより、ずっと身につくよ。',
+742:'1つの項目（10問）は、1回10〜15分くらいで区切るよ。1回で100％を目指さないで、何日かに分けてくり返すんだわ。',
+743:'少しずつ区切って何周かくり返して、8割くらい言えるようになったら、次へ進んでだいじょうぶだよ。',
+744:'瞬間英作文は「口と頭の筋トレ」なんだわ。回数を重ねるほど、必ず口が慣れてくるよ。',
+745:'瞬間英作文の whose・of which が、どうしてもわからない',
+746:'たくさんの人がつまずくところなんだわ。文法ドリルには、このための回がないんだよ。',
+747:'2026年2月22日のセミナー（関係代名詞・関係副詞）で、ちなコーチがくわしく解説してるよ。オンクラスの「英語セミナー アーカイブ一覧」から見られるんだわ。',
+748:'Part3の後半は、まずは「英語を見て意味がわかればOK」だよ。ゆっくり、階段をのぼるように進めていくべさ。',
+749:'マスター講座の「番外編」（長いセミナー動画）は、全部見てから次へ進むのかい？',
+750:'見なくてもだいじょうぶだよ。そのまま2周目に入って問題ないよ。',
+751:'番外編（前置詞セミナー・助動詞セミナーなど）は、どれも60分をこえる長い動画なんだわ。週末とか時間がとれるときに、気になるテーマから見れば十分だよ。',
+752:'90audioの届く時間（朝7時）を変えたいんだわ',
+753:'届く時間はみんないっしょの設定だから、一人ずつ変えることはできないんだよ。',
+754:'朝早く出かける人は、前の日に届いた音声を次の朝に聞くように、1日ずらして進めるのもおすすめだよ。通知は切っておいてだいじょうぶだよ。',
+755:'前から使ってる本や、ほかの教材を使ってもいいのかい？',
+756:'「文法 → 読む → 聞く → 話す」の順番がくずれなければ、使ってだいじょうぶだよ。',
+757:'「この本も読みたい」って気持ちは大事にしてね。ただ、今のステップの学習（文法ドリルや瞬間英作文など）が中心になるように、時間を調整しながら進めようね。',
+758:'車の運転中や家事の間に、聞けるものはあるのかい？',
+759:'あるよ。耳と頭が空いてる時間は、音声の学習にぴったりなんだわ。',
+760:'文法ドリルの音声アプリ「マイオトモ」や、瞬間英作文アプリの自動再生（設定で「自動再生」をON）がおすすめだよ。',
+761:'90プログラムの教材じゃないけど、NHKの語学アプリ「中学生の基礎英語」（1回15分ほど）も聞きやすいよ。',
+762:'考えごとをしながらの作業中は、音声が頭に入りにくくなるんだわ。家事や移動など、頭が空いてるときに聞くのが効果的だよ。運転中は、安全第一でお願いね。',
+763:'毎日おんなじくり返しで、飽きてしまった・気分が乗らない',
+764:'そんな日は、軽めにできることで気分を変えてみようね。英語にふれる習慣を切らさないことが、いちばん大事なんだわ。',
+765:'もうやった瞬間英作文や、文法ドリルの音声を「聞くだけ」にして復習する。',
+766:'次のステップの「読む」学習を、少しだけのぞいてみる。',
+767:'タイマーを使って、スピードを意識してやってみる。',
+768:'英語の旅行vlogや、海外のYouTuberの動画を見て楽しむ。',
+769:'<b>答えてもらいやすい質問のしかた<\/b>',
+770:'教材の名前と、ページやLessonの番号を書く。',
+771:'問題文・テキストの答え・自分の答えを、いっしょに書く。',
+772:'わかってるところと、わからないところを書く。自分はどうしようと考えてるかも書くと、もっと的確に答えてもらえるよ。',
+773:'<b>覚えるときは「書く」より「声に出す」<\/b>　英語を覚えるために、ノートにたくさん書くのは、時間がかかるわりに身につきにくいやり方なんだわ。覚えたいときは、声に出して読む「音読」がおすすめだよ。',
+774:'質問部屋で、ちなコーチがこれまで答えてきた英語の疑問だよ。どれも、完ぺきに覚えなくてだいじょうぶ。「そういうもんなんだ」って知っておくだけで十分だよ。',
+775:'「a」と「the」は、どう使い分けるのさ？',
+776:'初めて話に出すもの・どれと決まってないものは a、話し手と聞き手の間で「あれね」とわかってるものは the だよ。',
+777:'日本人にはつかみにくい感覚だから、今は「このときは、こう言うんだ」くらいでだいじょうぶだよ。ドリルで空らんになってない a・the は、今は気にしなくてOKだよ。',
+778:'「Can I 〜？」と「Can you 〜？」の使い分けは？',
+779:'その動作をするのが「自分」なら Can I、「相手」なら Can you だよ。',
+780:'日本語は「だれが」をはぶくことが多いから、迷いやすいところなんだわ。動詞の動きをするのはだれかを考えてみてね。',
+781:'May I・Could you・I\'d like…丁寧な言い方は、どれを使えばいいのさ？',
+782:'まずは Can I 〜？と Can you 〜？が使えれば十分だよ。やさしく言えば、失礼にはならないよ。',
+783:'May I はていねいだけど、ふだんの会話では Can I の方がずっとよく使われるんだわ。注文するときも、I\'d like と Can I は、どっちを使ってもだいじょうぶだよ。',
+784:'some・any／many・much・a lot of の使い分けは？',
+785:'some はふつうの文、any は「？」の文や「〜ない」の文で使うのが基本だよ。many は数えられるもの、much は数えられないもの、a lot of はどっちにも使えるんだわ。',
+786:'迷ったら、会話では a lot of を使えばだいじょうぶだよ。数えられるかどうかを、毎回考えなくてすむからね。',
+787:'see・look・watch（見る）は、どう違うのさ？',
+788:'see は自然に目に入る、look は意識して目を向ける、watch は動きをじっと見続ける、だよ。',
+789:'show は「見せる」だから、自分が見るときには使わないよ。ルールで覚えるより、正しい英文を何回も口に出すうちに、感覚でつかめてくるんだわ。',
+790:'go home には、なんで to がつかないのさ？',
+791:'home は「家へ」って意味もある言葉だから、to がいらないんだわ。work や bed には to がつくよ。',
+792:'visit も「訪れる」って意味の中に「〜へ」が入ってるから、to はつけないんだよ。何回もまちがえやすいところだから、「visit＋場所」の形で覚えてしまうのが早いよ。',
+793:'have は進行形にしない、って習ったのに I\'m having lunch って言うのはなんでさ？',
+794:'have には「持ってる」と「食べる・する」の2つの意味があるからなんだわ。「持ってる」のときは進行形にしないけど、「食べる・体験する」のときは進行形にできるよ。',
+795:'食事は have breakfast・have dinner みたいに have を使うことが多いよ。eat でも、まちがいじゃないからね。',
+796:'when や if は、文の前に置く？後ろに置く？',
+797:'どっちでも正解だよ。会話では、先に「どうだったか」を言って、あとから when を足す形が多めなんだわ。',
+798:'「もし〜なら」の if の中では、未来のことでも will を使わないで、今の形（is など）にするよ。',
+799:'than me と than I do、どっちが正しいのさ？',
+800:'どっちも正解だよ。ふだんの会話では than me がよく使われて、than I do は少していねいな言い方なんだわ。',
+801:'文の最後の do・does・were は、前に出てきた動詞をくり返す代わりに使ってるんだよ。',
+802:'to play と playing、どっちを使えばいいのさ？',
+803:'start や like みたいに、どっちでもほぼおんなじ意味になる動詞が多いから、最初は「どっちでもOK」でだいじょうぶだよ。',
+804:'enjoy みたいに ing だけの動詞や、want・decide みたいに to だけの動詞もあるよ。こういう動詞だけ、出会うたびに覚えていこうね。',
+805:'「30分後に」は in？after？',
+806:'「今から30分後」なら in を使うよ。after は「ある出来事や期間のあとで」っていうときに使うんだわ。',
+807:'would like と want は、どう違うのさ？',
+808:'would like は want（ほしい）のていねいな言い方だよ。would like to want とは言わないよ。',
+809:'would like は「自分の気持ち」を相手に伝える言い方なんだわ。「彼女は先生になりたがってる」みたいに、ほかの人のことを言うときは want を使うよ。',
+810:'最上級には the がつくのに、my best friend には、なんでつかないのさ？',
+811:'my や your と the は、いっしょに並べて使えないからなんだわ。',
+812:'wash your hands みたいに、英語では「だれの」をよくつけるのはなんでさ？',
+813:'英語は、日本語より「だれのものか」をはっきりさせる言葉だからなんだわ。',
+814:'体の部分、持ち物、宿題とかその人の用事には、your・my・their などをつけることが多いよ。全部を覚えなくてだいじょうぶ。出会うたびに覚えていこうね。',
+815:'in・on・at などの前置詞が、なかなか覚えられない',
+816:'前置詞は、たくさんの英語学習者が悩むところなんだわ。ピンとこなくてもだいじょうぶだよ。',
+817:'まずは「in＝中に入ってる」「on＝くっついてる」「at＝点」みたいに、ざっくりしたイメージをつかむよ。',
+818:'よく使う形を、セットで覚えるよ（in the box、on the table、at the station など）。',
+819:'英語を読むときに「ここでは at を使うのか」って観察していくと、少しずつ感覚が身についていくんだわ。',
+820:'前置詞は、英語の中心じゃないんだよ。気になりすぎるときは、うまくスルーすることも大事だよ。',
+821:'be動詞と一般動詞の見分け方は？',
+822:'まず、文の中に動詞（play・like・get など）があるかを探すよ。あったら、疑問文は Do・Does を使うんだわ。見つからなかったら、be動詞（am・are・is）が入るよ。',
+823:'英語の文には、必ず動詞が1つ入ってるんだわ。この判断を何回もくり返すうちに、すぐわかるようになるよ。',
+824:'good と well は、どう違うのさ？',
+825:'good は「人・もの」がいい、well は「動作」が上手、だよ。',
+826:'「会う」は meet？see？',
+827:'初めて会うときや、待ち合わせて会うときは meet、もう知ってる人と会うときは see がよく使われるんだわ。',
+828:'「今日は晴れ」は It\'s fine today. でいいのかい？',
+829:'まちがいじゃないけど、ふだんの会話では It\'s sunny today. みたいに、もっと具体的に言うことが多いよ。',
+830:'fine には「悪くはない・ふつう」って意味もあるからなんだわ。瞬間英作文の答えに fine が出てきたら、sunny でも正解と考えてだいじょうぶだよ。',
+831:'3人称の s や、過去形の ed、ing のつけ方（つづり）で迷う',
+832:'ルールはあるけど、覚えるのがこわいときは、よく使う単語から1つずつ覚えていけばだいじょうぶだよ。',
+833:'1つずつ覚えていくうちに、「こういうときは y が i になるんだな」って、自然にルールがわかってくるんだわ。',
+834:'He told me that he was tired. の he が、I にならないのはなんでさ？',
+835:'彼が言ったことを、あとから自分が人に伝えてる文だからなんだわ。',
+836:'迷ったら、その人がほんとに言ったセリフを思い浮かべてみてね。',
+837:'that や、関係代名詞の which・whom は、はぶいてもいいのかい？',
+838:'I think (that) 〜 の that や、「〜が…する（名詞）」の which・whom は、はぶくことができるよ。会話では、はぶくことがとっても多いんだわ。',
+839:'名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置くよ。'},
 q:{1:'セミナーて、なんどすか？どなたはんでも参加できますのん？',
 2:'遅れて入っても、途中で抜けても、よろしおすか？',
 3:'顔を出さなあきまへんのん？',
@@ -4834,7 +5782,132 @@ q:{1:'セミナーて、なんどすか？どなたはんでも参加できま�
 710:'進め方は、オンクラスの「1.文法を学ぶ」→「瞬間英作文 進め方と資料」にある動画で見られます。',
 712:'<b>チャットの見方<\/b>：ラジオの画面の<b>いちばん右上<\/b>にある、吹き出しのマーク（💬）を押さはると、チャット（文字）の画面に切りかわります。下に並んだボタンの中にはおへんので、気ぃつけておくれやす。ラジオを聞きながら、感想を書きこめますえ。',
 713:'<b>聞いたあとは<\/b>：「<a class="in" href="https://discord.com/channels/1214839485364305960/1559722865945870446" target="_top">きまぐれラジオ_アウトプット<\/a>」のお部屋に、感想や気づきを書いてみておくれやす。お部屋は、「90audio（2周目〜）アウトプット」のすぐ下にあります。',
-714:'<b>アウトプットの書き方の例<\/b>　はじめに日付と回のタイトル（例：10/14「無理にポジティブにならなくていい」）を書いて、心に残ったことや、ご自分に置きかえて思わはったことを書きます。あとからアーカイブで聞かはった回の感想でもよろしおす。'},
+714:'<b>アウトプットの書き方の例<\/b>　はじめに日付と回のタイトル（例：10/14「無理にポジティブにならなくていい」）を書いて、心に残ったことや、ご自分に置きかえて思わはったことを書きます。あとからアーカイブで聞かはった回の感想でもよろしおす。',
+715:'答えとちがう英文を作ったけど、まちがいどすか？',
+716:'文法が正しゅうて、意味が通じたら、正解どす。答えと一字一句おんなじやのうても大丈夫どす。',
+717:'テキストの答えは、ぎょうさんある正解のうちの1つどす。',
+718:'「自分は思いつかへんかったけど、こんな言い方もあるんやな」と、答えの英文も新しい表現として覚えておくれやす。いずれ、話すお相手が使うてきはるかもしれまへん。',
+719:'合うてるか分からへんもんは、いっぺん印をつけて先へ進んで、あとでまとめてAIや質問部屋で確かめはるのもおすすめどす。',
+720:'文法ドリルの音声（CD・アプリ）は、いつから使うんどすか？',
+721:'1周目は使わへんでもよろしおす。2周目か3周目から、プラスαで取り入れておくれやす。',
+722:'はじめは「マスター講座を見る → ドリルの左のページ（説明）を読む → 右のページ（EXERCISE）を解く」の3つで十分どす。',
+723:'中身が少し分かってきたころに音声を足さはると、リズムや発音がつかみやすうて、覚えるのもぐっと進みますえ。音声は、ドリルの3ページ目で案内されてる「マイオトモ」いうアプリで聞けます。',
+724:'気になったことは、どこまで調べたらよろしおすか？',
+725:'答えや解説が分からへんところは、その場で調べておくれやす。それ以外は「こういう言い方もあるんやね」くらいで先へ進まはって大丈夫どす。',
+726:'いちばん大事なんは、文法ドリルの問題（EXERCISE）を解けるようになることどす。',
+727:'1〜2周目は、気になることがあっても先へ進んで、3〜5周目で、じっくり深めはるのがスムーズどす。',
+728:'ドリルのピンクの字のヒントがついてるところは、「今は気にせんでええところ」どす。深追いせんでよろしおす。',
+729:'「気になって眠れへん！」くらいのことだけ調べて、あとはいっぺんスルーする。それくらいの気持ちでよろしおす。全体が見えてきたら、あとから自然に分かることもぎょうさんおす。',
+730:'文法が「身についた」と言えるのは、どのくらいどすか？',
+731:'今は、下の③〜④を目指さはったら十分どす。',
+732:'<b>聞いたことがある<\/b>：用語やルールを、見たことがある・聞いたことがある。',
+733:'<b>説明を読めば分かる<\/b>：解説や例文を見たら「そういうことね」と分かるけど、ご自分ひとりでは使えへん。',
+734:'<b>問題なら解ける<\/b>：ドリルの問題は解けるけど、会話や瞬間英作文ではぱっと出てこぉへん。',
+735:'<b>自然に使える<\/b>：説明を思い出さへんでも、会話や瞬間英作文で使える。',
+736:'<b>人に教えられる<\/b>：なんでそうなるんかを説明できる。ここは最後のゴールで、時間をかけて自然にたどりつくところどす。',
+737:'③から④に近づくときに、瞬間英作文が大きな力になりますえ。瞬間英作文でつまずかはったら、文法ドリルに戻ったらよろしおす。行ったり来たりしながら身についていきます。',
+738:'瞬間英作文が口から出てこぉへん・何回くり返したらよろしおすか？',
+739:'「見たら分かるのに、口から出えへん」のは自然なことどす。理解することと、話すことは、別の力やさかい。',
+740:'目安は、最低5周どす。1〜2周で出てこぉへんのは、ふつうどす。',
+741:'必ず声に出しておくれやす。頭の中だけでやるより、ずっと身につきますえ。',
+742:'1つの項目（10問）は、1回10〜15分くらいで区切ります。いっぺんで100％を目指さんと、何日かに分けてくり返しておくれやす。',
+743:'少しずつ区切って何周かくり返して、8割くらい言えるようにならはったら、次へ進んでよろしおす。',
+744:'瞬間英作文は「口と頭の筋トレ」どす。回数を重ねるほど、必ず口が慣れてきますえ。',
+745:'瞬間英作文の whose・of which が、どないしても分からへん',
+746:'ぎょうさんの方がつまずかはるところどす。文法ドリルには、このための回がおへん。',
+747:'2026年2月22日のセミナー（関係代名詞・関係副詞）で、ちなコーチがくわしゅう解説してはります。オンクラスの「英語セミナー アーカイブ一覧」から見られますえ。',
+748:'Part3の後半は、まずは「英語を見て意味が分かったらよろしおす」。ゆっくり、階段をのぼるように進めていきまひょ。',
+749:'マスター講座の「番外編」（長いセミナー動画）は、全部見てから次へ進むんどすか？',
+750:'見いひんでもよろしおす。そのまま2周目に入らはって問題おへん。',
+751:'番外編（前置詞セミナー・助動詞セミナーなど）は、どれも60分をこえる長い動画どす。週末など時間がとれるときに、気になるテーマから見はったら十分どす。',
+752:'90audioの届く時間（朝7時）を変えたいんどす',
+753:'届く時間はみなさんいっしょの設定やさかい、お一人ずつ変えることはできしまへん。',
+754:'朝早うお出かけの方は、前の日に届いた音声を次の朝に聞くように、1日ずらして進めはるのもおすすめどす。通知は切っといてよろしおす。',
+755:'前から使うてはる本や、ほかの教材を使うてもよろしおすか？',
+756:'「文法 → 読む → 聞く → 話す」の順番がくずれへんかったら、使うてよろしおす。',
+757:'「この本も読みたい」いうお気持ちは大事にしておくれやす。ただ、今のステップの学習（文法ドリルや瞬間英作文など）が中心になるように、時間を調整しながら進めておくれやす。',
+758:'車の運転中や家事の間に、聞けるもんはおすか？',
+759:'おすえ。耳と頭が空いてる時間は、音声の学習にぴったりどす。',
+760:'文法ドリルの音声アプリ「マイオトモ」や、瞬間英作文アプリの自動再生（設定で「自動再生」をON）がおすすめどす。',
+761:'90プログラムの教材やおへんけど、NHKの語学アプリ「中学生の基礎英語」（1回15分ほど）も聞きやすおす。',
+762:'考えごとをしながらの作業中は、音声が頭に入りにくうなります。家事や移動など、頭が空いてるときに聞かはるのが効果的どす。運転中は、安全第一でお願いしますえ。',
+763:'毎日おんなじくり返しで、飽きてしもた・気分が乗らへん',
+764:'そんな日は、軽めにできることで気分を変えてみまひょ。英語にふれる習慣を切らさへんことが、いちばん大事どす。',
+765:'もうやった瞬間英作文や、文法ドリルの音声を「聞くだけ」にして復習する。',
+766:'次のステップの「読む」学習を、少しだけのぞいてみる。',
+767:'タイマーを使うて、スピードを意識してやってみる。',
+768:'英語の旅行vlogや、海外のYouTuberの動画を見て楽しむ。',
+769:'<b>答えてもらいやすい質問のしかた<\/b>',
+770:'教材の名前と、ページやLessonの番号を書く。',
+771:'問題文・テキストの答え・ご自分の答えを、いっしょに書く。',
+772:'分かってるところと、分からへんところを書く。ご自分はどうしようと考えてはるかも書かはると、もっと的確に答えてもらえますえ。',
+773:'<b>覚えるときは「書く」より「声に出す」<\/b>　英語を覚えるために、ノートにぎょうさん書くのは、時間がかかるわりに身につきにくいやり方どす。覚えたいときは、声に出して読む「音読」がおすすめどす。',
+774:'質問部屋で、ちなコーチがこれまで答えてきはった英語の疑問どす。どれも、完ぺきに覚えへんでもよろしおす。「そういうもんなんや」と知っておくだけで十分どす。',
+775:'「a」と「the」は、どう使い分けるんどすか？',
+776:'初めて話に出すもん・どれと決まってへんもんは a、話し手と聞き手の間で「あれね」と分かってるもんは the どす。',
+777:'日本人にはつかみにくい感覚やさかい、今は「このときは、こう言うんや」くらいでよろしおす。ドリルで空らんになってへん a・the は、今は気にせんでよろしおす。',
+778:'「Can I 〜？」と「Can you 〜？」の使い分けは？',
+779:'その動作をしはるのが「自分」なら Can I、「お相手」なら Can you どす。',
+780:'日本語は「だれが」をはぶくことが多いさかい、迷いやすいところどす。動詞の動きをするのはだれかを考えてみておくれやす。',
+781:'May I・Could you・I\'d like…丁寧な言い方は、どれを使うたらよろしおすか？',
+782:'まずは Can I 〜？と Can you 〜？が使えたら十分どす。やさしゅう言わはったら、失礼にはなりまへん。',
+783:'May I はていねいどすけど、ふだんの会話では Can I の方がずっとよう使われます。注文するときも、I\'d like と Can I は、どちらを使うてもよろしおす。',
+784:'some・any／many・much・a lot of の使い分けは？',
+785:'some はふつうの文、any は「？」の文や「〜ない」の文で使うのが基本どす。many は数えられるもん、much は数えられへんもん、a lot of はどちらにも使えますえ。',
+786:'迷わはったら、会話では a lot of を使うたらよろしおす。数えられるかどうかを、毎回考えんですみます。',
+787:'see・look・watch（見る）は、どう違うんどすか？',
+788:'see は自然に目に入る、look は意識して目を向ける、watch は動きをじっと見続ける、どす。',
+789:'show は「見せる」やさかい、ご自分が見るときには使いまへん。ルールで覚えるより、正しい英文を何べんも口に出すうちに、感覚でつかめてきますえ。',
+790:'go home には、なんで to がつかへんのどすか？',
+791:'home は「家へ」いう意味もある言葉やさかい、to がいりまへん。work や bed には to がつきます。',
+792:'visit も「訪れる」いう意味の中に「〜へ」が入ってるさかい、to はつけまへん。何べんもまちがえやすいところやさかい、「visit＋場所」の形で覚えてしまはるのが早おす。',
+793:'have は進行形にせえへん、と習うたのに I\'m having lunch と言うのはなんでどすか？',
+794:'have には「持ってる」と「食べる・する」の2つの意味があるさかいどす。「持ってる」のときは進行形にしまへんけど、「食べる・体験する」のときは進行形にできますえ。',
+795:'食事は have breakfast・have dinner のように have を使うことが多おす。eat でも、まちがいやおへん。',
+796:'when や if は、文の前に置く？後ろに置く？',
+797:'どちらでも正解どす。会話では、先に「どうやったか」を言うて、あとから when を足す形が多めどす。',
+798:'「もし〜なら」の if の中では、未来のことでも will を使わんと、今の形（is など）にします。',
+799:'than me と than I do、どちらが正しいんどすか？',
+800:'どちらも正解どす。ふだんの会話では than me がよう使われて、than I do は少していねいな言い方どす。',
+801:'文の最後の do・does・were は、前に出てきた動詞をくり返す代わりに使うてます。',
+802:'to play と playing、どちらを使うたらよろしおすか？',
+803:'start や like のように、どちらでもほぼおんなじ意味になる動詞が多いさかい、最初は「どちらでもよろしおす」で大丈夫どす。',
+804:'enjoy のように ing だけの動詞や、want・decide のように to だけの動詞もおす。こうした動詞だけ、出会うたびに覚えていきまひょ。',
+805:'「30分後に」は in？after？',
+806:'「今から30分後」なら in を使います。after は「ある出来事や期間のあとで」いうときに使いますえ。',
+807:'would like と want は、どう違うんどすか？',
+808:'would like は want（ほしい）のていねいな言い方どす。would like to want とは言いまへん。',
+809:'would like は「自分の気持ち」をお相手に伝える言い方どす。「彼女は先生になりたがってはる」のように、ほかの人のことを言うときは want を使います。',
+810:'最上級には the がつくのに、my best friend には、なんでつかへんのどすか？',
+811:'my や your と the は、いっしょに並べて使えへんさかいどす。',
+812:'wash your hands のように、英語では「だれの」をようつけるのはなんでどすか？',
+813:'英語は、日本語より「だれのもんか」をはっきりさせる言葉やさかいどす。',
+814:'体の部分、持ち物、宿題などその人の用事には、your・my・their などをつけることが多おす。全部を覚えへんでもよろしおす。出会うたびに覚えていきまひょ。',
+815:'in・on・at などの前置詞が、なかなか覚えられへん',
+816:'前置詞は、ぎょうさんの英語学習者が悩まはるところどす。ぴんとこぉへんでもよろしおす。',
+817:'まずは「in＝中に入ってる」「on＝くっついてる」「at＝点」のように、ざっくりしたイメージをつかみます。',
+818:'よう使う形を、セットで覚えます（in the box、on the table、at the station など）。',
+819:'英語を読むときに「ここでは at を使うんやな」と観察していかはると、少しずつ感覚が身についていきますえ。',
+820:'前置詞は、英語の中心やおへん。気になりすぎるときは、うまいことスルーするのも大事どす。',
+821:'be動詞と一般動詞の見分け方は？',
+822:'まず、文の中に動詞（play・like・get など）があるかを探します。あったら、疑問文は Do・Does を使います。見つからへんかったら、be動詞（am・are・is）が入りますえ。',
+823:'英語の文には、必ず動詞が1つ入ってます。この判断を何べんもくり返すうちに、すぐ分かるようになりますえ。',
+824:'good と well は、どう違うんどすか？',
+825:'good は「人・もん」がよろしい、well は「動作」が上手、どす。',
+826:'「会う」は meet？see？',
+827:'初めて会うときや、待ち合わせて会うときは meet、もう知ってはる人と会うときは see がよう使われます。',
+828:'「今日は晴れ」は It\'s fine today. でよろしおすか？',
+829:'まちがいやおへんけど、ふだんの会話では It\'s sunny today. のように、もっと具体的に言うことが多おす。',
+830:'fine には「悪うはない・ふつう」いう意味もあるさかいどす。瞬間英作文の答えに fine が出てきたら、sunny でも正解と考えてよろしおす。',
+831:'3人称の s や、過去形の ed、ing のつけ方（つづり）で迷う',
+832:'ルールはおすけど、覚えるのがしんどいときは、よう使う単語から1つずつ覚えていかはったら大丈夫どす。',
+833:'1つずつ覚えていかはるうちに、「こういうときは y が i になるんやな」と、自然にルールが分かってきますえ。',
+834:'He told me that he was tired. の he が、I にならへんのはなんでどすか？',
+835:'彼が言わはったことを、あとから自分が人に伝えてる文やさかいどす。',
+836:'迷わはったら、その人がほんまに言わはったセリフを思い浮かべてみておくれやす。',
+837:'that や、関係代名詞の which・whom は、はぶいてもよろしおすか？',
+838:'I think (that) 〜 の that や、「〜が…する（名詞）」の which・whom は、はぶくことができます。会話では、はぶくことがえらい多おす。',
+839:'名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置きます。'},
 y:{4:'セミナーに参加する青い文字（リンク）を押しても入れない',
 10:'Discordで、返事を書いたり、気持ちのマーク（スタンプ）を付けたりするには？',
 13:'オンクラスに入れない・「新しく登録」の画面が出てしまう',
