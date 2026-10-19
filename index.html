@@ -169,6 +169,7 @@ body.gw-open .search{position:static}
 .rx-chip.on{background:rgba(88,101,242,.3);border-color:#5865f2}
 .rx-tabs{display:flex;gap:6px;padding:0 4px 4px}
 .cp-row{margin-top:6px;display:flex;flex-direction:column;gap:6px}
+.ans-hint{margin:-2px 0 10px;font-size:15px;line-height:1.6;color:var(--sub)}
 .cp-btn{width:100%;font:inherit;font-size:16px;font-weight:700;padding:10px 12px;border-radius:10px;border:1.5px dashed var(--accent);background:transparent;color:var(--accent-ink);cursor:pointer}
 .cp-btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .cp-msg{margin:0;font-size:15px;font-weight:700;color:var(--accent-ink);word-break:break-all}
@@ -2553,6 +2554,21 @@ document.getElementById('pick').addEventListener('click',function(){
       setTimeout(function(){ m.hidden=true; },8000);
     });
     row.appendChild(b); row.appendChild(m); ans.appendChild(row);
+  });
+  // 「ちなコーチの回答をぜんぶ読む」は別の画面（Discord）で開き、このページは残しておく。
+  // もし画面が切りかわっても、もどったときに同じ質問が開くよう、先に場所を覚えておく
+  items.forEach(function(d,i){
+    [].forEach.call(d.querySelectorAll('a.btn[href^="https://discord.com/channels/"]'),function(a){
+      if(a.textContent.indexOf('ちなコーチの回答')<0) return;
+      a.target='_blank'; a.rel='noopener';
+      var hint=document.createElement('p'); hint.className='ans-hint';
+      hint.textContent='Discordが開きます。読み終わったら、このページにもどってくださいね。この質問を開いたまま、続きから読めます。';
+      a.parentNode.insertBefore(hint,a.nextSibling);
+      a.addEventListener('click',function(){
+        try{ history.replaceState(null,'','#'+d.id); }catch(e){}
+        save(i);
+      });
+    });
   });
 })();
 </script>
