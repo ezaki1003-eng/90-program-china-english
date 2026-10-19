@@ -2577,6 +2577,26 @@ document.getElementById('pick').addEventListener('click',function(){
       });
     });
   });
+  // オンクラスへのリンクも、もどり方を一言そえる（1つの質問に1回だけ）。押したら、もどったときに同じ質問が開くよう覚えておく
+  items.forEach(function(d,i){
+    var links=[].slice.call(d.querySelectorAll('a[href^="https://app.the-online-class.com/"]'));
+    if(!links.length) return;
+    links.forEach(function(a){
+      a.addEventListener('click',function(){
+        try{ history.replaceState(null,'','#'+d.id); }catch(e){}
+        save(i);
+      });
+    });
+    var hint=document.createElement('div'); hint.className='ans-hint';
+    hint.innerHTML='<p>押すと、画面がオンクラスに切りかわります。</p>'
+      +'<p><b>見終わったら、ここにもどるには</b></p>'
+      +'<ul><li><b>iPhone</b>：画面のいちばん下にある「＜」を押します。</li>'
+      +'<li><b>Android</b>：画面の下の「◀」（もどる）を押します。</li></ul>'
+      +'<p>この質問を開いたまま、もどってこられます。</p>';
+    var btns=links.filter(function(a){ return a.classList.contains('btn'); });
+    if(btns.length){ var last=btns[btns.length-1]; last.parentNode.insertBefore(hint,last.nextSibling); }
+    else { var ans=d.querySelector('.ans'), row=ans&&ans.querySelector('.cp-row'); if(ans) ans.insertBefore(hint,row); }
+  });
 })();
 </script>
 <script>
