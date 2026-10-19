@@ -169,7 +169,10 @@ body.gw-open .search{position:static}
 .rx-chip.on{background:rgba(88,101,242,.3);border-color:#5865f2}
 .rx-tabs{display:flex;gap:6px;padding:0 4px 4px}
 .cp-row{margin-top:6px;display:flex;flex-direction:column;gap:6px}
-.ans-hint{margin:-2px 0 10px;font-size:15px;line-height:1.6;color:var(--sub)}
+.ans-hint{margin:-2px 0 12px;padding:10px 12px;border-radius:10px;background:var(--accent-soft);font-size:16px;line-height:1.6;color:var(--ink)}
+.ans-hint p{margin:0 0 4px}
+.ans-hint ul{margin:0 0 4px;padding-left:1.2em}
+.ans-hint li{margin:2px 0}
 .cp-btn{width:100%;font:inherit;font-size:16px;font-weight:700;padding:10px 12px;border-radius:10px;border:1.5px dashed var(--accent);background:transparent;color:var(--accent-ink);cursor:pointer}
 .cp-btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .cp-msg{margin:0;font-size:15px;font-weight:700;color:var(--accent-ink);word-break:break-all}
@@ -2561,8 +2564,12 @@ document.getElementById('pick').addEventListener('click',function(){
     [].forEach.call(d.querySelectorAll('a.btn[href^="https://discord.com/channels/"]'),function(a){
       if(a.textContent.indexOf('ちなコーチの回答')<0) return;
       a.target='_blank'; a.rel='noopener';
-      var hint=document.createElement('p'); hint.className='ans-hint';
-      hint.textContent='Discordが開きます。読み終わったら、このページにもどってくださいね。この質問を開いたまま、続きから読めます。';
+      var hint=document.createElement('div'); hint.className='ans-hint';
+      hint.innerHTML='<p>押すと、画面がDiscordに切りかわります。</p>'
+        +'<p><b>読み終わったら、ここにもどるには</b></p>'
+        +'<ul><li><b>iPhone</b>：画面のいちばん左上にある、小さな「◀ LINE」を押します。</li>'
+        +'<li><b>Android</b>：画面の下の「◀」（もどる）を押します。</li></ul>'
+        +'<p>この質問を開いたまま、もどってこられます。</p>';
       a.parentNode.insertBefore(hint,a.nextSibling);
       a.addEventListener('click',function(){
         try{ history.replaceState(null,'','#'+d.id); }catch(e){}
