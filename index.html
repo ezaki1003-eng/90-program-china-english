@@ -185,6 +185,8 @@ body.gw-open .search{position:static}
 .theme-btns button{display:flex;align-items:center;gap:8px;text-align:left;padding:10px;border-radius:12px;border:1.5px solid var(--accent);background:var(--accent-soft);color:var(--ink);font:inherit;font-size:16px;font-weight:700;line-height:1.35;cursor:pointer}
 .theme-btns button small{display:block;font-size:13px;font-weight:500;color:var(--sub)}
 .th-ic{font-size:22px;flex:none}
+.th-ic svg.th-av{display:block;width:30px;height:30px}
+section h2 svg.h2-av{width:34px;height:34px;stroke:none}
 .theme-btns button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .list-back{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:20;font:inherit;font-size:17px;font-weight:700;padding:12px 20px;border-radius:999px;border:0;background:var(--accent);color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer;white-space:nowrap}
 .list-back[hidden]{display:none}
@@ -219,6 +221,8 @@ body.gw-open .search{position:static}
   <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></symbol>
   <symbol id="i-start" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></symbol>
   <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/></symbol>
+  <symbol id="i-av-china" viewBox="0 0 48 48"><path d="M8 27c0-11.5 7-20 16-20s16 8.5 16 20v13c0 2.2-1.8 4-4 4H12c-2.2 0-4-1.8-4-4z" fill="#2a2a2e"/><path d="M10 48c1-6.5 6.8-10 14-10s13 3.5 14 10z" fill="#f4a3b7"/><path d="M21 34h6v5h-6z" fill="#ffd9c0"/><ellipse cx="24" cy="25" rx="11" ry="11.5" fill="#ffe2cc"/><path d="M12.8 23c.8-7.5 5.6-12 11.2-12s10.4 4.5 11.2 12c-4.5-.8-8.6-3-10.7-6.3C22.2 20 17.8 22.3 12.8 23z" fill="#2a2a2e"/><circle cx="34" cy="14.5" r="2.6" fill="#ffd24d"/><circle cx="34" cy="14.5" r="1" fill="#ff9f43"/><path d="M18.4 26.2q1.6-1.7 3.2 0M26.4 26.2q1.6-1.7 3.2 0" stroke="#3b2b2b" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="17.3" cy="29.3" r="1.9" fill="#ffaaa8" opacity=".75"/><circle cx="30.7" cy="29.3" r="1.9" fill="#ffaaa8" opacity=".75"/><path d="M21.9 30.6q2.1 1.9 4.2 0" stroke="#c4525e" stroke-width="1.4" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="i-av-tasse" viewBox="0 0 48 48"><path d="M9 48c1-6.8 7-10.2 15-10.2s14 3.4 15 10.2z" fill="#86b9e8"/><path d="M20.5 38.2 24 42l3.5-3.8z" fill="#fff"/><path d="M21 33h6v5.5h-6z" fill="#ffd9c0"/><circle cx="12.9" cy="26" r="2.4" fill="#ffd9c0"/><circle cx="35.1" cy="26" r="2.4" fill="#ffd9c0"/><ellipse cx="24" cy="25" rx="11" ry="11.5" fill="#ffe2cc"/><path d="M12.6 24c-1.2-8.5 4.8-14.8 11.4-14.8s12.6 6.3 11.4 14.8c-1.5-3.2-4.2-5.5-7.4-6.2-3.4 1.9-9.3 3.4-15.4 6.2z" fill="#2a2a2e"/><path d="M18.4 26.4q1.6-1.7 3.2 0M26.4 26.4q1.6-1.7 3.2 0" stroke="#3b2b2b" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="17.4" cy="29.4" r="1.7" fill="#ffb4a8" opacity=".6"/><circle cx="30.6" cy="29.4" r="1.7" fill="#ffb4a8" opacity=".6"/><path d="M21.6 30.6q2.4 2.1 4.8 0" stroke="#b5505a" stroke-width="1.4" fill="none" stroke-linecap="round"/></symbol>
   <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></symbol>
   <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
 </svg>
@@ -2111,7 +2115,7 @@ body.gw-open .search{position:static}
   </section>
 
   <section id="tasse">
-    <h2>👨‍🏫 タッセーさんの回答</h2>
+    <h2><svg class="h2-av" aria-hidden="true"><use href="#i-av-tasse"/></svg>タッセーさんの回答</h2>
     <p class="note" data-t="1086">ここは、<b>ちなコーチではなく、タッセーさん</b>が質問部屋で答えた内容です。タッセーさんも、ロードマップに沿って英語を勉強してきた講師です（<a class="in" href="#q-tasse">タッセーさんって、どんな人？</a>）。</p>
 
     <details id="q-tasse-eigomimi" data-y="たっせー たっせーさん たっせい えいごみみ えいご みみ かいせつ わからない なにをしているか はつおん まね くりかえし じゅうぷん" data-k="タッセー タッセーさん 英語耳 解説 分からない わからない 何をしているか 発音 まね 真似 くり返し 10分">
@@ -2794,8 +2798,8 @@ document.getElementById('pick').addEventListener('click',function(){
     ["🌷","仲間の工夫",["q-kufu-start","q-kufu-time","q-kufu-place","q-kufu-keep","q-kufu-tired","q-kufu-drill","q-kufu-memory","q-kufu-talk","q-kufu-ai","q-kufu-words"],"kufu"],
     ['😟','不安になったとき',['q-anxious','q-noresult','q-stuckhard','q-phone','q-negative','q-compare','q-forget','q-comeback','q-sick','q-t44','q-bored']],
     ['🎤','セミナー・ラジオ',['q-t1','q-t2','q-t3','q-t4','q-archive','q-radio','q-radiohow','q-offkai','q-t52']],
-    ['👩‍🏫','ちなコーチのこと',['q-coachwho','q-tasse','q-tasse-eigomimi','q-withyou','q-t54','q-t28','q-reasons','q-t47']],
-    ['👨‍🏫','タッセーさんの回答',['q-tasse','q-tasse-eigomimi'],'tasse']
+    ['<svg class="th-av"><use href="#i-av-china"/></svg>','ちなコーチのこと',['q-coachwho','q-tasse','q-tasse-eigomimi','q-withyou','q-t54','q-t28','q-reasons','q-t47']],
+    ['<svg class="th-av"><use href="#i-av-tasse"/></svg>','タッセーさんの回答',['q-tasse','q-tasse-eigomimi'],'tasse']
   ];
   var tbox=document.getElementById('theme-btns');
   if(tbox) THEMES.forEach(function(t){
