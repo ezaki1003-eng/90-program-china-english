@@ -1418,7 +1418,7 @@ body.gw-open .search{position:static}
         <p class="cheer" data-t="702">数字は、人とくらべるためではなく、自分の成長を見るためのものです。少し前の自分より速くなっていたら、それが積み重ねてきた証です。</p>
       </div>
     </details>
-    <details id="q-eigomimi" data-y="えいごみみ えいご みみ はつおん はつおんきごう つかいかた やりかた すすめかた どうやって むずかしい くせ しょう だい6しょう ぱろっとろー うた きんどる しーでぃー cd だうんろーど おんせい くるま ほんのみかた なんしゅう なんかい しゅうすう きんとれ したのきんにく" data-k="英語耳 英語 耳 発音 発音記号 使い方 やり方 進め方 難しい クセ 章 第6章 パロットロー 歌 Kindle 何周 何回 周数 20周 30周 筋トレ 舌 筋肉">
+    <details id="q-eigomimi" data-y="えいごみみ えいご みみ はつおん はつおんきごう つかいかた やりかた すすめかた どうやって むずかしい くせ しょう だい6しょう ぱろっとろー うた きんどる しーでぃー cd だうんろーど おんせい くるま ほんのみかた なんしゅう なんかい しゅうすう きんとれ したのきんにく かいせつ わからない たっせー" data-k="英語耳 英語 耳 発音 発音記号 使い方 やり方 進め方 難しい クセ 章 第6章 パロットロー 歌 Kindle 何周 何回 周数 20周 30周 筋トレ 舌 筋肉 解説 分からない タッセー">
       <summary data-t="455">「英語耳（えいごみみ）」は、どうやって使えばいい？</summary>
       <div class="ans">
         <p class="lead" data-t="456">発音記号と、口や舌の動かし方を練習する本です。自分で正しい音が出せるようになると、英語の聞こえ方が変わってきます。</p>
@@ -1445,6 +1445,14 @@ body.gw-open .search{position:static}
           <li><span data-t="470">ロードマップを目安にしながら、細かいところは、自分の感覚や「やってみたい」と思える気持ちに合うやり方を選ぶのが、長く続けるコツです。</span></li>
         </ul></div>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1554667976668483737" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+        <div class="cw-box"><p class="note" data-t="1080"><b>タッセーさんの考え（Discordの質問への答えから）</b></p>
+        <ul class="steps">
+          <li><span data-t="1081">解説が少なくて、何をしているのかよく分からなくても大丈夫です。音声を聞いて、まねして発音する。このくり返しが英語耳の基本です。</span></li>
+          <li><span data-t="1082">英語耳は、理屈を理解するための本ではなく、正しい音を聞きとって、口に覚えさせる練習の本だからです。</span></li>
+          <li><span data-t="1083">全部を完ぺきにやろうとしないこと。1日10分くらいの軽い取り組みで十分です。</span></li>
+          <li><span data-t="1084">メインの学習（究極の英語リーディング・瞬間英作文など）は続けたまま、息抜きや、並べて進める学習として取り入れるのがちょうどいいです。長い時間やるより、短い時間でも毎日さわるほうが、口に定着します。</span></li>
+        </ul></div>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1563015652061618266" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>タッセーさんの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
     <details id="q-t39" data-y="えいが どらま あにめ じぶり ねっとふりっくす じまく えいごじまく にほんごじまく たのしみ みかた" data-k="映画 ドラマ アニメ ジブリ Netflix 字幕 英語字幕 日本語字幕 楽しみ 見方">
@@ -2838,9 +2846,16 @@ document.getElementById('pick').addEventListener('click',function(){
   // 「ちなコーチの回答をぜんぶ読む」は別の画面（Discord）で開き、このページは残しておく。
   // もし画面が切りかわっても、もどったときに同じ質問が開くよう、先に場所を覚えておく
   items.forEach(function(d,i){
-    [].forEach.call(d.querySelectorAll('a.btn[href^="https://discord.com/channels/"]'),function(a){
-      if(a.textContent.indexOf('ちなコーチの回答')<0) return;
+    var ansLinks=[].filter.call(d.querySelectorAll('a.btn[href^="https://discord.com/channels/"]'),function(a){
+      return /(ちなコーチ|タッセーさん)の回答/.test(a.textContent);
+    });
+    ansLinks.forEach(function(a,k){
       a.target='_blank'; a.rel='noopener';
+      a.addEventListener('click',function(){
+        try{ history.replaceState(null,'','#'+d.id); }catch(e){}
+        save(i);
+      });
+      if(k<ansLinks.length-1) return;
       var hint=document.createElement('div'); hint.className='ans-hint';
       hint.innerHTML='<p>押すと、画面がDiscordに切りかわります。</p>'
         +'<p><b>読み終わったら、ここにもどるには</b></p>'
@@ -2848,10 +2863,6 @@ document.getElementById('pick').addEventListener('click',function(){
         +'<li><b>Android</b>：画面の下の「◀」（もどる）を押します。</li></ul>'
         +'<p>この質問を開いたまま、もどってこられます。</p>';
       a.parentNode.insertBefore(hint,a.nextSibling);
-      a.addEventListener('click',function(){
-        try{ history.replaceState(null,'','#'+d.id); }catch(e){}
-        save(i);
-      });
     });
   });
   // 仲間の工夫の「投稿を見る」も別の画面（Discord）で開き、もどったときに同じ質問が開くよう覚えておく
