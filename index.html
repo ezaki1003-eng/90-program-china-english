@@ -243,6 +243,34 @@ section h2 svg.h2-av{width:34px;height:34px;stroke:none}
 .at-cmp .ok b{color:#2e7d4f}.at-cmp .ng b{color:#b3261e}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .at-cmp .ok b{color:#7fd6a0}:root:not([data-theme="light"]) .at-cmp .ng b{color:#ff9a90}}
 :root[data-theme="dark"] .at-cmp .ok b{color:#7fd6a0}:root[data-theme="dark"] .at-cmp .ng b{color:#ff9a90}
+/* 英語耳の音声をスマホで聞く：文字を減らして、絵で見せる */
+.ed{display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:14px;background:var(--accent-soft);border:2px solid var(--accent)}
+.ed p{margin:0}
+.ed-h{font-family:var(--display);font-weight:700;font-size:20px;color:var(--accent-ink)}
+.ed-voice{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.ed-voice div{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 6px;border-radius:12px;background:var(--card);border:1.5px solid var(--line);font-weight:700;font-size:17px;text-align:center}
+.ed-face{font-size:34px;line-height:1}
+.ed-file{font-size:15px;color:var(--sub);background:var(--ph);border-radius:6px;padding:0 10px;letter-spacing:.05em}
+.ed-file b{font-size:22px}
+.ed-voice .f .ed-file b{color:#d8344a}
+.ed-voice .m .ed-file b{color:#2a6fd6}
+.ed-cap{font-size:16px;text-align:center;color:var(--sub);font-weight:700}
+.ed-flow{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.ed-flow li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:8px 10px;align-items:start;background:var(--card);border-radius:12px;padding:10px;border:1.5px solid var(--line)}
+.ed-n{grid-row:span 2;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
+.ed-flow p{font-size:17px;line-height:1.6}
+.ed-pic{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;padding:8px;border-radius:10px;background:var(--ph);font-weight:700;font-size:16px}
+.ed-book{padding:6px 12px;line-height:1.35;text-align:center;border-radius:8px;border:2px solid var(--line);background:var(--card);color:var(--sub)}
+.ed-book.on{border-color:#2e7d4f;color:var(--ink);box-shadow:0 0 0 3px #2e7d4f33}
+.ed-book em{font-style:normal;color:#2e7d4f;margin-left:4px}
+.ed-box{display:flex;flex-direction:column;align-items:center;font-size:30px;line-height:1.1}
+.ed-box small{font-size:13px}
+.ed-arr{color:var(--accent-ink)}
+.ed-notes{font-size:24px}
+.ed-dev{display:flex;flex-direction:column;gap:6px}
+.ed-dev div{display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;padding:8px 10px;border-radius:10px;background:var(--card);font-size:17px}
+.ed-dev b{min-width:8.5em}
+.ed-key{font-style:normal;font-weight:700;background:var(--accent);color:#fff;border-radius:6px;padding:0 8px}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1450,7 +1478,7 @@ section h2 svg.h2-av{width:34px;height:34px;stroke:none}
         <p class="cheer" data-t="702">数字は、人とくらべるためではなく、自分の成長を見るためのものです。少し前の自分より速くなっていたら、それが積み重ねてきた証です。</p>
       </div>
     </details>
-    <details id="q-eigomimi" data-y="えいごみみ えいご みみ はつおん はつおんきごう つかいかた やりかた すすめかた どうやって むずかしい くせ しょう だい6しょう ぱろっとろー うた きんどる しーでぃー cd だうんろーど おんせい くるま ほんのみかた なんしゅう なんかい しゅうすう きんとれ したのきんにく" data-k="英語耳 英語 耳 発音 発音記号 使い方 やり方 進め方 難しい クセ 章 第6章 パロットロー 歌 Kindle 何周 何回 周数 20周 30周 筋トレ 舌 筋肉">
+    <details id="q-eigomimi" data-y="えいごみみ えいご みみ はつおん はつおんきごう つかいかた やりかた すすめかた どうやって むずかしい くせ しょう だい6しょう ぱろっとろー うた きんどる しーでぃー cd だうんろーど おんせい くるま ほんのみかた なんしゅう なんかい しゅうすう きんとれ したのきんにく こえ じょせい だんせい おんなのひと おとこのひと えらぶ じっぷ かいとう てんかい みつからない どこ ほぞん すまほ あんどろいど あいふぉん ぱそこん あいでぃー ぱすわーど" data-k="英語耳 英語 耳 発音 発音記号 使い方 やり方 進め方 難しい クセ 章 第6章 パロットロー 歌 Kindle 何周 何回 周数 20周 30周 筋トレ 舌 筋肉 声 女性 男性 女声 男声 選ぶ ZIP 解凍 展開 見つからない 保存 スマホ アンドロイド iPhone パソコン ダウンロード ID パスワード">
       <summary data-t="455">「英語耳（えいごみみ）」は、どうやって使えばいい？</summary>
       <div class="ans">
         <p class="lead" data-t="456">発音記号と、口や舌の動かし方を練習する本です。自分で正しい音が出せるようになると、英語の聞こえ方が変わってきます。</p>
@@ -1465,6 +1493,28 @@ section h2 svg.h2-av{width:34px;height:34px;stroke:none}
         <p class="note" data-t="463"><b>本の見方</b>　第2章〜第5章が、発音記号ごとの練習です（ここがメインです）。第6章は洋楽の歌を使った練習、第7章は読み物です。本のはじめに「第2〜5章を10回ほどくり返したら、第6章へ」と、進め方が書いてあります。</p>
         <p class="note" data-t="464"><b>音声（CD）の使い方</b>　紙の本にはCDが付いています。CDプレーヤーやカーステレオで、そのまま流して練習できます。車で流しながら練習している方もいます。</p>
         <p class="note" data-t="465">CDがかけられないときは、出版社（KADOKAWA）のサイトから、同じ音声をダウンロードすることもできます。本の中に出てくる英単語を、IDとパスワードとして入れる仕組みです。Kindle版にはCDがないので、ダウンロードで聞きます。オンクラスの「3.英語を聞く」の「はじめに」にも、英語耳のQ&amp;Aがあります。</p>
+        <div class="ed">
+          <p class="ed-h" data-t="1100">🎧 音声をスマホで聞くには</p>
+          <div class="ed-voice">
+            <div class="f"><span class="ed-face">👩</span><span class="ed-file">……<b>F</b></span><span data-t="1101">女の人の声</span></div>
+            <div class="m"><span class="ed-face">👨</span><span class="ed-file">……<b>M</b></span><span data-t="1102">男の人の声</span></div>
+          </div>
+          <p class="ed-cap" data-t="1103">改訂３版には両方入っています。好きな方でOK</p>
+          <ol class="ed-flow">
+            <li><span class="ed-n">1</span>
+              <div class="ed-pic"><span class="ed-book">英語耳<br>改訂３版</span><span class="ed-book">英語耳<br>改訂・新CD版</span></div>
+              <p data-t="1104">英語耳は<b>2種類</b>あります。表紙を見て、<b>自分の本</b>の方を押す。IDとパスワードは本ごとにちがいます（どのページの英単語かは、本の名前の下に書いてあります）</p></li>
+            <li><span class="ed-n">2</span>
+              <div class="ed-pic"><span class="ed-box">📦<small>ZIP</small></span><span class="ed-arr">→ 開く →</span><span class="ed-notes">🎵🎵🎵</span></div>
+              <p data-t="1105">届いた<b>箱（ZIP）</b>を開くと、音声が出てきます</p></li>
+          </ol>
+          <div class="ed-dev">
+            <div><b>🤖 アンドロイド</b><span data-t="1106">ファイル → ZIP → <i class="ed-key">展開</i>（<i class="ed-key">解凍</i>）</span></div>
+            <div><b>📱 iPhone</b><span data-t="1107">ファイル → ZIP を<i class="ed-key">タップ</i></span></div>
+            <div><b>💻 パソコン</b><span data-t="1108">右クリック → <i class="ed-key">すべて展開</i></span></div>
+          </div>
+        </div>
+        <a class="btn" href="https://promo.kadokawa.co.jp/chukei/voice/" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>英語耳の音声ダウンロードのページ（KADOKAWA）</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/oANxMzMzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>英語耳 Q&amp;A（オンクラス）</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/oQNyITOyUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>「英語耳」の進め方（ラジオ9/14の回より・オンクラス）</a>
         <a class="btn" href="https://www.kadokawa.co.jp/product/322012000562/" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>英語耳の本と音声ダウンロードの案内（KADOKAWA）</a>
