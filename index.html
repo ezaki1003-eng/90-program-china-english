@@ -7465,14 +7465,18 @@ y:{4:'セミナーに参加する青い文字（リンク）を押しても入�
     clover:function(c){ return petals(4,15,15,c); },
     leaf:function(c){ var s=''; for(var k=0;k<5;k++){ s+='<path transform="rotate('+(k*72-90)+' 36 36)" d="M36 36L66 30 60 36 66 42z" fill="'+c+'"/><path transform="rotate('+(k*72-90)+' 36 36)" d="M36 36C46 24 60 24 68 36 60 48 46 48 36 36z" fill="'+c+'"/>'; } return s; },
     acorn:function(c){ return '<ellipse cx="36" cy="42" rx="22" ry="24" fill="'+c+'"/><path d="M12 30c0-12 11-20 24-20s24 8 24 20z" fill="#8a5a2b"/><rect x="33" y="3" width="6" height="10" rx="3" fill="#8a5a2b"/>'; },
-    round:function(c){ return '<circle cx="36" cy="36" r="32" fill="'+c+'"/>'; }
+    round:function(c){ return '<circle cx="36" cy="36" r="32" fill="'+c+'"/>'; },
+    snow:function(c){ var s='<circle cx="36" cy="36" r="22" fill="'+c+'" opacity=".35"/>'; for(var k=0;k<6;k++){ s+='<path transform="rotate('+(k*60)+' 36 36)" d="M36 34V5M36 13l-7-7M36 13l7-7M36 23l-9-8M36 23l9-8" stroke="'+c+'" stroke-width="5" stroke-linecap="round" fill="none"/>'; } return s; },
+    mitten:function(c){ return '<path d="M20 58V38C12 33 9 25 13 19c4-6 11-5 14 1V15C27 8 32 4 39 4s13 4 13 11v43z" fill="'+c+'"/><rect x="18" y="56" width="36" height="13" rx="5" fill="#fff"/><rect x="18" y="56" width="36" height="13" rx="5" fill="'+c+'" opacity=".45"/>'; },
+    snowman:function(c){ return '<circle cx="36" cy="46" r="24" fill="'+c+'" stroke="#8fb3d6" stroke-width="2.5"/><circle cx="36" cy="15" r="12" fill="'+c+'" stroke="#8fb3d6" stroke-width="2.5"/><circle cx="32" cy="13" r="1.8" fill="#4a4a4a"/><circle cx="40" cy="13" r="1.8" fill="#4a4a4a"/><path d="M36 16l6 2-6 1z" fill="#f08a4b"/><path d="M23 25.5h26" stroke="#e86a6a" stroke-width="5" stroke-linecap="round"/>'; }
   };
   var SETS={
     hana:[{s:'sakura',c:'#f6a5c0',t:'できた！'},{s:'flower',c:'#ffd45c',t:'えらい！'},{s:'heart',c:'#ff8e9e',t:'Good<br>job!'},{s:'star',c:'#ffc93c',t:'Nice!'},{s:'clover',c:'#8fd19e',t:'がん<br>ばった'},{s:'flower',c:'#ffb36b',t:'すごい！'}],
     aki:[{s:'leaf',c:'#f08a4b',t:'できた！'},{s:'acorn',c:'#d9a066',t:'えらい！'},{s:'leaf',c:'#e8c14a',t:'すごい！'},{s:'round',c:'#f7b267',t:'がん<br>ばった'},{s:'heart',c:'#e98a8a',t:'Good<br>job!'},{s:'star',c:'#f2c14e',t:'Nice!'}],
+    fuyu:[{s:'snow',c:'#7fb8ef',t:'できた！'},{s:'mitten',c:'#e86a6a',t:'えらい！'},{s:'snowman',c:'#eef6fd',t:'がん<br>ばった'},{s:'star',c:'#ffc93c',t:'Nice!'},{s:'heart',c:'#f49ab0',t:'Good<br>job!'},{s:'snow',c:'#a9a3e8',t:'すごい！'}],
     eigo:[{s:'star',c:'#ffc93c',t:'Great!'},{s:'heart',c:'#ff8e9e',t:'Well<br>done!'},{s:'flower',c:'#9ad0f5',t:'Nice!'},{s:'sakura',c:'#f6a5c0',t:'Good<br>job!'},{s:'clover',c:'#8fd19e',t:'Keep<br>going!'},{s:'round',c:'#c3a6f0',t:'You did<br>it!'}]
   };
-  var NOW='hana', SET=SETS[NOW];
+  var NOW='fuyu', SET=SETS[NOW];
   // 小さい音（最初はなし。押した人だけ「あり」。選んだのは覚えておく）。iPhone はマナーモードのとき鳴らない
   var snd=box.querySelector('.hm-snd'), soundOn=false, ac=null;
   try{ soundOn=localStorage.getItem('komatta-hm-sound')==='1'; }catch(_){}
