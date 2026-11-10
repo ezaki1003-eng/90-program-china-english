@@ -3583,12 +3583,12 @@ var DIAL=null;
   document.querySelectorAll('details').forEach(function(d){
     var ans=d.querySelector(':scope > .ans'); if(!ans||!d.id) return;
     var box=document.createElement('div'); box.className='solved';
-    box.innerHTML='<p>この答えで、解決しましたか？</p><div class="sv-btns"><button type="button" data-v="ok">😊 解決した</button><button type="button" data-v="ng">😢 まだこまっている</button></div><p class="sv-msg" hidden></p>';
+    box.innerHTML='<p>この答えで、すっきりしましたか？</p><div class="sv-btns"><button type="button" data-v="ok">😊 わかった！</button><button type="button" data-v="ng">😢 まだこまっている</button></div><p class="sv-msg" hidden></p>';
     var m=box.querySelector('.sv-msg');
     box.querySelectorAll('button').forEach(function(b){
       b.addEventListener('click',function(){
-        if(b.getAttribute('data-v')==='ok'){ m.innerHTML='よかったです🌸 教えてくださって、ありがとうございます。'; }
-        else { m.innerHTML='教えてくださって、ありがとうございます。Discordの<b>質問部屋</b>で聞いてみてください。サポーターやちなコーチが答えます。<br><a href="#q-question">→ 質問のしかたを見る</a>'; }
+        if(b.getAttribute('data-v')==='ok'){ m.innerHTML='よかったです🌸 ここまで読んでくださって、ありがとうございます。またこまったときは、いつでもここを開いてくださいね。'; }
+        else { m.innerHTML='まだこまっているんですね。だいじょうぶですよ😊<br>Discordの<b>質問部屋</b>で聞いてみてください。いっしょに学んでいる仲間のみなさんも、答えてくれます。<br><a href="#q-question">→ 質問のしかたを見る</a>'; }
         m.hidden=false;
         try{ var k='komatta-solved', o=JSON.parse(localStorage.getItem(k)||'{}'); o[d.id]=b.getAttribute('data-v'); localStorage.setItem(k,JSON.stringify(o)); }catch(e){}
       });
