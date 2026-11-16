@@ -334,6 +334,20 @@ ul.ts-points li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:10px;a
 ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500;margin-top:2px}
 .ts-box{padding:12px 14px;border-radius:12px;background:var(--card);border:1.5px solid var(--line)}
 .ts-panel>.note{padding:0 4px}
+/* best5 + pick-only finder (2026-11-16) */
+.best5,.pickq{background:var(--card);border:2px solid var(--accent);border-radius:14px;padding:14px 12px;display:flex;flex-direction:column;gap:10px;scroll-margin-top:90px}
+.b5-h{font-size:20px;text-wrap:balance}
+.b5-lead{font-size:16px;color:var(--sub)}
+.b5-btns,.pq-btns{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+.b5-btns button,.pq-btns button{display:flex;align-items:center;gap:12px;text-align:left;min-height:58px;padding:12px 14px;border-radius:14px;border:2px solid var(--accent);background:var(--accent-soft);color:var(--ink);font:inherit;font-size:19px;font-weight:700;line-height:1.4;cursor:pointer}
+.b5-btns button::after,.pq-btns button::after{content:"›";margin-left:auto;font-size:24px;line-height:1;color:var(--accent)}
+.b5-ic{font-size:28px;flex:none;line-height:1}
+.pq-q{margin:0;font-weight:700;font-size:20px;line-height:1.5;color:var(--accent-ink)}
+.pq-path{margin:0;font-size:15px;color:var(--sub)}
+.pq-nav{display:flex;gap:10px}
+.pq-nav[hidden]{display:none}
+.pq-nav button{flex:1 1 0;min-width:0;padding:12px 8px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:17px;font-weight:700;cursor:pointer}
+.b5-btns button:focus-visible,.pq-btns button:focus-visible,.pq-nav button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -416,6 +430,27 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <button type="button" data-d="k" aria-pressed="false" hidden>久留米弁</button>
       <button type="button" data-d="h" aria-pressed="false" hidden>北海道弁</button>
       <button type="button" data-d="y" aria-pressed="false">スマホのことばをやさしく</button>
+    </div>
+  </div>
+  <div class="best5" id="best5" role="group" aria-labelledby="best5-h">
+    <p class="themes-h b5-h" id="best5-h" data-t="1316">🏅 よく聞かれる質問 ベスト5</p>
+    <p class="note b5-lead" data-t="1317">質問部屋に、とくに多く届いた質問です。押すと、答えが開きます。</p>
+    <div class="b5-btns">
+      <button type="button" data-go="q-shunkan"><span class="b5-ic" aria-hidden="true">📘</span><span data-t="1318">瞬間英作文は、アプリ？本？</span></button>
+      <button type="button" data-go="q-t30"><span class="b5-ic" aria-hidden="true">🪜</span><span data-t="1319">文法ドリルは、完ぺきにしてから次へ？</span></button>
+      <button type="button" data-go="q-tacho-script"><span class="b5-ic" aria-hidden="true">🔊</span><span data-t="1320">英文を見ると、音声が止まる</span></button>
+      <button type="button" data-go="q-typelist"><span class="b5-ic" aria-hidden="true">🗺️</span><span data-t="1321">何から、どの順番で？（一覧表）</span></button>
+      <button type="button" data-go="q-90audio"><span class="b5-ic" aria-hidden="true">🎧</span><span data-t="1322">毎朝の音声が届かない</span></button>
+    </div>
+  </div>
+  <div class="pickq" id="pickq" role="group" aria-labelledby="pickq-h">
+    <p class="themes-h b5-h" id="pickq-h" data-t="1323">🔎 文字を打たずに探す（選ぶだけ）</p>
+    <p class="pq-path" id="pq-path" hidden></p>
+    <p class="pq-q" id="pq-q" aria-live="polite"></p>
+    <div class="pq-btns" id="pq-btns"></div>
+    <div class="pq-nav" id="pq-nav" hidden>
+      <button type="button" id="pq-back">◀ もどる</button>
+      <button type="button" id="pq-top">↺ はじめから</button>
     </div>
   </div>
   <section class="about" aria-labelledby="about-h">
@@ -3791,9 +3826,12 @@ var DIAL=null;
 
   // ---- 4. recently added / changed ----
   var NEWS=[
-    ['11/16','theme-btns','スマホの手順を見やすくしました（「📱 iPhone の人」「🤖 Android の人」のテーマに入っている項目。1行ずつ・絵つき）'],
+    ['11/16','best5','「よく聞かれる質問 ベスト5」を、上の方に置きました'],
+    ['11/16','pickq','文字を打たなくても、ボタンを選ぶだけで答えが探せるようになりました'],
     ['11/16','theme-btns','テーマに「📱 iPhone の人」「🤖 Android の人」ができました'],
-    ['11/16','q-tacho-script','多聴voiceで、英文を見ながら音声を聞く方法（iPhone・Android を選べて、見やすくなりました）'],
+    ['11/16','theme-btns','スマホの手順を、1行ずつ・番号と絵で見やすくしました'],
+    ['11/16','q-tacho-script','新しい項目：多聴voiceで、英文を見ながら音声を聞く方法'],
+    ['11/16','dial-h','方言を選ぶボタンは、なくしました（「スマホのことばをやさしく」は残っています）'],
     ['11/9','stage-h','ガイドが新しくなりました（文字を「もっと大きく」・いまの時期に合わせて探す入り口・よく届く質問10こ・上へ戻るボタン）'],
     ['11/8','hanamaru','いちばん下の「できました」スタンプが、冬のスタンプ（雪の結晶・手ぶくろ・雪だるま）になりました⛄'],
     ['10/29','kiroku','新しいなかま分け「📒 ノート・記録・アプリ（仲間のやり方）」'],
@@ -3866,5 +3904,118 @@ var DIAL=null;
   });
   // 写真・確認用：?os=ios / ?os=android で開くと、そのボタンを押した状態になる
   var m=/[?&]os=(ios|android)/.exec(location.search); if(m) pick(m[1]);
+})();
+</script>
+
+<script>
+// よく聞かれる質問ベスト5 ＋ 文字を打たずに探す（選ぶだけ）（2026-11-16）。行き先はぜんぶ、今ある項目の id
+(function(){
+  var q=document.getElementById('q'), hits=document.getElementById('hits'), from=null;
+  function go(id,os,src){
+    var d=document.getElementById(id); if(!d||d.tagName!=='DETAILS') return;
+    if(q&&q.value){ q.value=''; q.dispatchEvent(new Event('input')); }
+    if(hits) hits.hidden=true;
+    d.hidden=false; d.open=true; window.__lastOpened=d.id;
+    if(os&&window.__pickOS) window.__pickOS(os,d);
+    from=src; upd();
+    d.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  var b5=document.getElementById('best5');
+  if(b5) b5.querySelectorAll('button[data-go]').forEach(function(b){ b.addEventListener('click',function(){ go(b.getAttribute('data-go'),null,b5); }); });
+  // [絵文字, 1問目のことば, [[2問目のことば, 行き先id, スマホを聞くなら1], ...]]
+  var TREE=[
+    ['🔊','音が出ない・聞けない',[
+      ['毎朝の音声（90audio）が届かない','q-90audio'],
+      ['スマホの画面が消えると、音が止まる','q-t49'],
+      ['英文（スクリプト）を見ると、音が止まる','q-tacho-script',1],
+      ['動画が見られない・とちゅうで止まる','q-t15'],
+      ['英語耳の音声を、スマホで聞きたい','q-eigomimi',1],
+      ['文法ドリルの音声は、いつから使う？','q-drillaudio']]],
+    ['📱','入れない・画面が見つからない',[
+      ['オンクラスに入れない','q-t13'],
+      ['iPadで、オンクラスのメニューが出ない','q-t14'],
+      ['セミナーのURLから入れない','q-t4'],
+      ['Discordの部屋が、急に見えなくなった','q-t401'],
+      ['動画に字幕が出て、見えにくい','q-t16'],
+      ['自分の投稿だけ、まとめて見たい','q-t50']]],
+    ['💬','Discord の使い方',[
+      ['Discordの始めかたが分からない','q-t8'],
+      ['返信やスタンプのしかた','q-t10'],
+      ['だれがスタンプを押してくれたか知りたい','q-whoreact'],
+      ['自分あての返信に気づけない','q-mymention'],
+      ['送った投稿を、あとから直したい','q-edit'],
+      ['通知の音を止めたい','q-t17']]],
+    ['📚','何をすればいいか分からない',[
+      ['何から、どの順番でやればいい？','q-t29'],
+      ['勉強の進め方の一覧表を見たい','q-typelist'],
+      ['文法ドリルは、完ぺきにしてから次へ？','q-t30'],
+      ['瞬間英作文は、いつから始める？','q-t24'],
+      ['瞬間英作文は、アプリ？本？','q-shunkan'],
+      ['90日を過ぎたら、どうなる？','q-t47']]],
+    ['📝','日報・Dayの数え方',[
+      ['日報は、毎日書かないといけない？','q-nippo'],
+      ['週報は、いつ・どう書く？','q-weekly'],
+      ['Day25の目標が、うまく書けない','q-goal'],
+      ['旅行などで、何日か報告できなかった','q-dayskip'],
+      ['Day90の日は、なにをする？','q-day90'],
+      ['91日目からは、日報をどこに書く？','q-t48']]],
+    ['😟','続かない・不安',[
+      ['続かない・時間がとれない','q-t44'],
+      ['毎日同じで、飽きてしまった','q-bored'],
+      ['先のことを考えると、不安になる','q-anxious'],
+      ['成果を感じられない','q-noresult'],
+      ['ほかの人と比べて、落ちこむ','q-compare'],
+      ['しばらく離れていたけど、また始めたい','q-comeback']]],
+    ['🎙️','セミナー・ラジオ',[
+      ['セミナーってなに？だれでも出られる？','q-t1'],
+      ['顔を出さないといけない？','q-t3'],
+      ['セミナーのURLから入れない','q-t4'],
+      ['見のがしたセミナーを見たい','q-archive'],
+      ['「きまぐれラジオ」ってなに？','q-radio'],
+      ['ラジオの入り方・切り方','q-radiohow']]]
+  ];
+  var box=document.getElementById('pickq'), qq=document.getElementById('pq-q'), bs=document.getElementById('pq-btns'),
+      nav=document.getElementById('pq-nav'), path=document.getElementById('pq-path'), st=[];
+  function btn(ic,txt,fn){
+    var b=document.createElement('button'); b.type='button';
+    b.innerHTML=(ic?'<span class="b5-ic" aria-hidden="true">'+ic+'</span>':'')+'<span></span>';
+    b.lastChild.textContent=txt; b.addEventListener('click',fn); bs.appendChild(b);
+  }
+  function render(move){
+    bs.innerHTML=''; nav.hidden=!st.length;
+    var a=st.length?TREE[st[0]]:null, it=(st.length>1&&a)?a[2][st[1]]:null;
+    path.hidden=!a; if(a) path.textContent='えらんだもの：'+a[0]+' '+a[1]+(it?' → '+it[0]:'');
+    if(!a){
+      qq.textContent='何で困っていますか？';
+      TREE.forEach(function(t,i){ btn(t[0],t[1],function(){ st=[i]; render(1); }); });
+    } else if(!it){
+      qq.textContent='どれに近いですか？';
+      a[2].forEach(function(x,j){ btn('',x[0],function(){ if(x[2]){ st=[st[0],j]; render(1); } else go(x[1],null,box); }); });
+    } else {
+      qq.textContent='お使いのスマホは、どちらですか？';
+      btn('📱','iPhone',function(){ go(it[1],'ios',box); });
+      btn('🤖','Android（アンドロイド）',function(){ go(it[1],'android',box); });
+      btn('🤔','わからない・パソコン',function(){ go(it[1],null,box); });
+    }
+    if(move&&box.getBoundingClientRect().top<0) box.scrollIntoView({block:'start'});
+  }
+  if(box){
+    document.getElementById('pq-back').addEventListener('click',function(){ st.pop(); render(1); });
+    document.getElementById('pq-top').addEventListener('click',function(){ st=[]; render(1); });
+    render(0);
+  }
+  // 答えの「閉じて、もどる」と画面の下のボタンで、ベスト5・選ぶだけの場所へもどる（テーマや検索の一覧が出ているときは、今までどおり一覧へ）
+  var fb=document.createElement('button'); fb.type='button'; fb.className='list-back'; fb.hidden=true;
+  fb.textContent='↩ 選ぶところにもどる';
+  function back(){ if(from&&(!hits||hits.hidden)){ from.scrollIntoView({block:'start'}); return true; } return false; }
+  fb.addEventListener('click',back); document.body.appendChild(fb);
+  document.querySelectorAll('.back-btn').forEach(function(b){ b.addEventListener('click',back); });
+  var vis={};
+  function upd(){ fb.hidden = !from || (hits&&!hits.hidden) || !!vis[from.id]; }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ vis[e.target.id]=e.isIntersecting; }); upd(); });
+    [b5,box].forEach(function(x){ if(x) io.observe(x); });
+  }
+  if(hits) new MutationObserver(upd).observe(hits,{attributes:true,attributeFilter:['hidden']});
 })();
 </script>
