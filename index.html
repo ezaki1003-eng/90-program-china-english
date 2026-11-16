@@ -407,14 +407,14 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <button type="button" data-z="" aria-pressed="true">ふつう</button>
       <button type="button" data-z="big" aria-pressed="false">大きく</button>
       <button type="button" data-z="bigger" aria-pressed="false">もっと大きく</button>
-    </div>    <p class="dial-head" id="dial-h">ことばを選ぶ（方言でも読めます）</p>
+    </div>    <p class="dial-head" id="dial-h">📱 スマホのことばを、やさしくする</p>
     <div class="dial-btns">
       <button type="button" data-d="" aria-pressed="true">ふつう</button>
-      <button type="button" data-d="n" aria-pressed="false">名古屋弁</button>
-      <button type="button" data-d="o" aria-pressed="false">大阪弁</button>
-      <button type="button" data-d="q" aria-pressed="false">京都弁</button>
-      <button type="button" data-d="k" aria-pressed="false">久留米弁</button>
-      <button type="button" data-d="h" aria-pressed="false">北海道弁</button>
+      <button type="button" data-d="n" aria-pressed="false" hidden>名古屋弁</button>
+      <button type="button" data-d="o" aria-pressed="false" hidden>大阪弁</button>
+      <button type="button" data-d="q" aria-pressed="false" hidden>京都弁</button>
+      <button type="button" data-d="k" aria-pressed="false" hidden>久留米弁</button>
+      <button type="button" data-d="h" aria-pressed="false" hidden>北海道弁</button>
       <button type="button" data-d="y" aria-pressed="false">スマホのことばをやさしく</button>
     </div>
   </div>
@@ -3373,6 +3373,7 @@ document.getElementById('pick').addEventListener('click',function(){
 })();
 </script>
 <script>
+try{var _dd=localStorage.getItem('komatta-dial'); if(_dd && 'noqkh'.indexOf(_dd)>=0) localStorage.setItem('komatta-dial','');}catch(e){}
 var DIAL=null;
 (function(){
   // 方言の切り替え：もとの文章をとっておき、選んだ方言の文章に入れかえる
