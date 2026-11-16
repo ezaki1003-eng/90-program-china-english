@@ -600,8 +600,13 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="7">Discordの部屋は、見てもいいの？</summary>
       <div class="ans">
         <p class="lead" data-t="65">どの部屋も、自由に見て大丈夫です。入ったばかりの方も、遠慮なくのぞいてみてください。</p>
-        <p class="note" data-t="66">読むだけでもOKです。みなさんの投稿から、やる気や勉強のヒントがたくさんもらえます。</p>
-        <p class="note" data-t="67">よかったら、ほかの方の投稿を読んで、スタンプも押してみてください。押すのは自由ですが、あなたのスタンプひとつが「見てるよ」「一緒にがんばろう」というエールになって、だれかの「今日もがんばろう」につながります。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1629"><b>読むだけでもOK</b><small>みなさんの投稿から、やる気や勉強のヒントがたくさんもらえます</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-react"/></svg><span data-t="1630">よかったら、<b>スタンプも押してみて</b><small>押すのは自由です。あなたのスタンプひとつが「見てるよ」「一緒にがんばろう」というエールになって、だれかの「今日もがんばろう」につながります</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1631">とくに見てほしいのは<b>「セミナー／イベント」</b>の部屋<small>毎月のセミナーの案内は、ここに出ます</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="t7-rooms"><span data-t="1632">🚪 部屋の一覧を見る（16部屋）</span></button>
+        <div class="ts-more" id="t7-rooms" hidden>
         <ul class="rooms">
           <li><a class="in" href="https://discord.com/channels/1214839485364305960/1350354533448155187" target="_top">はじめに</a><span data-t="274">最初に読んでほしい案内</span></li>
           <li><a class="in" href="https://discord.com/channels/1214839485364305960/1512318220542017646" target="_top">コミュニティールール</a><span data-t="275">みんなが気持ちよく過ごすための約束</span></li>
@@ -620,6 +625,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <li><a class="in" href="https://discord.com/channels/1214839485364305960/1454112635879424103" target="_top">英語で雑談しましょう</a><span data-t="288">英語で書いて、おしゃべりする部屋です。ChatGPTに手伝ってもらって書いている方もいるので、短い一言からでも大丈夫です</span></li>
           <li><a class="in" href="https://discord.com/channels/1214839485364305960/1517862984377172090" target="_top">日本語で雑談しましょう</a><span data-t="289">「みなさんに聞いてみたいこと」「みんなはどうしてる？」も、気軽にどうぞ。旅行や好きなことの話でも盛り上がっています</span></li>
         </ul>
+        </div>
       </div>
     </details>
     <details id="q-t401" data-y="へやがきえた へやがない へやがみえない へやがなくなった へやがみつからない ちゃんねるがきえた ひょうじがきえた でぃすこーど へや きえた なくなった みえない みつからない かくれた ひょうじ でない ちゃんねる おふかい もうしこみ かてごりー とじた おりたたみ やじるし" data-k="Discord ディスコード 部屋 消えた なくなった 見えない 見つからない 隠れた 表示 チャンネル オフ会 申し込み カテゴリー 閉じた 折りたたみ">
@@ -776,7 +782,8 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="578">Discordや日報で見かけることばの意味は？</summary>
       <div class="ans">
         <p class="lead" data-t="579">よく出てくることばを、まとめました。上の「ことばで探す」に、ひらがなで入れても見つかります。</p>
-        <p class="note"><b>Discordの操作のことば</b></p>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="wd-discord"><span data-t="1633">💬 Discordの操作のことば（8つ）</span></button>
+        <div class="ts-more" id="wd-discord" hidden>
         <ul class="words">
           <li><b>メンション（@〜）</b>　名前の前に「@」をつけて、その人に知らせること。</li>
           <li><b>リアクション</b>　投稿につけるスタンプのこと。</li>
@@ -787,7 +794,9 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <li><b>ボイスチャンネル</b>　声で話す部屋。きまぐれラジオはここで配信しています。</li>
           <li><b>アーカイブ</b>　あとから見られる録画・録音のこと。</li>
         </ul>
-        <p class="note"><b>勉強のやり方のことば</b></p>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="wd-study"><span data-t="1634">📖 勉強のやり方のことば（13こ）</span></button>
+        <div class="ts-more" id="wd-study" hidden>
         <ul class="words">
           <li><b>精読（せいどく）</b>　1文ずつ、ていねいに読むこと。「究極の英語リーディング」がこれです。</li>
           <li><b>多読（たどく）</b>　たくさん読んで、英語に慣れること。オンクラスの「多読book」がこれです。</li>
@@ -803,7 +812,9 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <li><b>i＋1（アイ・プラス・ワン）</b>　今の自分より、少しだけ難しいレベルのこと。いちばん力がつくと言われています。</li>
           <li><b>120点目標</b>　週報に書く、次の週の目標のこと。</li>
         </ul>
-        <p class="note"><b>日報でよく見る書き方</b></p>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="wd-nippo"><span data-t="1635">📝 日報でよく見る書き方（5つ）</span></button>
+        <div class="ts-more" id="wd-nippo" hidden>
         <ul class="words">
           <li><b>P2・Part2</b>　瞬間英作文のパート2のこと。</li>
           <li><b>⑤・5周目</b>　その教材の5回目のくり返し、という意味。</li>
@@ -811,13 +822,16 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <li><b>おかわり</b>　瞬間英作文の続編の本（「おかわり」シリーズ）のこと。</li>
           <li><b>▶︎50分</b>　その日の勉強時間のこと。</li>
         </ul>
-        <p class="note"><b>アプリや道具の名前</b></p>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="wd-app"><span data-t="1636">📱 アプリや道具の名前（4つ）</span></button>
+        <div class="ts-more" id="wd-app" hidden>
         <ul class="words">
           <li><b>チャッピー</b>　ChatGPT（チャットジーピーティー）のあだ名。</li>
           <li><b>my-oto-mo（マイオトモ）</b>　文法ドリルの音声が聞けるアプリ。</li>
           <li><b>booco（ブーコ）</b>　究極の英語リーディング・リスニングの音声が聞けるアプリ。</li>
           <li><b>Studyplus（スタディプラス）</b>　勉強時間を記録するアプリ。</li>
         </ul>
+        </div>
         <p class="cheer" data-t="580">分からないことばがあるのは、新しいことを始めた証拠です。少しずつ慣れていきましょう。</p>
       </div>
     </details>
@@ -825,14 +839,17 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="581">90プログラムで使うもの、ぜんぶでいくつあるの？（一覧）</summary>
       <div class="ans">
         <p class="lead" data-t="582">90プログラムで出てくるものを、ひとつにまとめました。名前を押すと、くわしい説明に飛びます。</p>
-        <p class="note"><b>連絡と学習の場所</b></p>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="all-basho"><span data-t="1637">📱 連絡と学習の場所（4つ）</span></button>
+        <div class="ts-more" id="all-basho" hidden>
         <ul class="words">
           <li><a class="in" href="#q-tools"><b>LINE（受講生LINE）</b></a>　お知らせや、こまったときの連絡先。</li>
           <li><a class="in" href="#q-tools"><b>オンクラス</b></a>　動画や教材が入っている、学習のサイト。</li>
           <li><a class="in" href="#q-tools"><b>Discord（ディスコード）</b></a>　日報を書いたり、質問したり、仲間とはげまし合う場所。</li>
           <li><a class="in" href="#q-studyplus"><b>Studyplus（スタディプラス）</b></a>　勉強時間を記録するアプリ。</li>
         </ul>
-        <p class="note"><b>毎日・毎週のこと</b></p>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="all-mainichi"><span data-t="1638">📅 毎日・毎週のこと（5つ）</span></button>
+        <div class="ts-more" id="all-mainichi" hidden>
         <ul class="words">
           <li><a class="in" href="#q-90audio"><b>90audio</b></a>　毎朝届く、ちなコーチの音声。続けるための心の持ち方の話です。</li>
           <li><a class="in" href="#q-nippo"><b>日報</b></a>　その日の勉強を報告する投稿。</li>
@@ -840,7 +857,9 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <li><a class="in" href="#q-radio"><b>きまぐれラジオ</b></a>　平日のお昼に、ちなコーチが話す短いラジオ。</li>
           <li><a class="in" href="#q-question"><b>質問部屋</b></a>　英語や、システムのことを質問する部屋。</li>
         </ul>
-        <p class="note"><b>教材（だいたい進む順番）</b></p>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="all-kyozai"><span data-t="1639">📚 教材・だいたい進む順番（10こ）</span></button>
+        <div class="ts-more" id="all-kyozai" hidden>
         <ul class="words">
           <li><a class="in" href="#q-master"><b>マスター講座</b></a>　ちなコーチの、文法の動画講座。</li>
           <li><a class="in" href="#q-drill"><b>文法ドリル</b></a>　『中学英語をもう一度ひとつひとつわかりやすく。』の本。</li>
@@ -853,13 +872,16 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <li><a class="in" href="#q-tango"><b>単語帳（DUO3.0など）</b></a>　文法の土台ができてから使います。</li>
           <li><a class="in" href="#q-duo"><b>DUO（デュオ）</b></a>　例文で覚える単語帳。DUO selectとDUO 3.0があります。</li>
         </ul>
-        <p class="note"><b>そのほか</b></p>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="all-hoka"><span data-t="1640">🌟 そのほか（4つ）</span></button>
+        <div class="ts-more" id="all-hoka" hidden>
         <ul class="words">
           <li><a class="in" href="#seminar"><b>セミナー</b></a>　ちなコーチのオンライン勉強会。</li>
           <li><a class="in" href="#q-offkai"><b>オフ会</b></a>　ちなコーチが日本に帰ってくるときに開く、会って話せる集まり。</li>
           <li><a class="in" href="#q-withyou"><b>With you コース</b></a>　ちなコーチがもっと近くで伴走する、別のコース。</li>
           <li><a class="in" href="#q-words"><b>ことばの意味</b></a>　分からないカタカナや略し方の説明。</li>
         </ul>
+        </div>
         <p class="cheer" data-t="583">いっぺんに全部使わなくて大丈夫です。今の自分に合うものから、ひとつずつ。</p>
       </div>
     </details>
@@ -1312,11 +1334,12 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-whose" data-y="ふーず おぶうぃっち かんけいだいめいし しょゆうかく わからない むずかしい ぱーとすりー せみなー" data-k="whose of which 関係代名詞 所有格 分からない 難しい Part3 セミナー">
       <summary data-t="745">瞬間英作文の whose・of which が、どうしても分からない</summary>
       <div class="ans">
-        <p class="lead" data-t="746">たくさんの方がつまずくところです。文法ドリルには、このための回がありません。</p>
-        <ol class="steps">
-          <li><span data-t="747">2026年2月22日のセミナー（関係代名詞・関係副詞）で、ちなコーチがくわしく解説しています。オンクラスの「英語セミナー アーカイブ一覧」から見られます。</span></li>
-          <li><span data-t="748">Part3の後半は、まずは「英語を見て意味が分かればOK」です。ゆっくり、階段をのぼるように進めましょう。</span></li>
-        </ol>
+        <p class="lead" data-t="1608">たくさんの方がつまずくところです。セミナーのアーカイブで、くわしく学べます。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1609">文法ドリルには、<b>このための回がない</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-play"/></svg><span data-t="1610"><b>2026年2月22日のセミナー</b>（関係代名詞・関係副詞）で、ちなコーチがくわしく解説<small>オンクラスの「英語セミナー アーカイブ一覧」から見られます</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1611">Part3の後半は、まずは<b>「英語を見て意味が分かればOK」</b><small>ゆっくり、階段をのぼるように進めましょう</small></span></li>
+        </ul>
         <a class="btn" href="#q-archive"><svg aria-hidden="true"><use href="#i-video"/></svg>前のセミナーの見かた</a>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1444867537262350386" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
@@ -1357,12 +1380,13 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="646">90プログラムの仲間は、どんな理由で英語を学んでいる人が多いの？（理由ベスト3）</summary>
       <div class="ans">
         <p class="lead" data-t="647">仲間が「人生の目標を決める」（90audioのDay25）で書いた目標から、英語を学びたい理由をまとめました。</p>
-        <ol class="steps">
-          <li><span data-t="648"><b>1位　海外旅行を、英語で楽しみたい</b>　世界一周の旅や、クルーズ旅行でたくさんの人と交流したい。旅先で、アプリに頼らずに自分で注文したい。</span></li>
-          <li><span data-t="649"><b>2位　仕事で使いたい・海外で働きたい</b>　海外で働きたい、外資系の会社で働きたい。自分の作品を、海外の人にも届けたい。</span></li>
-          <li><span data-t="650"><b>3位　外国の人と話したい・友だちを作りたい</b>　外国人の友だちを作って、ちがう文化を知りたい。英語で話しながら、趣味を一緒に楽しみたい。</span></li>
-        </ol>
-        <p class="note" data-t="651"><b>ちょっと変わった理由・すてきな目標</b></p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1705"><b>1位　海外旅行を、英語で楽しみたい</b><small>世界一周の旅や、クルーズ旅行でたくさんの人と交流したい。旅先で、アプリに頼らずに自分で注文したい</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-file"/></svg><span data-t="1706"><b>2位　仕事で使いたい・海外で働きたい</b><small>海外で働きたい、外資系の会社で働きたい。自分の作品を、海外の人にも届けたい</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1707"><b>3位　外国の人と話したい・友だちを作りたい</b><small>外国人の友だちを作って、ちがう文化を知りたい。英語で話しながら、趣味を一緒に楽しみたい</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="rs-hoka"><span data-t="1708">💐 ちょっと変わった理由・すてきな目標（5つ）</span></button>
+        <div class="ts-more" id="rs-hoka" hidden>
         <ul class="words">
           <li><span data-t="652">困っている外国人観光客の、助けになりたい</span></li>
           <li><span data-t="653">海外のお笑いを観て、大笑いしたい</span></li>
@@ -1370,6 +1394,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <li><span data-t="655">子どもが、英語を嫌いにならないように</span></li>
           <li><span data-t="656">英語の勉強を通して、自分を変えたい</span></li>
         </ul>
+        </div>
         <p class="cheer" data-t="657">理由は、人の数だけあります。あなたの「やってみたい」も、大切な理由ですよ。</p>
       </div>
     </details>
@@ -1486,7 +1511,9 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="32">簡単すぎる・もう分かっているところは？</summary>
       <div class="ans">
         <p class="lead" data-t="103">簡単すぎると感じたら、次のレベルへ進んで大丈夫です。</p>
-        <p class="note"><span data-t="215">今の自分より「少しだけむずかしい」くらいが、いちばん力がつきます。</span></p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-up"/></svg><span data-t="1612">今の自分より<b>「少しだけむずかしい」</b>くらいが、いちばん力がつく</span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1513081299945132124" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -1619,12 +1646,22 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="882">オーバーラッピングやシャドーイングで、抑揚（文の上がり下がり）がうまくまねできない</summary>
       <div class="ans">
         <p class="lead" data-t="883">抑揚は「完ぺきにまねする」より、「少しずつ気づいて、近づけていく」で大丈夫です。</p>
-        <ol class="steps">
-          <li><span data-t="884">オーバーラッピングは、音声と同時に声に出しながら、意味をイメージする練習です。最初は意味まで手が回らなくても問題ありません。慣れてきたら、少しずつ近づけていきましょう。</span></li>
-          <li><span data-t="885">全文をまねしなくてOKです。まねしにくい2〜3文だけを選んで、スクリプトに「↗」「↘」を書きこみ、その文だけをくり返しましょう。書きこむのは、頭を整理するためなので大丈夫です。</span></li>
-          <li><span data-t="886">2周目からは、全部を同じようにくり返すより、苦手なところ（聞き取れなかった・言いにくかった・抑揚がつかめなかった文）に時間を使いましょう。</span></li>
-        </ol>
-        <p class="note" data-t="887"><b>抑揚の、基本の形</b></p>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1660">🎵 練習の流れ</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1661"><b>音声を聞く</b></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1662"><b>音読</b></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-speed"/></svg><span data-t="1663"><b>オーバーラッピング</b><small>はじめは0.7倍くらい、慣れたら1.0倍</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1664"><b>シャドーイング</b></span></li>
+          </ol>
+        </div>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1665">まねしにくい<b>2〜3文だけ</b>選んで、「↗」「↘」を書きこむ<small>全文をまねしなくてOK。その文だけをくり返しましょう。書きこむのは、頭を整理するためなので大丈夫です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1666">最初は<b>意味まで手が回らなくても問題なし</b><small>オーバーラッピングは、音声と同時に声に出しながら、意味をイメージする練習です。慣れてきたら、少しずつ近づけていきましょう</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1667">2周目からは、<b>苦手なところに時間を使う</b><small>聞き取れなかった・言いにくかった・抑揚がつかめなかった文</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="it-kata"><span data-t="1668">↗↘ 抑揚の、基本の形</span></button>
+        <div class="ts-more" id="it-kata" hidden>
         <ul class="words">
           <li><b>ふつうの文</b>　文の終わりが下がる↘　I went to the station.</li>
           <li><b>Yes/Noで答える質問</b>　文の終わりが上がる↗　Did you go to the station?</li>
@@ -1632,7 +1669,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <li><b>いくつか並べるとき</b>　途中は上がって↗、最後は下がる↘　I bought apples, oranges, and bananas.</li>
         </ul>
         <p class="note" data-t="888">話す人によってクセがあるので、全部をまねしなくても大丈夫です。</p>
-        <p class="note" data-t="889">「音声を聞く → 音読 → オーバーラッピング（はじめは0.7倍くらい、慣れたら1.0倍）→ シャドーイング」の流れで進めましょう。</p>
+        </div>
         <p class="cheer" data-t="890">シャドーイングは、完ぺきにするためではなく、英語の音を自然にキャッチして、意味をスラスラ分かるようになるための練習です。</p>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1561355893780774986" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
@@ -1641,12 +1678,21 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="584">「多聴voice（たちょうボイス）」って、なに？</summary>
       <div class="ans">
         <p class="lead" data-t="585">90プログラムだけの、オリジナルの英語音声教材です。オンクラスの「<a class="in" href="https://app.the-online-class.com/learning_courses/oADM4gDI6MGb" target="_top">3.英語を聞く</a>」に入っています。</p>
-        <ol class="steps">
-          <li><span data-t="586">多読bookのお話を、音声で聞ける教材です。「入門1〜53」から始まり、そのあと「レベル1」「レベル2」と、多読bookと同じ番号で並んでいます。</span></li>
-          <li><span data-t="587">聞くのは「読んだことのあるお話」から。内容が分かっている英文を聞くと、英語の音と意味を結びつける練習に集中できます。</span></li>
-          <li><span data-t="588">「入門」は初めて読む文章なので、①先に文章（スクリプト）を読んで内容をつかむ → ②そのあとで音声を聞く、の順で進めます。</span></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1641">多読bookのお話を、<b>音声で聞ける</b><small>「入門1〜53」から始まり、そのあと「レベル1」「レベル2」と、多読bookと同じ番号で並んでいます</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1642">聞くのは<b>「読んだことのあるお話」から</b><small>内容が分かっている英文を聞くと、英語の音と意味を結びつける練習に集中できます</small></span></li>
+        </ul>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1643">🎧 「入門」の進め方</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-file"/></svg><span data-t="1644">先に<b>文章（スクリプト）を読んで</b>、内容をつかむ<small>「入門」は初めて読む文章だからです</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1645">そのあとで<b>音声を聞く</b></span></li>
+          </ol>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="tc-jiki"><span data-t="1646">📅 始める時期は？</span></button>
+        <div class="ts-more ts-box" id="tc-jiki" hidden>
         <p class="note" data-t="589"><b>始める時期</b>　「究極の英語リーディング」vol.1〜3を進めたあとが目安です。「英語耳」や「究極の英語リスニング」と同じころに取り組みます。</p>
+        </div>
         <a class="btn" href="https://app.the-online-class.com/lessons/owN0UDNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>「多聴voiceの進め方」（オンクラス）</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/oQO5YTNzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ラジオ「多聴voice入門の進め方」</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/oAMzYjNwQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>「入門1」を開く</a>
@@ -1763,18 +1809,31 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="439">「究極の英語リーディング」は、なぜ必要？どうやって進めるの？</summary>
       <div class="ans">
         <p class="lead" data-t="440">英語を、前から順番に「かたまりごと」に分かるようになるための本です。</p>
-        <p class="note" data-t="441"><b>なぜ必要？</b>　読んですぐに意味が分からない英文は、耳で聞いても分かりません。「読んで分かる速さ」が、そのまま「聞いて分かる速さ」の上限になります。だから、聞く・話す練習の前に、まずここで「読める」を作ります。</p>
-        <ol class="steps">
-          <li><span data-t="442">本に書いてある手順（ROUND1〜3）のとおりに進めれば大丈夫です。</span></li>
-          <li><span data-t="443">1つのお話にかける時間は、20〜30分くらいが目安です。</span></li>
-          <li><span data-t="444">きれいな日本語に訳さなくてOKです。英語の順番のまま、場面が頭に浮かべば合格です。</span></li>
-          <li><span data-t="445">「7〜8割わかった」で、次のお話へ進んで大丈夫です。</span></li>
-          <li><span data-t="446">文法でどうしても引っかかるところだけ、<a class="in" href="https://app.the-online-class.com/learning_courses/oQTM2gDI6MGb" target="_top">文法ドリル</a>に戻って確かめます。</span></li>
-          <li><span data-t="447">本はvol.1・vol.2・vol.3の3冊です。vol.1から順に、使われる単語が少しずつ増えていきます（およそ1000語→2000語→3000語のレベル）。それぞれ2回ずつくり返すのが理想です。</span></li>
-          <li><span data-t="557">vol.1の普通の速さの音声に合わせて、スムーズに読めるようになったら、vol.2へ進む目安です。vol.1が簡単すぎると感じたら、vol.2から始めても大丈夫です。</span></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1647">「<b>読んで分かる速さ</b>」が、そのまま「聞いて分かる速さ」の上限になる<small>読んですぐに意味が分からない英文は、耳で聞いても分かりません。だから、聞く・話す練習の前に、まずここで「読める」を作ります</small></span></li>
+        </ul>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1648">📖 進め方</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1649">本の手順<b>（ROUND1〜3）のとおり</b>に進める</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1650">1つのお話は<b>20〜30分くらい</b>が目安</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1651">英語の順番のまま、<b>場面が頭に浮かべば合格</b><small>きれいな日本語に訳さなくてOKです</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1652"><b>「7〜8割わかった」</b>で、次のお話へ</span></li>
+          </ol>
+        </div>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1653">知らない単語を、<b>全部調べなくて大丈夫</b><small>日本語でざっくり意味が分かれば十分合格です</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="rh-more"><span data-t="1654">📚 本の3冊・文法・単語のこと（くわしく）</span></button>
+        <div class="ts-more ts-box" id="rh-more" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-back"/></svg><span data-t="446">文法でどうしても引っかかるところだけ、<a class="in" href="https://app.the-online-class.com/learning_courses/oQTM2gDI6MGb" target="_top">文法ドリル</a>に戻って確かめます。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="447">本はvol.1・vol.2・vol.3の3冊です。vol.1から順に、使われる単語が少しずつ増えていきます（およそ1000語→2000語→3000語のレベル）。それぞれ2回ずつくり返すのが理想です。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-up"/></svg><span data-t="557">vol.1の普通の速さの音声に合わせて、スムーズに読めるようになったら、vol.2へ進む目安です。vol.1が簡単すぎると感じたら、vol.2から始めても大丈夫です。</span></li>
+        </ul>
         <p class="note" data-t="448">知らない単語を、全部調べなくても大丈夫です。英語を見て、日本語でざっくり意味が分かれば十分合格。「なんとなく分かる」まま、次へ進んでOKです。調べたときも、その場で覚えようとしなくて大丈夫。同じ言葉に何度も出会ううちに、自然と身についていきます。</p>
         <p class="note" data-t="449">日報で「精読」と書かれているのは、この本のことです。オンクラスの「多読book」とは役割がちがいます。</p>
+        </div>
         <div class="cw-box"><p class="note" data-t="450"><b>ちなコーチの考え（Discordの質問への答えから）</b></p>
         <ul class="steps">
           <li><span data-t="451">まず英文の作り（どれが主語で、どれが動詞か）を確かめて、そのあとスラッシュで区切ったかたまりごとに、意味をイメージしていく。この順番で大丈夫です。</span></li>
@@ -1789,16 +1848,19 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="545">「多読book（たどくブック）」って、なに？どう進めるの？</summary>
       <div class="ans">
         <p class="lead" data-t="546">たくさんの英文を読んで、「なんとなく分かる」感覚を育てる教材です。オンクラスの「<a class="in" href="https://app.the-online-class.com/learning_courses/oQDO2gDI6MGb" target="_top">2.英語を読む</a>」に入っています。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1655">身近なお話が、<b>やさしいレベルから順番に</b><small>マクドナルドやトヨタの物語、昔話など。全部で237話です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1656">細かい単語は気にせず、<b>どんどん読み進める</b><small>辞書で1つずつ調べなくて大丈夫です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1657">「どんな話だったか」を<b>日本語でざっくり言えればOK</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1658"><b>「ところどころ分からない単語がある」</b>くらいが、ちょうどいい<small>まったく分からないときは、今の自分にはまだ少し難しいというサインです</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="td-more"><span data-t="1659">📚 ある場所・始める時期・精読とのちがい</span></button>
+        <div class="ts-more ts-box" id="td-more" hidden>
         <p class="note" data-t="556"><b>多読bookのある場所</b>　オンクラスの「<a class="in" href="https://app.the-online-class.com/learning_courses/oQDO2gDI6MGb" target="_top">2.英語を読む</a>」を開くと、「はじめに」「読む教材（多読book）に入る前に」のあとに、「レベル１（1~20）」から「レベル３（225~237）」まで、全部で237話が並んでいます。最初のお話は「1. マクドナルド物語」です。</p>
-        <ol class="steps">
-          <li><span data-t="547">マクドナルドやトヨタの物語、昔話など、身近なお話が、やさしいレベルから順番に並んでいます。</span></li>
-          <li><span data-t="548">細かい単語の意味は気にせず、どんどん読み進めます。辞書で1つずつ調べなくて大丈夫です。</span></li>
-          <li><span data-t="549">1つのお話を読んだら、「どんな話だったか」を日本語でざっくり言えればOKです。</span></li>
-          <li><span data-t="550">「ほとんど分かるけど、ところどころ分からない単語がある」くらいが、ちょうどいいレベルです。まったく分からないときは、今の自分にはまだ少し難しいというサインです。</span></li>
-        </ol>
         <p class="note" data-t="552"><b>始める時期</b>　文法ドリルや瞬間英作文をある程度進めてから始めます。はじめは「究極の英語リーディング」を多めにして、慣れてきたら多読bookを少しずつ増やしていきます。</p>
         <p class="note" data-t="553"><b>精読とのちがい</b>　「究極の英語リーディング」（精読）は、1文ずつていねいに読んで、文のしくみを理解する練習です。多読bookは、たくさん読んで英語に慣れる練習です。どちらも大切です。</p>
         <p class="note" data-t="554">知らない単語が多くて読むのがつらいときは、いったんお休みしても大丈夫です。</p>
+        </div>
         <a class="btn" href="https://youtu.be/7QFxzdmiK0c" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>多読の進め方（ちなコーチの動画・YouTube）</a>
         <a class="btn" href="https://app.the-online-class.com/learning_courses/oQDO2gDI6MGb" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>多読bookの一覧（オンクラス「2.英語を読む」）</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/oAM1UDNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>「読む教材（多読book）に入る前に」を読む</a>
@@ -1811,12 +1873,19 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="695">「WPM（ダブリューピーエム）」ってなに？読む速さの目安は？</summary>
       <div class="ans">
         <p class="lead" data-t="696">WPMは、1分間に読める英語の単語の数のことです。読む速さを、数字で見ることができます。</p>
-        <p class="note" data-t="703"><b>全員が測らなくて大丈夫です</b>　WPMは、多読（多読bookなど）を進めている方が、読む速さの目安にするものです。文法ドリルや瞬間英作文をしている方は、まだ気にしなくて大丈夫。多読を始めて、「自分はどのくらいの速さで読めているのかな」と気になったときに、使ってみてください。</p>
-        <ol class="steps">
-          <li><span data-t="697"><b>測り方</b>：英文を読んだ時間を測ります。声に出さずに読む（黙読）で大丈夫です。</span></li>
-          <li><span data-t="698"><b>計算のしかた</b>：読んだ単語の数を、かかった時間（分）で割ります。たとえば、300語の英文を2分で読んだら、150WPMです。</span></li>
-          <li><span data-t="699">下の目安とくらべると、今の自分の位置や、次の目標が分かります。</span></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1669"><b>全員が測らなくて大丈夫</b><small>多読（多読bookなど）を進めている方が、読む速さの目安にするものです。文法ドリルや瞬間英作文をしている方は、まだ気にしなくて大丈夫</small></span></li>
+        </ul>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1670">⏱ 測り方</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1671">英文を読んだ<b>時間を測る</b><small>声に出さずに読む（黙読）で大丈夫です</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1672"><b>単語の数 ÷ 時間（分）</b><small>たとえば、300語の英文を2分で読んだら、150WPMです</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-graph"/></svg><span data-t="1673">下の<b>目安とくらべる</b><small>今の自分の位置や、次の目標が分かります</small></span></li>
+          </ol>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="wpm-meyasu"><span data-t="1674">📊 速さの目安の表を見る</span></button>
+        <div class="ts-more" id="wpm-meyasu" hidden>
         <div class="cw-box"><p class="note" data-t="700"><b>ちなコーチが紹介した目安（質問部屋で、Geminiで調べたものとして）</b></p>
         <p class="note"><b>読む速さ（リーディング）</b></p>
         <table class="wpm-t">
@@ -1834,6 +1903,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <tr><th>200以上</th><td>手加減のない早い会話、スポーツの実況</td></tr>
         </table>
         <p class="note">まとめ：まずは150WPMを、安定して読めたり話せたりすることを目指すのが一般的です。ネイティブの自然な速さは、180〜200WPMくらいです。</p>
+        </div>
         </div>
         <p class="note" data-t="701"><b>ちなコーチの場合</b>　はじめて読む英文で、160〜180WPMくらいです。ネイティブとの日常会話や、仕事の基本的な場面なら、問題なく理解できる速さです。WPMを意識して多読をすると、英語を頭から順にそのまま理解する感覚が身につき、成長も実感しやすくなります。</p>
         <p class="cheer" data-t="702">数字は、人とくらべるためではなく、自分の成長を見るためのものです。少し前の自分より速くなっていたら、それが積み重ねてきた証です。</p>
@@ -1924,13 +1994,21 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="39">映画やドラマで、英語を楽しみたい</summary>
       <div class="ans">
         <p class="lead" data-t="108">「たまのお楽しみ」として取り入れるのは、とてもいいことです。</p>
-        <ol class="steps">
-          <li><span data-t="232">初めて見る作品は、まず「日本語の字幕＋英語の音声」で、お話の流れをつかみます。</span></li>
-          <li><span data-t="233">気に入ったシーンだけ、「英語の音声＋字幕なし（または英語の字幕）」で聞きとりに挑戦します。</span></li>
-          <li><span data-t="234">もう内容を知っている作品（ジブリなど）なら、最初から英語の音声で見てもOKです。</span></li>
-        </ol>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1613">🎬 映画・ドラマの見かた</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-play"/></svg><span data-t="1614">初めての作品は<b>「日本語の字幕＋英語の音声」</b><small>まず、お話の流れをつかみます</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1615">気に入ったシーンだけ、<b>聞きとりに挑戦</b><small>「英語の音声＋字幕なし（または英語の字幕）」で</small></span></li>
+          </ol>
+        </div>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1616">内容を知っている作品（ジブリなど）なら、<b>最初から英語の音声</b>でもOK</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1617">メモは<b>1回に1〜2個だけ</b>で十分<small>分からない言葉を全部ノートに書かなくて大丈夫。「使ってみたい！」と思ったものだけ</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="t39-jimaku"><span data-t="1618">💭 英語の字幕について</span></button>
+        <div class="ts-more ts-box" id="t39-jimaku" hidden>
         <p class="note" data-t="109">英語の字幕は、実際のセリフとずれていることがよくあります。気になるときは字幕を消して、音だけに集中するほうが効果的です。</p>
-        <p class="note" data-t="110">分からない言葉を全部ノートに書かなくて大丈夫です。「使ってみたい！」と思ったものを、1回に1〜2個だけメモするくらいで十分です。</p>
+        </div>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1549242864205037743" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -1969,15 +2047,26 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="600">単語帳は、どれを選べばいい？「DUO（デュオ）」って、なに？</summary>
       <div class="ans">
         <p class="lead" data-t="601">「DUO（デュオ）」は、例文の中で単語を覚える単語帳です。90プログラムのロードマップにものっています。</p>
-        <ol class="steps">
-          <li><span data-t="602"><b>2つのレベル</b>　「DUO select（デュオ・セレクト）」は初中級、「DUO 3.0」は中上級の本です。最後はDUO 3.0を目指しますが、むずかしく感じたら、DUO selectから始めましょう。</span></li>
-          <li><span data-t="603"><b>始める時期</b>　文法ドリルと瞬間英作文をくり返し、「<a class="in" href="#q-eigomimi">英語耳</a>」で発音を学んでからが目安です。</span></li>
-          <li><span data-t="604"><b>試験を受けるなら</b>　英検やTOEICを受ける予定があるなら、その試験に合わせた単語帳もおすすめです（英検準2級なら「銀のフレーズ」、英検2級やTOEICなら「金のフレーズ」など）。</span></li>
-          <li><span data-t="605"><b>進め方</b>　1回15〜20分で、100単語ほど（DUOなら例文20〜25個くらい）をテンポよく声に出して読みます。同じところを1週間毎日くり返し、最後の2〜3日で、覚えられない単語にだけ付箋を貼ります。1週間たったら、次の100単語へ。</span></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1675"><b>DUO select</b>＝初中級／<b>DUO 3.0</b>＝中上級<small>最後はDUO 3.0を目指しますが、むずかしく感じたら、DUO selectから始めましょう</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-cal"/></svg><span data-t="1676">始めるのは、<b>文法ドリル・瞬間英作文・<a class="in" href="#q-eigomimi">英語耳</a>のあと</b>が目安<small>文法ドリルと瞬間英作文をくり返し、英語耳で発音を学んでから</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1677">試験を受けるなら、<b>その試験に合わせた単語帳</b>も<small>英検準2級なら「銀のフレーズ」、英検2級やTOEICなら「金のフレーズ」など</small></span></li>
+        </ul>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1678">🔁 1週間の進め方</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1679">1回15〜20分で、<b>100単語ほど</b>をテンポよく声に出して読む<small>DUOなら例文20〜25個くらい</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1680">同じところを<b>1週間毎日</b>くり返す</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1681">最後の2〜3日で、<b>覚えられない単語にだけ付箋</b></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1682">1週間たったら、<b>次の100単語へ</b></span></li>
+          </ol>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="duo-qa"><span data-t="1683">💭 どれを買えばいい？（受講生さんの質問から）</span></button>
+        <div class="ts-more" id="duo-qa" hidden>
         <div class="cw-box">
           <p data-t="606"><b>受講生さんの質問から</b>　「本屋さんで中身を見て選べないし、合わなくてもすぐに買い直せない。DUO 3.0は初心者だと挫折しやすいと聞いたけれど、どれを買えばいい？」</p>
           <p data-t="607"><b>ちなコーチの答え（まとめ）</b>　試験の予定がなく、「読める・聞ける文章を増やしたい」なら、DUOシリーズがおすすめ。例文に大事な単語がぎゅっと詰まっていて、単語帳としても教材としても優秀です。DUO 3.0がむずかしければ、やさしい「DUO select」から。1冊1,500円以下なので、迷ったら2冊とも用意しておくと安心です。</p>
+        </div>
         </div>
         <a class="btn" href="https://app.the-online-class.com/lessons/ogM2QjNwUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>英単語との向き合い方（セミナー録画）</a>
         <p class="cheer" data-t="608">1冊がボロボロになるまで、何度も出会いましょう。「あ、この単語知ってる！」が、どんどん増えていきますよ。</p>
@@ -1987,17 +2076,26 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-duoex" data-y="たんごちょう れいぶん でゅお でゅおせれくと いっしゅうめ よむ おんせい かう こうにゅう はつおん はつおんきごう つづり ながらぎき" data-k="単語帳 例文 DUO DUO select 1周目 読む 音声 買う 購入 発音 発音記号 つづり ながら聞き">
       <summary data-t="900">単語帳（DUO selectなど）の例文は、1周目から読んだほうがいい？</summary>
       <div class="ans">
-        <p class="lead" data-t="901">単語と意味にたくさん出会う、今のやり方のままで大丈夫です。余裕があれば、1周目から例文を読むのも効果があります。</p>
-        <p class="note" data-t="902">単語は、文の中で出会うと、使い方まで一緒に入ってきます。ただ、1周目の目的は「何度も出会うこと」です。</p>
-        <p class="note" data-t="903"><b>例文を取り入れるときのルール</b></p>
-        <ol class="steps">
-          <li><span data-t="904">意味を細かく確認しません。立ち止まらず、テンポよく音読します。</span></li>
-          <li><span data-t="905">分からないところがあっても、流します。</span></li>
-          <li><span data-t="906">例文のテストはしません。読むだけで十分です。</span></li>
-        </ol>
-        <p class="note" data-t="907">時間が長くなりすぎる・疲れるときは、1周目は単語中心のままにして、2周目から例文を足しても遅くありません。大事なのは、毎日続けられる負荷にしておくことです。</p>
+        <p class="lead" data-t="1684">今のやり方のままで大丈夫です。余裕があれば、1周目から例文を読むのも効果があります。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1685">1周目の目的は<b>「何度も出会うこと」</b><small>単語と意味にたくさん出会う、今のやり方でOK。単語は、文の中で出会うと、使い方まで一緒に入ってきます</small></span></li>
+        </ul>
+        <div class="ts-panel">
+          <p class="os-h" data-t="903"><b>例文を取り入れるときのルール</b></p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-speed"/></svg><span data-t="1686">意味を細かく確認せず、<b>テンポよく音読</b><small>立ち止まりません</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1687">分からないところがあっても、<b>流す</b></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1688">例文の<b>テストはしない</b><small>読むだけで十分です</small></span></li>
+          </ol>
+        </div>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1689">疲れるときは、<b>2周目から例文を足しても遅くない</b><small>大事なのは、毎日続けられる負荷にしておくことです</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="dx-hatsuon"><span data-t="1690">🔊 発音のこと・音声は買う？</span></button>
+        <div class="ts-more ts-box" id="dx-hatsuon" hidden>
         <p class="note" data-t="908"><b>単語を見ただけで、発音は分かるようになる？</b>　ある程度は予想できるようになります。ただ、英語はつづりと発音がちがう例外があるので、完全には分かりません。基本は「単語・音・意味」をセットで覚えます。音声を聞いて、まねして声に出し、迷ったら発音記号で確かめましょう。</p>
         <p class="note" data-t="909"><b>単語帳の音声は、買ったほうがいい？</b>　今すぐ必ず、というわけではありません。家事の合間など、耳で聞く時間がとれるなら、耳から単語に出会う回数が増えるので、とても効果があります。「ながら聞き」ができそうなら、買って聞いてみるのがおすすめです。</p>
+        </div>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1561606946967261187" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2020,10 +2118,10 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="640">英検やTOEICは、受けたほうがいい？</summary>
       <div class="ans">
         <p class="lead" data-t="641">受けなくても大丈夫です。でも、受ける予定があると、目標になっておすすめです。</p>
-        <ol class="steps">
-          <li><span data-t="642">受けるなら、90プログラムで文法・読む・聞くの土台を作ってからがおすすめです。土台ができていると、試験の勉強もスムーズで、点数も伸びやすくなります。</span></li>
-          <li><span data-t="643">試験の勉強は、「その試験用の単語帳1冊＋過去問1冊」がおすすめです。単語帳の選び方は「<a class="in" href="#q-duo">DUO（デュオ）</a>」の項目も見てください。</span></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1619">受けるなら、<b>90プログラムで土台を作ってから</b><small>文法・読む・聞くの土台ができていると、試験の勉強もスムーズで、点数も伸びやすくなります</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1620">試験の勉強は<b>「その試験用の単語帳1冊＋過去問1冊」</b><small>単語帳の選び方は「<a class="in" href="#q-duo">DUO（デュオ）</a>」の項目も見てください</small></span></li>
+        </ul>
         <p class="cheer" data-t="645">試験は、がんばってきた自分の成長を確かめる目印のひとつ。「受けてみたいな」と思えたときが、チャレンジのタイミングです。</p>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1437566905912135720" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
@@ -2107,22 +2205,27 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="938">🔔 勉強を始めるきっかけがほしい（仲間の工夫・14件）</summary>
       <div class="ans">
         <p class="lead" data-t="939">始める前の「合図」や流れを決めておくと、迷わずに始められます。</p>
-        <ol class="steps">
-          <li><div><span data-t="940">勉強を始める合図は「よしっ」と言って手をポンと1回たたくこと。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1497963071027548283" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="941">やる気が出ないときの始める合図は、髪を結ぶこと。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1554749433457942551" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="942">始める合図は、仕事から帰って洗濯物を取りこむこと。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1556593757435076708" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="943">やろうかどうか迷って2〜3分たってしまうので、迷ったらとりあえず瞬間英作文のアプリを開く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1409303260652896310" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="944">「〇〇したら〇〇する」と決める。朝ストレッチしたら動画を見る、電車に乗ったら文法ドリル。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1429969515659133029" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="945">始める合図は「お風呂上がり」。やることを全部終わらせて、すっきりした気持ちで机に向かう。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1521527647350296717" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="946">90audioは、目の前にちなさんがいてお茶をしながら話している…と思いながら聞くと、聞き流しにならない。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1515908227840082061" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="947">推しグッズを机に並べて「見守られている」環境にし、アロマをたいて集中モードに入る。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1550144588260315137" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="948">始める合図は水を飲むこと（コーヒーだとおやつも食べたくなるので）</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1554644646238359693" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="949">職場の休けい時間に「いってきます」と声をかけてから英語の時間にする。宣言すると周りの目が気にならない。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1559958983803146293" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="950">始める合図は「香り」。勉強に合う香りで、英語モードに切りかえる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1521777231846703246" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="951">始める合図は、カフェオレとチョコレート。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1522958091644174498" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="952">テキストが届く前でも、朝の通勤電車でビデオ講義を聞いて、できることから始める。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1514923424106025071" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="953">毎日「今日やること」を紙に書き、いつも先頭に「英語」と書く。線で消すのがゲーム感覚で楽しい。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1437257183283777646" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="940">勉強を始める合図は「よしっ」と言って手をポンと1回たたくこと。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1497963071027548283" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="941">やる気が出ないときの始める合図は、髪を結ぶこと。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1554749433457942551" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="942">始める合図は、仕事から帰って洗濯物を取りこむこと。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1556593757435076708" target="_top">投稿を見る</a></div></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kufu-start"><span data-t="1595">💡 ほかの工夫も見る（あと11件）</span></button>
+        <div class="ts-more" id="kf-kufu-start" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="943">やろうかどうか迷って2〜3分たってしまうので、迷ったらとりあえず瞬間英作文のアプリを開く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1409303260652896310" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="944">「〇〇したら〇〇する」と決める。朝ストレッチしたら動画を見る、電車に乗ったら文法ドリル。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1429969515659133029" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="945">始める合図は「お風呂上がり」。やることを全部終わらせて、すっきりした気持ちで机に向かう。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1521527647350296717" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><div><span data-t="946">90audioは、目の前にちなさんがいてお茶をしながら話している…と思いながら聞くと、聞き流しにならない。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1515908227840082061" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><div><span data-t="947">推しグッズを机に並べて「見守られている」環境にし、アロマをたいて集中モードに入る。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1550144588260315137" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="948">始める合図は水を飲むこと（コーヒーだとおやつも食べたくなるので）</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1554644646238359693" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="949">職場の休けい時間に「いってきます」と声をかけてから英語の時間にする。宣言すると周りの目が気にならない。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1559958983803146293" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="950">始める合図は「香り」。勉強に合う香りで、英語モードに切りかえる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1521777231846703246" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="951">始める合図は、カフェオレとチョコレート。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1522958091644174498" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="952">テキストが届く前でも、朝の通勤電車でビデオ講義を聞いて、できることから始める。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1514923424106025071" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="953">毎日「今日やること」を紙に書き、いつも先頭に「英語」と書く。線で消すのがゲーム感覚で楽しい。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1437257183283777646" target="_top">投稿を見る</a></div></li>
+        </ul>
+        </div>
         <p class="note" data-t="954">「投稿を見る」を押すと、Discordのその投稿が開きます。もどるときは、iPhoneは画面のいちばん左上の「◀ LINE」、Androidは画面の下の「◀」を押します。</p>
       </div>
     </details>
@@ -2130,22 +2233,27 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="955">⏰ 勉強の時間がなかなか作れない（仲間の工夫・14件）</summary>
       <div class="ans">
         <p class="lead" data-t="956">まとまった時間がなくても、毎日の中にすきま時間はあります。</p>
-        <ol class="steps">
-          <li><div><span data-t="957">通勤中のNetflixのうち20分、寝る前の20分、犬の散歩の15分を英語の時間に置きかえる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1492713284913201203" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="958">ポモドーロ（25分＋5分休けい）の5分で、掃除機など家のことをすませる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1500302715719389245" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="959">お弁当を作る時間に、イヤホンで瞬間英作文。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1517295478944043189" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="960">子どもが宿題をしている時間に、いっしょに文法ドリルをする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1475838995089985619" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="961">子どもの習い事が終わるのを待つ車の中で、文法ドリルを眺める。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1520241552763387924" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="962">運転中は考えこむものは危ないので、聞き流しやちなコーチのSNSなど、聞くだけのものを選ぶ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1526255173260021770" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="963">仕事のメールや資料、報告書をあえて英語で確認し、仕事中も英語の中に飛びこむ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1540896644999155772" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="964">仕事の前に、誰もいない静かなオフィスで20〜30分学習する。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1547239376684064778" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="965">1日の中にポモドーロを散らす（朝・通勤は復習・夕食作りながらアプリ・食後・お風呂のあと）</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1538003209665126521" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="966">1日のスケジュールに「この時間は必ず勉強する」と組みこみ、5分・10分の短い時間でも記録する。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1512233166826504284" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="967">1時間まとめてでなくていい。車通勤中に90audio、昼休みに20分、夕飯のあとに、と分けて学習する。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1517484083469615184" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="968">外出する日は、アプリやAIなど外でできることをやる。机に向かう勉強は次の日にまわす。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1542161910579859476" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="969">車での移動が多いので、マスター講座は車の中で聞く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1503159479473016882" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="970">急な用事で時間がとれない日は、昼休みや次の日の朝の時間を使って続ける。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1393420763742212128" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="957">通勤中のNetflixのうち20分、寝る前の20分、犬の散歩の15分を英語の時間に置きかえる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1492713284913201203" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="958">ポモドーロ（25分＋5分休けい）の5分で、掃除機など家のことをすませる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1500302715719389245" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="959">お弁当を作る時間に、イヤホンで瞬間英作文。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1517295478944043189" target="_top">投稿を見る</a></div></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kufu-time"><span data-t="1596">💡 ほかの工夫も見る（あと11件）</span></button>
+        <div class="ts-more" id="kf-kufu-time" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="960">子どもが宿題をしている時間に、いっしょに文法ドリルをする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1475838995089985619" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="961">子どもの習い事が終わるのを待つ車の中で、文法ドリルを眺める。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1520241552763387924" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><div><span data-t="962">運転中は考えこむものは危ないので、聞き流しやちなコーチのSNSなど、聞くだけのものを選ぶ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1526255173260021770" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="963">仕事のメールや資料、報告書をあえて英語で確認し、仕事中も英語の中に飛びこむ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1540896644999155772" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="964">仕事の前に、誰もいない静かなオフィスで20〜30分学習する。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1547239376684064778" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="965">1日の中にポモドーロを散らす（朝・通勤は復習・夕食作りながらアプリ・食後・お風呂のあと）</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1538003209665126521" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="966">1日のスケジュールに「この時間は必ず勉強する」と組みこみ、5分・10分の短い時間でも記録する。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1512233166826504284" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="967">1時間まとめてでなくていい。車通勤中に90audio、昼休みに20分、夕飯のあとに、と分けて学習する。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1517484083469615184" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="968">外出する日は、アプリやAIなど外でできることをやる。机に向かう勉強は次の日にまわす。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1542161910579859476" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><div><span data-t="969">車での移動が多いので、マスター講座は車の中で聞く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1503159479473016882" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="970">急な用事で時間がとれない日は、昼休みや次の日の朝の時間を使って続ける。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1393420763742212128" target="_top">投稿を見る</a></div></li>
+        </ul>
+        </div>
         <p class="note" data-t="971">「投稿を見る」を押すと、Discordのその投稿が開きます。もどるときは、iPhoneは画面のいちばん左上の「◀ LINE」、Androidは画面の下の「◀」を押します。</p>
       </div>
     </details>
@@ -2153,22 +2261,27 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="972">🏠 家だと集中できない・すぐ始められない（仲間の工夫・14件）</summary>
       <div class="ans">
         <p class="lead" data-t="973">教材の置き場所や勉強する場所を少し変えたり、スマホに気をとられない工夫をしたりすると、始めやすくなります。</p>
-        <ol class="steps">
-          <li><div><span data-t="974">いちばん長くいる場所に文法ドリルとiPadを置く。帰宅したらキッチンカウンターに置いて、すきま時間に開く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1528562160731422800" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="975">寝る前に文法ドリルを、どかさないと何もできない場所に置いておく。朝、触ったらそのまま開く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1441560068964221140" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="976">図書館で勉強する。いろいろな年代の人が勉強していて、はかどる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1426469469613592596" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="977">カフェだと人の目が気になって集中できないので、家で集中できない日は車の中で。いちばん落ち着く場所を選ぶ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1530930313193062543" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="978">気になることは片づけてから勉強。時間がかかりそうなら、先に1ポモドーロ勉強してから取りかかる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1539490202274369577" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="979">教材ごとに場所を決める。リーディングはダイニングのいつもの席、瞬間英作文は毎日同じ時間のお風呂、マスター講座は通勤中。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1524602480745250818" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="980">始める合図はカフェに行くこと。空き時間にカフェへ行くと頭が一気に学習モードになる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1522373886719561801" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="981">YouTubeの「ポモドーロ用の音楽」（子どもが使っていたあつ森のもの）を流して勉強する。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1517221497528127538" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="982">英語の勉強はカフェやファミレスで。始める合図は冷たいお水。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1535115375698771968" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="983">スマホの画面を白黒モードにすると、インスタなどがつまらなくなって見すぎを防げる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1538325222543855719" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="984">TikTokやYouTubeは英語が終わるまで見ない。見るときはお湯がたまるまで・煮込み時間などに、キッチンタイマーで区切る。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1526393814342963261" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="985">朝いちばんに部屋を掃除する。それがすんだら、勉強モードに切りかわる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1397345692736815277" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="986">「今日は！」という日は、カフェで少し長めに勉強する。ときどき場所を変えると、メリハリが出る。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1420544322897707038" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="987">平日は、仕事のあとに会社の「ひとりになれる部屋」で1時間勉強する。帰りが遅くなるときは、お昼休みも使う。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1437231087238643762" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="974">いちばん長くいる場所に文法ドリルとiPadを置く。帰宅したらキッチンカウンターに置いて、すきま時間に開く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1528562160731422800" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="975">寝る前に文法ドリルを、どかさないと何もできない場所に置いておく。朝、触ったらそのまま開く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1441560068964221140" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="976">図書館で勉強する。いろいろな年代の人が勉強していて、はかどる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1426469469613592596" target="_top">投稿を見る</a></div></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kufu-place"><span data-t="1597">💡 ほかの工夫も見る（あと11件）</span></button>
+        <div class="ts-more" id="kf-kufu-place" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="977">カフェだと人の目が気になって集中できないので、家で集中できない日は車の中で。いちばん落ち着く場所を選ぶ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1530930313193062543" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="978">気になることは片づけてから勉強。時間がかかりそうなら、先に1ポモドーロ勉強してから取りかかる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1539490202274369577" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="979">教材ごとに場所を決める。リーディングはダイニングのいつもの席、瞬間英作文は毎日同じ時間のお風呂、マスター講座は通勤中。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1524602480745250818" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="980">始める合図はカフェに行くこと。空き時間にカフェへ行くと頭が一気に学習モードになる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1522373886719561801" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="981">YouTubeの「ポモドーロ用の音楽」（子どもが使っていたあつ森のもの）を流して勉強する。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1517221497528127538" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="982">英語の勉強はカフェやファミレスで。始める合図は冷たいお水。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1535115375698771968" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="983">スマホの画面を白黒モードにすると、インスタなどがつまらなくなって見すぎを防げる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1538325222543855719" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="984">TikTokやYouTubeは英語が終わるまで見ない。見るときはお湯がたまるまで・煮込み時間などに、キッチンタイマーで区切る。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1526393814342963261" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="985">朝いちばんに部屋を掃除する。それがすんだら、勉強モードに切りかわる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1397345692736815277" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="986">「今日は！」という日は、カフェで少し長めに勉強する。ときどき場所を変えると、メリハリが出る。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1420544322897707038" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="987">平日は、仕事のあとに会社の「ひとりになれる部屋」で1時間勉強する。帰りが遅くなるときは、お昼休みも使う。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1437231087238643762" target="_top">投稿を見る</a></div></li>
+        </ul>
+        </div>
         <p class="note" data-t="988">「投稿を見る」を押すと、Discordのその投稿が開きます。もどるときは、iPhoneは画面のいちばん左上の「◀ LINE」、Androidは画面の下の「◀」を押します。</p>
       </div>
     </details>
@@ -2176,19 +2289,24 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="989">📝 続けるための記録・ご褒美のアイデアがほしい（仲間の工夫・11件）</summary>
       <div class="ans">
         <p class="lead" data-t="990">やったことが目に見えたり、小さなご褒美があったりすると、続けやすくなります。</p>
-        <ol class="steps">
-          <li><div><span data-t="991">今日やることを1つずつ付箋に書いて机に貼り、終わったら剥がす。寝るまでに付箋ゼロをめざす。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1481845847661482094" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="992">学習ノートに、その日の気持ちも書いておく。あとでDAY1から読み返すと、自分の変化が分かってうれしい。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1430167382944383028" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="993">学習した日はカレンダーに丸。始めるときは「さっ、今から英語の時間！」と声に出す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1536196898212544512" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="994">外した付箋は単語帳の1ページ目に貼りためる。付箋の山を見ると自分をほめたくなる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1552176423446253589" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="995">ちなコーチの励ましの言葉（「応援しています」「大丈夫」など）を英語にして、付箋で冷蔵庫に貼る。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1537147915414405140" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="996">3分ワークの質問を印刷して、学習ノートの表紙の裏に封筒を貼って差しこみ、毎日見えるようにする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1489801099480272998" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="997">朝いちばんに学習できた日は、ご褒美にコンビニでアイスコーヒーを買って職場へ向かう。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1423299406702313472" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="998">スプレッドシートに毎日チェックを入れて進み具合を見る。瞬間英作文には点数をつける。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1431780084578124008" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="999">2週間に1度の自問自答（人生の目標）の紙を、冷蔵庫の横に貼って目につくようにする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1549638688621854791" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1000">週報で学習時間の合計を足していき、アプリでも見える化して、自分の努力を確かめる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1509040043539562527" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1001">毎日、日報に書くことを続ける。日報のおかげで180日コツコツ続けられた。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1563533436910698618" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="991">今日やることを1つずつ付箋に書いて机に貼り、終わったら剥がす。寝るまでに付箋ゼロをめざす。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1481845847661482094" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="992">学習ノートに、その日の気持ちも書いておく。あとでDAY1から読み返すと、自分の変化が分かってうれしい。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1430167382944383028" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="993">学習した日はカレンダーに丸。始めるときは「さっ、今から英語の時間！」と声に出す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1536196898212544512" target="_top">投稿を見る</a></div></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kufu-keep"><span data-t="1598">💡 ほかの工夫も見る（あと8件）</span></button>
+        <div class="ts-more" id="kf-kufu-keep" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="994">外した付箋は単語帳の1ページ目に貼りためる。付箋の山を見ると自分をほめたくなる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1552176423446253589" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="995">ちなコーチの励ましの言葉（「応援しています」「大丈夫」など）を英語にして、付箋で冷蔵庫に貼る。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1537147915414405140" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="996">3分ワークの質問を印刷して、学習ノートの表紙の裏に封筒を貼って差しこみ、毎日見えるようにする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1489801099480272998" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="997">朝いちばんに学習できた日は、ご褒美にコンビニでアイスコーヒーを買って職場へ向かう。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1423299406702313472" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-graph"/></svg><div><span data-t="998">スプレッドシートに毎日チェックを入れて進み具合を見る。瞬間英作文には点数をつける。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1431780084578124008" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="999">2週間に1度の自問自答（人生の目標）の紙を、冷蔵庫の横に貼って目につくようにする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1549638688621854791" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1000">週報で学習時間の合計を足していき、アプリでも見える化して、自分の努力を確かめる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1509040043539562527" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="1001">毎日、日報に書くことを続ける。日報のおかげで180日コツコツ続けられた。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1563533436910698618" target="_top">投稿を見る</a></div></li>
+        </ul>
+        </div>
         <p class="note" data-t="1002">「投稿を見る」を押すと、Discordのその投稿が開きます。もどるときは、iPhoneは画面のいちばん左上の「◀ LINE」、Androidは画面の下の「◀」を押します。</p>
       </div>
     </details>
@@ -2196,18 +2314,23 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="1003">🍵 疲れた日・忙しい日・気分が乗らない日の乗り切り方（仲間の工夫・10件）</summary>
       <div class="ans">
         <p class="lead" data-t="1004">がんばれない日があっても大丈夫。仲間は、こんなふうに乗り切っています。</p>
-        <ol class="steps">
-          <li><div><span data-t="1005">意気込まず、とりあえずテキストとノートを開く。飲み物とチョコを用意して、重苦しい空気を作らない。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1478180722668736532" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1006">「毎日30分以上」などの時間の目標をあえて決めない。そのほうが挫折しにくい。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1430690600839151706" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1007">英語の日記は1日1行だけ。気楽だから続けられる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1484907659957108747" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1008">朝の用事が終わっても、ほっとしてソファに座らない。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1416207930318913537" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1009">湯船に浸かっている時は、必ずオンクラスを見る（防水ケースが無ければジップロックで）</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1480518635050110986" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1010">「あと何分」とタイマーをセットして、時間との勝負にする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1437581977715736676" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1011">へとへとで休みたい日も、「続けてきたものが途切れるのはもったいない」と、とりあえず90audioだけは聞く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1563173377689129023" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1012">仕事のあとは食べるとすぐ眠くなるので、「夕飯のあと1時間だけ」と決めてから食事とお風呂にする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1531624071018709073" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1013">寝る前のだらだらスマホをやめて早く寝ると、朝に時間がとれる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1550025816983732245" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1014">お風呂のあとだと眠くなる精読を、お風呂の前にずらしたら集中できた。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1562459438546157591" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="1005">意気込まず、とりあえずテキストとノートを開く。飲み物とチョコを用意して、重苦しい空気を作らない。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1478180722668736532" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1006">「毎日30分以上」などの時間の目標をあえて決めない。そのほうが挫折しにくい。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1430690600839151706" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="1007">英語の日記は1日1行だけ。気楽だから続けられる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1484907659957108747" target="_top">投稿を見る</a></div></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kufu-tired"><span data-t="1599">💡 ほかの工夫も見る（あと7件）</span></button>
+        <div class="ts-more" id="kf-kufu-tired" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1008">朝の用事が終わっても、ほっとしてソファに座らない。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1416207930318913537" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="1009">湯船に浸かっている時は、必ずオンクラスを見る（防水ケースが無ければジップロックで）</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1480518635050110986" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1010">「あと何分」とタイマーをセットして、時間との勝負にする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1437581977715736676" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><div><span data-t="1011">へとへとで休みたい日も、「続けてきたものが途切れるのはもったいない」と、とりあえず90audioだけは聞く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1563173377689129023" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1012">仕事のあとは食べるとすぐ眠くなるので、「夕飯のあと1時間だけ」と決めてから食事とお風呂にする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1531624071018709073" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1013">寝る前のだらだらスマホをやめて早く寝ると、朝に時間がとれる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1550025816983732245" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><div><span data-t="1014">お風呂のあとだと眠くなる精読を、お風呂の前にずらしたら集中できた。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1562459438546157591" target="_top">投稿を見る</a></div></li>
+        </ul>
+        </div>
         <p class="note" data-t="1015">「投稿を見る」を押すと、Discordのその投稿が開きます。もどるときは、iPhoneは画面のいちばん左上の「◀ LINE」、Androidは画面の下の「◀」を押します。</p>
       </div>
     </details>
@@ -2215,20 +2338,25 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="1016">📘 文法ドリル・瞬間英作文の進め方の工夫（仲間の工夫・12件）</summary>
       <div class="ans">
         <p class="lead" data-t="1017">進め方は、ちなコーチのロードマップが基本です。そのうえで、仲間はこんな工夫をしています。</p>
-        <ol class="steps">
-          <li><div><span data-t="1018">文法ドリルは、①左の解説を読んで右の問題を解く→②ドリルを見ながら、音声に合わせて答えを音読→③余裕があれば、ドリルを見ずに音声に合わせて音読、の順に進める。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1475431683745644625" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1019">苦手な文法は、ちなコーチのアーカイブを用法ごとに区切って、少しずつ見る（たとえば今日は、現在完了形の1つ目の用法だけ）</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1484554099403001916" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1020">100円ショップの「復習・ポイント・確認・質問」など6種類の付箋を、文法ドリルの忘れそうなところに貼り分ける。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1556300680648466473" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1021">瞬間英作文アプリのカウント音をオフにすると、あせらされる感じがなくなって落ち着いて答えられた。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1463142420006047846" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1022">瞬間英作文は本とアプリを両方使う。本には、答えられなかった文・日付・できた数・チャッピーに聞いたことを書きこんで復習。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1525853530261426326" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1023">瞬間英作文アプリは、文法ごと→グループで量を増やす→通常→シャッフルの順に。ポーズも「ふつう」から「超速」へ少しずつ短く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1528542940023226478" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1024">楽しくなるように、好きな映画スターの口調をまねしたり、部屋で一人コントをしながら瞬間英作文。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1539423261841031248" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1025">瞬間英作文は10問を10分前後で。中1→中2→中3を4周ずつしてから中1に戻ると、サクサク答えられた。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1249989567998590977/1519661550393364612" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1026">瞬間英作文100回チャレンジをゲーム感覚で。100回目は「ラスボスを倒す」イメージ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1557570850784542801" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1027">文法書と英作文は、いま15〜16周目。100回を目標に、焦らずくり返す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1555582873451368499" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1028">通勤の電車で、文法ドリルを片手に声に出して練習。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1468817160670548103/1525853350547947570" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1029">やり方に迷ったら、アーカイブで進め方を聞き直す。やりやすい教材に逃げていないかも見直す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1558324768523165808" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><div><span data-t="1018">文法ドリルは、①左の解説を読んで右の問題を解く→②ドリルを見ながら、音声に合わせて答えを音読→③余裕があれば、ドリルを見ずに音声に合わせて音読、の順に進める。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1475431683745644625" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="1019">苦手な文法は、ちなコーチのアーカイブを用法ごとに区切って、少しずつ見る（たとえば今日は、現在完了形の1つ目の用法だけ）</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1484554099403001916" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="1020">100円ショップの「復習・ポイント・確認・質問」など6種類の付箋を、文法ドリルの忘れそうなところに貼り分ける。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1556300680648466473" target="_top">投稿を見る</a></div></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kufu-drill"><span data-t="1600">💡 ほかの工夫も見る（あと9件）</span></button>
+        <div class="ts-more" id="kf-kufu-drill" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1021">瞬間英作文アプリのカウント音をオフにすると、あせらされる感じがなくなって落ち着いて答えられた。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1463142420006047846" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1022">瞬間英作文は本とアプリを両方使う。本には、答えられなかった文・日付・できた数・チャッピーに聞いたことを書きこんで復習。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1525853530261426326" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1023">瞬間英作文アプリは、文法ごと→グループで量を増やす→通常→シャッフルの順に。ポーズも「ふつう」から「超速」へ少しずつ短く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1528542940023226478" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><div><span data-t="1024">楽しくなるように、好きな映画スターの口調をまねしたり、部屋で一人コントをしながら瞬間英作文。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1539423261841031248" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><div><span data-t="1025">瞬間英作文は10問を10分前後で。中1→中2→中3を4周ずつしてから中1に戻ると、サクサク答えられた。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1249989567998590977/1519661550393364612" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="1026">瞬間英作文100回チャレンジをゲーム感覚で。100回目は「ラスボスを倒す」イメージ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1557570850784542801" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><div><span data-t="1027">文法書と英作文は、いま15〜16周目。100回を目標に、焦らずくり返す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1555582873451368499" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1028">通勤の電車で、文法ドリルを片手に声に出して練習。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1468817160670548103/1525853350547947570" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><div><span data-t="1029">やり方に迷ったら、アーカイブで進め方を聞き直す。やりやすい教材に逃げていないかも見直す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1558324768523165808" target="_top">投稿を見る</a></div></li>
+        </ul>
+        </div>
         <p class="note" data-t="1030">「投稿を見る」を押すと、Discordのその投稿が開きます。もどるときは、iPhoneは画面のいちばん左上の「◀ LINE」、Androidは画面の下の「◀」を押します。</p>
       </div>
     </details>
@@ -2236,18 +2364,23 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="1031">🌱 覚えられない・すぐ忘れてしまう（仲間の工夫・10件）</summary>
       <div class="ans">
         <p class="lead" data-t="1032">忘れるのは、みんな同じです。仲間は、こんな復習の工夫をしています。</p>
-        <ol class="steps">
-          <li><div><span data-t="1033">まちがえたら「なぜまちがえたか」の原因を探して、次はまちがえないようにする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1528997312129400842/1532408931727577230" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1034">マスター講座の2回目は苦手なところだけ、誰かに説明するつもりで見る。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1442176045771132938" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1035">文法ドリルは10周。書かずに、答えを声に出して答え合わせ。その後は分からないところだけ辞書がわりに。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1475496438934011964" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1036">文法ドリルのQRコードの「スピーキング・トレーニング用」音声で、日本語を聞いて本を見ずに英語にする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1249989567998590977/1411607796352417863" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1037">外食で注文を待つあいだにチャッピーに問題を出してもらう。車では動詞の変化（break-broke-broken）を声に出す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1507542773866168391" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1038">瞬間英作文の復習のタイミングを変えてみたら、記憶に残っていた。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1467520692768735303" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1039">復習は「翌日・3日後・1週間後・1か月後」。忘れかけたころに思い出すと残りやすい。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1513311767571468519" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1040">理解に苦しむところには印を付けておき、2周目・3周目で重点的にやる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1521111465036218428" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1041">セミナーで教わった付箋の覚え方を、すぐやってみる。朝から声に出して覚える。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1526815262349721620" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1042">瞬間英作文で忘れているところが多いときは、基本の文法に戻って復習する。人に文法を説明できるようになることを目指す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1521836431108997211" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="1033">まちがえたら「なぜまちがえたか」の原因を探して、次はまちがえないようにする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1528997312129400842/1532408931727577230" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="1034">マスター講座の2回目は苦手なところだけ、誰かに説明するつもりで見る。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1442176045771132938" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><div><span data-t="1035">文法ドリルは10周。書かずに、答えを声に出して答え合わせ。その後は分からないところだけ辞書がわりに。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1475496438934011964" target="_top">投稿を見る</a></div></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kufu-memory"><span data-t="1601">💡 ほかの工夫も見る（あと7件）</span></button>
+        <div class="ts-more" id="kf-kufu-memory" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><div><span data-t="1036">文法ドリルのQRコードの「スピーキング・トレーニング用」音声で、日本語を聞いて本を見ずに英語にする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1249989567998590977/1411607796352417863" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1037">外食で注文を待つあいだにチャッピーに問題を出してもらう。車では動詞の変化（break-broke-broken）を声に出す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1507542773866168391" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><div><span data-t="1038">瞬間英作文の復習のタイミングを変えてみたら、記憶に残っていた。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1467520692768735303" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-cal"/></svg><div><span data-t="1039">復習は「翌日・3日後・1週間後・1か月後」。忘れかけたころに思い出すと残りやすい。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1513311767571468519" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><div><span data-t="1040">理解に苦しむところには印を付けておき、2周目・3周目で重点的にやる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1521111465036218428" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1041">セミナーで教わった付箋の覚え方を、すぐやってみる。朝から声に出して覚える。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1526815262349721620" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><div><span data-t="1042">瞬間英作文で忘れているところが多いときは、基本の文法に戻って復習する。人に文法を説明できるようになることを目指す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1521836431108997211" target="_top">投稿を見る</a></div></li>
+        </ul>
+        </div>
         <p class="note" data-t="1043">「投稿を見る」を押すと、Discordのその投稿が開きます。もどるときは、iPhoneは画面のいちばん左上の「◀ LINE」、Androidは画面の下の「◀」を押します。</p>
       </div>
     </details>
@@ -2255,20 +2388,25 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="1044">💬 独り言・話す練習の工夫（仲間の工夫・12件）</summary>
       <div class="ans">
         <p class="lead" data-t="1045">話す練習は、ひとりでも、家族とでもできます。</p>
-        <ol class="steps">
-          <li><div><span data-t="1046">覚えたい英文は、とりあえず10回声に出す。声に出すと忘れにくい。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1521205518864224417" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1047">テキストで覚えた型を、自分の独り言にアレンジして使う。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1549181030366314498" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1048">独り言がいつも同じ形になるので、瞬間英作文のフレーズを思い出して言い方を変えてみる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1547931651001159741" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1049">通勤の駅で迷っている外国人観光客に、中学英語で乗り場を案内してみる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1538381894066905198" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1050">娘さんといっしょに、Can I〜／Can you〜を使えるところで使うゲーム。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1561331727073288315" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1051">姪や甥と英語でLINEのやりとりをする。言い方が分からないときはチャッピーに聞く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1558813271082016939" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1052">独り言英会話は、先に原稿を作ってから話し、あとでGeminiに添削してもらう。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1546096433571045466" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1053">通勤時間に、思ったことを英語にして口に出す（独り言英会話）</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1249989567998590977/1506826804642447490" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1054">3分間の英語のひとりごとを、ゲーム感覚でやってみる。分からない言い方はチャッピーに聞きながら。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1501161421029900359" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1055">旅行先の買い物やカフェで、英語を使ってみる。通じるとうれしくて、はげみになる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1551210963968200921" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1056">1日の中で思い出すたびに、英語でひとりごとを言ってみる。「この語順でよかったっけ？」と気づける。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1530571121827778802" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1057">英語の日記は、「3分」と時間を計って書いてみる。見直すと「なるほど、こう書けばよかった」と気づける。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1550908543706603533" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><div><span data-t="1046">覚えたい英文は、とりあえず10回声に出す。声に出すと忘れにくい。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1521205518864224417" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><div><span data-t="1047">テキストで覚えた型を、自分の独り言にアレンジして使う。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1549181030366314498" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><div><span data-t="1048">独り言がいつも同じ形になるので、瞬間英作文のフレーズを思い出して言い方を変えてみる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1547931651001159741" target="_top">投稿を見る</a></div></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kufu-talk"><span data-t="1602">💡 ほかの工夫も見る（あと9件）</span></button>
+        <div class="ts-more" id="kf-kufu-talk" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1049">通勤の駅で迷っている外国人観光客に、中学英語で乗り場を案内してみる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1538381894066905198" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="1050">娘さんといっしょに、Can I〜／Can you〜を使えるところで使うゲーム。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1561331727073288315" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1051">姪や甥と英語でLINEのやりとりをする。言い方が分からないときはチャッピーに聞く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1558813271082016939" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1052">独り言英会話は、先に原稿を作ってから話し、あとでGeminiに添削してもらう。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1546096433571045466" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1053">通勤時間に、思ったことを英語にして口に出す（独り言英会話）</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1249989567998590977/1506826804642447490" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1054">3分間の英語のひとりごとを、ゲーム感覚でやってみる。分からない言い方はチャッピーに聞きながら。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1501161421029900359" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="1055">旅行先の買い物やカフェで、英語を使ってみる。通じるとうれしくて、はげみになる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1551210963968200921" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><div><span data-t="1056">1日の中で思い出すたびに、英語でひとりごとを言ってみる。「この語順でよかったっけ？」と気づける。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1530571121827778802" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1057">英語の日記は、「3分」と時間を計って書いてみる。見直すと「なるほど、こう書けばよかった」と気づける。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1550908543706603533" target="_top">投稿を見る</a></div></li>
+        </ul>
+        </div>
         <p class="note" data-t="1058">「投稿を見る」を押すと、Discordのその投稿が開きます。もどるときは、iPhoneは画面のいちばん左上の「◀ LINE」、Androidは画面の下の「◀」を押します。</p>
       </div>
     </details>
@@ -2276,15 +2414,20 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="1059">🤖 AI（チャッピー）の使い方の工夫（仲間の工夫・7件）</summary>
       <div class="ans">
         <p class="lead" data-t="1060">仲間は、AI（ChatGPTなど）をこんなふうに使っています。</p>
-        <ol class="steps">
-          <li><div><span data-t="1061">「2分ひとりごと」のテーマ表（道を聞く・カフェで…）をチャッピーに作ってもらい、それに沿って話す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1558438869198700707" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1062">ChatGPTに名前（メグ）をつけ、バイト先のホテルを想定したロールプレイで会話練習。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1528823172718268508" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1063">瞬間英作文の答えをチャッピーに聞き取ってもらい、文と発音が合っているか○×で答えてもらう。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1530945791743627374" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1064">今の自分のレベルで読めそうな英語の本を、チャッピーに教えてもらう。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1548561974722306180" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1065">be動詞と一般動詞でつまずいたので、チャッピーに毎日問題を出してもらい、分からないところは「なんで？」と聞く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1556297691783364649" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1066">日記のかわりに、AI（名前をつけたサラちゃん）と会話する。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1546180979826098176" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1067">苦手なところ（前置詞のまちがいなど）は、ドリルを続けながら、ドリルと似た問題をAIに作ってもらい、解く回数を増やす。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1523692188050002063" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1061">「2分ひとりごと」のテーマ表（道を聞く・カフェで…）をチャッピーに作ってもらい、それに沿って話す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1558438869198700707" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1062">ChatGPTに名前（メグ）をつけ、バイト先のホテルを想定したロールプレイで会話練習。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1528823172718268508" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1063">瞬間英作文の答えをチャッピーに聞き取ってもらい、文と発音が合っているか○×で答えてもらう。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1530945791743627374" target="_top">投稿を見る</a></div></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kufu-ai"><span data-t="1603">💡 ほかの工夫も見る（あと4件）</span></button>
+        <div class="ts-more" id="kf-kufu-ai" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1064">今の自分のレベルで読めそうな英語の本を、チャッピーに教えてもらう。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1548561974722306180" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1065">be動詞と一般動詞でつまずいたので、チャッピーに毎日問題を出してもらい、分からないところは「なんで？」と聞く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1556297691783364649" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1066">日記のかわりに、AI（名前をつけたサラちゃん）と会話する。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1546180979826098176" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1067">苦手なところ（前置詞のまちがいなど）は、ドリルを続けながら、ドリルと似た問題をAIに作ってもらい、解く回数を増やす。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1523692188050002063" target="_top">投稿を見る</a></div></li>
+        </ul>
+        </div>
         <p class="note" data-t="1068">「投稿を見る」を押すと、Discordのその投稿が開きます。もどるときは、iPhoneは画面のいちばん左上の「◀ LINE」、Androidは画面の下の「◀」を押します。</p>
       </div>
     </details>
@@ -2292,15 +2435,20 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="1069">🔤 単語・リーディング・リスニングの工夫（仲間の工夫・7件）</summary>
       <div class="ans">
         <p class="lead" data-t="1070">単語を覚える・読む・聞くための、仲間の工夫です。</p>
-        <ol class="steps">
-          <li><div><span data-t="1071">通勤の1時間に英語のポッドキャストを聞き、独り言のようにくり返し口に出す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1557327343767261225" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1072">時間がとれない日も、英語耳でおすすめの曲（カーペンターズ「プリーズ・ミスター・ポストマン」）を口ずさむ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1530567074815021136" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1073">車通勤の30分は、洋楽を聞きながら口ずさむ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1549987333305270364" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1074">飽きないように、外国の方が話す英語を目を閉じて聞く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1511029061655334993" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1075">多読bookで知らない単語は、その部分だけ範囲を選んで翻訳すると、リズムをくずさず読める。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1509920371430920342" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1076">旅行先で、英語で案内している人の説明に耳をすませて、分かりやすい英語の言い方を学ぶ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1556798999850123456" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1077">覚えにくい単語は、語呂でイメージする。獣医（veterinarian）は「べったり練り餡」。獣医さんが練り餡を食べているところを思いうかべる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1521347332338221166" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1071">通勤の1時間に英語のポッドキャストを聞き、独り言のようにくり返し口に出す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1557327343767261225" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1072">時間がとれない日も、英語耳でおすすめの曲（カーペンターズ「プリーズ・ミスター・ポストマン」）を口ずさむ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1530567074815021136" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1073">車通勤の30分は、洋楽を聞きながら口ずさむ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1549987333305270364" target="_top">投稿を見る</a></div></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kufu-words"><span data-t="1604">💡 ほかの工夫も見る（あと4件）</span></button>
+        <div class="ts-more" id="kf-kufu-words" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><div><span data-t="1074">飽きないように、外国の方が話す英語を目を閉じて聞く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1511029061655334993" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><div><span data-t="1075">多読bookで知らない単語は、その部分だけ範囲を選んで翻訳すると、リズムをくずさず読める。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1509920371430920342" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><div><span data-t="1076">旅行先で、英語で案内している人の説明に耳をすませて、分かりやすい英語の言い方を学ぶ。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1521682596138975384/1556798999850123456" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><div><span data-t="1077">覚えにくい単語は、語呂でイメージする。獣医（veterinarian）は「べったり練り餡」。獣医さんが練り餡を食べているところを思いうかべる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1521347332338221166" target="_top">投稿を見る</a></div></li>
+        </ul>
+        </div>
         <p class="note" data-t="1078">「投稿を見る」を押すと、Discordのその投稿が開きます。もどるときは、iPhoneは画面のいちばん左上の「◀ LINE」、Androidは画面の下の「◀」を押します。</p>
       </div>
     </details>
@@ -2323,59 +2471,74 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="1114">📒 ノートの使い方（仲間のやり方・9件）</summary>
       <div class="ans">
         <p class="lead" data-t="1115">ノートや紙を、勉強にどう使っているか。仲間のやり方です。</p>
-        <ol class="steps">
-          <li><div><span data-t="1116">毎日の学習と、かかった時間を、一冊のノートに書く。週報を書くときは、そのノートを見返して時間を出す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1564401831743062119" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1117">To do ノートに「やること・やりたいこと」を書いて、できたらチェック。スマホより紙のほうが自分に合っていた。3か月で1冊使いきった。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1560546059019616277" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1118">ちなコーチの回答をもらったら、勉強の前にノートに短くまとめる。目的とやり方がごちゃごちゃにならず、頭がスッキリする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1550599967838568491" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1119">文法ドリルは、4周目からノートに書くのをやめて、声に出して答える。話してみてはじめて言えるようになると実感。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1549568262193422417" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1120">文法ドリルは、復習のところだけノートに書いて、あとは音読で答える。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1548515373098336308" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1121">なかなか覚えられない単語は、付箋に書いてコルクボードにはる。何度も出会って覚えていく。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1549772417289814097" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1135">3分ワークのプリントを、学習ノートの表紙の裏に封筒をはって差しておく。毎日目に入るので、続けやすい。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1489801099480272998" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1136">毎日のコメントをスマホのメモにも残しておき、「DAY○○」で検索して、前の周の自分を読み返す。どれだけ成長したかが分かる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1514760252451586189" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1137">学んだら、翌日 → 3日後 → 1週間後 → 1か月後に思い出す（スペーシングという覚え方）。忘れかけたころに思い出すのがいちばん効く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1513311767571468519" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1116">毎日の学習と、かかった時間を、一冊のノートに書く。週報を書くときは、そのノートを見返して時間を出す。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1564401831743062119" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1117">To do ノートに「やること・やりたいこと」を書いて、できたらチェック。スマホより紙のほうが自分に合っていた。3か月で1冊使いきった。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1560546059019616277" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="1118">ちなコーチの回答をもらったら、勉強の前にノートに短くまとめる。目的とやり方がごちゃごちゃにならず、頭がスッキリする。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1550599967838568491" target="_top">投稿を見る</a></div></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kiroku-note"><span data-t="1605">💡 ほかのやり方も見る（あと6件）</span></button>
+        <div class="ts-more" id="kf-kiroku-note" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="1119">文法ドリルは、4周目からノートに書くのをやめて、声に出して答える。話してみてはじめて言えるようになると実感。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1549568262193422417" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="1120">文法ドリルは、復習のところだけノートに書いて、あとは音読で答える。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1289489198897692672/1548515373098336308" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="1121">なかなか覚えられない単語は、付箋に書いてコルクボードにはる。何度も出会って覚えていく。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1549772417289814097" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="1135">3分ワークのプリントを、学習ノートの表紙の裏に封筒をはって差しておく。毎日目に入るので、続けやすい。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1489801099480272998" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1136">毎日のコメントをスマホのメモにも残しておき、「DAY○○」で検索して、前の周の自分を読み返す。どれだけ成長したかが分かる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1514760252451586189" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-cal"/></svg><div><span data-t="1137">学んだら、翌日 → 3日後 → 1週間後 → 1か月後に思い出す（スペーシングという覚え方）。忘れかけたころに思い出すのがいちばん効く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1513311767571468519" target="_top">投稿を見る</a></div></li>
+        </ul>
+        </div>
       </div>
     </details>
     <details id="q-kiroku-rec" data-y="きろく すうじ じかん せいとうりつ すたでぃぷらす すぷれっどしーと ひょう なかまのやりかた なかま くふう" data-k="記録 数字 時間 正答率 スタディプラス Studyplus スプレッドシート 表 仲間のやり方 仲間 工夫">
       <summary data-t="1122">📊 記録・数字のとり方（仲間のやり方・8件）</summary>
       <div class="ans">
         <p class="lead" data-t="1123">勉強した時間や正答率を、どう記録しているか。仲間のやり方です。</p>
-        <ol class="steps">
-          <li><div><span data-t="1124">入会した日から、スタディプラス（勉強の時間を記録するアプリ）で毎日記録。教材ごとに日別・週別・月別・ぜんぶの合計が分かるので、ロードマップのどこまで進んだかを確かめて、次の進め方を決め直すのに使う。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1526882639452176426" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1125">アプリに入れ忘れた日も、ノートに書いておいた教材と時間を見て、カレンダーからさかのぼって記録できる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1510059262095659159" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1126">最初はノートに記録していたけれど、ごちゃごちゃになりそうだったので、Day60 からスプレッドシート（表のアプリ）に。続けるうちに自分の学習のくせが見えて、「時間がない日はこれだけ」と作戦が立てられるようになった。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1551008970011967560" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1127">その日にやった内容をノートに書く。スタディプラスのレポートで「ゼロの日がない」のを見るのが、自分へのご褒美。今は「ゼロにしない」がいちばん大事。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1564495592720433153" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1128">瞬間英作文で、正答率と時間を数える。2回目は少しだけ正答率が上がって、時間も短くなっているのが分かって、うれしくなる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1562441883685363834" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1129">運転しながらやった瞬間英作文は、家でもう一度やって、正答率をちゃんと数える。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1542167019804172288" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1138">自分で作ったエクセル（表のアプリ）の一覧表に、究極の英語リーディングの章ごとの手順・音読時間・目標時間・練習回数を書く。時間オーバーは色を変えるので、苦手なテーマがひと目で分かる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1499346580145311834" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1139">スタディプラスの「レポート」（グラフのマーク）で、勉強時間の配分を円グラフで見る。「今週の目標」では、達成度が％で出る。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1547809040300773380" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1124">入会した日から、スタディプラス（勉強の時間を記録するアプリ）で毎日記録。教材ごとに日別・週別・月別・ぜんぶの合計が分かるので、ロードマップのどこまで進んだかを確かめて、次の進め方を決め直すのに使う。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1526882639452176426" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1125">アプリに入れ忘れた日も、ノートに書いておいた教材と時間を見て、カレンダーからさかのぼって記録できる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1510059262095659159" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1126">最初はノートに記録していたけれど、ごちゃごちゃになりそうだったので、Day60 からスプレッドシート（表のアプリ）に。続けるうちに自分の学習のくせが見えて、「時間がない日はこれだけ」と作戦が立てられるようになった。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1551008970011967560" target="_top">投稿を見る</a></div></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kiroku-rec"><span data-t="1606">💡 ほかのやり方も見る（あと5件）</span></button>
+        <div class="ts-more" id="kf-kiroku-rec" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><div><span data-t="1127">その日にやった内容をノートに書く。スタディプラスのレポートで「ゼロの日がない」のを見るのが、自分へのご褒美。今は「ゼロにしない」がいちばん大事。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1564495592720433153" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1128">瞬間英作文で、正答率と時間を数える。2回目は少しだけ正答率が上がって、時間も短くなっているのが分かって、うれしくなる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1562441883685363834" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-graph"/></svg><div><span data-t="1129">運転しながらやった瞬間英作文は、家でもう一度やって、正答率をちゃんと数える。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1461170001548673066/1542167019804172288" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1138">自分で作ったエクセル（表のアプリ）の一覧表に、究極の英語リーディングの章ごとの手順・音読時間・目標時間・練習回数を書く。時間オーバーは色を変えるので、苦手なテーマがひと目で分かる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1499346580145311834" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1139">スタディプラスの「レポート」（グラフのマーク）で、勉強時間の配分を円グラフで見る。「今週の目標」では、達成度が％で出る。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1547809040300773380" target="_top">投稿を見る</a></div></li>
+        </ul>
+        </div>
       </div>
     </details>
     <details id="q-kiroku-app" data-y="でぃーぷる ほんやく きんどる ちぇっく べれしゅっぱん あぷり えーびーしーど おんせい すまほ えいごみみ なかまのやりかた なかま くふう" data-k="DeepL 翻訳 Kindle チェック ベレ出版 アプリ abceed エービーシード 音声 スマホ 英語耳 仲間のやり方 仲間 工夫">
       <summary data-t="1130">📱 アプリの使い方（仲間のやり方・6件）</summary>
       <div class="ans">
         <p class="lead" data-t="1131">教材の音声を聞く・翻訳する・チェックを消すなど、アプリの使い方。仲間のやり方です。</p>
-        <ol class="steps">
-          <li><div><span data-t="1132">英語耳の音声を、abceed のアプリで聞く。音声の速さを変えられる・次の音声へ自動で進む・アカウントを作らなくても使える、のが便利。英語耳の音声は無料。「瞬間英作文」は、2026年版の音声なら無料（2006年版は有料。中身は同じなので、本が2006年版でも2026年版の音声で勉強できます）。「DUO」は有料。使い方は投稿に画像つきでくわしく。出版社（ベレ出版）の「abceed の使い方」ページもあります。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1565086307045216277" target="_top">投稿を見る</a> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1565408643070042223" target="_top">訂正の投稿を見る</a> <a class="in kf" href="https://www.beret.co.jp/manual_abceed" target="_blank" rel="noopener">ベレ出版の使い方ページ</a></div></li>
-          <li><div><span data-t="1134">仕事の移動中に、前にやった瞬間英作文を abceed で聞いて復習する。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1492049703087374438" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1140">瞬間英作文のアプリで、チェックをまとめて消すには：チェックリストの画面で、消したい問題を2秒長押し → 左に出る四角にチェック → 右上の削除マーク。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1561748211968909398" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1141">Kindle（電子書籍）版の瞬間英作文には音声がついていないので、出版社（ベレ出版）のサイトから音声だけダウンロードできる。いまは無料・登録なしで、本のページの「音声ファイル」の「ダウンロード」を押すと、音声の入った箱（ZIP）がもらえる（2026年10月に確かめました。前は有料でした）。</span> <a class="in kf" href="https://www.beret.co.jp/book/41344" target="_blank" rel="noopener">ベレ出版の本のページ</a></div></li>
-          <li><div><span data-t="1142">多読で知らない単語が出てきたら、その部分だけ選んで翻訳する。辞書を引くより、読むリズムがくずれない。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1509920371430920342" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1143">英文を自分で作って「これで合ってるかな？」と確かめたいときは DeepL（翻訳のアプリ）。ほかの言い方も出してくれる。くわしい解説がほしいときは ChatGPT。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1548600309218287648" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1132">英語耳の音声を、abceed のアプリで聞く。音声の速さを変えられる・次の音声へ自動で進む・アカウントを作らなくても使える、のが便利。英語耳の音声は無料。「瞬間英作文」は、2026年版の音声なら無料（2006年版は有料。中身は同じなので、本が2006年版でも2026年版の音声で勉強できます）。「DUO」は有料。使い方は投稿に画像つきでくわしく。出版社（ベレ出版）の「abceed の使い方」ページもあります。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1565086307045216277" target="_top">投稿を見る</a> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1565408643070042223" target="_top">訂正の投稿を見る</a> <a class="in kf" href="https://www.beret.co.jp/manual_abceed" target="_blank" rel="noopener">ベレ出版の使い方ページ</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><div><span data-t="1134">仕事の移動中に、前にやった瞬間英作文を abceed で聞いて復習する。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1277162300217757738/1492049703087374438" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1140">瞬間英作文のアプリで、チェックをまとめて消すには：チェックリストの画面で、消したい問題を2秒長押し → 左に出る四角にチェック → 右上の削除マーク。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1561748211968909398" target="_top">投稿を見る</a></div></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kiroku-app"><span data-t="1607">💡 ほかのやり方も見る（あと3件）</span></button>
+        <div class="ts-more" id="kf-kiroku-app" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><div><span data-t="1141">Kindle（電子書籍）版の瞬間英作文には音声がついていないので、出版社（ベレ出版）のサイトから音声だけダウンロードできる。いまは無料・登録なしで、本のページの「音声ファイル」の「ダウンロード」を押すと、音声の入った箱（ZIP）がもらえる（2026年10月に確かめました。前は有料でした）。</span> <a class="in kf" href="https://www.beret.co.jp/book/41344" target="_blank" rel="noopener">ベレ出版の本のページ</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><div><span data-t="1142">多読で知らない単語が出てきたら、その部分だけ選んで翻訳する。辞書を引くより、読むリズムがくずれない。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1509920371430920342" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1143">英文を自分で作って「これで合ってるかな？」と確かめたいときは DeepL（翻訳のアプリ）。ほかの言い方も出してくれる。くわしい解説がほしいときは ChatGPT。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1548600309218287648" target="_top">投稿を見る</a></div></li>
+        </ul>
+        </div>
       </div>
     </details>
     <details id="q-kiroku-way" data-y="すすめかた ひんと まよう あさ にがて こえにだす でい0 じむ どうが なかまのやりかた なかま くふう" data-k="進め方 ヒント 迷う 朝 苦手 声に出す Day0 ジム 動画 仲間のやり方 仲間 工夫">
       <summary data-t="1144">🧭 進め方のヒント（仲間のやり方・4件）</summary>
       <div class="ans">
         <p class="lead" data-t="1145">進め方に迷ったときの、仲間のやり方です。</p>
-        <ol class="steps">
-          <li><div><span data-t="1146">朝いちばんの、頭がすっきりしている時間に、苦手なものからやる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1510096193131253932" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1147">文法ドリルは、答えを必ず声に出して言う。一度で無理をせず、回を重ねながら、見ないでスラスラ言えるようにしていく。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1475626223643263066" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1148">何をいつから始めればいいか迷ったら、90audio の Day0 を見返す。最初は分からなかったことが、今なら「なるほど」と分かる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1475357619026661397" target="_top">投稿を見る</a></div></li>
-          <li><div><span data-t="1149">ジムで歩いたり走ったりしている時間に、YouTube の英文法の動画を見る。運動の時間があっという間に終わる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1326559498315235419" target="_top">投稿を見る</a></div></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1146">朝いちばんの、頭がすっきりしている時間に、苦手なものからやる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1510096193131253932" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><div><span data-t="1147">文法ドリルは、答えを必ず声に出して言う。一度で無理をせず、回を重ねながら、見ないでスラスラ言えるようにしていく。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1475626223643263066" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><div><span data-t="1148">何をいつから始めればいいか迷ったら、90audio の Day0 を見返す。最初は分からなかったことが、今なら「なるほど」と分かる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1475357619026661397" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><div><span data-t="1149">ジムで歩いたり走ったりしている時間に、YouTube の英文法の動画を見る。運動の時間があっという間に終わる。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1326559498315235419" target="_top">投稿を見る</a></div></li>
+        </ul>
       </div>
     </details>
   </section>
@@ -2387,13 +2550,19 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-article" data-y="えー ざ かんし つかいわけ えーとざ ふとくてい とくてい" data-k="a the 冠詞 使い分け aとthe 不特定 特定">
       <summary data-t="775">「a」と「the」は、どう使い分けるの？</summary>
       <div class="ans">
-        <p class="lead" data-t="776">初めて話に出すもの・どれと決まっていないものは a、話し手と聞き手の間で「あれね」と分かっているものは the です。</p>
+        <p class="lead" data-t="1524">「初めて」なら a、「あれね」と分かっていれば the です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1525"><b>a</b>＝初めて話に出すもの<small>どれと決まっていないものにも使います</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1526"><b>the</b>＝話し手と聞き手の間で「あれね」と分かっているもの</span></li>
+        </ul>
         <ul class="words">
           <li>I'd like to make <b>a</b> reservation.（初めて話に出す予約）</li>
           <li>Have you made <b>the</b> reservation?（「例の予約」として分かっている）</li>
           <li>play <b>the</b> piano ／ go to <b>the</b> gym（the を使うことが多い言い方）</li>
         </ul>
-        <p class="note" data-t="777">日本人にはつかみにくい感覚なので、今は「このときは、こう言うんだ」くらいで大丈夫です。ドリルで空らんになっていない a・the は、今は気にしなくてOKです。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1527">今は「<b>このときは、こう言うんだ</b>」くらいで大丈夫<small>日本人にはつかみにくい感覚です。ドリルで空らんになっていない a・the は、今は気にしなくてOKです</small></span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1422392552459468901" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2401,12 +2570,14 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-cani" data-y="きゃんあい きゃんゆー きょか いらい もらえますか してくれますか しゅご" data-k="Can I Can you 許可 依頼 もらえますか してくれますか 主語">
       <summary data-t="778">「Can I 〜？」と「Can you 〜？」の使い分けは？</summary>
       <div class="ans">
-        <p class="lead" data-t="779">その動作をするのが「自分」なら Can I、「相手」なら Can you です。</p>
+        <p class="lead" data-t="1528">動くのが「自分」なら Can I、「相手」なら Can you です。</p>
         <ul class="words">
           <li><b>Can I</b> get a blanket?（毛布をいただけますか？＝受け取るのは自分）</li>
           <li><b>Can you</b> bring me a blanket?（毛布を持ってきてくれますか？＝動くのは相手）</li>
         </ul>
-        <p class="note" data-t="780">日本語は「だれが」をはぶくことが多いので、迷いやすいところです。動詞の動きをするのはだれかを考えてみましょう。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1529">その動作を<b>するのはだれか</b>を考える<small>日本語は「だれが」をはぶくことが多いので、迷いやすいところです</small></span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1406575886215548928" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2414,12 +2585,16 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-polite" data-y="めいあい くっどゆー うっどゆー あいどらいく ていねい しつれい ちゅうもん" data-k="May I Could you Would you I'd like Will you 丁寧 失礼 注文">
       <summary data-t="781">May I・Could you・I'd like…丁寧な言い方は、どれを使えばいい？</summary>
       <div class="ans">
-        <p class="lead" data-t="782">まずは Can I 〜？と Can you 〜？が使えれば十分です。やさしく言えば、失礼にはなりません。</p>
+        <p class="lead" data-t="1530">まずは Can I 〜？と Can you 〜？が使えれば十分です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1531">やさしく言えば、<b>失礼にはなりません</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1532">ふだんの会話は、May I より<b>Can I</b><small>May I はていねいですが、Can I の方がずっとよく使われます</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1533">注文は、I'd like と Can I の<b>どちらでも大丈夫</b></span></li>
+        </ul>
         <ul class="words">
           <li>I'd like a coffee, please.（コーヒーをください）</li>
           <li>Can I have a coffee?（コーヒーをもらえますか？）</li>
         </ul>
-        <p class="note" data-t="783">May I はていねいですが、ふだんの会話では Can I の方がずっとよく使われます。注文するときも、I'd like と Can I は、どちらを使っても大丈夫です。</p>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1427648657762816112" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2427,13 +2602,17 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-many" data-y="さむ えに めに まっち あろっとおぶ たくさん すこし かぞえられる かさんめいし" data-k="some any many much a lot of たくさん 少し 数えられる 可算名詞 不可算名詞">
       <summary data-t="784">some・any／many・much・a lot of の使い分けは？</summary>
       <div class="ans">
-        <p class="lead" data-t="785">some はふつうの文、any は「？」の文や「〜ない」の文で使うのが基本です。many は数えられるもの、much は数えられないもの、a lot of はどちらにも使えます。</p>
+        <p class="lead" data-t="1534">迷ったら、会話では a lot of を使えば大丈夫です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1535"><b>some</b>＝ふつうの文／<b>any</b>＝「？」の文や「〜ない」の文</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1536"><b>many</b>＝数えられるもの／<b>much</b>＝数えられないもの</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1537"><b>a lot of</b>＝どちらにも使える<small>数えられるかどうかを、毎回考えなくてすみます</small></span></li>
+        </ul>
         <ul class="words">
           <li>I have <b>some</b> friends. ／ Do you have <b>any</b> questions?</li>
           <li>There are <b>many</b> people. ／ I don't have <b>much</b> time.</li>
           <li>I have <b>a lot of</b> books. ／ I drink <b>a lot of</b> water.</li>
         </ul>
-        <p class="note" data-t="786">迷ったら、会話では a lot of を使えば大丈夫です。数えられるかどうかを、毎回考えなくてすみます。</p>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1419848359522336778" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2441,13 +2620,20 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-see" data-y="しー るっく うぉっち しょー みる つかいわけ" data-k="see look watch show 見る 使い分け">
       <summary data-t="787">see・look・watch（見る）は、どう違うの？</summary>
       <div class="ans">
-        <p class="lead" data-t="788">see は自然に目に入る、look は意識して目を向ける、watch は動きをじっと見続ける、です。</p>
+        <p class="lead" data-t="1538">see は「目に入る」、look は「目を向ける」、watch は「見続ける」です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1539"><b>see</b>＝自然に目に入る／<b>look</b>＝意識して目を向ける</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1540"><b>watch</b>＝動きをじっと見続ける</span></li>
+        </ul>
         <ul class="words">
           <li>I <b>saw</b> a bird in the sky.（空に鳥が見えた）</li>
           <li><b>Look</b> at that picture!（あの絵を見て！）</li>
           <li>I <b>watch</b> TV every night.（毎晩テレビを見ます）</li>
         </ul>
-        <p class="note" data-t="789">show は「見せる」なので、自分が見るときには使いません。ルールで覚えるより、正しい英文を何度も口に出すうちに、感覚でつかめてきます。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1541"><b>show</b> は「見せる」<small>自分が見るときには使いません</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1542">ルールより、<b>正しい英文を何度も口に出す</b><small>そのうちに、感覚でつかめてきます</small></span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1422189594622955580" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2455,13 +2641,17 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-gohome" data-y="ごーほーむ とぅー つかない ごーとぅー ごーあぶろーど びじっと" data-k="go home to つかない go to go abroad visit">
       <summary data-t="790">go home には、なぜ to がつかないの？</summary>
       <div class="ans">
-        <p class="lead" data-t="791">home は「家へ」という意味もある言葉なので、to がいりません。work や bed には to がつきます。</p>
+        <p class="lead" data-t="1543">home には「家へ」という意味も入っているので、to がいりません。</p>
         <ul class="words">
           <li>go home ／ go abroad（外国へ行く）</li>
           <li>go to work ／ go to bed</li>
           <li>visit Kyoto（visit to Kyoto とは言いません）</li>
         </ul>
-        <p class="note" data-t="792">visit も「訪れる」という意味の中に「〜へ」が入っているので、to はつけません。何度もまちがえやすいところなので、「visit＋場所」の形で覚えてしまうのが早いです。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1544">work や bed には <b>to がつく</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1545"><b>visit</b> も to はつけない<small>「訪れる」という意味の中に「〜へ」が入っています</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1546">「<b>visit＋場所</b>」の形で覚えてしまうのが早い<small>何度もまちがえやすいところです</small></span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1412446427719667843" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2469,13 +2659,19 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-have" data-y="はぶ しんこうけい はびんぐ たべる もっている らんち ゆうしょく いーと" data-k="have 進行形 having 食べる 持っている lunch dinner eat">
       <summary data-t="793">have は進行形にしない、と習ったのに I'm having lunch と言うのはなぜ？</summary>
       <div class="ans">
-        <p class="lead" data-t="794">have には「持っている」と「食べる・する」の2つの意味があるからです。「持っている」のときは進行形にしませんが、「食べる・体験する」のときは進行形にできます。</p>
+        <p class="lead" data-t="1547">have には「持っている」と「食べる・する」の2つの意味があるからです。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1548">「持っている」は、<b>進行形にしない</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1549">「食べる・体験する」は、<b>進行形にできる</b></span></li>
+        </ul>
         <ul class="words">
           <li>I <b>have</b> a car.（車を持っている）</li>
           <li>She <b>is having</b> lunch.（昼ごはんを食べている）</li>
           <li>We <b>are having</b> a party.（パーティーをしている）</li>
         </ul>
-        <p class="note" data-t="795">食事は have breakfast・have dinner のように have を使うことが多いです。eat でも、まちがいではありません。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1550">食事は <b>have breakfast・have dinner</b> のように have が多い<small>eat でも、まちがいではありません</small></span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1416223719314948117" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2483,13 +2679,18 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-when" data-y="うぇん いふ いち まえ うしろ ぶんとう もし みらい うぃる げんざいけい" data-k="when if 位置 前 後ろ 文頭 もし 未来 will 現在形">
       <summary data-t="796">when や if は、文の前に置く？後ろに置く？</summary>
       <div class="ans">
-        <p class="lead" data-t="797">どちらでも正解です。会話では、先に「どうだったか」を言って、あとから when を足す形が多めです。</p>
+        <p class="lead" data-t="1551">前でも後ろでも、どちらでも正解です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1552">会話では、<b>先に「どうだったか」</b>を言って、あとから when を足す形が多め</span></li>
+        </ul>
         <ul class="words">
           <li>She was very happy <b>when</b> she saw him again.</li>
           <li><b>When</b> I saw him again, I was very happy.</li>
           <li><b>If</b> it <b>is</b> fine tomorrow, we will go on a picnic.</li>
         </ul>
-        <p class="note" data-t="798">「もし〜なら」の if の中では、未来のことでも will を使わず、今の形（is など）にします。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1553">if の中は、未来のことでも <b>will を使わない</b><small>今の形（is など）にします</small></span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1457565115208437780" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2497,12 +2698,18 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-than" data-y="ざんみー ざんあいどぅー ひかく ひかくきゅう より" data-k="than me than I do 比較 比較級 より">
       <summary data-t="799">than me と than I do、どちらが正しいの？</summary>
       <div class="ans">
-        <p class="lead" data-t="800">どちらも正解です。ふだんの会話では than me がよく使われ、than I do は少していねいな言い方です。</p>
+        <p class="lead" data-t="1554">どちらも正解です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1555"><b>than me</b>＝ふだんの会話でよく使う</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1556"><b>than I do</b>＝少していねいな言い方</span></li>
+        </ul>
         <ul class="words">
           <li>He can swim faster <b>than me</b>.</li>
           <li>He can swim faster <b>than I do</b>.</li>
         </ul>
-        <p class="note" data-t="801">文の最後の do・does・were は、前に出てきた動詞をくり返す代わりに使っています。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1557">最後の do・does・were は、<b>前の動詞のくり返しの代わり</b></span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1404665260165562460" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2510,13 +2717,17 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-toing" data-y="ふていし どうめいし とぅー いんぐ すたーと えんじょい うぉんと" data-k="不定詞 動名詞 to ing start enjoy want decide">
       <summary data-t="802">to play と playing、どちらを使えばいい？</summary>
       <div class="ans">
-        <p class="lead" data-t="803">start や like のように、どちらでもほぼ同じ意味になる動詞が多いので、最初は「どちらでもOK」で大丈夫です。</p>
+        <p class="lead" data-t="1558">最初は「どちらでもOK」で大丈夫です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1559">start や like は、<b>どちらでもほぼ同じ意味</b><small>こういう動詞が多いです</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1560">enjoy は <b>ing だけ</b>／want・decide は <b>to だけ</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1561">こうした動詞だけ、<b>出会うたびに覚えていく</b></span></li>
+        </ul>
         <ul class="words">
           <li>I started <b>using</b> this phone. ／ I started <b>to use</b> this phone.</li>
           <li>I enjoy <b>playing</b> tennis.（enjoy は ing だけ）</li>
           <li>I want <b>to play</b> tennis.（want は to だけ）</li>
         </ul>
-        <p class="note" data-t="804">enjoy のように ing だけの動詞や、want・decide のように to だけの動詞もあります。こうした動詞だけ、出会うたびに覚えていきましょう。</p>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1434347846991216681" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2524,7 +2735,11 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-in" data-y="いん あふたー ふんご ごに さんじゅっぷんご あと" data-k="in after 分後 後に 30分後 あと">
       <summary data-t="805">「30分後に」は in？after？</summary>
       <div class="ans">
-        <p class="lead" data-t="806">「今から30分後」なら in を使います。after は「ある出来事や期間のあとで」というときに使います。</p>
+        <p class="lead" data-t="1562">「今から30分後」なら in です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1563"><b>in</b>＝今から〜後</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1564"><b>after</b>＝ある出来事や期間のあとで</span></li>
+        </ul>
         <ul class="words">
           <li>I'll call you <b>in</b> 30 minutes.（30分後に電話しますね）</li>
           <li>I'll go shopping <b>after</b> lunch.（お昼のあとに買い物に行きます）</li>
@@ -2536,13 +2751,16 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-would" data-y="うっどらいく うぉんと ほしい ていねい こどもっぽい" data-k="would like want ほしい 丁寧 子どもっぽい I'd like">
       <summary data-t="807">would like と want は、どう違うの？</summary>
       <div class="ans">
-        <p class="lead" data-t="808">would like は want（ほしい）のていねいな言い方です。would like to want とは言いません。</p>
+        <p class="lead" data-t="1565">would like は、want（ほしい）のていねいな言い方です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1566"><b>would like</b>＝「自分の気持ち」を相手に伝える<small>would like to want とは言いません</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1567">ほかの人のことは <b>want</b><small>「彼女は先生になりたがっている」など</small></span></li>
+        </ul>
         <ul class="words">
           <li>Which one <b>would you like</b>?（どちらがいいですか？）</li>
           <li>I'd like to drink coffee.（コーヒーを飲みたいです）</li>
           <li>She <b>wants</b> to be a teacher.（彼女は先生になりたがっている）</li>
         </ul>
-        <p class="note" data-t="809">would like は「自分の気持ち」を相手に伝える言い方です。「彼女は先生になりたがっている」のように、ほかの人のことを言うときは want を使います。</p>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1409011503402582026" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2562,12 +2780,15 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-your" data-y="ゆあ まい だれの しょゆう てをあらう はをみがく しゅくだい" data-k="your my their だれの 所有 所有格 手を洗う 歯を磨く 宿題">
       <summary data-t="812">wash your hands のように、英語では「だれの」をよくつけるのはなぜ？</summary>
       <div class="ans">
-        <p class="lead" data-t="813">英語は、日本語より「だれのものか」をはっきりさせる言葉だからです。</p>
+        <p class="lead" data-t="1568">英語は「だれのものか」をはっきりさせる言葉だからです。</p>
         <ul class="words">
           <li>wash <b>your</b> hands ／ brush <b>your</b> teeth</li>
           <li>do <b>your</b> homework ／ charge <b>your</b> phone</li>
         </ul>
-        <p class="note" data-t="814">体の部分、持ち物、宿題などその人の用事には、your・my・their などをつけることが多いです。全部を覚えなくて大丈夫。出会うたびに覚えていきましょう。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1569">体の部分・持ち物・その人の用事には、<b>your・my・their</b> などをつけることが多い<small>宿題などもそうです</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1570"><b>全部を覚えなくて大丈夫</b><small>出会うたびに覚えていきましょう</small></span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1422904633554112583" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2575,13 +2796,18 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-prep" data-y="ぜんちし いん おん あっと おぼえられない こんがらがる ふろむ" data-k="前置詞 in on at 覚えられない こんがらがる from to">
       <summary data-t="815">in・on・at などの前置詞が、なかなか覚えられない</summary>
       <div class="ans">
-        <p class="lead" data-t="816">前置詞は、たくさんの英語学習者が悩むところです。ピンとこなくても大丈夫です。</p>
-        <ol class="steps">
-          <li><span data-t="817">まずは「in＝中に入っている」「on＝くっついている」「at＝点」のように、ざっくりしたイメージをつかみます。</span></li>
-          <li><span data-t="818">よく使う形を、セットで覚えます（in the box、on the table、at the station など）。</span></li>
-          <li><span data-t="819">英語を読むときに「ここでは at を使うのか」と観察していくと、少しずつ感覚が身についていきます。</span></li>
-        </ol>
-        <p class="note" data-t="820">前置詞は、英語の中心ではありません。気になりすぎるときは、うまくスルーすることも大切です。</p>
+        <p class="lead" data-t="1571">たくさんの英語学習者が悩むところです。ピンとこなくても大丈夫です。</p>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1572">📍 前置詞のなれ方</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1573"><b>ざっくりしたイメージ</b>をつかむ<small>in＝中に入っている、on＝くっついている、at＝点</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1574">よく使う形を<b>セットで覚える</b><small>in the box、on the table、at the station など</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1575">読むときに「ここでは at か」と<b>観察する</b><small>少しずつ感覚が身についていきます</small></span></li>
+          </ol>
+        </div>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1576">前置詞は、<b>英語の中心ではない</b><small>気になりすぎるときは、うまくスルーすることも大切です</small></span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1398056176624599195" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2589,13 +2815,19 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-bedo" data-y="びーどうし いっぱんどうし みわけかた ぎもんぶん どぅー だず いず あー" data-k="be動詞 一般動詞 見分け方 疑問文 Do Does Is Are">
       <summary data-t="821">be動詞と一般動詞の見分け方は？</summary>
       <div class="ans">
-        <p class="lead" data-t="822">まず、文の中に動詞（play・like・get など）があるかを探します。あれば、疑問文は Do・Does を使います。見つからなければ、be動詞（am・are・is）が入ります。</p>
+        <p class="lead" data-t="1577">文の中に、動詞があるかを探します。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1578">動詞（play・like・get など）が<b>ある</b> → 疑問文は <b>Do・Does</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1579">見つから<b>ない</b> → <b>be動詞</b>（am・are・is）が入る</span></li>
+        </ul>
         <ul class="words">
           <li><b>Do</b> you like coffee?（like がある）</li>
           <li><b>Does</b> Emma play golf?（play がある）</li>
           <li><b>Is</b> she a good singer?（動詞がない → be動詞）</li>
         </ul>
-        <p class="note" data-t="823">英語の文には、必ず動詞が1つ入っています。この判断を何度もくり返すうちに、すぐに分かるようになります。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1580">英語の文には、<b>必ず動詞が1つ</b>入っている<small>この判断を何度もくり返すうちに、すぐに分かるようになります</small></span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1394933927361118271" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2615,7 +2847,11 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-meet" data-y="みーと しー あう つかいわけ" data-k="meet see 会う 使い分け">
       <summary data-t="826">「会う」は meet？see？</summary>
       <div class="ans">
-        <p class="lead" data-t="827">初めて会うときや、待ち合わせて会うときは meet、もう知っている人と会うときは see がよく使われます。</p>
+        <p class="lead" data-t="1581">初めて・待ち合わせなら meet、知っている人なら see です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1582"><b>meet</b>＝初めて会うとき・待ち合わせて会うとき</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1583"><b>see</b>＝もう知っている人と会うとき<small>よく使われます</small></span></li>
+        </ul>
         <ul class="words">
           <li>Nice to <b>meet</b> you.（はじめまして）</li>
           <li>I was happy to <b>see</b> him again.（また彼に会えてうれしかった）</li>
@@ -2627,8 +2863,11 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-fine" data-y="ふぁいん さにー はれ てんき いっつふぁいんとぅでい" data-k="fine sunny 晴れ 天気 It's fine today">
       <summary data-t="828">「今日は晴れ」は It's fine today. でいいの？</summary>
       <div class="ans">
-        <p class="lead" data-t="829">まちがいではありませんが、ふだんの会話では It's sunny today. のように、もっと具体的に言うことが多いです。</p>
-        <p class="note" data-t="830">fine には「悪くはない・ふつう」という意味もあるからです。瞬間英作文の答えに fine が出てきたら、sunny でも正解と考えて大丈夫です。</p>
+        <p class="lead" data-t="1584">まちがいではありません。会話では It's sunny today. が多いです。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1585">ふだんの会話では、<b>もっと具体的に</b>言うことが多い<small>fine には「悪くはない・ふつう」という意味もあるからです</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1586">瞬間英作文の答えに fine が出てきたら、<b>sunny でも正解</b>と考えて大丈夫</span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1530044074319544340" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2636,11 +2875,16 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-spell" data-y="さんたんげん えす かこけい いーでぃー いんぐ つづり すぺる わいをあいにかえる" data-k="三単現 s 過去形 ed ing つづり スペル yをiに 重ねる">
       <summary data-t="831">3人称の s や、過去形の ed、ing のつけ方（つづり）で迷う</summary>
       <div class="ans">
-        <p class="lead" data-t="832">ルールはありますが、覚えるのがしんどいときは、よく使う単語から1つずつ覚えていけば大丈夫です。</p>
+        <p class="lead" data-t="1587">よく使う単語から、1つずつ覚えていけば大丈夫です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1588">ルールはあるけれど、<b>覚えるのがしんどいときは無理しない</b></span></li>
+        </ul>
         <ul class="words">
           <li>study → stud<b>ied</b> ／ swim → swi<b>mming</b></li>
         </ul>
-        <p class="note" data-t="833">1つずつ覚えていくうちに、「こういうときは y が i になるんだな」と、自然にルールが分かってきます。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1589">1つずつ覚えるうちに、<b>自然にルールが分かってくる</b><small>「こういうときは y が i になるんだな」と</small></span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1425712125502034073" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2653,7 +2897,9 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <li>彼のセリフ："<b>I</b> am tired."</li>
           <li>それを伝えると：He told me that <b>he</b> was tired.</li>
         </ul>
-        <p class="note" data-t="836">迷ったら、その人が実際に言ったセリフを思い浮かべてみましょう。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1590">迷ったら、その人が<b>実際に言ったセリフ</b>を思い浮かべる</span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1471299235562651689" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2661,13 +2907,19 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-e-omit" data-y="ざっと しょうりゃく はぶく かんけいだいめいし ふー ういっち ふーむ うしろからせつめい" data-k="that 省略 はぶく 関係代名詞 who which whom 後ろから説明 分詞">
       <summary data-t="837">that や、関係代名詞の which・whom は、はぶいてもいいの？</summary>
       <div class="ans">
-        <p class="lead" data-t="838">I think (that) 〜 の that や、「〜が…する（名詞）」の which・whom は、はぶくことができます。会話では、はぶくことがとても多いです。</p>
+        <p class="lead" data-t="1591">はぶけます。会話では、はぶくことがとても多いです。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1592">I think (that) 〜 の <b>that</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1593">「〜が…する（名詞）」の <b>which・whom</b></span></li>
+        </ul>
         <ul class="words">
           <li>I think (<b>that</b>) he is kind.</li>
           <li>Is the book (<b>which</b>) he wants to read expensive?</li>
           <li>the sleeping baby ／ the baby sleeping in the car</li>
         </ul>
-        <p class="note" data-t="839">名詞を説明する言葉が1つだけのときは名詞の前（the sleeping baby）、長いときは名詞の後ろ（the baby sleeping in the car）に置きます。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1594">名詞を説明する言葉が<b>1つだけ</b>→名詞の前、<b>長い</b>→名詞の後ろ<small>the sleeping baby ／ the baby sleeping in the car</small></span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1446102491371540502" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2681,11 +2933,11 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="1087">英語耳を始めたけど、解説が少なくて、何をしているのか分からない（タッセーさんの回答）</summary>
       <div class="ans">
         <p class="lead" data-t="1088">今のやり方で大丈夫です。音声を聞いて、まねして発音する。このくり返しが英語耳の基本です。</p>
-        <ul class="steps">
-          <li><span data-t="1081">解説が少なくて、何をしているのかよく分からなくても大丈夫です。音を聞いてまねするうちに、発音と聞きとりの土台ができていきます。</span></li>
-          <li><span data-t="1082">英語耳は、理屈を理解するための本ではなく、正しい音を聞きとって、口に覚えさせる練習の本だからです。</span></li>
-          <li><span data-t="1083">全部を完ぺきにやろうとしないこと。1日10分くらいの軽い取り組みで十分です。</span></li>
-          <li><span data-t="1084">メインの学習（究極の英語リーディング・瞬間英作文など）は続けたまま、息抜きや、並べて進める学習として取り入れるのがちょうどいいです。長い時間やるより、短い時間でも毎日さわるほうが、口に定着します。</span></li>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1701">分からなくても大丈夫。<b>まねするうちに土台ができる</b><small>音を聞いてまねするうちに、発音と聞きとりの土台ができていきます</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1702">英語耳は、<b>口に覚えさせる練習の本</b><small>理屈を理解するための本ではなく、正しい音を聞きとって、口に覚えさせる本だからです</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1703"><b>1日10分くらい</b>の軽い取り組みで十分<small>全部を完ぺきにやろうとしないこと</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1704">メインの学習は続けたまま、<b>短い時間でも毎日さわる</b><small>究極の英語リーディング・瞬間英作文などと並べて、息抜きとして取り入れるのがちょうどいいです。長い時間やるより、口に定着します</small></span></li>
         </ul>
         <p class="note" data-t="1089">英語耳の進め方や、ちなコーチの考えは「<a class="in" href="#q-eigomimi">英語耳（えいごみみ）は、どうやって使えばいい？</a>」にあります。</p>
         <a class="btn" href="https://app.the-online-class.com/lessons/oANxMzMzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>英語耳 Q&amp;A（オンクラス）</a>
@@ -2724,11 +2976,14 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="758">車の運転中や家事の間に、聞けるものはある？</summary>
       <div class="ans">
         <p class="lead" data-t="759">あります。耳と頭が空いている時間は、音声の学習にぴったりです。</p>
-        <ol class="steps">
-          <li><span data-t="760">文法ドリルの音声アプリ「マイオトモ」や、瞬間英作文アプリの自動再生（設定で「自動再生」をON）がおすすめです。</span></li>
-          <li><span data-t="761">90プログラムの教材ではありませんが、NHKの語学アプリ「中学生の基礎英語」（1回15分ほど）も聞きやすいです。</span></li>
-        </ol>
-        <p class="note" data-t="762">考えごとをしながらの作業中は、音声が頭に入りにくくなります。家事や移動など、頭が空いているときに聞くのが効果的です。運転中は、安全第一でお願いします。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1621">文法ドリルの音声アプリ<b>「マイオトモ」</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><span data-t="1622">瞬間英作文アプリの<b>自動再生</b><small>設定で「自動再生」をONにします</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-play"/></svg><span data-t="1623">NHKの語学アプリ<b>「中学生の基礎英語」</b><small>90プログラムの教材ではありませんが、1回15分ほどで聞きやすいです</small></span></li>
+        </ul>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1624"><b>頭が空いているとき</b>に聞くのが効果的<small>考えごとをしながらの作業中は、音声が頭に入りにくくなります。運転中は、安全第一でお願いします</small></span></li>
+        </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1413682242949087253" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -2783,13 +3038,20 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-stuckhard" data-y="すすまない ねむくなる ねむい やるきがでない くやしい まえにできたのに まちがえる にがて ちゅうに むずかしい" data-k="進まない 眠くなる 眠い やる気が出ない 悔しい 前にできたのに 間違える 苦手 中2 難しい">
       <summary data-t="864">むずかしいところで進まない・眠くなる・前にできたのにまちがえて悔しい</summary>
       <div class="ans">
-        <p class="lead" data-t="865">むずかしいところで眠くなったり、やる気が出なかったりするのは、脳が英語の回路を作ろうと、フル回転しているしるしです。正しいことをしている証拠です。</p>
-        <ol class="steps">
-          <li><span data-t="866">脳は、変わることや、たくさんエネルギーを使うことが苦手です。急に負荷がかかると、眠くさせたり、「やらなくていい言いわけ」を作ったりします。</span></li>
-          <li><span data-t="867">むずかしすぎるときは、負荷を下げましょう。たとえば瞬間英作文なら、先に答えの日本語と英文を音読してから取り組んでもOKです。今の自分より「少しだけむずかしい」くらいが、いちばん力がつきます。</span></li>
-          <li><span data-t="868">眠いときは、立ってやる・歩きながらやる・思い切って15分ほど仮眠する、などもおすすめです。</span></li>
-        </ol>
-        <p class="note" data-t="869">「中2レベルなのに」「前にやったのに」と、自分を責めないでください。いちばん負荷がかかるところは、こえたら話せることがぐんと増える「伸びしろ」です。</p>
+        <p class="lead" data-t="1709">眠くなったり、やる気が出なかったりするのは、正しいことをしている証拠です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-reload"/></svg><span data-t="1710">脳が<b>英語の回路を作ろうと、フル回転</b>しているしるし<small>脳は、変わることや、たくさんエネルギーを使うことが苦手です。急に負荷がかかると、眠くさせたり、「やらなくていい言いわけ」を作ったりします</small></span></li>
+        </ul>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1711">🛠 こんなふうに乗りこえる</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-speed"/></svg><span data-t="1712">むずかしすぎるときは、<b>負荷を下げる</b><small>瞬間英作文なら、先に答えの日本語と英文を音読してから取り組んでもOK。今の自分より「少しだけむずかしい」くらいが、いちばん力がつきます</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1713">眠いときは、<b>立つ・歩く・15分ほど仮眠</b><small>立ってやる・歩きながらやる・思い切って仮眠する、などもおすすめです</small></span></li>
+          </ol>
+        </div>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1714">自分を責めないで。<b>そこは「伸びしろ」</b><small>「中2レベルなのに」「前にやったのに」と思わなくて大丈夫。いちばん負荷がかかるところは、こえたら話せることがぐんと増えます</small></span></li>
+        </ul>
         <a class="btn" href="https://app.the-online-class.com/lessons/oQOwUTMzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ラジオ「『苦手な分野で進まない…』と落ち込む日に聴く話」</a>
       </div>
     </details>
@@ -2797,11 +3059,18 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="870">ついスマホやゲーム、テレビに逃げてしまう</summary>
       <div class="ans">
         <p class="lead" data-t="871">誘惑に負けるのは、意志が弱いからではありません。だれにでもあることです。</p>
-        <ol class="steps">
-          <li><span data-t="872">意志の力は、朝起きたときがいちばん強く、疲れるにつれて弱くなります。疲れているときに、がまんで勝とうとしなくて大丈夫です。</span></li>
-          <li><span data-t="873">SNSやゲームは、手を止めさせないように、プロが本気で作っています。戦わずに、物理的に遠ざけましょう。</span></li>
-          <li><span data-t="874">たとえば、勉強するときはスマホを別の部屋に置く、スマホの画面のいちばん押しやすい場所に英語のアプリを置く、スタディプラスのタイマーを先に押してしまう、などです。</span></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1715">意志の力は<b>朝がいちばん強い</b><small>疲れるにつれて弱くなります。疲れているときに、がまんで勝とうとしなくて大丈夫です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-phone"/></svg><span data-t="1716">SNSやゲームは、プロが本気で作っている<small>手を止めさせないように作られています。戦わずに、物理的に遠ざけましょう</small></span></li>
+        </ul>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1717">🙌 遠ざける工夫のれい</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-back"/></svg><span data-t="1718">勉強するときは、<b>スマホを別の部屋に置く</b></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><span data-t="1719">画面のいちばん押しやすい場所に、<b>英語のアプリを置く</b></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-graph"/></svg><span data-t="1720">スタディプラスの<b>タイマーを先に押してしまう</b></span></li>
+          </ol>
+        </div>
         <p class="note" data-t="875">負けてしまった日も、自分を責めないでください。「次はどう工夫しようかな」と考えれば十分です。</p>
         <a class="btn" href="https://app.the-online-class.com/lessons/owN0YjMzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ラジオ「『ついスマホやゲームに逃げちゃう…』と落ち込む日に聴く話」</a>
       </div>
@@ -2809,12 +3078,18 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-negative" data-y="ねがてぃぶ わるいほうへ まえむきになれない ぽじてぃぶ じしんがない くちぐせ しか も" data-k="ネガティブ 悪い方へ 前向きになれない ポジティブ 自信がない 口ぐせ しか も">
       <summary data-t="876">つい悪い方へ考えてしまう・前向きになれない</summary>
       <div class="ans">
-        <p class="lead" data-t="877">ネガティブな気持ちは、無理に消さなくて大丈夫です。不安や怖さは、危険から身を守るための、だれにでもある気持ちです。</p>
-        <ol class="steps">
-          <li><span data-t="878">大事なのは、ネガティブな気持ちを抱えたままでも、一歩進むことです。それが本当の強さです。</span></li>
-          <li><span data-t="879">気持ちは変えなくていいので、口ぐせを変えてみましょう。「10分しかできなかった」ではなく、「忙しかったのに、10分もできた」。「しか」を「も」に変えるだけです。</span></li>
-          <li><span data-t="880">「読めるようになるのかな」と不安になったら、「読めるようになったら最高だな」と言いかえてみましょう。</span></li>
-        </ol>
+        <p class="lead" data-t="1721">ネガティブな気持ちは、無理に消さなくて大丈夫です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1722">不安や怖さは、<b>だれにでもある気持ち</b><small>危険から身を守るための気持ちです</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1723">抱えたままでも、<b>一歩進む</b><small>それが本当の強さです</small></span></li>
+        </ul>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1724">💬 口ぐせを変えてみる</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1725">「しか」を<b>「も」</b>に<small>「10分しかできなかった」→「忙しかったのに、10分もできた」</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1726">不安を<b>「〜したら最高だな」</b>に<small>「読めるようになるのかな」→「読めるようになったら最高だな」</small></span></li>
+          </ol>
+        </div>
         <p class="note" data-t="881">今日できたことに目を向けて、自分に小さな丸をあげてください。</p>
         <a class="btn" href="https://app.the-online-class.com/lessons/oQNzkDOzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ラジオ「無理にポジティブにならなくていい」</a>
       </div>
@@ -3209,12 +3484,14 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="515">ちなコーチって、どんな人？</summary>
       <div class="ans">
         <p class="lead" data-t="516">90プログラムをつくった英語コーチです。Discordやセミナーで、みなさんの質問に答えています。</p>
-        <ol class="steps">
-          <li><span data-t="517">2025年8月から、ご家族でマレーシアに住んでいます。日本との時差は1時間です。</span></li>
-          <li><span data-t="518">ご主人の<a class="in" href="#q-tasse">タッセーさん</a>と、小さな娘さんの3人家族です。</span></li>
-          <li><span data-t="519">外国の方と8年ほど一緒に働いてきました。</span></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1691">2025年8月から、<b>ご家族でマレーシア</b>に住んでいる<small>日本との時差は1時間です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1692">ご主人の<a class="in" href="#q-tasse">タッセーさん</a>と、小さな娘さんの<b>3人家族</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1693">外国の方と<b>8年ほど一緒に働いてきた</b></span></li>
+        </ul>
         <p class="note" data-t="520"><b>ちなコーチの思い</b>　英語を途中でやめずに、楽しく続けられる人を、一人でも多く増やしたい。</p>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="cw-hito"><span data-t="1694">🌸 ちなコーチって、こんな人（くわしく）</span></button>
+        <div class="ts-more" id="cw-hito" hidden>
         <div class="cw-box"><p class="note" data-t="535"><b>ちなコーチって、こんな人</b></p>
         <ul class="steps">
           <li><span data-t="536">実は、人前で話すのは苦手です。でも、セミナーでみなさんのお顔が見られるのは、とてもうれしい時間です。</span></li>
@@ -3225,6 +3502,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <li><span data-t="542">「ここ（90プログラム）が私の居場所。みんなにとっても、居場所になったらうれしい」</span></li>
         </ul></div>
         <p class="note" data-t="543">Discordの「ちなの楽屋トーク」では、ちなコーチが海外での暮らしや、ふとした気づきを、気軽につぶやいています。</p>
+        </div>
         <p class="note" data-t="544">ちなコーチのご家族の動画もあります。タッセーさんが娘さんのお誕生日会のために作ったものを、ちなコーチが受講生のみなさんに向けてシェアしてくれました。よかったら見てみてくださいね。</p>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1326404839546294315/1444902493489336360" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ご家族の動画の投稿を見る（Discord）</a>
       </div>
@@ -3232,17 +3510,25 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
     <details id="q-tasse" data-y="たっせー たっせーさん たっせい だれ どんなひと ちなこーち だんな おっと ごしゅじん たいだん じっせきしゃ ぜろきせい 0きせい せんじかん まいにち あさ しゅんかんえいさくぶん たっせーこうし こうしのたっせー たっせーせんせい" data-k="タッセー タッセーさん 達成 誰 どんな人 ちなコーチ 旦那 夫 ご主人 対談 実績者 0期生 1400時間 毎日 朝 瞬間英作文 メッセージ タッセー講師 講師のタッセーさん">
       <summary data-t="521">「タッセーさん」って、どんな人？</summary>
       <div class="ans">
-        <p class="lead" data-t="1090">ちなコーチのご主人で、90プログラムの「0期生」です。2024年3月から記録をつけはじめ、毎日の積み重ねで、合計1,400時間をこえる英語学習を続けてきました。</p>
-        <ol class="steps">
-          <li><span data-t="1091"><b>最初は、うまくいきませんでした。</b>自己流でオンライン英会話を40回ほど受けましたが、伸びませんでした。「文法の基礎がないまま話そうとしていた。山に登ったことがないのに、いきなりエベレストに行くような感じだった」と話しています。</span></li>
-          <li><span data-t="1092"><b>夫婦だからといって、特別に教わったわけではありません。</b>90プログラムの順番どおりに、自分で教材と向き合ってきました（文法 → 瞬間英作文 → リーディング → リスニング → スピーキング）。</span></li>
-          <li><span data-t="1093"><b>いちばん苦労したのは、瞬間英作文。</b>2冊をそれぞれ100時間、合計200時間。「正」の字を書いて回数を数えながら、くり返しました。</span></li>
-          <li><span data-t="1094"><b>手応えを感じたのは、300〜500時間のころ。</b>瞬間英作文の文が、頭に残るようになってきたそうです。</span></li>
-          <li><span data-t="1095"><b>続けるコツは「朝いちばん」と「毎日」。</b>「英語が終わるまで、次の仕事をしない」と決めて、700日ほど毎日続けています。週3回や週5回のときは続かなかったのに、毎日にしたら「休むかどうかを考えなくなって、かえって楽になった」そうです。忙しい日は10分、5分の日もあります。</span></li>
-          <li><span data-t="1096"><b>少しずつ、変わってきました。</b>前は、英語の場面になるとちなコーチの後ろに隠れていたのが、今は一人で美容院にも行けるように。自信がついて、声も大きくなりました。</span></li>
-          <li><span data-t="1097"><b>目標は「友だちの相談を聞ける人」になること。</b>英語を学んで、話を聞いてくれる人のありがたさに気づいたそうです。</span></li>
-          <li><span data-t="524">英語耳には60日間で合計20時間ほど取り組み、発音がはっきり変わったそうです。</span></li>
-        </ol>
+        <p class="lead" data-t="1695">ちなコーチのご主人で、90プログラムの「0期生」です。合計1,400時間をこえる英語学習を続けてきました。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1696">夫婦でも<b>特別に教わったわけではない</b><small>90プログラムの順番どおりに、自分で教材と向き合ってきました（文法 → 瞬間英作文 → リーディング → リスニング → スピーキング）</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1697">続けるコツは<b>「朝いちばん」と「毎日」</b><small>700日ほど毎日続けています。忙しい日は10分、5分の日もあります</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-up"/></svg><span data-t="1698">今は<b>一人で美容院にも行ける</b>ように<small>自信がついて、声も大きくなりました</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="ts-ayumi"><span data-t="1699">📖 タッセーさんの歩み（くわしく）</span></button>
+        <div class="ts-more ts-box" id="ts-ayumi" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-cal"/></svg><span data-t="1700">2024年3月から記録をつけはじめ、毎日の積み重ねで続けてきました。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-back"/></svg><span data-t="1091"><b>最初は、うまくいきませんでした。</b>自己流でオンライン英会話を40回ほど受けましたが、伸びませんでした。「文法の基礎がないまま話そうとしていた。山に登ったことがないのに、いきなりエベレストに行くような感じだった」と話しています。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1093"><b>いちばん苦労したのは、瞬間英作文。</b>2冊をそれぞれ100時間、合計200時間。「正」の字を書いて回数を数えながら、くり返しました。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1094"><b>手応えを感じたのは、300〜500時間のころ。</b>瞬間英作文の文が、頭に残るようになってきたそうです。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1095"><b>続けるコツは「朝いちばん」と「毎日」。</b>「英語が終わるまで、次の仕事をしない」と決めて、700日ほど毎日続けています。週3回や週5回のときは続かなかったのに、毎日にしたら「休むかどうかを考えなくなって、かえって楽になった」そうです。忙しい日は10分、5分の日もあります。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-up"/></svg><span data-t="1096"><b>少しずつ、変わってきました。</b>前は、英語の場面になるとちなコーチの後ろに隠れていたのが、今は一人で美容院にも行けるように。自信がついて、声も大きくなりました。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1097"><b>目標は「友だちの相談を聞ける人」になること。</b>英語を学んで、話を聞いてくれる人のありがたさに気づいたそうです。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="524">英語耳には60日間で合計20時間ほど取り組み、発音がはっきり変わったそうです。</span></li>
+        </ul>
+        </div>
         <div class="cw-box"><p class="note" data-t="1098"><b>タッセーさんから、みんなへ</b></p>
         <p class="note" data-t="1099">「今も、挫折の毎日です。それでも毎日続けたことで、少しずつ話せるようになりました。ここに参加している時点で、まず大成功。一歩一歩、一緒に前に進みましょう。」（2026年7月25日の実績者対談より）</p></div>
         <a class="btn" href="https://app.the-online-class.com/lessons/owMwkTOwUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>実績者対談（タッセーさん）を見る（オンクラス）</a>
@@ -3253,12 +3539,12 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <summary data-t="526">「With you（ウィズユー）コース」ってなに？</summary>
       <div class="ans">
         <p class="lead" data-t="527">90プログラムとは別の、ちなコーチがもっと近くで伴走するコースです。</p>
-        <ol class="steps">
-          <li><span data-t="528">ちなコーチと、マンツーマンで個別相談ができます。</span></li>
-          <li><span data-t="529">少人数のメンバーで、With youコースだけのセミナーを定期的に行っています。</span></li>
-          <li><span data-t="530">11月スタートの枠は、満席になりました（2026年10月の時点）。</span></li>
-        </ol>
-        <p class="note" data-t="531">くわしく知りたい方や、気になる方は、受講生LINEにひとこと送ってください。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1625">ちなコーチと<b>マンツーマンで個別相談</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-cal"/></svg><span data-t="1626">少人数の<b>With youコースだけのセミナー</b>を定期的に</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1627">11月スタートの枠は、<b>満席</b>になりました<small>2026年10月の時点</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-linemsg"/></svg><span data-t="1628">気になる方は、<b>受講生LINEにひとこと</b></span></li>
+        </ul>
         <p class="note" data-t="532">90プログラムだけでも、英語の力はしっかりつきます。「もっと近くで見てほしい」と思ったときの道のひとつとして、知っておいてくださいね。</p>
       </div>
     </details>
