@@ -327,6 +327,13 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
 .ts-tasse svg{width:46px;height:46px;border-radius:50%;background:#e8f1fb}
 .ts-tasse p{margin:0}.ts-tasse p+p{grid-column:1/-1}
 .ts-tasse .ts-tasse-h{font-family:var(--display);font-weight:700;font-size:19px;color:var(--accent-ink);line-height:1.4}.ts-tasse-h small{display:block;font-size:17px;font-family:var(--body);color:var(--sub)}
+/* スマホの手順を見やすく（ほかの項目にも広げた・2026-11-16） */
+.ts-panel{display:flex;flex-direction:column;gap:10px;padding:12px 8px;border-radius:14px;border:2px solid var(--accent);background:var(--accent-soft)}
+ul.ts-points{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.ts-points li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:10px;align-items:center;padding:10px;border-radius:12px;background:var(--card);border:1.5px solid var(--line);line-height:1.5}
+ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500;margin-top:2px}
+.ts-box{padding:12px 14px;border-radius:12px;background:var(--card);border:1.5px solid var(--line)}
+.ts-panel>.note{padding:0 4px}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -347,6 +354,44 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
   <symbol id="ts-recent" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M12 11v18M20 11v18M28 11v18" stroke-width="3.4"/></symbol>
   <symbol id="ts-split" viewBox="0 0 40 40"><rect x="9" y="3" width="22" height="34" rx="4" fill="#fff" stroke="#555" stroke-width="2.2"/><rect x="12" y="6" width="16" height="12" rx="2" fill="#e33"/><path d="M18 9.3v5.4l4.6-2.7z" fill="#fff"/><path d="M11 20h18" stroke="#333" stroke-width="1.8"/><path d="M13 24h14M13 28h11M13 32h13" stroke="#9aa3ad" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="ts-line" viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h28" stroke="currentColor" stroke-width="3"/><path d="M20 4v10M16 10l4 4 4-4M20 36V26M16 30l4-4 4 4" stroke="#e8761e" stroke-width="2.6"/></symbol>
+  <symbol id="ts-hold" viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9a8 8 0 0 1 14 0" stroke="#e8761e" stroke-width="2.4"/><path d="M14.5 25V11a2.5 2.5 0 0 1 5 0v9l7.3 1.6a3 3 0 0 1 2.3 3.4L27.5 35H16.5l-6.3-7.6a2.4 2.4 0 0 1 3.6-3.1z" fill="#fff" stroke="currentColor" stroke-width="2.4"/></symbol>
+  <symbol id="ts-menu" viewBox="0 0 40 40"><rect x="6" y="5" width="28" height="30" rx="4" fill="#fff" stroke="#555" stroke-width="2"/><path d="M11 12h18M11 18h18" stroke="#9aa3ad" stroke-width="2.4" stroke-linecap="round"/><rect x="9" y="23" width="22" height="8" rx="2" fill="#e8761e"/></symbol>
+  <symbol id="ts-names" viewBox="0 0 40 40" stroke-linecap="round"><circle cx="10" cy="10" r="3.6" fill="#7fb0e0"/><circle cx="10" cy="20" r="3.6" fill="#7fb0e0"/><circle cx="10" cy="30" r="3.6" fill="#7fb0e0"/><path d="M17 10h16M17 20h13M17 30h15" stroke="currentColor" stroke-width="2.6"/></symbol>
+  <symbol id="ts-mouse" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="11" y="4" width="18" height="32" rx="9"/><path d="M20 4v11M11 15h18"/></symbol>
+  <symbol id="ts-rclick" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 4a9 9 0 0 1 9 9v2h-9z" fill="#e8761e" stroke="none"/><rect x="11" y="4" width="18" height="32" rx="9"/><path d="M20 4v11M11 15h18"/></symbol>
+  <symbol id="ts-voice" viewBox="0 0 40 40"><path d="M6 15h6l8-6v22l-8-6H6z" fill="currentColor"/><path d="M25 14a8 8 0 0 1 0 12M29.5 9.5a14 14 0 0 1 0 21" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="ts-join" viewBox="0 0 40 40"><rect x="3" y="11" width="34" height="18" rx="9" fill="#2f9e5b"/><text x="20" y="24.5" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="sans-serif">参加</text></symbol>
+  <symbol id="ts-chat" viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h26a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H17l-7 6v-6H7a3 3 0 0 1-3-3V10a3 3 0 0 1 3-3z" fill="#fff" stroke="currentColor" stroke-width="2.4"/><path d="M11 14h18M11 20h12" stroke="#9aa3ad" stroke-width="2.4"/></symbol>
+  <symbol id="ts-hang" viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="#e33"/><path d="M8.5 22.5c6.4-6.4 16.6-6.4 23 0l-2.6 3.2-4.4-1.3v-3.3a14 14 0 0 0-9 0v3.3l-4.4 1.3z" fill="#fff"/></symbol>
+  <symbol id="ts-bell" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 27V18a8 8 0 0 1 16 0v9l3 3H9z"/><path d="M17 33a3 3 0 0 0 6 0M20 6v4"/></symbol>
+  <symbol id="ts-at" viewBox="0 0 40 40"><text x="20" y="29" text-anchor="middle" font-size="28" font-weight="700" fill="#2a6fd6" font-family="sans-serif">@</text></symbol>
+  <symbol id="ts-gear" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M20 5v5M20 30v5M5 20h5M30 20h5M9.4 9.4l3.5 3.5M27.1 27.1l3.5 3.5M9.4 30.6l3.5-3.5M27.1 12.9l3.5-3.5" stroke-width="3.6"/><circle cx="20" cy="20" r="9" fill="#fff" stroke-width="2.6"/><circle cx="20" cy="20" r="3.5" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="ts-react" viewBox="0 0 40 40"><rect x="3" y="10" width="34" height="20" rx="10" fill="#fff" stroke="#2a6fd6" stroke-width="2.2"/><circle cx="14" cy="20" r="6" fill="#ffc83d"/><circle cx="12" cy="19" r="1" fill="#333"/><circle cx="16" cy="19" r="1" fill="#333"/><path d="M11.5 21.6a3 3 0 0 0 5 0" stroke="#333" stroke-width="1.2" fill="none"/><text x="28" y="24.5" text-anchor="middle" font-size="12" font-weight="700" fill="#2a6fd6" font-family="sans-serif">3</text></symbol>
+  <symbol id="ts-reply" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 10l-9 9 9 9"/><path d="M8 19h14a10 10 0 0 1 10 10v2"/></symbol>
+  <symbol id="ts-abc" viewBox="0 0 40 40"><rect x="3" y="9" width="34" height="22" rx="5" fill="#fff" stroke="#555" stroke-width="2.2"/><text x="20" y="24.5" text-anchor="middle" font-size="11" font-weight="700" fill="#2a6fd6" font-family="sans-serif">ABC</text></symbol>
+  <symbol id="ts-hankaku" viewBox="0 0 40 40"><rect x="3" y="9" width="34" height="22" rx="5" fill="#fff" stroke="#555" stroke-width="2.2"/><text x="20" y="24.5" text-anchor="middle" font-size="10" font-weight="700" fill="#2a6fd6" font-family="sans-serif">半/全</text></symbol>
+  <symbol id="ts-clock" viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="15" fill="#fff" stroke="currentColor" stroke-width="2.4"/><path d="M20 11v9l6 4" stroke="#e8761e" stroke-width="3"/></symbol>
+  <symbol id="ts-zoom" viewBox="0 0 40 40"><rect x="3" y="3" width="34" height="34" rx="9" fill="#2d8cff"/><rect x="8" y="14" width="16" height="12" rx="3" fill="#fff"/><path d="M25 18l7-4v12l-7-4z" fill="#fff"/></symbol>
+  <symbol id="ts-reload" viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M31 21a11 11 0 1 1-3.4-8.6" stroke="currentColor" stroke-width="2.8"/><path d="M29 5v8h-8" stroke="#e8761e" stroke-width="2.8"/></symbol>
+  <symbol id="ts-dots" viewBox="0 0 40 40"><rect x="4" y="11" width="32" height="18" rx="9" fill="#fff" stroke="currentColor" stroke-width="2.2"/><circle cx="13" cy="20" r="2.4" fill="currentColor"/><circle cx="20" cy="20" r="2.4" fill="currentColor"/><circle cx="27" cy="20" r="2.4" fill="currentColor"/></symbol>
+  <symbol id="ts-browser" viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="#fff" stroke="#2a6fd6" stroke-width="2.4"/><path d="M27.5 12.5l-5 10-10 5 5-10z" fill="#e33"/><circle cx="20" cy="20" r="1.8" fill="#fff"/></symbol>
+  <symbol id="ts-linemsg" viewBox="0 0 40 40"><path d="M20 6c8.8 0 15 5.4 15 11.8S28.8 29.6 20 29.6c-1.4 0-2.7-.1-4-.4L9 34l1.6-6.2C7 25.6 5 22 5 17.8 5 11.4 11.2 6 20 6z" fill="#06c755"/><text x="20" y="21.5" text-anchor="middle" font-size="8.5" font-weight="700" fill="#fff" font-family="sans-serif">LINE</text></symbol>
+  <symbol id="ts-phone" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="11" y="4" width="18" height="32" rx="4" fill="#fff"/><path d="M17 31h6"/></symbol>
+  <symbol id="ts-star" viewBox="0 0 40 40"><path d="M20 5l4.4 9 9.9 1.4-7.2 7 1.7 9.8L20 27.6l-8.8 4.6 1.7-9.8-7.2-7 9.9-1.4z" fill="#ffc83d" stroke="#c98a00" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="ts-file" viewBox="0 0 40 40"><path d="M4 11a3 3 0 0 1 3-3h8l3 4h15a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z" fill="#5aa0e6"/><path d="M4 16h32" stroke="#fff" stroke-width="1.6"/></symbol>
+  <symbol id="ts-zip" viewBox="0 0 40 40" stroke="#a87a3a" stroke-width="2" stroke-linejoin="round"><path d="M6 14l14-7 14 7v14l-14 7-14-7z" fill="#e9c38b"/><path d="M6 14l14 7 14-7M20 21v14" fill="none"/></symbol>
+  <symbol id="ts-repeat" viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 17a12 12 0 0 1 20.5-6.5M32 23a12 12 0 0 1-20.5 6.5" stroke="currentColor" stroke-width="2.8"/><path d="M29 4v7h-7M11 36v-7h7" stroke="#e8761e" stroke-width="2.8"/></symbol>
+  <symbol id="ts-ear" viewBox="0 0 40 40"><path d="M7 26v-6a13 13 0 0 1 26 0v6" stroke="currentColor" stroke-width="2.6" fill="none"/><rect x="5" y="22" width="8" height="13" rx="3" fill="#2a6fd6"/><rect x="27" y="22" width="8" height="13" rx="3" fill="#2a6fd6"/></symbol>
+  <symbol id="ts-person" viewBox="0 0 40 40" fill="none" stroke-linecap="round"><circle cx="17" cy="14" r="6" stroke="currentColor" stroke-width="2.4"/><path d="M5 34a12 12 0 0 1 24 0" stroke="currentColor" stroke-width="2.4"/><path d="M32 8v9M27.5 12.5h9" stroke="#e8761e" stroke-width="2.8"/></symbol>
+  <symbol id="ts-graph" viewBox="0 0 40 40"><path d="M5 34h30" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><rect x="8" y="22" width="6" height="10" rx="1" fill="#7fb0e0"/><rect x="17" y="15" width="6" height="17" rx="1" fill="#2a6fd6"/><rect x="26" y="7" width="6" height="25" rx="1" fill="#e8761e"/></symbol>
+  <symbol id="ts-search" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-linecap="round"><circle cx="17" cy="17" r="10" fill="#fff" stroke-width="2.6"/><path d="M24.5 24.5l9 9" stroke-width="3.6"/></symbol>
+  <symbol id="ts-pen" viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 32l2-7 16-16 5 5-16 16z" fill="#fff" stroke="currentColor" stroke-width="2.4"/><path d="M22.5 12.5l5 5" stroke="currentColor" stroke-width="2.4"/><path d="M6 36h28" stroke="#e8761e" stroke-width="2.4"/></symbol>
+  <symbol id="ts-check" viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="#2f9e5b"/><path d="M12.5 20.5l5 5 10-10" stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ts-cal" viewBox="0 0 40 40"><rect x="6" y="8" width="28" height="27" rx="3" fill="#fff" stroke="currentColor" stroke-width="2.2"/><path d="M6 15h28" stroke="currentColor" stroke-width="2.2"/><path d="M13 5v6M27 5v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><text x="20" y="30" text-anchor="middle" font-size="11" font-weight="700" fill="#e33" font-family="sans-serif">1月</text></symbol>
+  <symbol id="ts-dl" viewBox="0 0 40 40" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5v19M13 17l7 7 7-7" stroke="#e8761e" stroke-width="3"/><path d="M7 26v7h26v-7" stroke="currentColor" stroke-width="2.6"/></symbol>
+  <symbol id="ts-speed" viewBox="0 0 40 40" fill="none" stroke-linecap="round"><path d="M5 29a15 15 0 0 1 30 0" stroke="currentColor" stroke-width="2.6"/><path d="M20 29l8-10" stroke="#e8761e" stroke-width="3"/><circle cx="20" cy="29" r="2.8" fill="currentColor"/></symbol>
+  <symbol id="ts-next" viewBox="0 0 40 40" fill="none" stroke="#e8761e" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20h27M24 12l8 8-8 8"/></symbol>
+  <symbol id="ts-books" viewBox="0 0 40 40" stroke="#555" stroke-width="1.8" stroke-linejoin="round"><rect x="5" y="8" width="8" height="27" rx="1.5" fill="#7fb0e0"/><rect x="15" y="5" width="8" height="30" rx="1.5" fill="#e8761e"/><rect x="25.5" y="10" width="8" height="25" rx="1.5" fill="#2f9e5b" transform="rotate(-8 29.5 22.5)"/></symbol>
 <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
 </svg>
 
@@ -468,10 +513,11 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
     <details id="q-t4" data-y="はいれない ずーむ ゆーあーるえる りんく さんかできない つながらない ひらかない とまる ふりーず せみなー" data-k="入れない URL Zoom ズーム 入室 フリーズ 参加できない">
       <summary data-t="4">参加のURLから入れない</summary>
       <div class="ans">
-        <ol class="steps">
-          <li><span data-t="140">開始の少し前に開いた場合、始まるまで入れないことがあります。開始時刻に開き直してください。</span></li>
-          <li><span data-t="141">スマホの人は、先に「Zoom」のアプリを入れておいてください。</span></li>
-          <li><span data-t="142">止まってしまったら、Zoomのアプリを一度閉じて、もう一度開いてください。</span></li>
+        <p class="lead" data-t="1256">Zoom（ズーム）に入れないときに、ためすことです。</p>
+        <ol class="ts-steps">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1257"><b>開始の時刻</b>に、開き直す<small>早く開くと、始まるまで入れないことがあります</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-zoom"/></svg><span data-t="1258">スマホの人は、先に<b>Zoomのアプリ</b>を入れる<small>下のボタンから入れられます</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-reload"/></svg><span data-t="1259">止まったら、Zoomを<b>閉じて、開き直す</b></span></li>
         </ol>
         <p class="note" data-t="62">それでも入れないときは、受講生LINEにひとこと送ってください。</p>
         <a class="btn" href="https://apps.apple.com/jp/app/id546505307" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>Zoomアプリ（iPhone）</a>
@@ -577,19 +623,23 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
     <details id="q-t10" data-y="でぃすこーど でぃすこ へんしん すたんぷ りあくしょん おしかた めんしょん あっと なまえ よびかけ そうさ やりかた あおもじ あおくならない あおいもじ ぜんかく はんかく つうちがいかない とどかない えいごのあっと にほんごのあっと こうほ でない めんしょんできない" data-k="Discord ディスコード 返信 スタンプ リアクション 押し方 メンション @ ＠ 名前 呼びかけ 操作 やり方 青文字 青くならない 青い文字 全角 半角 通知が行かない 届かない">
       <summary data-t="10">Discordで、返信やスタンプはどうやるの？</summary>
       <div class="ans">
-        <p class="lead" data-t="70">スマホとパソコンで、やり方が少しちがいます。</p>
-        <p class="note" data-t="923"><b>① スマホの場合</b></p>
-        <ol class="steps">
-          <li><span data-t="154"><b>スタンプ</b>：投稿を長押しして、出てきた絵文字から選びます。すでに付いているスタンプを押すと、同じものを付けられます。</span></li>
-          <li><span data-t="155"><b>返信</b>：投稿を長押しして、「返信」を選びます。だれへの返事か分かるので、話がつながります。</span></li>
-          <li><span data-t="156"><b>呼びかけ</b>：入力欄に「@」と相手の名前の最初の文字を打つと、名前の候補が出ます。選ぶと、相手にお知らせが届きます。</span></li>
-        </ol>
-        <p class="note" data-t="924"><b>② パソコンの場合</b></p>
-        <ol class="steps">
-          <li><span data-t="71"><b>スタンプ・返信</b>：投稿にマウスを乗せると、右側にスタンプ（にこにこマーク）や返信（矢印）のボタンが出ます。押して選びます。</span></li>
-          <li><span data-t="926"><b>呼びかけ</b>：スマホと同じで、入力欄に「@」と名前の最初の文字を打ち、出てきた候補を押して選びます。</span></li>
-        </ol>
-        <p class="note" data-t="72">まちがえて付けたスタンプは、もう一度押すと消せます。</p>
+        <p class="lead" data-t="1244">よく使う3つ（スタンプ・返信・呼びかけ）のやり方です。</p>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1245">📱 スマホのやり方</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-react"/></svg><span data-t="1246"><b>スタンプ</b>：投稿を長押し → 絵文字を選ぶ<small>付いているスタンプを押すと、同じものを付けられます</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-reply"/></svg><span data-t="1247"><b>返信</b>：投稿を長押し →「返信」<small>だれへの返事か分かるので、話がつながります</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-at"/></svg><span data-t="1248"><b>呼びかけ</b>：「@」と名前の1文字目を打つ<small>出てきた名前を選ぶと、相手にお知らせが届きます</small></span></li>
+          </ol>
+          <p class="note" data-t="72">まちがえて付けたスタンプは、もう一度押すと消せます。</p>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="t10-pc"><span data-t="1249">💻 パソコンの方</span></button>
+        <div class="ts-more" id="t10-pc" hidden>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-mouse"/></svg><span data-t="1250">投稿に<b>マウスを乗せる</b><small>右側に、スタンプ（にこにこマーク）と返信（矢印）のボタンが出ます</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-at"/></svg><span data-t="1251"><b>呼びかけ</b>はスマホと同じ<small>「@」と名前の1文字目を打ち、候補を押します</small></span></li>
+          </ol>
+        </div>
         <p class="at-h" data-t="658">@をつけたのに、名前が青い文字にならないときは</p>
         <p class="note" data-t="672">名前が青い文字になると、相手にお知らせが届きます。青くなるコツは、<b>@を打ったあと、出てきた名前を押して選ぶこと</b>です。</p>
         <figure class="at-fig" aria-label="Discordで@を使うときの画面の絵">
@@ -610,25 +660,32 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
             <div class="ng"><b>× 日本語の＠<small>（全角）</small></b><span class="at-mini"><span class="at-mini-pop none">（何も出ない）</span><span class="at-mini-in">＠ち</span></span>候補が出ない</div>
           </div>
         </figure>
-        <ol class="steps">
-          <li><span data-t="673">@を打っても名前の候補が出てこないときは、@が<b>日本語の「＠」</b>（全角）になっています。見た目はほとんど同じですが、日本語の＠では青くなりません。一度消して、英語の@で打ち直してください。</span></li>
+        <p class="note" data-t="1252">名前の候補が出ないときは、@が<b>日本語の「＠」</b>になっています。一度消して、<b>英語の@</b>で打ち直してください。</p>
+        <ol class="ts-steps">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="1253">キーボードを<b>英語（ABC）</b>にしてから@を打つ<small>地球のマーク🌐や「ABC」のボタンで切りかえます</small></span></li>
         </ol>
-        <p class="note" data-t="927"><b>① スマホの場合</b></p>
-        <ol class="steps">
-          <li><span data-t="674">キーボードを英語（ABC）に切りかえてから@を打つと、英語の@が出ます。地球のマーク🌐や「ABC」のボタンで切りかえられます。</span></li>
-        </ol>
-        <p class="note" data-t="928"><b>② パソコンの場合</b></p>
-        <ol class="steps">
-          <li><span data-t="675">キーボードの左上にある「半角/全角」のキーを1回押してから、@を打ってください。</span></li>
-        </ol>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="t10-pc2"><span data-t="1254">💻 パソコンで@を打つとき</span></button>
+        <div class="ts-more" id="t10-pc2" hidden>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-hankaku"/></svg><span data-t="1255">キーボードの左上の「<b>半角/全角</b>」を1回押してから、@を打つ</span></li>
+          </ol>
+        </div>
         <p class="note" data-t="676">名前を最後まで自分で打っただけでは、青くならないことがあります。候補の中から押して選ぶと、まちがいありません。</p>
       </div>
     </details>
     <details id="q-whoreact" data-y="だれがすたんぷ だれが おした すたんぷ りあくしょん だれ なまえ みたい しりたい みかた いいね おしたひと えもじ でぃすこーど すまほ ながおし" data-k="誰が だれが 押した スタンプ リアクション 誰 名前 見たい 知りたい 見方 いいね 押した人 絵文字 Discord スマホ 長押し">
       <summary data-t="679">だれがスタンプを押してくれたのか、知りたい</summary>
       <div class="ans">
-        <p class="lead" data-t="680">投稿についたスタンプは、だれが押したのか、名前を見ることができます。</p>
-        <p class="note" data-t="929"><b>① スマホの場合</b></p>
+        <p class="lead" data-t="1218">スタンプを押してくれた人の名前は、見ることができます。</p>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1219">📱 スマホのやり方</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-hold"/></svg><span data-t="1220">見たい投稿を、指で<b>長押し</b>する</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-menu"/></svg><span data-t="1221">メニューの<b>下の方</b>の「<b>リアクション</b>」を押す</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-names"/></svg><span data-t="1222">押してくれた人の<b>名前が並ぶ</b><small>上のほかのスタンプを押すと、その人たちも見られます</small></span></li>
+          </ol>
+          <p class="note" data-t="1223">💡 <b>もっとかんたん</b>　スタンプ（「👏 3」など）そのものを長押ししても、同じ一覧が出ます。</p>
+        </div>
         <figure class="at-fig" aria-label="スマホのDiscordで、スタンプを押した人を見るときの画面の絵">
           <div class="at-step">
             <p class="at-cap">① 見たい投稿を、指で長押しする</p>
@@ -653,17 +710,13 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
             </div>
           </div>
         </figure>
-        <ol class="steps">
-          <li><span data-t="681">スタンプを見たい投稿を、指で長押しします。</span></li>
-          <li><span data-t="682">下からメニューが出てきます。メニューの下の方に「リアクション」があるので、押します。</span></li>
-          <li><span data-t="683">スタンプごとに、押してくれた人の名前が並びます。上に並んだほかのスタンプを押すと、そのスタンプを押した人も見られます。</span></li>
-        </ol>
-        <p class="note" data-t="687"><b>もっとかんたんな方法</b>　投稿の下についているスタンプ（「👏 3」など）そのものを長押ししても、同じように名前の一覧が見られます。</p>
-        <p class="note" data-t="930"><b>② パソコンの場合</b></p>
-        <ol class="steps">
-          <li><span data-t="684">スタンプの上にマウスを乗せると、押した人の名前が出ます。</span></li>
-          <li><span data-t="931">全員を見たいときは、投稿の上で右クリックして「リアクションを表示」を押します。</span></li>
-        </ol>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="wr-pc"><span data-t="1224">💻 パソコンの方</span></button>
+        <div class="ts-more" id="wr-pc" hidden>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-mouse"/></svg><span data-t="1225">スタンプに<b>マウスを乗せる</b>と、名前が出る</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-rclick"/></svg><span data-t="1226">全員を見るときは、投稿を<b>右クリック</b><small>→「リアクションを表示」を押します</small></span></li>
+          </ol>
+        </div>
         <p class="cheer" data-t="686">あなたの投稿を見て、だれかが押してくれたスタンプです。ひとつひとつが、仲間からの「見てるよ」「がんばってね」のエールです。あなたが押すスタンプも、きっとだれかの励みになっていますよ。</p>
       </div>
     </details>
@@ -883,10 +936,10 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
     <details id="q-t14" data-y="あいぱっど たぶれっと めにゅー でない みえない ひょうじ おんくら" data-k="iPad アイパッド メニュー 出ない 表示">
       <summary data-t="14">iPadでオンクラスのメニューが出ない</summary>
       <div class="ans">
-        <ol class="steps">
-          <li><span data-t="165">スマホでは出るか、見てみてください。</span></li>
-          <li><span data-t="166">iPadは機種のしくみで、メニューが出ないことがあります。</span></li>
-          <li><span data-t="167">ページを「お気に入り」か「ホーム画面に追加」しておくと、すぐ開けます。</span></li>
+        <p class="lead" data-t="166">iPadは機種のしくみで、メニューが出ないことがあります。</p>
+        <ol class="ts-steps">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-phone"/></svg><span data-t="1267"><b>スマホ</b>では出るか、見てみる</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1268">「<b>お気に入り</b>」か「<b>ホーム画面に追加</b>」をしておく<small>次から、すぐ開けます</small></span></li>
         </ol>
         <a class="btn" href="https://app.the-online-class.com/" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>オンクラスを開く</a>
       </div>
@@ -895,10 +948,11 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
       <summary data-t="15">動画が見られない・とちゅうで止まる</summary>
       <div class="ans">
         <p class="lead" data-t="74">LINEの中で開いた画面だと、動画が止まることがあります。</p>
-        <ol class="steps">
-          <li><span data-t="168">画面の右下（または右上）の「…」や共有のボタンから、「Safariで開く」「Chromeで開く」を選んでみてください。</span></li>
-          <li><span data-t="169">ページを読み込み直すか、Wi-Fiを一度オフにして、もう一度ためしてください。</span></li>
-          <li><span data-t="170">それでも見られないときは、使っている機械（iPhone・Androidなど）を書いて、受講生LINEに送ってください。</span></li>
+        <ol class="ts-steps">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-dots"/></svg><span data-t="1260">「<b>…</b>」や共有のボタンを押す<small>画面の右下（または右上）にあります</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-browser"/></svg><span data-t="1261">「<b>Safariで開く</b>」「<b>Chromeで開く</b>」を選ぶ</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-reload"/></svg><span data-t="1262">だめなら、<b>読み込み直す</b><small>または、Wi-Fiを一度オフにして、もう一度ためします</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-linemsg"/></svg><span data-t="1263">それでもだめなら、<b>受講生LINE</b>へ<small>使っている機械（iPhone・Androidなど）を書いて送ってください</small></span></li>
         </ol>
       </div>
     </details>
@@ -920,12 +974,21 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
       <summary data-t="17">Discordの通知の音を止めたい</summary>
       <div class="ans">
         <p class="lead" data-t="427">いちばん簡単なのは、通知を「自分あてのときだけ」にする方法です。</p>
-        <ol class="steps">
-          <li><span data-t="428">Discordのアプリで、画面の左にある「90Program」のアイコンを長押しします。</span></li>
-          <li><span data-t="429">出てきたメニューから「通知設定」を選びます。</span></li>
-          <li><span data-t="430">「@mentions（メンションのみ）」を選びます。これで、あなたあての返信や呼びかけのときだけ通知が来て、ほかの投稿では鳴らなくなります。</span></li>
-        </ol>
-        <p class="note" data-t="431">通知を全部止めたいときは、スマホの「設定」アプリ →「Discord」→「通知」で、オフにできます。ただ、全部止めると、あなたあての返信にも気づきにくくなるので、「@mentions（メンションのみ）」がおすすめです。</p>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1237">🔔 自分あてのときだけ鳴らす</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-hold"/></svg><span data-t="1238">左の「<b>90Program</b>」のマークを<b>長押し</b><small>Discord のアプリの、画面の左にあります</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-bell"/></svg><span data-t="1239">「<b>通知設定</b>」を選ぶ</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-at"/></svg><span data-t="1240">「<b>@mentions（メンションのみ）</b>」を選ぶ<small>自分あての返信や呼びかけのときだけ鳴ります</small></span></li>
+          </ol>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="t17-off"><span data-t="1241">🔕 通知を全部止めたいとき</span></button>
+        <div class="ts-more" id="t17-off" hidden>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-gear"/></svg><span data-t="1242">スマホの「<b>設定</b>」アプリ →「Discord」→「通知」でオフ</span></li>
+          </ol>
+          <p class="note" data-t="1243">ただ、全部止めると、自分あての返信にも気づきにくくなります。「@mentions（メンションのみ）」がおすすめです。</p>
+        </div>
         <p class="note" data-t="432">画像つきのくわしい説明は、下のボタンから見られます。</p>
         <a class="btn" href="https://docs.google.com/document/d/1jnhf13Q-pXgtXPDjG6TWcouBLmuxvFq9BsVc_dnRvIQ/edit?usp=sharing" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>通知の設定のしかた（画像つき）</a>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1514893553892069397" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
@@ -969,24 +1032,39 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
       <summary data-t="20">「スタディプラス」ってなに？どうして使うの？</summary>
       <div class="ans">
         <p class="lead" data-t="79">勉強した時間を記録できる、無料のアプリです。ちなコーチもおすすめしています。</p>
-        <p class="note" data-t="80"><b>どうして大事なの？</b>　<a class="in" href="#q-typelist">タイプ別の一覧表</a>は、勉強した時間（0〜10時間、11〜20時間…）ごとに、やることが書いてあります。スタディプラスで合計の時間が分かると、「いま一覧表のどこにいて、次に何をすればいいか」がすぐに分かります。進めていくときの、道しるべになります。ロードマップ（教科書の写真つき）にも「0時間〜3000時間」の目安があるので、あわせて見ると、もっと分かりやすくなります。</p>
-        <p class="note" data-t="81">時間が数字やグラフで見えると、積み上げてきたことが自信になります。週報の学習時間も、そのまま書けます。</p>
-        <ol class="steps">
-          <li><span data-t="181">下のボタンから、アプリを入れます（無料）。</span></li>
-          <li><span data-t="182">アプリを開いて、アカウントを作ります。</span></li>
-          <li><span data-t="183">勉強を始めるときに、ストップウォッチ（タイマー）をスタートします。終わったら止めて、記録します。</span></li>
-          <li><span data-t="184">記録はグラフやカレンダーで見られます。合計の時間を、タイプ別の一覧表と見くらべてみましょう。</span></li>
-        </ol>
-        <p class="note" data-t="659"><b>教材ごとに分けて記録すると、もっと見やすくなります</b>　グラフが教材ごとに色分けされて、それぞれの合計時間も分かります。</p>
-        <ol class="steps">
-          <li><span data-t="660">アプリの「本棚」を開いて、「教材を追加」を押します。</span></li>
-          <li><span data-t="661"><b>本の教材</b>（文法ドリル・瞬間英作文・究極の英語リーディングなど）は、本の名前で検索するか、本の裏のバーコードを読み取ると出てきます。</span></li>
-          <li><span data-t="662"><b>本のない教材</b>（マスター講座・多読book・多聴voiceなど、オンクラスの教材）は、「独自教材」を選んで、名前を自分でつけて作ります。たとえば「マスター講座」「多読book」のように、分かりやすい名前で大丈夫です。</span></li>
-          <li><span data-t="663">勉強した時間を記録するときに、その日にやった教材を選びます。</span></li>
-        </ol>
-        <p class="note" data-t="894"><b>「レポート」と「今週の目標」も便利です</b>　アプリのグラフのマーク（レポート）を押すと、どの教材にどれくらい時間を使ったかが、円グラフでひと目で分かります。</p>
-        <p class="note" data-t="895">「今週の目標」に時間を入れておくと、どこまでできたかが「％」で出ます。週報で決める「次の週の目標」と合わせて、数字で見ていくのもおすすめです。</p>
-        <p class="note" data-t="82">正確に測れなくても大丈夫です。毎日の学習を積み上げている事実だけで、120点満点です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1285"><b>合計の時間</b>が分かる<small>タイプ別の一覧表で「いまどこ・次に何をするか」が分かります</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-graph"/></svg><span data-t="1286">数字やグラフで見えて、<b>自信</b>になる<small>週報の学習時間も、そのまま書けます</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="sp-why"><span data-t="1287">🧭 どうして大事なの？（くわしく）</span></button>
+        <div class="ts-more ts-box" id="sp-why" hidden>
+          <p class="note" data-t="80"><b>どうして大事なの？</b>　<a class="in" href="#q-typelist">タイプ別の一覧表</a>は、勉強した時間（0〜10時間、11〜20時間…）ごとに、やることが書いてあります。スタディプラスで合計の時間が分かると、「いま一覧表のどこにいて、次に何をすればいいか」がすぐに分かります。進めていくときの、道しるべになります。ロードマップ（教科書の写真つき）にも「0時間〜3000時間」の目安があるので、あわせて見ると、もっと分かりやすくなります。</p>
+        </div>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1288">📱 使い方</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-dl"/></svg><span data-t="1289">下のボタンから、<b>アプリを入れる</b>（無料）</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1290">アプリを開いて、<b>アカウントを作る</b></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1291">勉強を始めるとき、<b>ストップウォッチ</b>をスタート<small>終わったら止めて、記録します</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-graph"/></svg><span data-t="1292">記録は<b>グラフやカレンダー</b>で見られる<small>合計の時間を、タイプ別の一覧表と見くらべてみましょう</small></span></li>
+          </ol>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="sp-kyozai"><span data-t="1293">📚 教材ごとに分けて記録する</span></button>
+        <div class="ts-more" id="sp-kyozai" hidden>
+          <p class="note" data-t="1294">グラフが教材ごとに色分けされて、それぞれの合計時間も分かります。</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1295">「<b>本棚</b>」→「<b>教材を追加</b>」を押す</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1296"><b>本の教材</b>は、名前で検索かバーコード<small>文法ドリル・瞬間英作文・究極の英語リーディングなど</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1297"><b>本のない教材</b>は「<b>独自教材</b>」で作る<small>マスター講座・多読book・多聴voiceなど。名前は「多読book」のように自分でつけてOK</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1298">記録するときに、その日の<b>教材を選ぶ</b></span></li>
+          </ol>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="sp-report"><span data-t="1299">📊 「レポート」と「今週の目標」</span></button>
+        <div class="ts-more ts-box" id="sp-report" hidden>
+          <p class="note" data-t="894"><b>「レポート」と「今週の目標」も便利です</b>　アプリのグラフのマーク（レポート）を押すと、どの教材にどれくらい時間を使ったかが、円グラフでひと目で分かります。</p>
+          <p class="note" data-t="895">「今週の目標」に時間を入れておくと、どこまでできたかが「％」で出ます。週報で決める「次の週の目標」と合わせて、数字で見ていくのもおすすめです。</p>
+        </div>
+        <p class="cheer" data-t="82">正確に測れなくても大丈夫です。毎日の学習を積み上げている事実だけで、120点満点です。</p>
         <a class="btn" href="https://apps.apple.com/jp/app/id505410049" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>スタディプラス（iPhone）</a>
         <a class="btn" href="https://play.google.com/store/apps/details?id=jp.studyplus.android.app" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>スタディプラス（Android）</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/oANzYzNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>資料【ロードマップ】学習の全体像（教科書の写真つき）</a>
@@ -1334,10 +1412,10 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
       <summary data-t="35">瞬間英作文は、アプリ？本？</summary>
       <div class="ans">
         <p class="lead" data-t="105">おすすめはアプリです。</p>
-        <ol class="steps">
-          <li><span data-t="222">まずは<a class="in" href="https://apps.apple.com/jp/app/id443332137" target="_top">アプリ</a>だけで始めてみてください。</span></li>
-          <li><span data-t="223">紙でもやりたくなったら、そのときに本をそろえれば大丈夫です。</span></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-phone"/></svg><span data-t="222">まずは<a class="in" href="https://apps.apple.com/jp/app/id443332137" target="_top">アプリ</a>だけで始めてみてください。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="223">紙でもやりたくなったら、そのときに本をそろえれば大丈夫です。</span></li>
+        </ul>
         <a class="btn" href="https://apps.apple.com/jp/app/id443332137" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>瞬間英作文アプリ（iPhone）</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/oQM2AzNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>瞬間英作文の進め方（オンクラス）</a>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1542653996349522002" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
@@ -1347,12 +1425,12 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
       <summary data-t="704">瞬間英作文の本は、前の版と改訂版、どちらを買えばいい？</summary>
       <div class="ans">
         <p class="lead" data-t="705">紙の本で買うなら、改訂版がおすすめです。</p>
-        <ol class="steps">
-          <li><span data-t="706">改訂版は、2026年1月に出ました。のっている英文や学習の中身は、前の版と同じです。</span></li>
-          <li><span data-t="707">ちがうのは音声です。前の版はCDつきでしたが、改訂版は、スマホやパソコンに音声をダウンロードして聞く形になりました。答えるまでの間（ポーズ）も、少し使いやすく調整されています。</span></li>
-          <li><span data-t="708">前の版をもう持っている方は、あまり気にせず、そのまま進めて大丈夫です。</span></li>
-        </ol>
-        <p class="note" data-t="709">スマホで勉強するなら、本ではなく、アプリ（どんどん話すための瞬間英作文トレーニング）で進めるのもおすすめです。画面でサクサク進められて、音声もいっしょに流れます。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-cal"/></svg><span data-t="1300">改訂版は<b>2026年1月</b>に出ました<small>のっている英文や学習の中身は、前の版と同じです</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-dl"/></svg><span data-t="1301">ちがうのは<b>音声</b>です<small>前の版はCDつき。改訂版は、スマホやパソコンにダウンロードして聞きます。答えるまでの間（ポーズ）も、少し使いやすくなりました</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1302"><b>前の版</b>を持っている方は、そのまま進めて大丈夫</span></li>
+        </ul>
+        <p class="note" data-t="1303">📱 スマホで勉強するなら、<b>アプリ</b>（どんどん話すための瞬間英作文トレーニング）もおすすめです。画面でサクサク進められて、音声もいっしょに流れます。</p>
         <p class="note" data-t="710">進め方は、オンクラスの「1.文法を学ぶ」→「瞬間英作文 進め方と資料」にある動画で見られます。</p>
         <a class="btn" href="https://apps.apple.com/jp/app/id443332137" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>瞬間英作文アプリ（iPhone）</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/oQM2AzNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>瞬間英作文の進め方（オンクラス）</a>
@@ -1362,11 +1440,12 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
     <details id="q-t36" data-y="りーでぃんぐ よむ よみかた せいどく たどく きゅうきょく ほん ぶーこ おんせい" data-k="リーディング 精読 多読 究極 本 booco 音声 読む">
       <summary data-t="36">リーディング（読む）は、どう進める？</summary>
       <div class="ans">
-        <ol class="steps">
-          <li><span data-t="224">精読の「<a class="in" href="#q-reading">究極の英語リーディング</a>」は、改訂版のvol.1を使います。紙の本がおすすめです。</span></li>
-          <li><span data-t="225">音声は「booco」というアプリで、無料で聞けます。</span></li>
-          <li><span data-t="226">多読の教材は、オンクラスの「<a class="in" href="https://app.the-online-class.com/learning_courses/oQDO2gDI6MGb" target="_top">2.英語を読む</a>」にあります。</span></li>
-        </ol>
+        <p class="lead" data-t="1304">使うものは、この3つです。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1305"><b>精読</b>：「<a class="in" href="#q-reading">究極の英語リーディング</a>」改訂版 vol.1<small>紙の本がおすすめです</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1306"><b>音声</b>：「booco」というアプリで、無料で聞ける</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1307"><b>多読</b>：オンクラスの「<a class="in" href="https://app.the-online-class.com/learning_courses/oQDO2gDI6MGb" target="_top">2.英語を読む</a>」にあります</span></li>
+        </ul>
         <a class="btn" href="https://www.amazon.co.jp/dp/4757442238" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>改訂版 Vol.1 のページ（Amazon）</a>
         <a class="btn" href="https://apps.apple.com/jp/app/id1507203854" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（iPhone）</a>
         <a class="btn" href="https://play.google.com/store/apps/details?id=jp.co.alc.booco" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（Android）</a>
@@ -1377,16 +1456,22 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
     <details id="q-ultlisten" data-y="せいどく ちがい りーでぃんぐ きゅうきょく きゅうきょくのえいごりすにんぐ りすにんぐ せいちょう きく ほん どこ かう こうにゅう てにいれる あまぞん あるく ぶーこ かいていばん いつから" data-k="精読 違い ちがい リーディング 究極の英語リスニング 究極 リスニング 精聴 聞く 本 どこ 買う 購入 入手 Amazon アルク booco 改訂版 vol いつから">
       <summary data-t="591">「究極の英語リスニング」って、なに？</summary>
       <div class="ans">
-        <p class="lead" data-t="592">英語を「聞く力」をつける本です。1つの音声をくわしく聞く「精聴（せいちょう）」の教材で、vol.1〜4まであります（アルクの本）。</p>
-        <p class="note" data-t="609"><b>リーディングとのちがい</b>　「<a class="in" href="#q-reading">究極の英語リーディング</a>」は、英文を目で読んで、英語の語順のまま理解する力をつける本（精読）。「究極の英語リスニング」は、その力を耳で使えるようにする本（精聴）です。音声がぐんと速くなります。順番は、リーディング → リスニングです。</p>
-        <ol class="steps">
-          <li><span data-t="593"><b>どこで手に入る？</b>　本屋さんやAmazonで買えます。これから買う方は「改訂版」のvol.1からがおすすめです。音声は「booco（ブーコ）」というアプリで、無料で聞けます。</span></li>
-          <li><span data-t="594"><b>始める時期</b>　「<a class="in" href="#q-readhow">究極の英語リーディング</a>」のvol.1〜3が終わってから進みます。リーディングで英語の語順のまま分かるようになったら、次は速い音声で、耳でも分かるように練習します。</span></li>
-          <li><span data-t="595"><b>進め方</b>　聞く → 英文（スクリプト）を確かめる → 音読やシャドーイング。基本は2周がおすすめです。くわしくは「<a class="in" href="#q-listening">リスニング（聞く）は、どう進める？</a>」へ。</span></li>
-          <li><span data-t="596"><b>完ぺきでなくてOK</b>　1つの音声は20〜30分までと決めて、「6〜7割分かればOK」で次へ進みます。聞き取れないのは、ちょうどいい負荷がかかっている証拠です。</span></li>
-          <li><span data-t="597"><b>音声の速さ</b>　本の中盤から後半にかけて、音声がどんどん速くなります。はじめがゆっくりに感じたら、アプリで速さを上げて聞いてもOKです。</span></li>
-          <li><span data-t="598"><b>聞き取れないところは</b>　「<a class="in" href="#q-eigomimi">英語耳</a>」に戻って、その音のルールを確かめましょう。</span></li>
-        </ol>
+        <p class="lead" data-t="1311">英語を「聞く力」をつける本です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1312">1つの音声をくわしく聞く「<b>精聴</b>（せいちょう）」の本<small>vol.1〜4まであります（アルクの本）</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1313">順番は、<b>リーディング → リスニング</b><small>リーディング（精読）でついた力を、耳でも使えるようにします</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1314">始めるのは、「<a class="in" href="#q-readhow">究極の英語リーディング</a>」<b>vol.1〜3のあと</b></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="ul-more"><span data-t="1315">📖 もっとくわしく（手に入れ方・進め方）</span></button>
+        <div class="ts-more ts-box" id="ul-more" hidden>
+          <p class="note" data-t="609"><b>リーディングとのちがい</b>　「<a class="in" href="#q-reading">究極の英語リーディング</a>」は、英文を目で読んで、英語の語順のまま理解する力をつける本（精読）。「究極の英語リスニング」は、その力を耳で使えるようにする本（精聴）です。音声がぐんと速くなります。順番は、リーディング → リスニングです。</p>
+          <p class="note" data-t="593"><b>どこで手に入る？</b>　本屋さんやAmazonで買えます。これから買う方は「改訂版」のvol.1からがおすすめです。音声は「booco（ブーコ）」というアプリで、無料で聞けます。</p>
+          <p class="note" data-t="594"><b>始める時期</b>　「<a class="in" href="#q-readhow">究極の英語リーディング</a>」のvol.1〜3が終わってから進みます。リーディングで英語の語順のまま分かるようになったら、次は速い音声で、耳でも分かるように練習します。</p>
+          <p class="note" data-t="595"><b>進め方</b>　聞く → 英文（スクリプト）を確かめる → 音読やシャドーイング。基本は2周がおすすめです。くわしくは「<a class="in" href="#q-listening">リスニング（聞く）は、どう進める？</a>」へ。</p>
+          <p class="note" data-t="596"><b>完ぺきでなくてOK</b>　1つの音声は20〜30分までと決めて、「6〜7割分かればOK」で次へ進みます。聞き取れないのは、ちょうどいい負荷がかかっている証拠です。</p>
+          <p class="note" data-t="597"><b>音声の速さ</b>　本の中盤から後半にかけて、音声がどんどん速くなります。はじめがゆっくりに感じたら、アプリで速さを上げて聞いてもOKです。</p>
+          <p class="note" data-t="598"><b>聞き取れないところは</b>　「<a class="in" href="#q-eigomimi">英語耳</a>」に戻って、その音のルールを確かめましょう。</p>
+        </div>
         <a class="btn" href="https://www.amazon.co.jp/dp/4757440545" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>改訂版 Vol.1 のページ（Amazon）</a>
         <a class="btn" href="https://apps.apple.com/jp/app/id1507203854" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（iPhone）</a>
         <a class="btn" href="https://play.google.com/store/apps/details?id=jp.co.alc.booco" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（Android）</a>
@@ -1397,11 +1482,11 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
       <summary data-t="37">リスニング（聞く）は、どう進める？</summary>
       <div class="ans">
         <p class="lead" data-t="106">「究極の英語リーディング」が終わったら、「究極の英語リスニング」へ進みます。</p>
-        <ol class="steps">
-          <li><span data-t="227">vol.1が簡単すぎるときは、vol.2から始めてもOKです。boocoで先に音声を聞いて、レベルを確かめましょう。</span></li>
-          <li><span data-t="228">進め方は「聞く → 音読 → オーバーラッピング（音声に重ねて読む）→ シャドーイング（音声を追いかけて言う）」です。</span></li>
-          <li><span data-t="229">慣れてきたら、音声の速さを上げるのも効果があります。</span></li>
-        </ol>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1308">簡単すぎたら、<b>vol.2から</b>でもOK<small>boocoで先に音声を聞いて、レベルを確かめましょう</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1309">進め方：<b>聞く → 音読 → オーバーラッピング → シャドーイング</b><small>オーバーラッピング＝音声に重ねて読む。シャドーイング＝音声を追いかけて言う</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-speed"/></svg><span data-t="1310">慣れたら、<b>音声の速さを上げる</b>のも効果があります</span></li>
+        </ul>
         <a class="btn" href="https://apps.apple.com/jp/app/id1507203854" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（iPhone）</a>
         <a class="btn" href="https://play.google.com/store/apps/details?id=jp.co.alc.booco" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（Android）</a>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1513081299945132124" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
@@ -1635,17 +1720,18 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
       <summary data-t="455">「英語耳（えいごみみ）」は、どうやって使えばいい？</summary>
       <div class="ans">
         <p class="lead" data-t="456">発音記号と、口や舌の動かし方を練習する本です。自分で正しい音が出せるようになると、英語の聞こえ方が変わってきます。</p>
-        <p class="note" data-t="457"><b>始める時期</b>　「究極の英語リーディング」vol.1〜3を進めたあとが目安です。それより前でも、気分転換に1日5〜10分ほど取り入れるのはOKです。</p>
-        <ol class="steps">
-          <li><span data-t="458">第2章〜第5章を、1日10分くらいずつくり返します。はじめは1周に1時間ほどかかっても、くり返すうちに30分くらいで終わるようになります。</span></li>
-          <li><span data-t="459">発音記号を全部覚えなくて大丈夫です。「こんな音があるんだな」「つながるから聞こえにくいんだな」と分かれば十分です。</span></li>
-          <li><span data-t="460">そのあとは「究極の英語リスニング」などで音読しながら、聞き取れないところが出たら英語耳に戻って確かめます。辞書のように使っていきましょう。</span></li>
-          <li><span data-t="461">第6章（洋楽の歌）は、「やってみたい」と思えたら取り入れてください。合わなければ、無理にやらなくて大丈夫です。第7章は読み物なので、1回軽く読めばOKです。</span></li>
-        </ol>
-        <p class="note" data-t="462">少しクセのある本です。しんどくなったら、いったんお休みして大丈夫。また始めたくなったときに、再開すればOKです。</p>
-        <p class="note" data-t="463"><b>本の見方</b>　第2章〜第5章が、発音記号ごとの練習です（ここがメインです）。第6章は洋楽の歌を使った練習、第7章は読み物です。本のはじめに「第2〜5章を10回ほどくり返したら、第6章へ」と、進め方が書いてあります。</p>
-        <p class="note" data-t="464"><b>音声（CD）の使い方</b>　紙の本にはCDが付いています。CDプレーヤーやカーステレオで、そのまま流して練習できます。車で流しながら練習している方もいます。</p>
-        <p class="note" data-t="465">CDがかけられないときは、出版社（KADOKAWA）のサイトから、同じ音声をダウンロードすることもできます。本の中に出てくる英単語を、IDとパスワードとして入れる仕組みです。Kindle版にはCDがないので、ダウンロードで聞きます。オンクラスの「3.英語を聞く」の「はじめに」にも、英語耳のQ&amp;Aがあります。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1269"><b>始める時期</b>：「究極の英語リーディング」vol.1〜3のあと<small>その前でも、気分転換に1日5〜10分ほどならOK</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1270"><b>第2章〜第5章</b>を、1日10分くらいずつくり返す<small>はじめは1周1時間ほど。くり返すうちに30分くらいになります</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1271">発音記号は、<b>全部覚えなくて大丈夫</b><small>「こんな音があるんだな」と分かれば十分です</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="em-more"><span data-t="1272">📖 そのあとの進め方・本の見方</span></button>
+        <div class="ts-more ts-box" id="em-more" hidden>
+          <p class="note" data-t="460">そのあとは「究極の英語リスニング」などで音読しながら、聞き取れないところが出たら英語耳に戻って確かめます。辞書のように使っていきましょう。</p>
+          <p class="note" data-t="461">第6章（洋楽の歌）は、「やってみたい」と思えたら取り入れてください。合わなければ、無理にやらなくて大丈夫です。第7章は読み物なので、1回軽く読めばOKです。</p>
+          <p class="note" data-t="463"><b>本の見方</b>　第2章〜第5章が、発音記号ごとの練習です（ここがメインです）。第6章は洋楽の歌を使った練習、第7章は読み物です。本のはじめに「第2〜5章を10回ほどくり返したら、第6章へ」と、進め方が書いてあります。</p>
+          <p class="note" data-t="462">少しクセのある本です。しんどくなったら、いったんお休みして大丈夫。また始めたくなったときに、再開すればOKです。</p>
+        </div>
         <div class="ed">
           <p class="ed-h" data-t="1100">🎧 音声をスマホで聞くには</p>
           <div class="ed-voice">
@@ -1661,11 +1747,36 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
               <div class="ed-pic"><span class="ed-box">📦<small>ZIP</small></span><span class="ed-arr">→ 開く →</span><span class="ed-notes">🎵🎵🎵</span></div>
               <p data-t="1105">届いた<b>箱（ZIP）</b>を開くと、音声が出てきます</p></li>
           </ol>
-          <div class="ed-dev">
-            <div><b>🤖 アンドロイド</b><span data-t="1106">ファイルのアプリ（スマホによって「ファイル」「マイファイル」など名前がちがいます） → ZIP → <i class="ed-key">展開</i>（<i class="ed-key">解凍</i>）</span></div>
-            <div><b>📱 iPhone</b><span data-t="1107">ファイル → ZIP を<i class="ed-key">タップ</i></span></div>
-            <div><b>💻 パソコン</b><span data-t="1108">右クリック → <i class="ed-key">すべて展開</i></span></div>
-          </div>
+        </div>
+        <p class="os-q" data-t="1273">箱（ZIP）の開き方。どちらのスマホですか？</p>
+        <div class="os-pick" role="group" aria-label="スマホの種類">
+          <button type="button" data-os="ios" aria-pressed="false" aria-controls="em-ios"><span class="os-ic" aria-hidden="true">📱</span><span data-t="1274">iPhone の方</span></button>
+          <button type="button" data-os="android" aria-pressed="false" aria-controls="em-android"><span class="os-ic" aria-hidden="true">🤖</span><span data-t="1275">Android の方</span></button>
+        </div>
+        <div class="os-panel" id="em-ios" data-os="ios" hidden>
+          <p class="os-h" data-t="1276">📱 iPhone のやり方</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-file"/></svg><span data-t="1277">「<b>ファイル</b>」のアプリを開く</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-zip"/></svg><span data-t="1278">届いた <b>ZIP</b> を押す<small>中から音声が出てきます</small></span></li>
+          </ol>
+        </div>
+        <div class="os-panel" id="em-android" data-os="android" hidden>
+          <p class="os-h" data-t="1279">🤖 Android のやり方</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-file"/></svg><span data-t="1280"><b>ファイルのアプリ</b>を開く<small>「ファイル」「マイファイル」など、名前はスマホによってちがいます</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-zip"/></svg><span data-t="1281"><b>ZIP</b> を選んで「<b>展開</b>」（解凍）</span></li>
+          </ol>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="em-pc"><span data-t="1282">💻 パソコンの方</span></button>
+        <div class="ts-more" id="em-pc" hidden>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-zip"/></svg><span data-t="1283">ZIP を<b>右クリック</b> →「<b>すべて展開</b>」</span></li>
+          </ol>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="em-cd"><span data-t="1284">💿 CD・ダウンロードのこと</span></button>
+        <div class="ts-more ts-box" id="em-cd" hidden>
+          <p class="note" data-t="464"><b>音声（CD）の使い方</b>　紙の本にはCDが付いています。CDプレーヤーやカーステレオで、そのまま流して練習できます。車で流しながら練習している方もいます。</p>
+          <p class="note" data-t="465">CDがかけられないときは、出版社（KADOKAWA）のサイトから、同じ音声をダウンロードすることもできます。本の中に出てくる英単語を、IDとパスワードとして入れる仕組みです。Kindle版にはCDがないので、ダウンロードで聞きます。オンクラスの「3.英語を聞く」の「はじめに」にも、英語耳のQ&amp;Aがあります。</p>
         </div>
         <p class="note" data-t="1109"><b>📱 アプリ「abceed（エービーシード）」でも聞けます</b>　英語耳の音声は、abceed というスマホのアプリでも無料で聞けます。ちなコーチも「無料なのであれば、アプリを使ってみるのもとても良いと思います。スマホでの操作感や聴きやすさなど、使いやすいと感じる方で進めてみてくださいね」と答えています。仲間のやり方は「<a class="in" href="#q-kiroku-app">アプリの使い方</a>」にあります。</p>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1564795517777743943" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
@@ -2788,11 +2899,14 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
     <details id="q-t49" data-y="おんせい おと とまる がめん きえる らじお すりーぷ くらくなる ゆーちゅーぶ" data-k="音声 止まる 画面 消える ラジオ スリープ">
       <summary data-t="49">スマホの画面が消えると音声が止まる</summary>
       <div class="ans">
-        <ol class="steps">
-          <li><span data-t="258">オンクラスの中で再生すると、画面が消えたときに止まることがあります。</span></li>
-          <li><span data-t="259">YouTubeに移動して再生すると、画面を消しても聞けます。</span></li>
-          <li><span data-t="260">またはスマホの設定で、画面が消えるまでの時間を長くしてください。</span></li>
-        </ol>
+        <p class="lead" data-t="258">オンクラスの中で再生すると、画面が消えたときに止まることがあります。</p>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1264">どちらかを、ためしてください</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-play"/></svg><span data-t="1265"><b>YouTube</b> に移って再生する<small>画面を消しても聞けます</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-gear"/></svg><span data-t="1266">スマホの設定で、<b>画面が消えるまでの時間</b>を長くする</span></li>
+          </ol>
+        </div>
       </div>
     </details>
 
@@ -2828,8 +2942,17 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
     <details id="q-radiohow" data-y="きまぐれらじお らじお はいりかた さんか ききかた きりかた でかた ぬけかた せつだん でんわ あかいでんわ でんわまーく ちゃっと ちゃっとがめん きりかえ ぼいすちゃんねる はいりっぱなし つながったまま おわりかた あうとぷっと かんそう みぎうえ ふきだし" data-k="きまぐれラジオ 気まぐれラジオ ラジオ 入り方 参加 聞き方 切り方 出方 抜け方 切断 電話 赤い電話 電話マーク チャット チャット画面 切り替え ボイスチャンネル 入りっぱなし つながったまま 終わり方 アウトプット 感想 右上 吹き出し">
       <summary data-t="688">きまぐれラジオの入り方・チャットの見方・切り方（赤い電話マーク）</summary>
       <div class="ans">
-        <p class="lead" data-t="689">ラジオは、Discordの「ボイスチャンネル」という、声で話す部屋で聞きます。入り方と、聞き終わったときの切り方です。</p>
-        <p class="note" data-t="934"><b>① スマホの場合</b></p>
+        <p class="lead" data-t="1227">ラジオは、Discord の「声の部屋（ボイスチャンネル）」で聞きます。</p>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1228">📱 スマホのやり方</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-voice"/></svg><span data-t="1229">「<b>🔊 きまぐれラジオ</b>」を押す<small>部屋の一覧の、下の方にあります</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-join"/></svg><span data-t="1230">「<b>参加</b>」を押すと、つながる</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1231">文字を見るときは、<b>いちばん右上の💬</b><small>下に並んだボタンの中にはありません。聞きながら感想も書けます</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-hang"/></svg><span data-t="1232">聞き終わったら、<b>赤い電話マーク</b>で切る<small>画面の下の、右はしです</small></span></li>
+          </ol>
+          <p class="note" data-t="693">赤い電話マークを押さないと、ラジオが終わったあとも、つながったままになります。聞き終わったら、忘れずに押してくださいね。</p>
+        </div>
         <figure class="at-fig" aria-label="スマホのDiscordで、きまぐれラジオに入って、切るときの画面の絵">
           <div class="at-step">
             <p class="at-cap">① 部屋の一覧から「🔊 きまぐれラジオ」を押して、「参加」を押す</p>
@@ -2862,19 +2985,18 @@ ol.ts-steps small{display:block;font-size:17px;color:var(--sub);font-weight:500;
             <p class="rd-note">赤い電話マークは「電話をかける」ではなく、<b>「電話を切る」</b>ボタンです。</p>
           </div>
         </figure>
-        <ol class="steps">
-          <li><span data-t="690"><b>入り方</b>：部屋の一覧の下の方にある「🔊 きまぐれラジオ」を押して、出てきた画面の「参加」のボタンを押すと、ラジオにつながります。</span></li>
-          <li><span data-t="712"><b>チャットの見方</b>：ラジオの画面の<b>いちばん右上</b>にある、吹き出しのマーク（💬）を押すと、チャット（文字）の画面に切りかわります。下に並んだボタンの中にはないので、気をつけてくださいね。ラジオを聞きながら、感想を書きこめます。</span></li>
-          <li><span data-t="692"><b>切り方</b>：聞き終わったら、<b>赤い電話マーク</b>を押します。これで、ラジオから抜けられます。</span></li>
-        </ol>
-        <p class="note" data-t="693">赤い電話マークを押さないと、ラジオが終わったあとも、つながったままになります。聞き終わったら、忘れずに押してくださいね。</p>
-        <p class="note" data-t="935"><b>② パソコンの場合</b></p>
-        <ol class="steps">
-          <li><span data-t="694"><b>入り方</b>：部屋の一覧にある「🔊 きまぐれラジオ」を押すと、すぐにつながります。</span></li>
-          <li><span data-t="936"><b>切り方</b>：聞き終わったら、画面の左下に出る電話のマーク（「切断」）を押します。</span></li>
-        </ol>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="rh-pc"><span data-t="1233">💻 パソコンの方</span></button>
+        <div class="ts-more" id="rh-pc" hidden>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-voice"/></svg><span data-t="1234">「<b>🔊 きまぐれラジオ</b>」を押すと、すぐつながる</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-hang"/></svg><span data-t="1235">切るときは、<b>左下の電話マーク</b>（切断）</span></li>
+          </ol>
+        </div>
         <p class="note" data-t="713"><b>聞いたあとは</b>：「<a class="in" href="https://discord.com/channels/1214839485364305960/1559722865945870446" target="_top">きまぐれラジオ_アウトプット</a>」の部屋に、感想や気づきを書いてみましょう。部屋は、「90audio（2周目〜）アウトプット」のすぐ下にあります。</p>
-        <p class="note" data-t="714"><b>アウトプットの書き方の例</b>　はじめに日付と回のタイトル（例：10/14「無理にポジティブにならなくていい」）を書いて、心に残ったことや、自分に置きかえて思ったことを書きます。あとからアーカイブで聞いた回の感想でも大丈夫です。</p>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="rh-ex"><span data-t="1236">✏️ 感想の書き方の例</span></button>
+        <div class="ts-more ts-box" id="rh-ex" hidden>
+          <p class="note" data-t="714"><b>アウトプットの書き方の例</b>　はじめに日付と回のタイトル（例：10/14「無理にポジティブにならなくていい」）を書いて、心に残ったことや、自分に置きかえて思ったことを書きます。あとからアーカイブで聞いた回の感想でも大丈夫です。</p>
+        </div>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1559722865945870446" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>「きまぐれラジオ_アウトプット」の部屋を開く</a>
       </div>
     </details>
@@ -3668,6 +3790,7 @@ var DIAL=null;
 
   // ---- 4. recently added / changed ----
   var NEWS=[
+    ['11/16','theme-btns','スマホの手順を見やすくしました（「📱 iPhone の人」「🤖 Android の人」のテーマに入っている項目。1行ずつ・絵つき）'],
     ['11/16','theme-btns','テーマに「📱 iPhone の人」「🤖 Android の人」ができました'],
     ['11/16','q-tacho-script','多聴voiceで、英文を見ながら音声を聞く方法（iPhone・Android を選べて、見やすくなりました）'],
     ['11/9','stage-h','ガイドが新しくなりました（文字を「もっと大きく」・いまの時期に合わせて探す入り口・よく届く質問10こ・上へ戻るボタン）'],
