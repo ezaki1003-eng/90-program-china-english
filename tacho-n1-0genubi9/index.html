@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>多聴voice 入門１</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+/* 上に動画をはりつけ、下の台本をタップするとその場所から再生する1列のページ */
+:root{
+  --bg:#f6f7f4; --card:#ffffff; --fg:#1f2a24; --sub:#5d6b63; --line:#dfe5df;
+  --accent:#1f7a5a; --now:#e5f3ec; --nowbar:#1f7a5a;
+  --body:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#141a17; --card:#1c2420; --fg:#e8eee9; --sub:#9fb0a6; --line:#2c3832; --accent:#5cc79a; --now:#203a2f; --nowbar:#5cc79a; color-scheme:dark }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:18px;line-height:1.7}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px));padding-bottom:40px}
+header{padding-block:12px 6px}
+h1{font-size:20px;margin:0}
+.lead{color:var(--sub);font-size:14px;margin:2px 0 0}
+.player{position:sticky;top:0;z-index:5;background:var(--bg);padding-block:8px}
+.frame{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden}
+.frame iframe,.frame>div{position:absolute;inset:0;width:100%;height:100%}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.bar button{flex:1 1 0;min-width:72px;font:inherit;font-size:16px;padding:10px 6px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer}
+.bar button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.bar button:focus-visible,.line:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.script{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+.line{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;padding:12px;border-radius:10px;background:var(--card);border:1px solid var(--line);cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%}
+.line .t{font-size:14px;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:4px}
+.line .en{font-size:19px;min-width:0}
+.line .ja{grid-column:2;font-size:15px;color:var(--sub);min-width:0}
+.hideja .ja{display:none}
+.line.now{background:var(--now);border-color:var(--nowbar);box-shadow:inset 5px 0 0 var(--nowbar)}
+.note{font-size:13px;color:var(--sub);margin-top:14px}
+details{margin-top:20px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
+summary{cursor:pointer;font-weight:bold}
+label{display:block;font-size:14px;margin-top:10px;color:var(--sub)}
+input,textarea{width:100%;font:inherit;font-size:15px;padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--fg)}
+textarea{min-height:160px}
+.go{margin-top:10px;font:inherit;padding:10px 16px;border-radius:10px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 id="ttl">多聴voice 入門１</h1>
+    <p class="lead">文をタップすると、その場所から流れます。動画は上にとまったまま、台本だけが動きます。</p>
+  </header>
+
+  <div class="player">
+    <div class="frame"><div id="yt"></div></div>
+    <div class="bar">
+      <button id="back" type="button">⏪ 5秒</button>
+      <button id="play" type="button">▶ 再生</button>
+      <button id="slow" type="button">ゆっくり</button>
+      <button id="ja" type="button" class="on">日本語</button>
+    </div>
+  </div>
+
+  <div id="script" class="script"></div>
+
+  <p class="note">※多聴voice 入門１の動画と台本で作った見本です（受講生限定の中身です。リンクを知っている人だけが開けます）。台本に時間が書いていないため、時間は「約」のめやすです。段落の頭の時間を1回だけ書きこめば、ぴったり合います。</p>
+
+  <details>
+    <summary>自分の動画と台本で試す</summary>
+    <label for="url">YouTube の URL</label>
+    <input id="url" type="text" placeholder="https://youtu.be/...">
+    <label for="src">台本（1行に1文。「時間 英語 | 日本語」）</label>
+    <textarea id="src"></textarea>
+    <button id="apply" class="go" type="button">このページに出す</button>
+  </details>
+</div>
+
+<script>
+const SAMPLE_URL = "https://youtu.be/-9V31wOW_Ug";
+const SAMPLE = `My name is Sarah. I am 30 years old, and I work as a nurse at a clinic. My job is to take care of people who are not feeling well, and I really enjoy helping them. Last year, I met Jack. Jack is an architect, and he designs buildings. He is kind and easy to talk to. We became good friends, and I enjoyed spending time with him. At first, I didn’t know Jack was married. He never mentioned his wife, and I thought he liked me. We had a lot of fun together, talking and laughing. | サラは30歳の看護師。建築家のジャックと出会い、仲よくなる。結婚しているとは知らなかった。
+One day, my phone rang. It was a woman named Emily. She said, "Hello, is this Sarah?" I answered, "Yes, this is Sarah." I felt a little nervous. Emily continued, "I am Jack's wife. We’ve been married for 7 years." I was shocked and didn’t know what to say. I couldn’t believe it. Emily said, "I don’t want to lose Jack. I love him, and I want to keep our family together." I listened carefully, feeling sad. "Why are you calling me?" I asked. "I saw you and Jack together, and I want you to know the truth," Emily replied. | ある日、ジャックの妻エミリーから電話。「結婚して7年です。家族を守りたい」
+I was really surprised. I had no idea Jack was married. I said, "He never told me." Emily then said, "I have pictures I want to show you." She sent me pictures of Jack and her. They looked so happy together. I felt tears well up in my eyes. I couldn’t believe what was happening. I remembered the times Jack and I had spent together, our laughter and talks. I felt guilty. I didn’t want to hurt Emily. | 二人の幸せそうな写真を見て、サラは涙。エミリーを傷つけたくないと思う。
+"Why didn’t Jack tell me?" I asked myself. I felt confused and sad. Emily said, "Please, don’t hurt my family. I need your help." Her words made me feel the weight of the situation. "I understand," I replied. "I’ll stop seeing Jack. I don’t want to be the cause of any problems between you and him." | 「家族を傷つけないで」。サラは「もうジャックとは会いません」と答える。
+The next day, I saw Jack at work. He smiled at me, "Hi, Sarah," he said. My heart raced. I wanted to tell him everything, so I said, "Can we talk?" He nodded, and we went to a quiet place. I took a deep breath and said, "Jack, I need to talk to you about Emily." His face changed. "What do you mean?" he asked. "Emily called me. She told me everything," I said. Jack looked surprised. "Oh no, I should have told you," he said. "I was afraid I might lose you." | 次の日、サラはジャックに話す。「エミリーから全部聞いた」
+I felt hurt. "But you have a wife," I said. "This is not fair." Jack looked sad. "I know I made a mistake," he replied. I shook my head. "It’s too late now," I said. "I can’t be with you." Jack looked upset. "Please, don’t leave me. I need you," he said. "I love you. I want to be with you." My heart ached. I replied, "You need to choose. You can’t have both of us." Jack was quiet. I felt sad for him. I cared about him, but I didn’t want to hurt Emily. I had to be strong. | 「あなたには奥さんがいる」。サラは「どちらかを選んで」と言う。
+"Please, Sarah, give me some time to think," he said. "Take your time," I answered, "but I won’t wait for you." I walked away, feeling broken. I thought about Emily. She was a good person. I didn’t want to hurt her. | 「考える時間をくれ」「でも待たないわ」。サラは立ち去る。
+Days passed, and I focused on my work. I spent time with friends and tried to forget about Jack, but it was hard. One evening, I felt lonely. I thought about Jack, but I also felt strong. I remembered what Emily said: "I love him. I want to keep my family." I understood her feelings. I didn’t want to break their family apart. | 仕事に打ちこむ日々。さみしいけれど、エミリーの気持ちも分かる。
+I decided to talk to my friend Lily. She always gave great advice. I called her and asked, "Can we meet?" We met at a café, and I told her everything. "I like Jack, but he’s married," I said. "Emily called me. She’s sad." Lily listened carefully, then said, "You did the right thing, Sarah. You can’t be with someone who is already married." | 友だちのリリーに相談。「あなたは正しいことをしたのよ」
+"I know," I said, "but it hurts." Lily nodded. "It’s okay to feel sad. You need to take care of yourself." After talking to her, I felt better. I realized that I was strong. I would move on, and I needed to focus on my happiness. | 「悲しくていいの。自分を大切にして」。サラは前を向く。
+A week later, I decided to meet Emily again. I wanted to support her. I called her and said, "Can we meet?" We met at a park. Emily looked worried. "Thank you for meeting me," she said. I smiled softly. "I wanted to see how you’re doing," I said. "I’m sorry for everything." Emily nodded. "It’s hard for me," she said. | 1週間後、公園でエミリーともう一度会う。
+We talked about Jack and their marriage. Emily shared her feelings: "I love him, but I’m scared he will leave me." I felt her pain. "You are a strong woman," I said. "You need to talk to him and be honest." Emily nodded. "You’re right. I’ll speak to him," she said. "I’ll support you," I replied. "I don’t want to be a problem in your life." Emily looked grateful. "Thank you, Sarah." | 「彼と正直に話して」。エミリーは「そうするわ」と感謝する。
+We talked for a long time. I realized that we understood each other. We were both strong women who loved Jack in different ways. I decided to move to another city. I thought a fresh start would help me heal. I told my friends, and they supported me. "You need to do what’s best for you. You’ll be okay," Lily said. | サラは別の町へ引っこすと決める。
+On my last day at the clinic, I said goodbye to my patients. They were sad. "We will miss you, Sarah," they said. I felt happy that I had helped them. I left my job with mixed feelings. I was excited, but also sad. I knew it was time for a new adventure. | 最後の出勤日。患者さんたちとお別れ。
+When I arrived in the new city, I felt nervous but excited. I started looking for a new job and found a friendly hospital. I made new friends and felt happy to begin again. One day, I received a message from Emily. She said, "I spoke to Jack. We are trying to work things out." I felt relieved. "I’m happy for you," I replied. Emily thanked me. "Thank you for understanding. I appreciate it." | 新しい町で新しい病院へ。エミリーから「ジャックとやり直しています」と連絡。
+I smiled, glad I could help. As time passed, I focused on my new life. I made new friends and enjoyed my job. I felt happy, and I began to heal. I often thought about Jack and Emily, hoping they were happy together. | サラは新しい暮らしで、少しずつ元気になる。
+One evening, I went for a walk in the park. It was peaceful. I realized I was moving forward. I was ready for new experiences, and I knew that love would find me again. I felt hopeful for the future. | 夕方の公園。「また恋はやってくる」と希望をもつ。
+In the end, I learned a lot. I learned about love, honesty, and the importance of family. I felt proud of myself for making the right choices. I was ready to embrace life and look forward to new adventures and new love. | 愛・正直さ・家族の大切さを学んだサラ。新しい人生へ。`;
+
+let lines = [], player = null, ready = false, cur = -1, slow = false;
+const $ = id => document.getElementById(id);
+
+function toSec(s){ const p = s.split(":").map(Number); return p.length===3 ? p[0]*3600+p[1]*60+p[2] : p[0]*60+p[1]; }
+function vid(u){ const m = u.match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/); return m ? m[1] : null; }
+function parse(text){
+  return text.split(/\n/).map(l=>l.trim()).filter(Boolean).map(l=>{
+    const m = l.match(/^(\d+:\d{2}(?::\d{2})?)\s+(.*)$/);
+    const [en, ja=""] = (m ? m[2] : l).split("|").map(x=>x.trim());
+    return m ? {t:toSec(m[1]), label:m[1], en, ja} : {t:null, label:"…", en, ja};
+  }).filter(Boolean);
+}
+function fmt(s){ s=Math.round(s); return Math.floor(s/60)+":"+String(s%60).padStart(2,"0"); }
+/* 時間が書いていない台本は、動画の長さを文字の量で分けて「めやすの時間」をつける */
+function estimate(){
+  if(!lines.some(l=>l.t===null) || !ready) return;
+  const d = player.getDuration(); if(!d) { setTimeout(estimate, 500); return; }
+  const total = lines.reduce((a,l)=>a+l.en.length,0); let acc = 0;
+  lines.forEach(l=>{ l.t = d*acc/total; l.label = "約"+fmt(l.t); acc += l.en.length; });
+  document.querySelectorAll(".line .t").forEach((el,i)=>el.textContent = lines[i].label);
+}
+function render(){
+  const box = $("script"); box.textContent = "";
+  lines.forEach((ln,i)=>{
+    const b = document.createElement("button"); b.type="button"; b.className="line"; b.dataset.i=i;
+    const t = document.createElement("span"); t.className="t"; t.textContent=ln.label;
+    const en = document.createElement("span"); en.className="en"; en.textContent=ln.en;
+    const ja = document.createElement("span"); ja.className="ja"; ja.textContent=ln.ja;
+    b.append(t,en,ja); b.addEventListener("click",()=>jump(i)); box.append(b);
+  });
+  cur = -1;
+}
+function jump(i){
+  if(!ready || lines[i].t===null) return;
+  player.seekTo(lines[i].t, true); player.playVideo(); mark(i);
+}
+function mark(i){
+  if(i===cur) return;
+  const all = document.querySelectorAll(".line");
+  if(all[cur]) all[cur].classList.remove("now");
+  cur = i;
+  if(all[i]){
+    all[i].classList.add("now");
+    const top = all[i].getBoundingClientRect().top + scrollY - document.querySelector(".player").offsetHeight - 10;
+    scrollTo({top, behavior:"smooth"});
+  }
+}
+function tick(){
+  if(ready && player.getCurrentTime){
+    const now = player.getCurrentTime();
+    let i = -1; for(let k=0;k<lines.length;k++){ if(lines[k].t!==null && lines[k].t <= now+0.2) i=k; }
+    if(i>=0) mark(i);
+    const st = player.getPlayerState();
+    $("play").textContent = st===1 ? "⏸ 止める" : "▶ 再生";
+  }
+  setTimeout(tick, 400);
+}
+function load(url, text){
+  lines = parse(text); render();
+  const id = vid(url);
+  if(player && ready && id){ player.cueVideoById(id); setTimeout(estimate, 1500); }
+  return id;
+}
+
+$("back").onclick = ()=>{ if(ready) player.seekTo(Math.max(0, player.getCurrentTime()-5), true); };
+$("play").onclick = ()=>{ if(!ready) return; player.getPlayerState()===1 ? player.pauseVideo() : player.playVideo(); };
+$("slow").onclick = e=>{ slow=!slow; e.target.classList.toggle("on",slow); if(ready) player.setPlaybackRate(slow?0.75:1); };
+$("ja").onclick = e=>{ const on = !e.target.classList.contains("on"); e.target.classList.toggle("on",on); $("script").classList.toggle("hideja",!on); };
+$("apply").onclick = ()=>{
+  const url=$("url").value.trim(), text=$("src").value;
+  if(!vid(url)){ $("url").focus(); $("url").placeholder="URL を入れてください（youtu.be/… など）"; return; }
+  load(url,text);
+  try{ localStorage.setItem("tacho", JSON.stringify({url,text})); }catch(e){}
+  scrollTo({top:0,behavior:"smooth"});
+};
+
+let start = {url:SAMPLE_URL, text:SAMPLE};
+$("url").value = start.url; $("src").value = start.text;
+lines = parse(start.text); render();
+
+window.onYouTubeIframeAPIReady = ()=>{
+  player = new YT.Player("yt",{ videoId: vid(start.url), playerVars:{playsinline:1, rel:0},
+    events:{ onReady:()=>{ ready=true; estimate(); } } });
+};
+const s = document.createElement("script"); s.src="https://www.youtube.com/iframe_api"; document.head.append(s);
+tick();
+</script>
+</body>
+</html>
