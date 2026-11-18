@@ -34,6 +34,7 @@ h1{font-size:20px;margin:0}
 .line .ja{grid-column:2;font-size:15px;color:var(--sub);min-width:0}
 .hideja .ja{display:none}
 .line.now{background:var(--now);border-color:var(--nowbar);box-shadow:inset 5px 0 0 var(--nowbar)}
+.hint{margin:8px 0 0;padding:10px 12px;border-radius:10px;background:var(--now);border:1px solid var(--nowbar);font-size:15px}
 .note{font-size:13px;color:var(--sub);margin-top:14px}
 details{margin-top:20px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
 summary{cursor:pointer;font-weight:bold}
@@ -61,6 +62,7 @@ textarea{min-height:160px}
     </div>
   </div>
 
+  <p id="hint" class="hint" hidden>▶ 動画を1回タップして再生してください（iPhone は、さいしょの1回だけ必要です）。そのあとは文をタップすると、そこから流れます。</p>
   <div id="script" class="script"></div>
 
   <p class="note">※見本です。動画と台本の時間はまだ合わせていません（形を見ていただくためのもの）。見本の動画は、ほかの方の公開動画を借りています。本番は多聴の動画と台本を入れます。</p>
@@ -114,6 +116,7 @@ function render(){
 function jump(i){
   if(!ready) return;
   player.seekTo(lines[i].t, true); player.playVideo(); mark(i);
+  setTimeout(()=>{ $("hint").hidden = player.getPlayerState()===1; }, 1800);
 }
 function mark(i){
   if(i===cur) return;
@@ -133,6 +136,7 @@ function tick(){
     if(i>=0) mark(i);
     const st = player.getPlayerState();
     $("play").textContent = st===1 ? "⏸ 止める" : "▶ 再生";
+    if(st===1) $("hint").hidden = true;
   }
   setTimeout(tick, 400);
 }
@@ -144,7 +148,7 @@ function load(url, text){
 }
 
 $("back").onclick = ()=>{ if(ready) player.seekTo(Math.max(0, player.getCurrentTime()-5), true); };
-$("play").onclick = ()=>{ if(!ready) return; player.getPlayerState()===1 ? player.pauseVideo() : player.playVideo(); };
+$("play").onclick = ()=>{ if(!ready) return; if(player.getPlayerState()===1){ player.pauseVideo(); } else { player.playVideo(); setTimeout(()=>{ $("hint").hidden = player.getPlayerState()===1; }, 1800); } };
 $("slow").onclick = e=>{ slow=!slow; e.target.classList.toggle("on",slow); if(ready) player.setPlaybackRate(slow?0.75:1); };
 $("ja").onclick = e=>{ const on = !e.target.classList.contains("on"); e.target.classList.toggle("on",on); $("script").classList.toggle("hideja",!on); };
 $("apply").onclick = ()=>{
