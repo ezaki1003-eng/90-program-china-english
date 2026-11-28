@@ -382,6 +382,17 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
 .pq-nav[hidden]{display:none}
 .pq-nav button{flex:1 1 0;min-width:0;padding:12px 8px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:17px;font-weight:700;cursor:pointer}
 .b5-btns button:focus-visible,.pq-btns button:focus-visible,.pq-nav button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* 2026-11-29 勉強の進め方の小部屋・期限・よく調べられることば */
+.sub-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.sub-nav a{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border-radius:12px;border:1.5px solid var(--accent);background:var(--accent-soft);color:var(--ink);text-decoration:none;font-weight:700;font-size:17px;line-height:1.35}
+.sub-nav a small{font-size:14px;font-weight:500;color:var(--sub)}
+.sub-h{margin:16px 0 0;padding:4px 0 4px 10px;border-left:6px solid var(--accent);font-family:var(--display);font-size:21px;font-weight:700;color:var(--accent-ink);scroll-margin-top:130px}
+.expired{display:block;margin-top:6px;font-size:16px;font-weight:700;color:#b3261e}
+.qchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:-8px;align-items:center}
+.qchips-h{width:100%;font-size:15px;font-weight:700;color:var(--sub)}
+.qchips button{font:inherit;font-size:16px;font-weight:700;padding:6px 12px;border-radius:999px;border:1.5px solid var(--accent);background:var(--card);color:var(--accent-ink);cursor:pointer}
+.qchips button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -506,6 +517,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       <button type="submit" class="sbtn" aria-label="探す"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>探す</button>
     </form>
   </div>
+    <div class="qchips" role="group" aria-label="よく調べられることば"><span class="qchips-h">よく調べられることば（押すと探します）</span><button type="button" data-q="スタンプ">スタンプ</button><button type="button" data-q="90audio">90audio</button><button type="button" data-q="入れない">入れない</button><button type="button" data-q="セミナー">セミナー</button><button type="button" data-q="日報">日報</button><button type="button" data-q="瞬間英作文">瞬間英作文</button><button type="button" data-q="単語帳">単語帳</button><button type="button" data-q="英検">英検</button></div>
   <div class="hits" id="hits" hidden>
     <p class="hits-head" id="hits-head"></p>
     <div class="hits-list" id="hits-list"></div>
@@ -545,9 +557,9 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <p class="lead" data-t="58">ちなコーチがセミナーをしています。受講生なら、入ったばかりの方も、どなたでも参加できます。</p>
         <ul class="ts-points">
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-bell"/></svg><span data-t="1414">案内は「<a class="in" href="https://discord.com/channels/1214839485364305960/1249989567998590977" target="_top">セミナー／イベント</a>」の部屋に出る<small>通知が来たら、確認してください</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-play"/></svg><span data-t="1415">出られなくても、あとで<b>アーカイブ（録画）</b>が見られる<small>録画は、セミナーの部分です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-play"/></svg><span data-t="1415">出られなくても、あとで<b>アーカイブ（録画）</b>が見られる<small>録画は、セミナーの部分です</small></span></li>
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-names"/></svg><span data-t="1769">セミナーには、<b>Discord の名前</b>で入ってください<small>Zoom（ズーム）に出る名前を、Discord と同じにします</small></span></li>
-        </ul>
+        </ul>
         <p class="note" data-t="892">セミナー（英語のお話）のときは、できれば顔を出しての参加をお願いしています（強制ではありません）。むずかしいときは、耳だけの参加もできます。</p>
         <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="t1-moku"><span data-t="1417">📚 「もくもく自習室」があるときも</span></button>
         <div class="ts-more ts-box" id="t1-moku" hidden>
@@ -1023,7 +1035,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="aa-menu"><span data-t="1433">❓「困ったとき」のメニューが消えたら</span></button>
         <div class="ts-more ts-box" id="aa-menu" hidden>
           <p class="note" data-t="1150">ブロックと解除のあと、LINEの下のメニューに「困ったとき」が見えなくなったら、受講生LINEにひとこと送ってください。</p>
-        </div>
+        </div>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1523511877022515332" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -1149,6 +1161,18 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
   <section id="study">
     <h2><svg aria-hidden="true"><use href="#i-book"/></svg>勉強の進め方</h2>
 
+    <nav class="sub-nav" aria-label="勉強の進め方の小部屋">
+      <a href="#st-all">🧭 全体の進め方・ゴール<small>13項目</small></a>
+      <a href="#st-grammar">📘 文法（マスター講座・文法ドリル）<small>7項目</small></a>
+      <a href="#st-shunkan">🗣️ 瞬間英作文<small>10項目</small></a>
+      <a href="#st-read">📖 読む<small>6項目</small></a>
+      <a href="#st-listen">🎧 聞く・話す・発音<small>11項目</small></a>
+      <a href="#st-words">🔤 単語<small>4項目</small></a>
+      <a href="#st-exam">📝 英検・TOEIC<small>5項目</small></a>
+      <a href="#st-ai">🤖 AI<small>2項目</small></a>
+    </nav>
+
+    <h3 class="sub-h" id="st-all">🧭 全体の進め方・ゴール</h3>
     <details id="q-typelist" data-y="たいぷしー がくしゅう べんきょう すすめかた やりかた いちらんひょう いちらん たいぷべつ たいぷ ろーどまっぷ なにから じゅんばん どうやったら きょうかしょ しゃしん しりょう べんきょうのしかた べんきょうほう" data-k="650時間 251時間 タイプC 学習の進め方 勉強の進め方 進め方 やり方 一覧表 一覧 表 タイプ別 タイプ ロードマップ 何をすればいい 今日から 教科書 写真 全体像 資料 学習 順番 何から どうやったらいい どうやって どうしたらいい どうすればいい 勉強法 学習法">
       <summary data-t="19">学習の進め方の一覧表（タイプ別）を見たい</summary>
       <div class="ans">
@@ -1170,6 +1194,75 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <a class="btn" href="https://app.the-online-class.com/lessons/ogM0EDMxUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>資料【タイプ別】英語学習の進め方（一覧表）</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/oANzYzNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>資料【ロードマップ】学習の全体像（教科書の写真つき）</a>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1528220797422796951" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-t29" data-y="なにから じゅんばん すすめかた やりかた がくしゅう べんきょう ろーどまっぷ きょうざい どりる きょうかしょ しゃしん" data-k="学習の進め方 勉強の進め方 進め方 やり方 順番 何から ロードマップ 教材 ドリル 瞬間英作文 見落とし 学習 どうやったらいい どうやって どうしたらいい どうすればいい 勉強法 学習法 教科書 写真 全体像 資料">
+      <summary data-t="29">何から、どの順番でやればいい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="98">順番は決まっています。最初の90日は「文法の土台」づくりです。</p>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1371">📚 この順番で進めます</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-play"/></svg><span data-t="206"><a class="in" href="https://app.the-online-class.com/lessons/oAN4UTN5MDI6I2Y" target="_top">マスター講座</a>（動画）と、同じところの<a class="in" href="#q-drill">文法ドリル</a></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-speed"/></svg><span data-t="207"><a class="in" href="https://app.the-online-class.com/lessons/oQM2AzNzQDI6I2Y" target="_top">瞬間英作文</a></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="208"><a class="in" href="#q-reading">究極の英語リーディング</a> → 究極の英語リスニング</span></li>
+          </ol>
+          <p class="note" data-t="99">オンクラスの「1」「2」「3」を同時に進めなくて大丈夫です。まずは「マスター講座＋文法ドリル」から始めます。</p>
+        </div>
+        <a class="btn" href="https://app.the-online-class.com/lessons/oAOxYzNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ロードマップの説明（オンクラス）</a>
+        <a class="btn" href="https://app.the-online-class.com/lessons/oANzYzNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>資料【ロードマップ】学習の全体像（教科書の写真つき）</a>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1530824331482107924" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-t28" data-y="ごーる そつぎょう めやす ざせつ つづける かんきょう もくひょう えいかいわ はなせる どこまで さんじゅっぷん" data-k="ゴール 卒業 目安 挫折 続ける 環境 目標 英会話 話せる どこまで 30分">
+      <summary data-t="28">90プログラムのゴールは？</summary>
+      <div class="ans">
+        <p class="lead" data-t="96">挫折しない英語学習を身につけることが、ゴールです。その先の目安は、外国の方と30分間、ストレスなく英会話ができる状態です。</p>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1482">🧭 ゴールまでの道のり</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="202">文法の土台をつくる</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="203">英文を読めるようになる</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="204">音声を聞いて分かるようになる</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="205">英語を使って、自分のことばで話す</span></li>
+          </ol>
+          <p class="note" data-t="97">最初の90日は、1番の「文法の土台」をかためる期間です。90日を過ぎても、仲間と学べる場所は、ずっとそのままです。</p>
+        </div>
+        <a class="btn" href="https://app.the-online-class.com/lessons/oAOxYzNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ロードマップの説明（オンクラス）</a>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1399210507940134924" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-reasons" data-y="りゆう なぜ どうして えいご まなぶ べすと らんきんぐ いちい もくひょう なかま りょこう しごと ともだち かいがい ゆめ" data-k="理由 なぜ どうして 英語 学ぶ ベスト ランキング 1位 目標 仲間 旅行 仕事 友だち 海外 夢">
+      <summary data-t="646">90プログラムの仲間は、どんな理由で英語を学んでいる人が多いの？（理由ベスト3）</summary>
+      <div class="ans">
+        <p class="lead" data-t="647">仲間が「人生の目標を決める」（90audioのDay25）で書いた目標から、英語を学びたい理由をまとめました。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1705"><b>1位　海外旅行を、英語で楽しみたい</b><small>世界一周の旅や、クルーズ旅行でたくさんの人と交流したい。旅先で、アプリに頼らずに自分で注文したい</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-file"/></svg><span data-t="1706"><b>2位　仕事で使いたい・海外で働きたい</b><small>海外で働きたい、外資系の会社で働きたい。自分の作品を、海外の人にも届けたい</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1707"><b>3位　外国の人と話したい・友だちを作りたい</b><small>外国人の友だちを作って、ちがう文化を知りたい。英語で話しながら、趣味を一緒に楽しみたい</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="rs-hoka"><span data-t="1708">💐 ちょっと変わった理由・すてきな目標（5つ）</span></button>
+        <div class="ts-more" id="rs-hoka" hidden>
+        <ul class="words">
+          <li><span data-t="652">困っている外国人観光客の、助けになりたい</span></li>
+          <li><span data-t="653">海外のお笑いを観て、大笑いしたい</span></li>
+          <li><span data-t="654">すてきなカフェで、英語で注文してみたい</span></li>
+          <li><span data-t="655">子どもが、英語を嫌いにならないように</span></li>
+          <li><span data-t="656">英語の勉強を通して、自分を変えたい</span></li>
+        </ul>
+        </div>
+        <p class="cheer" data-t="657">理由は、人の数だけあります。あなたの「やってみたい」も、大切な理由ですよ。</p>
+      </div>
+    </details>
+    <details id="q-skipahead" data-y="さきに よむ きく どうじ へいこう きぶんてんかん よりみち じゅんばん" data-k="先に 読む 聞く 同時 並行 気分転換 寄り道 順番">
+      <summary data-t="628">「読む」「聞く」の教材を、先にやってもいい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="629">基本は、順番どおりに進めます。まずは文法の土台からです。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1475">「1」「2」「3」を<b>同時に進めなくて大丈夫</b><small>まずは「マスター講座＋文法ドリル」で、文法の土台をつくります</small></span></li>
+        </ul>
+        <p class="cheer" data-t="632">メインは、順番どおりに進めましょう。</p>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1437566905912135720" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
     <details id="q-studyplus" data-y="すたでぃぷらす すたぷら がくしゅうじかん じかん はかる はかりかた きろく たいまー すとっぷうぉっち あぷり いれかた つかいかた ぐらふ しゅうほう るいけい なんじかん きょうざい とうろく ついか ほんだな どくじきょうざい おんくらす いろわけ せってい" data-k="Studyplus スタディプラス スタプラ 学習時間 時間 測る 計る 記録 タイマー ストップウォッチ アプリ 入れ方 使い方 グラフ 週報 累計 何時間 教材 登録 追加 本棚 独自教材 オンクラス 色分け 教材ごと 設定">
@@ -1215,7 +1308,114 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <a class="btn" href="https://app.the-online-class.com/lessons/ogM0EDMxUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>資料【タイプ別】英語学習の進め方（一覧表）</a>
       </div>
     </details>
+    <details id="q-howdeep" data-y="きになる しらべる ふかぼり どこまで ぎもん もやもや すすめない ぴんくのじ ひんと するー" data-k="気になる 調べる 深掘り どこまで 疑問 モヤモヤ 進めない ピンクの字 ヒント スルー">
+      <summary data-t="724">気になったことは、どこまで調べればいい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="725">答えや解説が分からないところは、その場で調べましょう。それ以外は「こういう言い方もあるんだね」くらいで先へ進んで大丈夫です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1497">まず目指すのは、<b>ドリルの問題（EXERCISE）を解ける</b>ようになること</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1498">1〜2周目は先へ進み、<b>3〜5周目でじっくり</b>深める</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1499">ドリルの<b>ピンクの字のヒント</b>があるところは、今は気にしなくていい<small>深追いしなくて大丈夫です</small></span></li>
+        </ul>
+        <p class="note" data-t="729">「気になって眠れない！」くらいのことだけ調べて、あとは一度スルーする。それくらいの気持ちで大丈夫です。全体が見えてくると、あとから自然に分かることもたくさんあります。</p>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1402066181397024780" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-level" data-y="みについた ていちゃく めやす どのくらい できている りかい だんかい おしえられる" data-k="身についた 定着 目安 どのくらい できている 理解 段階 教えられる">
+      <summary data-t="730">文法が「身についた」と言えるのは、どのくらい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="731">今は、下の③〜④を目指せば十分です。</p>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1500">🪜 身につくまでの5つの段階</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1501"><b>聞いたことがある</b><small>用語やルールを、見たこと・聞いたことがある</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1502"><b>説明を読めば分かる</b><small>解説や例文を見れば分かるけれど、自分ひとりでは使えない</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1503"><b>問題なら解ける</b>（ここを目指す）<small>ドリルの問題は解けるけれど、会話や瞬間英作文ではパッと出てこない</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1504"><b>自然に使える</b>（ここを目指す）<small>説明を思い出さなくても、会話や瞬間英作文で使える</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1505"><b>人に教えられる</b><small>なぜそうなるのかを説明できる。最後のゴールで、時間をかけて自然にたどりつくところです</small></span></li>
+          </ol>
+          <p class="note" data-t="737">③から④に近づくときに、瞬間英作文が大きな力になります。瞬間英作文でつまずいたら、文法ドリルに戻ればOK。行ったり来たりしながら身についていきます。</p>
+        </div>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1407138905186369587" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-t32" data-y="かんたん かんたんすぎる わかってる しってる とばす とばしていい つぎ れべる" data-k="簡単 簡単すぎる 分かっている 知っている 飛ばす 次 レベル i+1">
+      <summary data-t="32">簡単すぎる・もう分かっているところは？</summary>
+      <div class="ans">
+        <p class="lead" data-t="103">簡単すぎると感じたら、次のレベルへ進んで大丈夫です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-up"/></svg><span data-t="1612">今の自分より<b>「少しだけむずかしい」</b>くらいが、力がつきやすい</span></li>
+        </ul>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1513081299945132124" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-t33" data-y="のーと かく まとめる ひっき せいり よこになって ねながら つくえ かいてもいい だめ こたえ めも かいておぼえる おんどく" data-k="ノート 書く まとめる 筆記 整理 横になって 寝ながら 机 書いてもいい ダメ 答え メモ">
+      <summary data-t="33">ノートはとったほうがいい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="104">ノートをとらなくても、英語の力は十分のびます。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1471">大事なのは、<b>くり返し聞いて、声に出す</b>こと<small>きれいにまとめることより、こちらが大事です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-phone"/></svg><span data-t="1472">マスター講座は動画なので、<b>スマホとイヤホン</b>があれば学べる<small>横になったままでも大丈夫です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-voice"/></svg><span data-t="1473">覚えたいときは、書くより「<b>音読</b>」</span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="t33-ok"><span data-t="1474">✏️ 書くのは、ダメなの？</span></button>
+        <div class="ts-more ts-box" id="t33-ok" hidden>
+        <p class="note" data-t="665"><b>書くことが、ダメなわけではありません</b>　文法ドリルの答えだけを書いたり、頭の中を整理したりするために書くのは、役に立ちます。きれいなノートを作ることが目的にならなければ、大丈夫です。</p>
+        </div>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1436513043818483763" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-othertext" data-y="ほかのきょうざい まえからつかっている ほん えほん ようしょ つかってもいい しかく" data-k="ほかの教材 前から使っている 本 絵本 洋書 使ってもいい 資格">
+      <summary data-t="755">前から使っている本や、ほかの教材を使ってもいい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="756">「文法 → 読む → 聞く → 話す」の順番がくずれなければ、使って大丈夫です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1486">「この本も読みたい」という<b>気持ちは大切に</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1487">ただ、<b>今のステップの学習が中心</b>になるように、時間を調整<small>文法ドリルや瞬間英作文などです</small></span></li>
+        </ul>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1449030594527760598" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-t42" data-y="おなじしつもん かこ けんさく さがす しらべる まえのしつもん しつもんべや" data-k="同じ質問 過去 検索 探す Can I a the when many some">
+      <summary data-t="42">同じ疑問を、前にだれかが聞いていないか探したい</summary>
+      <div class="ans">
+        <p class="lead" data-t="113"><a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">質問部屋</a>には、ちなコーチがこれまでにていねいに答えてきた質問がたくさんあります。</p>
+        <div class="ts-panel">
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1440">右上の<b>検索（虫めがね）</b>に、気になることばを入れる<small>例：「Can I」「when」「a と the」</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-menu"/></svg><span data-t="240">「特定のチャンネルで投稿」を選んで、質問部屋にしぼります。</span></li>
+          </ol>
+        </div>
+        <p class="note" data-t="114">よく聞かれているのは、a と the／Can I と Can you／when の位置／many と a lot of／some と any です。</p>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>質問部屋（英語について）を開く</a>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>質問部屋（システムについて）を開く</a>
+      </div>
+    </details>
+    <details id="q-question" data-y="しつもん どこで しつもんべや きく ききたい わからない そうだん しつもんのしかた かきかた こつ ぺーじ だれに めんしょん あっと たっせー たっせーこうし こうしのたっせー たっせーせんせい" data-k="質問 どこで 質問部屋 聞きたい 質問のしかた 書き方 コツ ページ だれに メンション @ タッセー タッセー講師 講師のタッセーさん">
+      <summary data-t="43">英語の質問はどこでするの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="115">Discordの「<a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">質問部屋</a>」です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1451">部屋は2つ：「<a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">英語について</a>」と「<a class="in" href="https://discord.com/channels/1214839485364305960/1443454925433606317" target="_top">システムについて</a>」</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1452">ほかの人の質問と答えも読める<small>さかのぼると、解決することもあります</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1453">送る前に、英文や教材のページを<b>もう一度見直す</b><small>まちがいがないと、正しく答えやすくなります</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="qq-how"><span data-t="1454">✏️ 答えてもらいやすい質問のしかた</span></button>
+        <div class="ts-more ts-box" id="qq-how" hidden>
+        <ul class="words">
+          <li data-t="770">教材の名前と、ページやLessonの番号を書く。</li>
+          <li data-t="771">問題文・テキストの答え・自分の答えを、いっしょに書く。</li>
+          <li data-t="772">分かっているところと、分からないところを書く。自分はどうしようと考えているかも書くと、もっと的確に答えてもらえます。</li>
+        </ul>
+        </div>
+        <p class="note" data-t="1110"><b>だれに聞けばいい？</b>　質問するときは、これまでどおり、ちなコーチに「@」をつけて大丈夫です。内容によっては、講師の<a class="in" href="#q-tasse">タッセーさん</a>が代わりに答えることもあります。「どっちに聞けばいいんだろう」と迷わなくて大丈夫です。</p>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1564795517777743943" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>質問部屋（英語について）を開く</a>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>質問部屋（システムについて）を開く</a>
+      </div>
+    </details>
 
+    <h3 class="sub-h" id="st-grammar">📘 文法（マスター講座・文法ドリル）</h3>
     <details id="q-master" data-y="ますたーこうざ ますたー こうざ えいぶんぽう ぶんぽう どうが なに どこ すすめかた ばんごう れっすん ちゃぷたー" data-k="マスター講座 マスター 講座 英文法 文法 動画 なに どこ 進め方 番号 Lesson CHAPTER">
       <summary data-t="570">「マスター講座」って、なに？</summary>
       <div class="ans">
@@ -1231,7 +1431,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
             <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-play"/></svg><span data-t="1459">マスター講座の<b>動画を見る</b></span></li>
             <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1460">同じ番号の文法ドリルの<b>左ページ（説明）</b>を読む</span></li>
             <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1461"><b>右ページの問題（EXERCISE）</b>を解く</span></li>
-          </ol>
+          </ol>
         </div>
         <a class="btn" href="https://app.the-online-class.com/lessons/oAN4UTN5MDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>1本目「主語と動詞について」を見る（オンクラス）</a>
         <a class="btn" href="https://app.the-online-class.com/learning_courses/oQTM2gDI6MGb" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>マスター講座の一覧（オンクラス「1.文法を学ぶ」）</a>
@@ -1255,214 +1455,17 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <a class="btn" href="https://www.amazon.co.jp/dp/4053054826" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>改訂版のページ（Amazon）</a>
       </div>
     </details>
-
-    <details data-y="きゅうきょく きゅうきょくのえいごりーでぃんぐ りーでぃんぐ よむ ほん せいどく あるく ぶーこ かいていばん" id="q-reading" data-k="究極の英語リーディング 究極 リーディング 精読 読む 本 教材 アルク booco vol 改訂版 表紙">
-      <summary data-t="22">「究極の英語リーディング」って、なに？</summary>
+    <details id="q-bangai" data-y="ばんがいへん せみなー ながいどうが ぜんぶみる ぜんちし じょどうし ますたーこうざ にしゅうめ" data-k="番外編 セミナー 長い動画 全部見る 前置詞 助動詞 マスター講座 2周目">
+      <summary data-t="749">マスター講座の「番外編」（長いセミナー動画）は、全部見てから次へ進むの？</summary>
       <div class="ans">
-        <p class="lead" data-t="86">英語を読む力をつける「精読」用の本です。<a class="in" href="https://app.the-online-class.com/lessons/oAOxYzNzQDI6I2Y" target="_top">ロードマップ</a>のSTEP2「英語を読む」で使います。</p>
-        <img class="cover" src="data:image/jpeg;base64,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e4l++zcnsOa79PE8L+GtHCWUTMpCrsI+dgOmfWuR1b4bePdYlR7mzi2p91Q3FaMng34gNp0NhFplrDbwENEqnlXH8WaANC81jVNW12dZdDltJRbq4WBwTgep9DVTT7wy6nb+JF0T9zDG8M0ZkAC571Na6B8TLTUb2+S0hM12gRzu4XHTHoPas0eBviF/Y91prWkZjuJfN3B8FT3oA2PC1xP4eluLddFPl6xdM0I3hvLUjv6c1Lf3S3tjNpr2AM2luJ7hWTgIDnj1rPi8MfEaO+sLo2URa0j8sqJMCQep96s2mh/Ee0u9RnGm28n24YZXfO38e9AHD/EHXDrX9nywWqW9i6sYmUYL+uR7V7P8EP8Akn8X/XQ15VefC7xxe28EU1nFthLFcN3Y817Z8NfDl74X8IW9hf7RcbizKpyBQB2dQy/eH0qaoZfvD6UASr91fpR2pF+6p9qdQA32o54PP0p1FADOfUEUvOfT1p1FABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABSHr7UtFADecd6diiigAxRiiigAxRiiigAxRiiigBD7Eik/rTqKACoZfvD6VLUMxAcZOOKAIx0X/dH8qO1FFIYUUUUDCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBP8aZc/fX/doooEf//Z" alt="改訂版 究極の英語リーディング Vol.1 の表紙（白い表紙、左上に「改訂版」、右に大きく「Vol.1」）">
+        <p class="lead" data-t="750">見なくても大丈夫です。そのまま2周目に入って問題ありません。</p>
         <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1465">始めるのは、<a class="in" href="https://app.the-online-class.com/lessons/oQM2AzNzQDI6I2Y" target="_top">瞬間英作文</a>のPart1〜3が<b>スムーズに言えるようになってから</b><small>日本語を見て、英語で言えるようになったらです。Part3の後半（10番から）は、英語を見て意味がイメージできればOK</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1466">「<b>改訂版</b>」のvol.1から順番に<small>本は紙の書籍がおすすめです</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="189">音声は「booco」というアプリで、無料で聞けます。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1490">番外編は、どれも<b>60分をこえる長い動画</b><small>前置詞セミナー・助動詞セミナーなど</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-cal"/></svg><span data-t="1491">週末など時間がとれるときに、<b>気になるテーマから</b>見れば十分</span></li>
         </ul>
-        <p class="note" data-t="87">「多読」の教材は本ではなく、オンクラスの「<a class="in" href="https://app.the-online-class.com/learning_courses/oQDO2gDI6MGb" target="_top">2.英語を読む</a>」にあります。</p>
-        <a class="btn" href="https://www.amazon.co.jp/dp/4757442238" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>改訂版 Vol.1 のページ（Amazon）</a>
-        <a class="btn" href="https://apps.apple.com/jp/app/id1507203854" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（iPhone）</a>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=jp.co.alc.booco" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（Android）</a>
-        <a class="btn" href="https://app.the-online-class.com/lessons/oAOzUTN1QDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>リーディングの説明（オンクラス）</a>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1522419177154023525" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
-
-    <details id="q-t23" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん さくぶん しつもん なぜ こたえ ちがう かいとう わからない ぱーと もんだい" data-k="瞬間英作文 Q&amp;A 質問 なぜ 答え 違う 解答 一覧 Part パート 問題 わからない">
-      <summary data-t="23">瞬間英作文で「なぜこの答えになるの？」と思ったら</summary>
-      <div class="ans">
-        <p class="lead" data-t="88">オンクラスに「瞬間英作文 Q&amp;A一覧」があります。</p>
-        <div class="ts-panel">
-          <ol class="ts-steps">
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1477">オンクラスの「<a class="in" href="https://app.the-online-class.com/learning_courses/oQTM2gDI6MGb" target="_top">1.文法を学ぶ</a>」を開いて、<b>下のほうまでスクロール</b></span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1478">「<b>瞬間英作文 Q&amp;A一覧</b>」を開く<small>Part1〜3の項目ごとに、よくある質問と答えが並んでいます</small></span></li>
-          </ol>
-          <p class="note" data-t="192">最初の「<a class="in" href="https://app.the-online-class.com/lessons/oQNwkTOyQDI6I2Y" target="_top">Q&amp;A 進め方①</a>」「<a class="in" href="https://app.the-online-class.com/lessons/ogNwkTOyQDI6I2Y" target="_top">②</a>」には、進め方についての質問がまとまっています。</p>
-        </div>
-        <p class="note" data-t="89">そこで見つからないときは、Discordの「<a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">質問部屋</a>」で聞いてください。</p>
-        <a class="btn" href="https://app.the-online-class.com/lessons/oQNwkTOyQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>瞬間英作文 Q&amp;A一覧（オンクラス）</a>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1532278409206567072" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-    <details id="q-otherans" data-y="こたえとちがう もはんかいとう ちがう まちがい せいかい いいかえ べつのいいかた じぶんのこたえ いちじいっく" data-k="答えと違う 模範解答 違う 間違い 正解 言い換え 別の言い方 自分の答え 一字一句 解答例">
-      <summary data-t="715">答えとちがう英文を作ったけど、まちがい？</summary>
-      <div class="ans">
-        <p class="lead" data-t="716">文法が正しくて、意味が通じれば、正解です。答えと一字一句同じでなくて大丈夫です。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="717">テキストの答えは、たくさんある正解のうちの1つです。</span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1506">答えの英文も、<b>新しい表現として覚えておく</b></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1507">分からないものは<b>印をつけて先へ</b><small>あとでまとめて、<a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">質問部屋</a>で確かめましょう。AIに聞いてみるのもいいですね</small></span></li>
-        </ul>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1450344109817729127" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-
-    <details id="q-t24" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん いつから はじめる たいみんぐ ぶんぽうどりる" data-k="瞬間英作文 いつから 始める タイミング スタート 文法ドリル 並行">
-      <summary data-t="24">瞬間英作文は、いつから始めればいい？</summary>
-      <div class="ans">
-        <p class="lead" data-t="90"><a class="in" href="#q-drill">文法ドリル</a>で、英語の基本のルールが分かってから始めるのがおすすめです。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-graph"/></svg><span data-t="1372">瞬間英作文は、文法ドリルより<b>少し負荷が高め</b></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1373">最初から完ぺきを目指さず、<b>くり返すうちに少しずつ</b>で大丈夫</span></li>
-        </ul>
-        <a class="btn" href="https://app.the-online-class.com/lessons/ogM0EDOzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>Q&amp;A「瞬間英作文を始めるタイミング」（オンクラス）</a>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1438790955837689887" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-
-    <details id="q-t25" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん たんご しらない わからない しらべる いみ" data-k="瞬間英作文 単語 知らない わからない 調べる 意味">
-      <summary data-t="25">瞬間英作文で、知らない単語が出てきたら？</summary>
-      <div class="ans">
-        <p class="lead" data-t="91">深追いしなくて大丈夫です。軽く調べて、先へ進みましょう。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-speed"/></svg><span data-t="1479">目的は、単語を増やすことではなく、<b>知っている文法をすばやく使える</b>ようにすること</span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="196">くり返し周回することを優先してください。</span></li>
-        </ul>
-        <a class="btn" href="https://app.the-online-class.com/lessons/ogM2QjNwUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>英単語との向き合い方（セミナー録画）</a>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1531472355673641031" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-    <details id="q-shunkan-many" data-y="しゅんかんえいさくぶん でてこない くちからでない なんかい なんしゅう くりかえし おぼえられない じかんがかかる ひゃっかい おんどく すすめかた" data-k="瞬間英作文 出てこない 口から出ない 何回 何周 繰り返し 覚えられない 時間がかかる 100回 音読 進め方">
-      <summary data-t="738">瞬間英作文が口から出てこない・何回くり返せばいい？</summary>
-      <div class="ans">
-        <p class="lead" data-t="739">「見れば分かるのに、口から出ない」のは自然なことです。理解することと、話すことは、別の力だからです。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1520">目安は<b>5周くらい</b><small>1〜2周で出てこないのは、ふつうです</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-voice"/></svg><span data-t="1521"><b>声に出して練習する</b><small>頭の中だけでやるより、身につきやすくなります</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1522">1つの項目（10問）は、<b>1回10〜15分</b>で区切る<small>1回で100％を目指さず、何日かに分けてくり返します</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1523"><b>8割くらい</b>言えるようになったら、次へ</span></li>
-        </ul>
-        <p class="note" data-t="744">瞬間英作文は「口と頭の筋トレ」です。回数を重ねるうちに、少しずつ口が慣れてきます。</p>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1415097214451318868" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-
-    <details id="q-t26" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん ぱーとさん ぱーと むずかしい できない でてこない とまる ざせつ" data-k="瞬間英作文 Part3 パート3 難しい むずかしい できない 出てこない 止まる">
-      <summary data-t="26">瞬間英作文のPart3がむずかしい</summary>
-      <div class="ans">
-        <p class="lead" data-t="1731">Part3は、<b>10番（関係代名詞・主格〈人〉）から</b>むずかしくなります。ここから後ろは、<b>ゆっくりでOK</b>です。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-speed"/></svg><span data-t="1732"><b>1〜9番</b>：Part1・2と同じく、1〜2秒で答える（9割以上正解）が目安</span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1733"><b>10番から最後まで</b>：スピードは気にせず、文の組み立てを理解して、正しく作れることを大切に<small>リーディングへ進むときは、ここは「英語を見て意味がイメージできれば」OKです</small></span></li>
-        </ul>
-        <div class="ts-panel">
-          <p class="os-h" data-t="1480">🪜 3段階で、ゆっくり上がる</p>
-          <ol class="ts-steps">
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="197">英語を見て、日本語の意味が分かる</span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="198">日本語を見て、ゆっくりでも正しい順番で英語を並べられる（小さなミスはOK）</span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-voice"/></svg><span data-t="199">日本語から英語を、正確に言える</span></li>
-          </ol>
-          <p class="note" data-t="93">この3段階を、ゆっくり上がっていけば十分です。いきなり「速く・正しく」を目指すと、止まってしまうのも当然です。</p>
-        </div>
-        <a class="btn" href="https://app.the-online-class.com/lessons/owN4kDNwUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>Part3に入る前に見る動画（オンクラス）</a>
-        <a class="btn" href="https://app.the-online-class.com/lessons/ogN0EDOzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>Q&amp;A「Part3が難しすぎて、挫折しそうです」（オンクラス）</a>
-        <p class="cheer" data-t="300">むずかしく感じるのは、ちゃんと階段をのぼっているからです。</p>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1444867537262350386" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-    <details id="q-whose" data-y="ふーず おぶうぃっち かんけいだいめいし しょゆうかく わからない むずかしい ぱーとすりー せみなー" data-k="whose of which 関係代名詞 所有格 分からない 難しい Part3 セミナー">
-      <summary data-t="745">瞬間英作文の whose・of which が、どうしても分からない</summary>
-      <div class="ans">
-        <p class="lead" data-t="1608">セミナーのアーカイブで、くわしく学べます。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1609">文法ドリルには、<b>このための回がない</b></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-play"/></svg><span data-t="1610"><b>2026年2月22日のセミナー</b>（関係代名詞・関係副詞）で、ちなコーチがくわしく解説<small>オンクラスの「英語セミナー アーカイブ一覧」から見られます</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1734">Part3の後半（10番から）は、<b>ゆっくりでOK</b>。文の組み立てを理解しながら進めましょう<small>リーディングへ進むときは「英語を見て意味がイメージできれば」OKです</small></span></li>
-        </ul>
-        <a class="btn" href="#q-archive"><svg aria-hidden="true"><use href="#i-video"/></svg>前のセミナーの見かた</a>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1444867537262350386" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-    <details id="q-t27" data-y="むずかしい ぶんぽう わからない かんけいだいめいし かていほう じせい ふくざつ ながいぶん" data-k="難しい むずかしい 文法 分からない 関係代名詞 仮定法 時制 複雑 長い文">
-      <summary data-t="27">むずかしい文法が出てきて、分からない</summary>
-      <div class="ans">
-        <p class="lead" data-t="94">読んだり聞いたりして「こういう意味だな」と分かれば、それで十分です。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="200">自分で使えるようにしよう、と思わなくて大丈夫です。</span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1481">英会話では、<b>シンプルな英語</b>で同じことが伝えられる<small>むずかしい形を使わなくても大丈夫です</small></span></li>
-        </ul>
-        <p class="note" data-t="95">それでも気になるときは、Discordの「<a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">質問部屋</a>」で聞いてください。</p>
-        <p class="cheer" data-t="298">分からないところがあるのは、新しいことに出会えている証拠です。</p>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1515946780578025552" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-
-    <details id="q-t28" data-y="ごーる そつぎょう めやす ざせつ つづける かんきょう もくひょう えいかいわ はなせる どこまで さんじゅっぷん" data-k="ゴール 卒業 目安 挫折 続ける 環境 目標 英会話 話せる どこまで 30分">
-      <summary data-t="28">90プログラムのゴールは？</summary>
-      <div class="ans">
-        <p class="lead" data-t="96">挫折しない英語学習を身につけることが、ゴールです。その先の目安は、外国の方と30分間、ストレスなく英会話ができる状態です。</p>
-        <div class="ts-panel">
-          <p class="os-h" data-t="1482">🧭 ゴールまでの道のり</p>
-          <ol class="ts-steps">
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="202">文法の土台をつくる</span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="203">英文を読めるようになる</span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="204">音声を聞いて分かるようになる</span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="205">英語を使って、自分のことばで話す</span></li>
-          </ol>
-          <p class="note" data-t="97">最初の90日は、1番の「文法の土台」をかためる期間です。90日を過ぎても、仲間と学べる場所は、ずっとそのままです。</p>
-        </div>
-        <a class="btn" href="https://app.the-online-class.com/lessons/oAOxYzNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ロードマップの説明（オンクラス）</a>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1399210507940134924" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-    <details id="q-reasons" data-y="りゆう なぜ どうして えいご まなぶ べすと らんきんぐ いちい もくひょう なかま りょこう しごと ともだち かいがい ゆめ" data-k="理由 なぜ どうして 英語 学ぶ ベスト ランキング 1位 目標 仲間 旅行 仕事 友だち 海外 夢">
-      <summary data-t="646">90プログラムの仲間は、どんな理由で英語を学んでいる人が多いの？（理由ベスト3）</summary>
-      <div class="ans">
-        <p class="lead" data-t="647">仲間が「人生の目標を決める」（90audioのDay25）で書いた目標から、英語を学びたい理由をまとめました。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1705"><b>1位　海外旅行を、英語で楽しみたい</b><small>世界一周の旅や、クルーズ旅行でたくさんの人と交流したい。旅先で、アプリに頼らずに自分で注文したい</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-file"/></svg><span data-t="1706"><b>2位　仕事で使いたい・海外で働きたい</b><small>海外で働きたい、外資系の会社で働きたい。自分の作品を、海外の人にも届けたい</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1707"><b>3位　外国の人と話したい・友だちを作りたい</b><small>外国人の友だちを作って、ちがう文化を知りたい。英語で話しながら、趣味を一緒に楽しみたい</small></span></li>
-        </ul>
-        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="rs-hoka"><span data-t="1708">💐 ちょっと変わった理由・すてきな目標（5つ）</span></button>
-        <div class="ts-more" id="rs-hoka" hidden>
-        <ul class="words">
-          <li><span data-t="652">困っている外国人観光客の、助けになりたい</span></li>
-          <li><span data-t="653">海外のお笑いを観て、大笑いしたい</span></li>
-          <li><span data-t="654">すてきなカフェで、英語で注文してみたい</span></li>
-          <li><span data-t="655">子どもが、英語を嫌いにならないように</span></li>
-          <li><span data-t="656">英語の勉強を通して、自分を変えたい</span></li>
-        </ul>
-        </div>
-        <p class="cheer" data-t="657">理由は、人の数だけあります。あなたの「やってみたい」も、大切な理由ですよ。</p>
-      </div>
-    </details>
-    <details id="q-t29" data-y="なにから じゅんばん すすめかた やりかた がくしゅう べんきょう ろーどまっぷ きょうざい どりる きょうかしょ しゃしん" data-k="学習の進め方 勉強の進め方 進め方 やり方 順番 何から ロードマップ 教材 ドリル 瞬間英作文 見落とし 学習 どうやったらいい どうやって どうしたらいい どうすればいい 勉強法 学習法 教科書 写真 全体像 資料">
-      <summary data-t="29">何から、どの順番でやればいい？</summary>
-      <div class="ans">
-        <p class="lead" data-t="98">順番は決まっています。最初の90日は「文法の土台」づくりです。</p>
-        <div class="ts-panel">
-          <p class="os-h" data-t="1371">📚 この順番で進めます</p>
-          <ol class="ts-steps">
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-play"/></svg><span data-t="206"><a class="in" href="https://app.the-online-class.com/lessons/oAN4UTN5MDI6I2Y" target="_top">マスター講座</a>（動画）と、同じところの<a class="in" href="#q-drill">文法ドリル</a></span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-speed"/></svg><span data-t="207"><a class="in" href="https://app.the-online-class.com/lessons/oQM2AzNzQDI6I2Y" target="_top">瞬間英作文</a></span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="208"><a class="in" href="#q-reading">究極の英語リーディング</a> → 究極の英語リスニング</span></li>
-          </ol>
-          <p class="note" data-t="99">オンクラスの「1」「2」「3」を同時に進めなくて大丈夫です。まずは「マスター講座＋文法ドリル」から始めます。</p>
-        </div>
-        <a class="btn" href="https://app.the-online-class.com/lessons/oAOxYzNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ロードマップの説明（オンクラス）</a>
-        <a class="btn" href="https://app.the-online-class.com/lessons/oANzYzNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>資料【ロードマップ】学習の全体像（教科書の写真つき）</a>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1530824331482107924" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-    <details id="q-skipahead" data-y="さきに よむ きく どうじ へいこう きぶんてんかん よりみち じゅんばん" data-k="先に 読む 聞く 同時 並行 気分転換 寄り道 順番">
-      <summary data-t="628">「読む」「聞く」の教材を、先にやってもいい？</summary>
-      <div class="ans">
-        <p class="lead" data-t="629">基本は、順番どおりに進めます。まずは文法の土台からです。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1475">「1」「2」「3」を<b>同時に進めなくて大丈夫</b><small>まずは「マスター講座＋文法ドリル」で、文法の土台をつくります</small></span></li>
-        </ul>
-        <p class="cheer" data-t="632">メインは、順番どおりに進めましょう。</p>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1437566905912135720" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-
     <details id="q-t30" data-y="どりる ぶんぽうどりる かんぺき わからない なんしゅう ふくしゅう にしゅうめ まちがえる" data-k="ドリル 完璧 わからない 何周 復習">
       <summary data-t="30">文法ドリル（『中学英語をもう一度ひとつひとつわかりやすく。』の本）は、完ぺきにしてから次へ進むの？</summary>
       <div class="ans">
@@ -1510,91 +1513,33 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1425358711144185957" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
-    <details id="q-howdeep" data-y="きになる しらべる ふかぼり どこまで ぎもん もやもや すすめない ぴんくのじ ひんと するー" data-k="気になる 調べる 深掘り どこまで 疑問 モヤモヤ 進めない ピンクの字 ヒント スルー">
-      <summary data-t="724">気になったことは、どこまで調べればいい？</summary>
+    <details id="q-t27" data-y="むずかしい ぶんぽう わからない かんけいだいめいし かていほう じせい ふくざつ ながいぶん" data-k="難しい むずかしい 文法 分からない 関係代名詞 仮定法 時制 複雑 長い文">
+      <summary data-t="27">むずかしい文法が出てきて、分からない</summary>
       <div class="ans">
-        <p class="lead" data-t="725">答えや解説が分からないところは、その場で調べましょう。それ以外は「こういう言い方もあるんだね」くらいで先へ進んで大丈夫です。</p>
+        <p class="lead" data-t="94">読んだり聞いたりして「こういう意味だな」と分かれば、それで十分です。</p>
         <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1497">まず目指すのは、<b>ドリルの問題（EXERCISE）を解ける</b>ようになること</span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1498">1〜2周目は先へ進み、<b>3〜5周目でじっくり</b>深める</span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1499">ドリルの<b>ピンクの字のヒント</b>があるところは、今は気にしなくていい<small>深追いしなくて大丈夫です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="200">自分で使えるようにしよう、と思わなくて大丈夫です。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1481">英会話では、<b>シンプルな英語</b>で同じことが伝えられる<small>むずかしい形を使わなくても大丈夫です</small></span></li>
         </ul>
-        <p class="note" data-t="729">「気になって眠れない！」くらいのことだけ調べて、あとは一度スルーする。それくらいの気持ちで大丈夫です。全体が見えてくると、あとから自然に分かることもたくさんあります。</p>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1402066181397024780" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-    <details id="q-level" data-y="みについた ていちゃく めやす どのくらい できている りかい だんかい おしえられる" data-k="身についた 定着 目安 どのくらい できている 理解 段階 教えられる">
-      <summary data-t="730">文法が「身についた」と言えるのは、どのくらい？</summary>
-      <div class="ans">
-        <p class="lead" data-t="731">今は、下の③〜④を目指せば十分です。</p>
-        <div class="ts-panel">
-          <p class="os-h" data-t="1500">🪜 身につくまでの5つの段階</p>
-          <ol class="ts-steps">
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1501"><b>聞いたことがある</b><small>用語やルールを、見たこと・聞いたことがある</small></span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1502"><b>説明を読めば分かる</b><small>解説や例文を見れば分かるけれど、自分ひとりでは使えない</small></span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1503"><b>問題なら解ける</b>（ここを目指す）<small>ドリルの問題は解けるけれど、会話や瞬間英作文ではパッと出てこない</small></span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1504"><b>自然に使える</b>（ここを目指す）<small>説明を思い出さなくても、会話や瞬間英作文で使える</small></span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1505"><b>人に教えられる</b><small>なぜそうなるのかを説明できる。最後のゴールで、時間をかけて自然にたどりつくところです</small></span></li>
-          </ol>
-          <p class="note" data-t="737">③から④に近づくときに、瞬間英作文が大きな力になります。瞬間英作文でつまずいたら、文法ドリルに戻ればOK。行ったり来たりしながら身についていきます。</p>
-        </div>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1407138905186369587" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-    <details id="q-t32" data-y="かんたん かんたんすぎる わかってる しってる とばす とばしていい つぎ れべる" data-k="簡単 簡単すぎる 分かっている 知っている 飛ばす 次 レベル i+1">
-      <summary data-t="32">簡単すぎる・もう分かっているところは？</summary>
-      <div class="ans">
-        <p class="lead" data-t="103">簡単すぎると感じたら、次のレベルへ進んで大丈夫です。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-up"/></svg><span data-t="1612">今の自分より<b>「少しだけむずかしい」</b>くらいが、力がつきやすい</span></li>
-        </ul>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1513081299945132124" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-    <details id="q-bangai" data-y="ばんがいへん せみなー ながいどうが ぜんぶみる ぜんちし じょどうし ますたーこうざ にしゅうめ" data-k="番外編 セミナー 長い動画 全部見る 前置詞 助動詞 マスター講座 2周目">
-      <summary data-t="749">マスター講座の「番外編」（長いセミナー動画）は、全部見てから次へ進むの？</summary>
-      <div class="ans">
-        <p class="lead" data-t="750">見なくても大丈夫です。そのまま2周目に入って問題ありません。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1490">番外編は、どれも<b>60分をこえる長い動画</b><small>前置詞セミナー・助動詞セミナーなど</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-cal"/></svg><span data-t="1491">週末など時間がとれるときに、<b>気になるテーマから</b>見れば十分</span></li>
-        </ul>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1522419177154023525" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-    <details id="q-t33" data-y="のーと かく まとめる ひっき せいり よこになって ねながら つくえ かいてもいい だめ こたえ めも かいておぼえる おんどく" data-k="ノート 書く まとめる 筆記 整理 横になって 寝ながら 机 書いてもいい ダメ 答え メモ">
-      <summary data-t="33">ノートはとったほうがいい？</summary>
-      <div class="ans">
-        <p class="lead" data-t="104">ノートをとらなくても、英語の力は十分のびます。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1471">大事なのは、<b>くり返し聞いて、声に出す</b>こと<small>きれいにまとめることより、こちらが大事です</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-phone"/></svg><span data-t="1472">マスター講座は動画なので、<b>スマホとイヤホン</b>があれば学べる<small>横になったままでも大丈夫です</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-voice"/></svg><span data-t="1473">覚えたいときは、書くより「<b>音読</b>」</span></li>
-        </ul>
-        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="t33-ok"><span data-t="1474">✏️ 書くのは、ダメなの？</span></button>
-        <div class="ts-more ts-box" id="t33-ok" hidden>
-        <p class="note" data-t="665"><b>書くことが、ダメなわけではありません</b>　文法ドリルの答えだけを書いたり、頭の中を整理したりするために書くのは、役に立ちます。きれいなノートを作ることが目的にならなければ、大丈夫です。</p>
-        </div>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1436513043818483763" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+        <p class="note" data-t="95">それでも気になるときは、Discordの「<a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">質問部屋</a>」で聞いてください。</p>
+        <p class="cheer" data-t="298">分からないところがあるのは、新しいことに出会えている証拠です。</p>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1515946780578025552" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
 
-    <details id="q-t34" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん つぎ りーでぃんぐ めやす いつまで" data-k="瞬間英作文 次 リーディング 目安 Part Part3 後半 10番 関係代名詞 主格 進む ゴール">
-      <summary data-t="34">瞬間英作文から次へ進む目安は？</summary>
+    <h3 class="sub-h" id="st-shunkan">🗣️ 瞬間英作文</h3>
+    <details id="q-t24" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん いつから はじめる たいみんぐ ぶんぽうどりる" data-k="瞬間英作文 いつから 始める タイミング スタート 文法ドリル 並行">
+      <summary data-t="24">瞬間英作文は、いつから始めればいい？</summary>
       <div class="ans">
-        <p class="lead" data-t="219">Part1〜3が、日本語を見てスムーズに英語で言えたら、<a class="in" href="#q-reading">リーディング</a>へ進みます。</p>
+        <p class="lead" data-t="90"><a class="in" href="#q-drill">文法ドリル</a>で、英語の基本のルールが分かってから始めるのがおすすめです。</p>
         <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1727">Part3の<b>「後半」は、10番（関係代名詞・主格〈人〉）から</b>あと<small>1〜9番は、Part1・2と同じく1〜2秒で答えられる（9割以上正解）のが目安です</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1728"><b>リーディングへ進むとき</b>は、Part3の後半は「英語を見て、日本語の意味がイメージできれば」OK<small>後半がまだスラスラ言えなくても、先へ進んで大丈夫です</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1729"><b>Part3の後半の練習では</b>、スピードは気にせず、ゆっくりでいいので<b>文の組み立てを理解して、正しく英語を作れる</b>ことを大切に<small>「意味が分かればOK」は次へ進む目安。練習のゴールは「正しく組み立てられる」です</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1730">リーディングに進んだあとも、<b>瞬間英作文は並行して続けます</b></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="221">すぐに出てこないのは「自動化」のとちゅうだからです。あせらなくて大丈夫です。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-graph"/></svg><span data-t="1372">瞬間英作文は、文法ドリルより<b>少し負荷が高め</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1373">最初から完ぺきを目指さず、<b>くり返すうちに少しずつ</b>で大丈夫</span></li>
         </ul>
-        <a class="btn" href="https://app.the-online-class.com/lessons/oQM2AzNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>瞬間英作文の進め方（オンクラス）</a>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1531472355673641031" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+        <a class="btn" href="https://app.the-online-class.com/lessons/ogM0EDOzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>Q&amp;A「瞬間英作文を始めるタイミング」（オンクラス）</a>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1438790955837689887" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
-
     <details id="q-shunkan" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん あぷり ほん きんどる でんししょせき かう こうにゅう" data-k="瞬間英作文 アプリ 本 Kindle 電子書籍 買う 購入">
       <summary data-t="35">瞬間英作文は、アプリ？本？</summary>
       <div class="ans">
@@ -1623,26 +1568,130 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <a class="btn" href="https://app.the-online-class.com/lessons/oQM2AzNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>瞬間英作文の進め方（オンクラス）</a>
       </div>
     </details>
-    <details id="q-hanon" data-y="はのん えいごのはのん えいごのはのんしょきゅう ちゅうきゅう かみ ほん かみのほん でんし でんししょせき でんしばん きんどる たぶれっと どっち どちら かう こうにゅう はなす えいごをはなす ろーどまっぷ いつかう" data-k="ハノン 英語のハノン 初級 中級 紙 本 紙の本 電子 電子書籍 電子版 Kindle キンドル タブレット どっち どちら 買う 購入 話す 英語を話す ロードマップ">
-      <summary data-t="1754">英語のハノンは、紙の本と電子書籍（Kindle）、どちらがいい？</summary>
+    <details id="q-t23" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん さくぶん しつもん なぜ こたえ ちがう かいとう わからない ぱーと もんだい" data-k="瞬間英作文 Q&amp;A 質問 なぜ 答え 違う 解答 一覧 Part パート 問題 わからない">
+      <summary data-t="23">瞬間英作文で「なぜこの答えになるの？」と思ったら</summary>
       <div class="ans">
-        <p class="lead" data-t="1755">どちらでも大丈夫です。ふだん Kindle やタブレットで勉強している方は、<b>電子版で十分</b>です。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1756">ハノンは、ロードマップの「<b>4.英語を話す</b>」で使う本です<small>まだ先の方は、あせって買わなくて大丈夫です</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1757">迷ったら、Kindle の<b>サンプル</b>で中身をのぞいてから決める<small>「電子で使えそう」なら電子版、「やっぱり紙がいい」なら紙の本に</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1758">紙で買うなら、<b>初級と中級</b>をまとめて買っておくと安心<small>海外に住んでいるなど、すぐに買いに行けない方の場合です。電子版でよければ、むりに荷物をふやさなくて大丈夫です</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1759">ハノンのほかに、紙でそろえておく本は<b>いまは特にありません</b></span></li>
-        </ul>
-        <div class="ts-tasse">
-          <svg aria-hidden="true"><use href="#i-av-china"/></svg>
-          <p class="ts-tasse-h" data-t="1760">ちなコーチより<small>（11/24）</small></p>
-          <p data-t="1761">わたしは海外に来てからハノンに取り組んだので、電子版だけでした。それでも見やすくて使いやすく、電子版で十分だと感じました。「4.英語を話す」まで進んだ方は、まだほとんどいないので、ハノンの具体的な取り組み方は、まだ解説していません。たどり着いた方は、どんどん質問して、一緒に開拓していってください。</p>
+        <p class="lead" data-t="88">オンクラスに「瞬間英作文 Q&amp;A一覧」があります。</p>
+        <div class="ts-panel">
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1477">オンクラスの「<a class="in" href="https://app.the-online-class.com/learning_courses/oQTM2gDI6MGb" target="_top">1.文法を学ぶ</a>」を開いて、<b>下のほうまでスクロール</b></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1478">「<b>瞬間英作文 Q&amp;A一覧</b>」を開く<small>Part1〜3の項目ごとに、よくある質問と答えが並んでいます</small></span></li>
+          </ol>
+          <p class="note" data-t="192">最初の「<a class="in" href="https://app.the-online-class.com/lessons/oQNwkTOyQDI6I2Y" target="_top">Q&amp;A 進め方①</a>」「<a class="in" href="https://app.the-online-class.com/lessons/ogNwkTOyQDI6I2Y" target="_top">②</a>」には、進め方についての質問がまとまっています。</p>
         </div>
-        <p class="cheer" data-t="1762">まずは、いま取り組んでいるところを大切にしてくださいね。</p>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1574579822699745341" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+        <p class="note" data-t="89">そこで見つからないときは、Discordの「<a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">質問部屋</a>」で聞いてください。</p>
+        <a class="btn" href="https://app.the-online-class.com/lessons/oQNwkTOyQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>瞬間英作文 Q&amp;A一覧（オンクラス）</a>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1532278409206567072" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-otherans" data-y="こたえとちがう もはんかいとう ちがう まちがい せいかい いいかえ べつのいいかた じぶんのこたえ いちじいっく" data-k="答えと違う 模範解答 違う 間違い 正解 言い換え 別の言い方 自分の答え 一字一句 解答例">
+      <summary data-t="715">答えとちがう英文を作ったけど、まちがい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="716">文法が正しくて、意味が通じれば、正解です。答えと一字一句同じでなくて大丈夫です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="717">テキストの答えは、たくさんある正解のうちの1つです。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1506">答えの英文も、<b>新しい表現として覚えておく</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1507">分からないものは<b>印をつけて先へ</b><small>あとでまとめて、<a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">質問部屋</a>で確かめましょう。AIに聞いてみるのもいいですね</small></span></li>
+        </ul>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1450344109817729127" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-t25" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん たんご しらない わからない しらべる いみ" data-k="瞬間英作文 単語 知らない わからない 調べる 意味">
+      <summary data-t="25">瞬間英作文で、知らない単語が出てきたら？</summary>
+      <div class="ans">
+        <p class="lead" data-t="91">深追いしなくて大丈夫です。軽く調べて、先へ進みましょう。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-speed"/></svg><span data-t="1479">目的は、単語を増やすことではなく、<b>知っている文法をすばやく使える</b>ようにすること</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="196">くり返し周回することを優先してください。</span></li>
+        </ul>
+        <a class="btn" href="https://app.the-online-class.com/lessons/ogM2QjNwUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>英単語との向き合い方（セミナー録画）</a>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1531472355673641031" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-shunkan-many" data-y="しゅんかんえいさくぶん でてこない くちからでない なんかい なんしゅう くりかえし おぼえられない じかんがかかる ひゃっかい おんどく すすめかた" data-k="瞬間英作文 出てこない 口から出ない 何回 何周 繰り返し 覚えられない 時間がかかる 100回 音読 進め方">
+      <summary data-t="738">瞬間英作文が口から出てこない・何回くり返せばいい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="739">「見れば分かるのに、口から出ない」のは自然なことです。理解することと、話すことは、別の力だからです。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1520">目安は<b>5周くらい</b><small>1〜2周で出てこないのは、ふつうです</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-voice"/></svg><span data-t="1521"><b>声に出して練習する</b><small>頭の中だけでやるより、身につきやすくなります</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1522">1つの項目（10問）は、<b>1回10〜15分</b>で区切る<small>1回で100％を目指さず、何日かに分けてくり返します</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1523"><b>8割くらい</b>言えるようになったら、次へ</span></li>
+        </ul>
+        <p class="note" data-t="744">瞬間英作文は「口と頭の筋トレ」です。回数を重ねるうちに、少しずつ口が慣れてきます。</p>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1415097214451318868" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-t26" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん ぱーとさん ぱーと むずかしい できない でてこない とまる ざせつ" data-k="瞬間英作文 Part3 パート3 難しい むずかしい できない 出てこない 止まる">
+      <summary data-t="26">瞬間英作文のPart3がむずかしい</summary>
+      <div class="ans">
+        <p class="lead" data-t="1731">Part3は、<b>10番（関係代名詞・主格〈人〉）から</b>むずかしくなります。ここから後ろは、<b>ゆっくりでOK</b>です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-speed"/></svg><span data-t="1732"><b>1〜9番</b>：Part1・2と同じく、1〜2秒で答える（9割以上正解）が目安</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1733"><b>10番から最後まで</b>：スピードは気にせず、文の組み立てを理解して、正しく作れることを大切に<small>リーディングへ進むときは、ここは「英語を見て意味がイメージできれば」OKです</small></span></li>
+        </ul>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1480">🪜 3段階で、ゆっくり上がる</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-abc"/></svg><span data-t="197">英語を見て、日本語の意味が分かる</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="198">日本語を見て、ゆっくりでも正しい順番で英語を並べられる（小さなミスはOK）</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-voice"/></svg><span data-t="199">日本語から英語を、正確に言える</span></li>
+          </ol>
+          <p class="note" data-t="93">この3段階を、ゆっくり上がっていけば十分です。いきなり「速く・正しく」を目指すと、止まってしまうのも当然です。</p>
+        </div>
+        <a class="btn" href="https://app.the-online-class.com/lessons/owN4kDNwUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>Part3に入る前に見る動画（オンクラス）</a>
+        <a class="btn" href="https://app.the-online-class.com/lessons/ogN0EDOzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>Q&amp;A「Part3が難しすぎて、挫折しそうです」（オンクラス）</a>
+        <p class="cheer" data-t="300">むずかしく感じるのは、ちゃんと階段をのぼっているからです。</p>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1444867537262350386" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-whose" data-y="ふーず おぶうぃっち かんけいだいめいし しょゆうかく わからない むずかしい ぱーとすりー せみなー" data-k="whose of which 関係代名詞 所有格 分からない 難しい Part3 セミナー">
+      <summary data-t="745">瞬間英作文の whose・of which が、どうしても分からない</summary>
+      <div class="ans">
+        <p class="lead" data-t="1608">セミナーのアーカイブで、くわしく学べます。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1609">文法ドリルには、<b>このための回がない</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-play"/></svg><span data-t="1610"><b>2026年2月22日のセミナー</b>（関係代名詞・関係副詞）で、ちなコーチがくわしく解説<small>オンクラスの「英語セミナー アーカイブ一覧」から見られます</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1734">Part3の後半（10番から）は、<b>ゆっくりでOK</b>。文の組み立てを理解しながら進めましょう<small>リーディングへ進むときは「英語を見て意味がイメージできれば」OKです</small></span></li>
+        </ul>
+        <a class="btn" href="#q-archive"><svg aria-hidden="true"><use href="#i-video"/></svg>前のセミナーの見かた</a>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1444867537262350386" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-t34" data-y="しゅんかんえいさくぶん しゅんかん えいさくぶん つぎ りーでぃんぐ めやす いつまで" data-k="瞬間英作文 次 リーディング 目安 Part Part3 後半 10番 関係代名詞 主格 進む ゴール">
+      <summary data-t="34">瞬間英作文から次へ進む目安は？</summary>
+      <div class="ans">
+        <p class="lead" data-t="219">Part1〜3が、日本語を見てスムーズに英語で言えたら、<a class="in" href="#q-reading">リーディング</a>へ進みます。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1727">Part3の<b>「後半」は、10番（関係代名詞・主格〈人〉）から</b>あと<small>1〜9番は、Part1・2と同じく1〜2秒で答えられる（9割以上正解）のが目安です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1728"><b>リーディングへ進むとき</b>は、Part3の後半は「英語を見て、日本語の意味がイメージできれば」OK<small>後半がまだスラスラ言えなくても、先へ進んで大丈夫です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1729"><b>Part3の後半の練習では</b>、スピードは気にせず、ゆっくりでいいので<b>文の組み立てを理解して、正しく英語を作れる</b>ことを大切に<small>「意味が分かればOK」は次へ進む目安。練習のゴールは「正しく組み立てられる」です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1730">リーディングに進んだあとも、<b>瞬間英作文は並行して続けます</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="221">すぐに出てこないのは「自動化」のとちゅうだからです。あせらなくて大丈夫です。</span></li>
+        </ul>
+        <a class="btn" href="https://app.the-online-class.com/lessons/oQM2AzNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>瞬間英作文の進め方（オンクラス）</a>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1531472355673641031" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
 
+    <h3 class="sub-h" id="st-read">📖 読む</h3>
+    <details data-y="きゅうきょく きゅうきょくのえいごりーでぃんぐ りーでぃんぐ よむ ほん せいどく あるく ぶーこ かいていばん" id="q-reading" data-k="究極の英語リーディング 究極 リーディング 精読 読む 本 教材 アルク booco vol 改訂版 表紙">
+      <summary data-t="22">「究極の英語リーディング」って、なに？</summary>
+      <div class="ans">
+        <p class="lead" data-t="86">英語を読む力をつける「精読」用の本です。<a class="in" href="https://app.the-online-class.com/lessons/oAOxYzNzQDI6I2Y" target="_top">ロードマップ</a>のSTEP2「英語を読む」で使います。</p>
+        <img class="cover" src="data:image/jpeg;base64,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e4l++zcnsOa79PE8L+GtHCWUTMpCrsI+dgOmfWuR1b4bePdYlR7mzi2p91Q3FaMng34gNp0NhFplrDbwENEqnlXH8WaANC81jVNW12dZdDltJRbq4WBwTgep9DVTT7wy6nb+JF0T9zDG8M0ZkAC571Na6B8TLTUb2+S0hM12gRzu4XHTHoPas0eBviF/Y91prWkZjuJfN3B8FT3oA2PC1xP4eluLddFPl6xdM0I3hvLUjv6c1Lf3S3tjNpr2AM2luJ7hWTgIDnj1rPi8MfEaO+sLo2URa0j8sqJMCQep96s2mh/Ee0u9RnGm28n24YZXfO38e9AHD/EHXDrX9nywWqW9i6sYmUYL+uR7V7P8EP8Akn8X/XQ15VefC7xxe28EU1nFthLFcN3Y817Z8NfDl74X8IW9hf7RcbizKpyBQB2dQy/eH0qaoZfvD6UASr91fpR2pF+6p9qdQA32o54PP0p1FADOfUEUvOfT1p1FABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABSHr7UtFADecd6diiigAxRiiigAxRiiigAxRiiigBD7Eik/rTqKACoZfvD6VLUMxAcZOOKAIx0X/dH8qO1FFIYUUUUDCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBP8aZc/fX/doooEf//Z" alt="改訂版 究極の英語リーディング Vol.1 の表紙（白い表紙、左上に「改訂版」、右に大きく「Vol.1」）">
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1465">始めるのは、<a class="in" href="https://app.the-online-class.com/lessons/oQM2AzNzQDI6I2Y" target="_top">瞬間英作文</a>のPart1〜3が<b>スムーズに言えるようになってから</b><small>日本語を見て、英語で言えるようになったらです。Part3の後半（10番から）は、英語を見て意味がイメージできればOK</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1466">「<b>改訂版</b>」のvol.1から順番に<small>本は紙の書籍がおすすめです</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="189">音声は「booco」というアプリで、無料で聞けます。</span></li>
+        </ul>
+        <p class="note" data-t="87">「多読」の教材は本ではなく、オンクラスの「<a class="in" href="https://app.the-online-class.com/learning_courses/oQDO2gDI6MGb" target="_top">2.英語を読む</a>」にあります。</p>
+        <a class="btn" href="https://www.amazon.co.jp/dp/4757442238" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>改訂版 Vol.1 のページ（Amazon）</a>
+        <a class="btn" href="https://apps.apple.com/jp/app/id1507203854" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（iPhone）</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=jp.co.alc.booco" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（Android）</a>
+        <a class="btn" href="https://app.the-online-class.com/lessons/oAOzUTN1QDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>リーディングの説明（オンクラス）</a>
+      </div>
+    </details>
     <details id="q-t36" data-y="りーでぃんぐ よむ よみかた せいどく たどく きゅうきょく ほん ぶーこ おんせい" data-k="リーディング 精読 多読 究極 本 booco 音声 読む">
       <summary data-t="36">リーディング（読む）は、どう進める？</summary>
       <div class="ans">
@@ -1657,6 +1706,137 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <a class="btn" href="https://play.google.com/store/apps/details?id=jp.co.alc.booco" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（Android）</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/oAOzUTN1QDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>リーディングの説明（オンクラス）</a>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1559022696937824430" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-readhow" data-y="きゅうきょく りーでぃんぐ なぜ なんで ひつよう りゆう やりかた すすめかた どうやって わからない せいどく らうんど すらっしゅ やく にほんご かんぺき なんしゅう にしゅう おぼえられない もやもや" data-k="究極の英語リーディング 究極 リーディング なぜ 必要 理由 やり方 進め方 わからない 精読 ROUND スラッシュ 訳 日本語 完璧 何周 2周 覚えられない">
+      <summary data-t="439">「究極の英語リーディング」は、なぜ必要？どうやって進めるの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="440">英語を、前から順番に「かたまりごと」に分かるようになるための本です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1647">「<b>読んで分かる速さ</b>」が、そのまま「聞いて分かる速さ」の上限になる<small>読んですぐに意味が分からない英文は、耳で聞いても分かりません。だから、聞く・話す練習の前に、まずここで「読める」を作ります</small></span></li>
+        </ul>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1648">📖 進め方</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1649">本の手順<b>（ROUND1〜3）のとおり</b>に進める</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1650">1つのお話は<b>20〜30分くらい</b>が目安</span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1651">英語の順番のまま、<b>場面が頭に浮かべば合格</b><small>きれいな日本語に訳さなくてOKです</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1652"><b>「7〜8割わかった」</b>で、次のお話へ</span></li>
+          </ol>
+        </div>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1653">知らない単語を、<b>全部調べなくて大丈夫</b><small>日本語でざっくり意味が分かれば十分合格です</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="rh-more"><span data-t="1654">📚 本の3冊・文法・単語のこと（くわしく）</span></button>
+        <div class="ts-more ts-box" id="rh-more" hidden>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-back"/></svg><span data-t="446">文法でどうしても引っかかるところだけ、<a class="in" href="https://app.the-online-class.com/learning_courses/oQTM2gDI6MGb" target="_top">文法ドリル</a>に戻って確かめます。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="447">本はvol.1・vol.2・vol.3の3冊です。vol.1から順に、使われる単語が少しずつ増えていきます（およそ1000語→2000語→3000語のレベル）。それぞれ2回ずつくり返すのが理想です。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-up"/></svg><span data-t="557">vol.1の普通の速さの音声に合わせて、スムーズに読めるようになったら、vol.2へ進む目安です。vol.1が簡単すぎると感じたら、vol.2から始めても大丈夫です。</span></li>
+        </ul>
+        <p class="note" data-t="448">調べたときも、その場で覚えようとしなくて大丈夫。同じ言葉に何度も出会ううちに、身についていきます。</p>
+        <p class="note" data-t="449"><a class="in" href="https://discord.com/channels/1214839485364305960/1214839485364305963" target="_top">日報</a>で「精読」と書かれているのは、この本のことです。オンクラスの「多読book」とは役割がちがいます。</p>
+        </div>
+        <div class="cw-box"><p class="note" data-t="450"><b>ちなコーチの考え（Discordの質問への答えから）</b></p>
+        <ul class="steps">
+          <li><span data-t="451">まず英文の作り（どれが主語で、どれが動詞か）を確かめて、そのあとスラッシュで区切ったかたまりごとに、意味をイメージしていく。この順番で大丈夫です。</span></li>
+          <li><span data-t="452">文法の用語を紙に書き出さなくてOKです。頭の中で、言葉の役割が分かれば合格です。</span></li>
+          <li><span data-t="453">発音より先にリーディングをするのは、音が聞き取れても、意味が分からなければ頭に入らないからです。いきなり発音から始めると、むずかしくて続きにくい、という理由もあります。</span></li>
+        </ul></div>
+        <p class="cheer" data-t="454">「なんとなく分かる」を積み重ねていけば大丈夫です。完ぺきでなくても、ちゃんと前に進んでいますよ。</p>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1415470509608665110" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-tadoku" data-y="たどく たどくぶっく たどくbook よむ りーでぃんぐ ものがたり まくどなるど ほし れべる じしょ たんご わからない すすめかた いつから せいどく ちがい" data-k="多読 多読book 多読ブック 読む リーディング 物語 マクドナルド 星 レベル 辞書 単語 わからない 進め方 いつから 精読 違い">
+      <summary data-t="545">「多読book（たどくブック）」って、なに？どう進めるの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="546">たくさんの英文を読んで、「なんとなく分かる」感覚を育てる教材です。オンクラスの「<a class="in" href="https://app.the-online-class.com/learning_courses/oQDO2gDI6MGb" target="_top">2.英語を読む</a>」に入っています。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1655">身近なお話が、<b>やさしいレベルから順番に</b><small>マクドナルドやトヨタの物語、昔話など。全部で237話です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1656">細かい単語は気にせず、<b>そのまま読み進める</b><small>辞書で1つずつ調べなくて大丈夫です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1657">「どんな話だったか」を<b>日本語でざっくり言えればOK</b></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1658"><b>「ところどころ分からない単語がある」</b>くらいが、ちょうどいい<small>まったく分からないときは、今の自分にはまだ少し難しいというサインです</small></span></li>
+        </ul>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="td-more"><span data-t="1659">📚 ある場所・始める時期・精読とのちがい</span></button>
+        <div class="ts-more ts-box" id="td-more" hidden>
+        <p class="note" data-t="556"><b>多読bookのある場所</b>　オンクラスの「<a class="in" href="https://app.the-online-class.com/learning_courses/oQDO2gDI6MGb" target="_top">2.英語を読む</a>」を開くと、「はじめに」「読む教材（多読book）に入る前に」のあとに、「レベル１（1~20）」から「レベル３（225~237）」まで、全部で237話が並んでいます。最初のお話は「1. マクドナルド物語」です。</p>
+        <p class="note" data-t="552"><b>始める時期</b>　文法ドリルや瞬間英作文をある程度進めてから始めます。はじめは「究極の英語リーディング」を多めにして、慣れてきたら多読bookを少しずつ増やしていきます。</p>
+        <p class="note" data-t="553"><b>精読とのちがい</b>　「究極の英語リーディング」（精読）は、1文ずつていねいに読んで、文のしくみを理解する練習です。多読bookは、たくさん読んで英語に慣れる練習です。どちらも大切です。</p>
+        <p class="note" data-t="554">知らない単語が多くて読むのがつらいときは、いったんお休みしても大丈夫です。</p>
+        </div>
+        <a class="btn" href="https://youtu.be/7QFxzdmiK0c" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>多読の進め方（ちなコーチの動画・YouTube）</a>
+        <a class="btn" href="https://app.the-online-class.com/learning_courses/oQDO2gDI6MGb" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>多読bookの一覧（オンクラス「2.英語を読む」）</a>
+        <a class="btn" href="https://app.the-online-class.com/lessons/oAM1UDNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>「読む教材（多読book）に入る前に」を読む</a>
+        <a class="btn" href="https://app.the-online-class.com/lessons/ogN3ATO5MDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>1話目「マクドナルド物語」を開く</a>
+        <p class="cheer" data-t="555">意味が全部分からなくても大丈夫。「なんとなく分かった」の積み重ねが、英語の力になっていきます。</p>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1418614259268714641" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+      </div>
+    </details>
+    <details id="q-wpm" data-y="だぶりゅーぴーえむ わーずぱーみにっつ よむはやさ よむそくど どくかいそくど はやさ そくど めやす はかりかた はかる いっぷんかん たんごすう じぶんのいち もくひょう ねいてぃぶ やらなきゃ やらないといけない ぜんいん しょしんしゃ いつから" data-k="WPM wpm ワーズパーミニット 読む速さ 読む速度 読解速度 速さ 速度 目安 測り方 測る 1分間 単語数 自分の位置 目標 ネイティブ TOEIC 共通テスト やらなきゃ 全員 初心者 いつから 必要">
+      <summary data-t="695">「WPM（ダブリューピーエム）」ってなに？読む速さの目安は？</summary>
+      <div class="ans">
+        <p class="lead" data-t="696">WPMは、1分間に読める英語の単語の数のことです。読む速さを、数字で見ることができます。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1669"><b>全員が測らなくて大丈夫</b><small>多読（多読bookなど）を進めている方が、読む速さの目安にするものです。文法ドリルや瞬間英作文をしている方は、まだ気にしなくて大丈夫</small></span></li>
+        </ul>
+        <div class="ts-panel">
+          <p class="os-h" data-t="1670">⏱ 測り方</p>
+          <ol class="ts-steps">
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1671">英文を読んだ<b>時間を測る</b><small>声に出さずに読む（黙読）で大丈夫です</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1672"><b>単語の数 ÷ 時間（分）</b><small>たとえば、300語の英文を2分で読んだら、150WPMです</small></span></li>
+            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-graph"/></svg><span data-t="1673">下の<b>目安とくらべる</b><small>今の自分の位置や、次の目標が分かります</small></span></li>
+          </ol>
+        </div>
+        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="wpm-meyasu"><span data-t="1674">📊 速さの目安の表を見る</span></button>
+        <div class="ts-more" id="wpm-meyasu" hidden>
+        <div class="cw-box"><p class="note" data-t="700"><b>ちなコーチが紹介した目安（質問部屋で、Geminiで調べたものとして）</b></p>
+        <p class="note"><b>読む速さ（リーディング）</b></p>
+        <table class="wpm-t">
+          <tr><th>100WPM前後</th><td>初級〜中級。1文ずつ、文の形を確かめながら読む速さ</td></tr>
+          <tr><th>150〜180</th><td>大学受験・TOEICなどで目指す速さ。英字新聞やWeb記事をスムーズに読める</td></tr>
+          <tr><th>200〜250</th><td>ネイティブ（英語が母語の人）の大人が、黙読する平均の速さ</td></tr>
+          <tr><th>300以上</th><td>速読のレベル</td></tr>
+        </table>
+        <p class="note">試験の目安：TOEICのリーディングを最後まで解くには150WPMくらい、共通テストは130〜140WPMくらい。</p>
+        <p class="note"><b>聞く・話す速さ（リスニング・スピーキング）</b></p>
+        <table class="wpm-t">
+          <tr><th>100〜120</th><td>英語学習者向けの教材、ゆっくりしたスピーチ</td></tr>
+          <tr><th>130〜150</th><td>ニュース番組（BBC・CNNなど）、TEDなどのスピーチ</td></tr>
+          <tr><th>160〜180</th><td>ネイティブ同士の日常会話、ポッドキャスト</td></tr>
+          <tr><th>200以上</th><td>手加減のない早い会話、スポーツの実況</td></tr>
+        </table>
+        <p class="note">まとめ：まずは150WPMを、安定して読めたり話せたりすることを目指すのが一般的です。</p>
+        </div>
+        </div>
+        <p class="note" data-t="701"><b>ちなコーチの場合</b>　はじめて読む英文で、160〜180WPMくらいです。ネイティブとの日常会話や、仕事の基本的な場面なら、問題なく理解できる速さです。WPMを意識して多読をすると、英語を頭から順にそのまま理解する感覚が身につき、成長も実感しやすくなります。</p>
+        <p class="cheer" data-t="702">数字は、人とくらべるためではなく、自分の成長を見るためのものです。少し前の自分より速くなっていたら、それが積み重ねてきた証です。</p>
+      </div>
+    </details>
+    <details id="q-japanese" data-y="にほんご やく やくしてしまう あたまのなか えいごのまま だめ うかぶ" data-k="日本語 訳 訳してしまう 頭の中 英語のまま ダメ 浮かぶ">
+      <summary data-t="617">頭の中で、日本語に訳してしまう。ダメなの？</summary>
+      <div class="ans">
+        <p class="lead" data-t="618">ダメではありません。日本語が浮かぶのは、自然なことです。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1488">英語は「<b>2つ目のことば</b>」なので、日本語が浮かぶのは当たり前<small>英語を英語のまま分かるのが理想ですが、それで大丈夫です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1489">たくさんの英文にふれるうちに、<b>少しずつ日本語を通さず</b>に入ってくる<small>よく使う表現から、少しずつです</small></span></li>
+        </ul>
+        <p class="cheer" data-t="621">今は、とまどわなくて大丈夫。そのまま進めていきましょう。</p>
+      </div>
+    </details>
+
+    <h3 class="sub-h" id="st-listen">🎧 聞く・話す・発音</h3>
+    <details id="q-listening" data-y="りすにんぐ きく ききとり きこえない しゃどーいんぐ おんどく おーばーらっぴんぐ ぶーこ きゅうきょく" data-k="リスニング 聞く 聞き取り 聞こえない シャドーイング 音読 オーバーラッピング booco 究極の英語リスニング">
+      <summary data-t="37">リスニング（聞く）は、どう進める？</summary>
+      <div class="ans">
+        <p class="lead" data-t="106">「究極の英語リーディング」が終わったら、「究極の英語リスニング」へ進みます。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1308">簡単すぎたら、<b>vol.2から</b>でもOK<small>boocoで先に音声を聞いて、レベルを確かめましょう</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1309">進め方：<b>聞く → 音読 → オーバーラッピング → シャドーイング</b><small>オーバーラッピング＝音声に重ねて読む。シャドーイング＝音声を追いかけて言う</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-speed"/></svg><span data-t="1310">慣れたら、<b>音声の速さを上げる</b>のも効果があります</span></li>
+        </ul>
+        <a class="btn" href="https://apps.apple.com/jp/app/id1507203854" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（iPhone）</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=jp.co.alc.booco" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（Android）</a>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1513081299945132124" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
     <details id="q-ultlisten" data-y="せいどく ちがい りーでぃんぐ きゅうきょく きゅうきょくのえいごりすにんぐ りすにんぐ せいちょう きく ほん どこ かう こうにゅう てにいれる あまぞん あるく ぶーこ かいていばん いつから" data-k="精読 違い ちがい リーディング 究極の英語リスニング 究極 リスニング 精聴 聞く 本 どこ 買う 購入 入手 Amazon アルク booco 改訂版 vol いつから">
@@ -1682,20 +1862,6 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <a class="btn" href="https://apps.apple.com/jp/app/id1507203854" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（iPhone）</a>
         <a class="btn" href="https://play.google.com/store/apps/details?id=jp.co.alc.booco" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（Android）</a>
         <p class="cheer" data-t="599">聞こえなかった英語も、少しずつ聞こえるようになっていきます。1つずつ進めていきましょう。</p>
-      </div>
-    </details>
-    <details id="q-listening" data-y="りすにんぐ きく ききとり きこえない しゃどーいんぐ おんどく おーばーらっぴんぐ ぶーこ きゅうきょく" data-k="リスニング 聞く 聞き取り 聞こえない シャドーイング 音読 オーバーラッピング booco 究極の英語リスニング">
-      <summary data-t="37">リスニング（聞く）は、どう進める？</summary>
-      <div class="ans">
-        <p class="lead" data-t="106">「究極の英語リーディング」が終わったら、「究極の英語リスニング」へ進みます。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1308">簡単すぎたら、<b>vol.2から</b>でもOK<small>boocoで先に音声を聞いて、レベルを確かめましょう</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1309">進め方：<b>聞く → 音読 → オーバーラッピング → シャドーイング</b><small>オーバーラッピング＝音声に重ねて読む。シャドーイング＝音声を追いかけて言う</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-speed"/></svg><span data-t="1310">慣れたら、<b>音声の速さを上げる</b>のも効果があります</span></li>
-        </ul>
-        <a class="btn" href="https://apps.apple.com/jp/app/id1507203854" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（iPhone）</a>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=jp.co.alc.booco" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>boocoアプリ（Android）</a>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1513081299945132124" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
     <details id="q-intonation" data-y="よくよう あがりさがり いんとねーしょん おーばーらっぴんぐ しゃどーいんぐ まね はつおん りすにんぐ きゅうきょく やじるし" data-k="抑揚 上がり下がり イントネーション オーバーラッピング シャドーイング まね 発音 リスニング 究極の英語リスニング 矢印">
@@ -1815,7 +1981,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
             <li data-t="1212">小さな窓にならないときは、設定の「<b>ピクチャー・イン・ピクチャー</b>」がオンか見てください（たいていオンです）。</li>
             <li data-t="1213">ボタンの名前や場所は、機種で少しちがいます。</li>
           </ul>
-        </div>
+        </div>
         <div class="ts-tasse">
           <svg aria-hidden="true"><use href="#i-av-china"/></svg>
           <p class="ts-tasse-h" data-t="1770">ちなコーチより<small>（11/16）</small></p>
@@ -1838,17 +2004,6 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         </ul>
       </div>
     </details>
-    <details id="q-japanese" data-y="にほんご やく やくしてしまう あたまのなか えいごのまま だめ うかぶ" data-k="日本語 訳 訳してしまう 頭の中 英語のまま ダメ 浮かぶ">
-      <summary data-t="617">頭の中で、日本語に訳してしまう。ダメなの？</summary>
-      <div class="ans">
-        <p class="lead" data-t="618">ダメではありません。日本語が浮かぶのは、自然なことです。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1488">英語は「<b>2つ目のことば</b>」なので、日本語が浮かぶのは当たり前<small>英語を英語のまま分かるのが理想ですが、それで大丈夫です</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1489">たくさんの英文にふれるうちに、<b>少しずつ日本語を通さず</b>に入ってくる<small>よく使う表現から、少しずつです</small></span></li>
-        </ul>
-        <p class="cheer" data-t="621">今は、とまどわなくて大丈夫。そのまま進めていきましょう。</p>
-      </div>
-    </details>
     <details id="q-phonetic" data-y="はつおんきごう はつおん きごう おぼえる あんき ぜんぶ えいごみみ じしょ" data-k="発音記号 発音 記号 覚える 暗記 全部 英語耳 辞書">
       <summary data-t="622">発音記号は、ぜんぶ覚えないといけない？</summary>
       <div class="ans">
@@ -1862,110 +2017,6 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1499561179742474352" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
-    <details id="q-readhow" data-y="きゅうきょく りーでぃんぐ なぜ なんで ひつよう りゆう やりかた すすめかた どうやって わからない せいどく らうんど すらっしゅ やく にほんご かんぺき なんしゅう にしゅう おぼえられない もやもや" data-k="究極の英語リーディング 究極 リーディング なぜ 必要 理由 やり方 進め方 わからない 精読 ROUND スラッシュ 訳 日本語 完璧 何周 2周 覚えられない">
-      <summary data-t="439">「究極の英語リーディング」は、なぜ必要？どうやって進めるの？</summary>
-      <div class="ans">
-        <p class="lead" data-t="440">英語を、前から順番に「かたまりごと」に分かるようになるための本です。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-ear"/></svg><span data-t="1647">「<b>読んで分かる速さ</b>」が、そのまま「聞いて分かる速さ」の上限になる<small>読んですぐに意味が分からない英文は、耳で聞いても分かりません。だから、聞く・話す練習の前に、まずここで「読める」を作ります</small></span></li>
-        </ul>
-        <div class="ts-panel">
-          <p class="os-h" data-t="1648">📖 進め方</p>
-          <ol class="ts-steps">
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1649">本の手順<b>（ROUND1〜3）のとおり</b>に進める</span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1650">1つのお話は<b>20〜30分くらい</b>が目安</span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1651">英語の順番のまま、<b>場面が頭に浮かべば合格</b><small>きれいな日本語に訳さなくてOKです</small></span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1652"><b>「7〜8割わかった」</b>で、次のお話へ</span></li>
-          </ol>
-        </div>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1653">知らない単語を、<b>全部調べなくて大丈夫</b><small>日本語でざっくり意味が分かれば十分合格です</small></span></li>
-        </ul>
-        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="rh-more"><span data-t="1654">📚 本の3冊・文法・単語のこと（くわしく）</span></button>
-        <div class="ts-more ts-box" id="rh-more" hidden>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-back"/></svg><span data-t="446">文法でどうしても引っかかるところだけ、<a class="in" href="https://app.the-online-class.com/learning_courses/oQTM2gDI6MGb" target="_top">文法ドリル</a>に戻って確かめます。</span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="447">本はvol.1・vol.2・vol.3の3冊です。vol.1から順に、使われる単語が少しずつ増えていきます（およそ1000語→2000語→3000語のレベル）。それぞれ2回ずつくり返すのが理想です。</span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-up"/></svg><span data-t="557">vol.1の普通の速さの音声に合わせて、スムーズに読めるようになったら、vol.2へ進む目安です。vol.1が簡単すぎると感じたら、vol.2から始めても大丈夫です。</span></li>
-        </ul>
-        <p class="note" data-t="448">調べたときも、その場で覚えようとしなくて大丈夫。同じ言葉に何度も出会ううちに、身についていきます。</p>
-        <p class="note" data-t="449"><a class="in" href="https://discord.com/channels/1214839485364305960/1214839485364305963" target="_top">日報</a>で「精読」と書かれているのは、この本のことです。オンクラスの「多読book」とは役割がちがいます。</p>
-        </div>
-        <div class="cw-box"><p class="note" data-t="450"><b>ちなコーチの考え（Discordの質問への答えから）</b></p>
-        <ul class="steps">
-          <li><span data-t="451">まず英文の作り（どれが主語で、どれが動詞か）を確かめて、そのあとスラッシュで区切ったかたまりごとに、意味をイメージしていく。この順番で大丈夫です。</span></li>
-          <li><span data-t="452">文法の用語を紙に書き出さなくてOKです。頭の中で、言葉の役割が分かれば合格です。</span></li>
-          <li><span data-t="453">発音より先にリーディングをするのは、音が聞き取れても、意味が分からなければ頭に入らないからです。いきなり発音から始めると、むずかしくて続きにくい、という理由もあります。</span></li>
-        </ul></div>
-        <p class="cheer" data-t="454">「なんとなく分かる」を積み重ねていけば大丈夫です。完ぺきでなくても、ちゃんと前に進んでいますよ。</p>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1415470509608665110" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-    <details id="q-tadoku" data-y="たどく たどくぶっく たどくbook よむ りーでぃんぐ ものがたり まくどなるど ほし れべる じしょ たんご わからない すすめかた いつから せいどく ちがい" data-k="多読 多読book 多読ブック 読む リーディング 物語 マクドナルド 星 レベル 辞書 単語 わからない 進め方 いつから 精読 違い">
-      <summary data-t="545">「多読book（たどくブック）」って、なに？どう進めるの？</summary>
-      <div class="ans">
-        <p class="lead" data-t="546">たくさんの英文を読んで、「なんとなく分かる」感覚を育てる教材です。オンクラスの「<a class="in" href="https://app.the-online-class.com/learning_courses/oQDO2gDI6MGb" target="_top">2.英語を読む</a>」に入っています。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1655">身近なお話が、<b>やさしいレベルから順番に</b><small>マクドナルドやトヨタの物語、昔話など。全部で237話です</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-next"/></svg><span data-t="1656">細かい単語は気にせず、<b>そのまま読み進める</b><small>辞書で1つずつ調べなくて大丈夫です</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1657">「どんな話だったか」を<b>日本語でざっくり言えればOK</b></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1658"><b>「ところどころ分からない単語がある」</b>くらいが、ちょうどいい<small>まったく分からないときは、今の自分にはまだ少し難しいというサインです</small></span></li>
-        </ul>
-        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="td-more"><span data-t="1659">📚 ある場所・始める時期・精読とのちがい</span></button>
-        <div class="ts-more ts-box" id="td-more" hidden>
-        <p class="note" data-t="556"><b>多読bookのある場所</b>　オンクラスの「<a class="in" href="https://app.the-online-class.com/learning_courses/oQDO2gDI6MGb" target="_top">2.英語を読む</a>」を開くと、「はじめに」「読む教材（多読book）に入る前に」のあとに、「レベル１（1~20）」から「レベル３（225~237）」まで、全部で237話が並んでいます。最初のお話は「1. マクドナルド物語」です。</p>
-        <p class="note" data-t="552"><b>始める時期</b>　文法ドリルや瞬間英作文をある程度進めてから始めます。はじめは「究極の英語リーディング」を多めにして、慣れてきたら多読bookを少しずつ増やしていきます。</p>
-        <p class="note" data-t="553"><b>精読とのちがい</b>　「究極の英語リーディング」（精読）は、1文ずつていねいに読んで、文のしくみを理解する練習です。多読bookは、たくさん読んで英語に慣れる練習です。どちらも大切です。</p>
-        <p class="note" data-t="554">知らない単語が多くて読むのがつらいときは、いったんお休みしても大丈夫です。</p>
-        </div>
-        <a class="btn" href="https://youtu.be/7QFxzdmiK0c" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>多読の進め方（ちなコーチの動画・YouTube）</a>
-        <a class="btn" href="https://app.the-online-class.com/learning_courses/oQDO2gDI6MGb" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>多読bookの一覧（オンクラス「2.英語を読む」）</a>
-        <a class="btn" href="https://app.the-online-class.com/lessons/oAM1UDNzQDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>「読む教材（多読book）に入る前に」を読む</a>
-        <a class="btn" href="https://app.the-online-class.com/lessons/ogN3ATO5MDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>1話目「マクドナルド物語」を開く</a>
-        <p class="cheer" data-t="555">意味が全部分からなくても大丈夫。「なんとなく分かった」の積み重ねが、英語の力になっていきます。</p>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1418614259268714641" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
-    <details id="q-wpm" data-y="だぶりゅーぴーえむ わーずぱーみにっつ よむはやさ よむそくど どくかいそくど はやさ そくど めやす はかりかた はかる いっぷんかん たんごすう じぶんのいち もくひょう ねいてぃぶ やらなきゃ やらないといけない ぜんいん しょしんしゃ いつから" data-k="WPM wpm ワーズパーミニット 読む速さ 読む速度 読解速度 速さ 速度 目安 測り方 測る 1分間 単語数 自分の位置 目標 ネイティブ TOEIC 共通テスト やらなきゃ 全員 初心者 いつから 必要">
-      <summary data-t="695">「WPM（ダブリューピーエム）」ってなに？読む速さの目安は？</summary>
-      <div class="ans">
-        <p class="lead" data-t="696">WPMは、1分間に読める英語の単語の数のことです。読む速さを、数字で見ることができます。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1669"><b>全員が測らなくて大丈夫</b><small>多読（多読bookなど）を進めている方が、読む速さの目安にするものです。文法ドリルや瞬間英作文をしている方は、まだ気にしなくて大丈夫</small></span></li>
-        </ul>
-        <div class="ts-panel">
-          <p class="os-h" data-t="1670">⏱ 測り方</p>
-          <ol class="ts-steps">
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1671">英文を読んだ<b>時間を測る</b><small>声に出さずに読む（黙読）で大丈夫です</small></span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1672"><b>単語の数 ÷ 時間（分）</b><small>たとえば、300語の英文を2分で読んだら、150WPMです</small></span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-graph"/></svg><span data-t="1673">下の<b>目安とくらべる</b><small>今の自分の位置や、次の目標が分かります</small></span></li>
-          </ol>
-        </div>
-        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="wpm-meyasu"><span data-t="1674">📊 速さの目安の表を見る</span></button>
-        <div class="ts-more" id="wpm-meyasu" hidden>
-        <div class="cw-box"><p class="note" data-t="700"><b>ちなコーチが紹介した目安（質問部屋で、Geminiで調べたものとして）</b></p>
-        <p class="note"><b>読む速さ（リーディング）</b></p>
-        <table class="wpm-t">
-          <tr><th>100WPM前後</th><td>初級〜中級。1文ずつ、文の形を確かめながら読む速さ</td></tr>
-          <tr><th>150〜180</th><td>大学受験・TOEICなどで目指す速さ。英字新聞やWeb記事をスムーズに読める</td></tr>
-          <tr><th>200〜250</th><td>ネイティブ（英語が母語の人）の大人が、黙読する平均の速さ</td></tr>
-          <tr><th>300以上</th><td>速読のレベル</td></tr>
-        </table>
-        <p class="note">試験の目安：TOEICのリーディングを最後まで解くには150WPMくらい、共通テストは130〜140WPMくらい。</p>
-        <p class="note"><b>聞く・話す速さ（リスニング・スピーキング）</b></p>
-        <table class="wpm-t">
-          <tr><th>100〜120</th><td>英語学習者向けの教材、ゆっくりしたスピーチ</td></tr>
-          <tr><th>130〜150</th><td>ニュース番組（BBC・CNNなど）、TEDなどのスピーチ</td></tr>
-          <tr><th>160〜180</th><td>ネイティブ同士の日常会話、ポッドキャスト</td></tr>
-          <tr><th>200以上</th><td>手加減のない早い会話、スポーツの実況</td></tr>
-        </table>
-        <p class="note">まとめ：まずは150WPMを、安定して読めたり話せたりすることを目指すのが一般的です。</p>
-        </div>
-        </div>
-        <p class="note" data-t="701"><b>ちなコーチの場合</b>　はじめて読む英文で、160〜180WPMくらいです。ネイティブとの日常会話や、仕事の基本的な場面なら、問題なく理解できる速さです。WPMを意識して多読をすると、英語を頭から順にそのまま理解する感覚が身につき、成長も実感しやすくなります。</p>
-        <p class="cheer" data-t="702">数字は、人とくらべるためではなく、自分の成長を見るためのものです。少し前の自分より速くなっていたら、それが積み重ねてきた証です。</p>
-      </div>
-    </details>
     <details id="q-eigomimi" data-y="えいごみみ えいご みみ はつおん はつおんきごう つかいかた やりかた すすめかた どうやって むずかしい くせ しょう だい6しょう ぱろっとろー うた きんどる しーでぃー cd だうんろーど おんせい くるま ほんのみかた なんしゅう なんかい しゅうすう きんとれ したのきんにく こえ じょせい だんせい おんなのひと おとこのひと えらぶ じっぷ かいとう てんかい みつからない どこ ほぞん すまほ あんどろいど あいふぉん ぱそこん あいでぃー ぱすわーど たっせーこうし こうしのたっせー たっせーせんせい" data-k="英語耳 英語 耳 発音 発音記号 使い方 やり方 進め方 難しい クセ 章 第6章 パロットロー 歌 Kindle 何周 何回 周数 20周 30周 筋トレ 舌 筋肉 声 女性 男性 女声 男声 選ぶ ZIP 解凍 展開 見つからない 保存 スマホ アンドロイド iPhone パソコン ダウンロード ID パスワード タッセー講師 講師のタッセーさん">
       <summary data-t="455">「英語耳（えいごみみ）」は、どうやって使えばいい？</summary>
       <div class="ans">
@@ -1975,6 +2026,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1270"><b>第2章〜第5章</b>を、1日10分くらいずつくり返す<small>はじめは1周1時間ほど。くり返すうちに30分くらいになります</small></span></li>
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1271">発音記号は、<b>全部覚えなくて大丈夫</b><small>「こんな音があるんだな」と分かれば十分です</small></span></li>
         </ul>
+        <p class="note" data-t="1837">音声のダウンロードと聞き方は「<a class="in" href="#q-eigomimi-audio">英語耳の音声を、スマホやパソコンで聞きたい</a>」を見てください。</p>
         <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="em-more"><span data-t="1272">📖 そのあとの進め方・本の見方</span></button>
         <div class="ts-more ts-box" id="em-more" hidden>
           <p class="note" data-t="460">そのあとは「究極の英語リスニング」などで音読しながら、聞き取れないところが出たら英語耳に戻って確かめます。辞書のように使っていきましょう。</p>
@@ -1982,6 +2034,25 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <p class="note" data-t="463"><b>本の見方</b>　第2章〜第5章が、発音記号ごとの練習です（ここがメインです）。第6章は洋楽の歌を使った練習、第7章は読み物です。本のはじめに「第2〜5章を10回ほどくり返したら、第6章へ」と、進め方が書いてあります。</p>
           <p class="note" data-t="462">少しクセのある本です。しんどくなったら、いったんお休みして大丈夫。また始めたくなったときに、再開すればOKです。</p>
         </div>
+        <a class="btn" href="https://app.the-online-class.com/lessons/oANxMzMzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>英語耳 Q&amp;A（オンクラス）</a>
+        <a class="btn" href="https://app.the-online-class.com/lessons/oQNyITOyUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>「英語耳」の進め方（ラジオ9/14の回より・オンクラス）</a>
+        <div class="cw-box"><p class="note" data-t="466"><b>ちなコーチの考え（Discordの質問への答えから）</b></p>
+        <ul class="steps">
+          <li><span data-t="664">第2章〜第5章は、20周〜30周とくり返して、舌や口の筋肉をきたえる（筋トレする）イメージで、身につけていきましょう。</span></li>
+          <li><span data-t="467">発音記号を、今すぐ完ぺきに覚えなくて大丈夫です。「こういうルールがあるから、こう聞こえるんだな」と気づけていれば、順調に進んでいる証拠です。</span></li>
+          <li><span data-t="468">発音記号を1つずつ暗記するより、実際の英文の中で「あ、これはあのルールだ」と結びつけるほうが、早く身につきます。</span></li>
+          <li><span data-t="469">英語耳は、1〜3回通して終わりではありません。聞き取れないところ、口が回らないところが出たときに戻って確かめる「辞書」として、ずっと使えます。</span></li>
+          <li><span data-t="470">ロードマップを目安にしながら、細かいところは、自分の感覚や「やってみたい」と思える気持ちに合うやり方を選ぶのが、長く続けるコツです。</span></li>
+        </ul></div>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1554667976668483737" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
+        <p class="note" data-t="1085"><b>講師のタッセーさんの回答もあります</b>　「英語耳を始めたけど、解説が少なくて何をしているのか分からない」という質問に、タッセーさんが答えています。ちなコーチとは別の「タッセーさんの回答」のところにまとめています。</p>
+        <a class="btn" href="#q-tasse-eigomimi"><svg aria-hidden="true"><use href="#i-link"/></svg>タッセーさんの回答を見る（英語耳）</a>
+      </div>
+    </details>
+    <details id="q-eigomimi-audio" data-y="えいごみみ えいご みみ おんせい きく だうんろーど じっぷ かいとう てんかい すまほ あいふぉん あんどろいど ぱそこん しーでぃー cd くるま みつからない ほぞん じょせい だんせい えらぶ えーびーしーど あぷり" data-k="英語耳 音声 聞く ダウンロード ZIP 解凍 展開 スマホ iPhone アンドロイド Android パソコン CD 車 見つからない 保存 女性 男性 選ぶ abceed アプリ KADOKAWA">
+      <summary data-t="1835">英語耳の音声を、スマホやパソコンで聞きたい</summary>
+      <div class="ans">
+        <p class="lead" data-t="1836">音声は、出版社（KADOKAWA）のサイトからダウンロードできます。紙の本にはCDも付いています。</p>
         <div class="ed">
           <p class="ed-h" data-t="1100">🎧 音声をスマホで聞くには</p>
           <div class="ed-voice">
@@ -2031,20 +2102,26 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <p class="note" data-t="1109"><b>📱 アプリ「abceed（エービーシード）」でも聞けます</b>　英語耳の音声は、abceed というスマホのアプリでも聞けます。ちなコーチも「無料なのであれば、アプリを使ってみるのもとても良いと思います。スマホでの操作感や聴きやすさなど、使いやすいと感じる方で進めてみてくださいね」と答えています。仲間のやり方は「<a class="in" href="#q-kiroku-app">アプリの使い方</a>」にあります。</p>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1564795517777743943" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
         <a class="btn" href="https://promo.kadokawa.co.jp/chukei/voice/" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>英語耳の音声ダウンロードのページ（KADOKAWA）</a>
-        <a class="btn" href="https://app.the-online-class.com/lessons/oANxMzMzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>英語耳 Q&amp;A（オンクラス）</a>
-        <a class="btn" href="https://app.the-online-class.com/lessons/oQNyITOyUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>「英語耳」の進め方（ラジオ9/14の回より・オンクラス）</a>
         <a class="btn" href="https://www.kadokawa.co.jp/product/322012000562/" target="_top"><svg aria-hidden="true"><use href="#i-book"/></svg>英語耳の本と音声ダウンロードの案内（KADOKAWA）</a>
-        <div class="cw-box"><p class="note" data-t="466"><b>ちなコーチの考え（Discordの質問への答えから）</b></p>
-        <ul class="steps">
-          <li><span data-t="664">第2章〜第5章は、20周〜30周とくり返して、舌や口の筋肉をきたえる（筋トレする）イメージで、身につけていきましょう。</span></li>
-          <li><span data-t="467">発音記号を、今すぐ完ぺきに覚えなくて大丈夫です。「こういうルールがあるから、こう聞こえるんだな」と気づけていれば、順調に進んでいる証拠です。</span></li>
-          <li><span data-t="468">発音記号を1つずつ暗記するより、実際の英文の中で「あ、これはあのルールだ」と結びつけるほうが、早く身につきます。</span></li>
-          <li><span data-t="469">英語耳は、1〜3回通して終わりではありません。聞き取れないところ、口が回らないところが出たときに戻って確かめる「辞書」として、ずっと使えます。</span></li>
-          <li><span data-t="470">ロードマップを目安にしながら、細かいところは、自分の感覚や「やってみたい」と思える気持ちに合うやり方を選ぶのが、長く続けるコツです。</span></li>
-        </ul></div>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1554667976668483737" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-        <p class="note" data-t="1085"><b>講師のタッセーさんの回答もあります</b>　「英語耳を始めたけど、解説が少なくて何をしているのか分からない」という質問に、タッセーさんが答えています。ちなコーチとは別の「タッセーさんの回答」のところにまとめています。</p>
-        <a class="btn" href="#q-tasse-eigomimi"><svg aria-hidden="true"><use href="#i-link"/></svg>タッセーさんの回答を見る（英語耳）</a>
+      </div>
+    </details>
+    <details id="q-hanon" data-y="はのん えいごのはのん えいごのはのんしょきゅう ちゅうきゅう かみ ほん かみのほん でんし でんししょせき でんしばん きんどる たぶれっと どっち どちら かう こうにゅう はなす えいごをはなす ろーどまっぷ いつかう" data-k="ハノン 英語のハノン 初級 中級 紙 本 紙の本 電子 電子書籍 電子版 Kindle キンドル タブレット どっち どちら 買う 購入 話す 英語を話す ロードマップ">
+      <summary data-t="1754">英語のハノンは、紙の本と電子書籍（Kindle）、どちらがいい？</summary>
+      <div class="ans">
+        <p class="lead" data-t="1755">どちらでも大丈夫です。ふだん Kindle やタブレットで勉強している方は、<b>電子版で十分</b>です。</p>
+        <ul class="ts-points">
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1756">ハノンは、ロードマップの「<b>4.英語を話す</b>」で使う本です<small>まだ先の方は、あせって買わなくて大丈夫です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1757">迷ったら、Kindle の<b>サンプル</b>で中身をのぞいてから決める<small>「電子で使えそう」なら電子版、「やっぱり紙がいい」なら紙の本に</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1758">紙で買うなら、<b>初級と中級</b>をまとめて買っておくと安心<small>海外に住んでいるなど、すぐに買いに行けない方の場合です。電子版でよければ、むりに荷物をふやさなくて大丈夫です</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1759">ハノンのほかに、紙でそろえておく本は<b>いまは特にありません</b></span></li>
+        </ul>
+        <div class="ts-tasse">
+          <svg aria-hidden="true"><use href="#i-av-china"/></svg>
+          <p class="ts-tasse-h" data-t="1760">ちなコーチより<small>（11/24）</small></p>
+          <p data-t="1761">わたしは海外に来てからハノンに取り組んだので、電子版だけでした。それでも見やすくて使いやすく、電子版で十分だと感じました。「4.英語を話す」まで進んだ方は、まだほとんどいないので、ハノンの具体的な取り組み方は、まだ解説していません。たどり着いた方は、どんどん質問して、一緒に開拓していってください。</p>
+        </div>
+        <p class="cheer" data-t="1762">まずは、いま取り組んでいるところを大切にしてくださいね。</p>
+        <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1574579822699745341" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
     <details id="q-t39" data-y="えいが どらま あにめ じぶり ねっとふりっくす じまく えいごじまく にほんごじまく たのしみ みかた" data-k="映画 ドラマ アニメ ジブリ Netflix 字幕 英語字幕 日本語字幕 楽しみ 見方">
@@ -2069,18 +2146,8 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1549242864205037743" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
-    <details id="q-othertext" data-y="ほかのきょうざい まえからつかっている ほん えほん ようしょ つかってもいい しかく" data-k="ほかの教材 前から使っている 本 絵本 洋書 使ってもいい 資格">
-      <summary data-t="755">前から使っている本や、ほかの教材を使ってもいい？</summary>
-      <div class="ans">
-        <p class="lead" data-t="756">「文法 → 読む → 聞く → 話す」の順番がくずれなければ、使って大丈夫です。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1486">「この本も読みたい」という<b>気持ちは大切に</b></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1487">ただ、<b>今のステップの学習が中心</b>になるように、時間を調整<small>文法ドリルや瞬間英作文などです</small></span></li>
-        </ul>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1449030594527760598" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-      </div>
-    </details>
 
+    <h3 class="sub-h" id="st-words">🔤 単語</h3>
     <details id="q-tango" data-y="たんご たんごちょう おぼえかた ごい おぼえられない ほん あぷり えーびーしーど" data-k="単語 単語帳 覚え方 語彙 本 アプリ abceed エービーシード">
       <summary data-t="40">単語帳は使ったほうがいい？</summary>
       <div class="ans">
@@ -2163,10 +2230,12 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <ul class="ts-points">
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1511">専門の単語は、<b>単語帳にはほとんどのっていない</b><small>病院や仕事、趣味などの単語です</small></span></li>
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1512">使う場面の前に<b>調べて、メモ</b>しておく<small>出会ったその場で調べるのも、遠回りに見えて、身につきやすいです</small></span></li>
-        </ul>
+        </ul>
         <p class="cheer" data-t="639">全部を覚えておかなくて大丈夫。必要なときに、調べればいいんです。</p>
       </div>
     </details>
+
+    <h3 class="sub-h" id="st-exam">📝 英検・TOEIC</h3>
     <details id="q-exam" data-y="えいけん とーいっく しけん しかく うけたほうがいい うけなきゃ いつ かこもん どれから しょしんしゃ せふぁーる せふぁある けんさ けんこうしんだん とーふる あいえるつ もくひょう" data-k="英検 TOEIC 試験 資格 受けたほうがいい 受けなきゃ いつ 過去問 どれから 初心者 CEFR セファール 健康診断 TOEFL IELTS 目標">
       <summary data-t="640">英検やTOEICは、受けたほうがいい？どれから受ける？</summary>
       <div class="ans">
@@ -2210,11 +2279,11 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       </div>
     </details>
     <details id="q-eiken" data-y="えいけん えーけん さんきゅう じゅんにきゅう にきゅう じゅんいっきゅう いっきゅう ごうかく ごうかくてん なんわり まんてん しーえすいー すこあ めんせつ にじしけん いちじしけん じゅうらいがた えすしーびーてぃー こんぴゅーたー ぱそこん もうしこみ しめきり いつ にってい つぎ かこもん たんごちょう ぱすたん でるじゅん らいてぃんぐ かた もちもの とけい あっぷるうぉっち のみもの ざぶとん ぶらんけっと かきこみ じこさいてん そくほう きんちょう" data-k="英検 3級 準2級 2級 準1級 1級 合格 合格点 何割 満点 CSE スコア 面接 二次試験 一次試験 従来型 SCBT コンピューター 申し込み 締め切り いつ 日程 次 過去問 単語帳 パス単 出る順 ライティング 型 持ち物 時計 Apple Watch 飲み物 座布団 ブランケット 書き込み 自己採点 速報 緊張">
-      <summary data-t="1786">英検のこと（受け方・合格点・次の日程・勉強のしかた・当日）</summary>
+      <summary data-t="1786">英検の受け方・合格点・次の日程</summary>
       <div class="ans">
-        <p class="lead" data-t="1787">英検は、<b>満点をめざさなくて大丈夫</b>。7割ちょっと取れれば合格圏内です。次の英検（2026年度 第3回・従来型）は、<b>2027年1月24日</b>。申し込みは<b>12月14日まで</b>です。</p>
+        <p class="lead" data-t="1787" data-until="2026-12-14" data-expired="※申し込みの期限（12月14日）は過ぎました。次の回の日程は、英検の公式サイトで確かめてください。">英検は、<b>満点をめざさなくて大丈夫</b>。7割ちょっと取れれば合格圏内です。次の英検（2026年度 第3回・従来型）は、<b>2027年1月24日</b>。申し込みは<b>12月14日まで</b>です。</p>
         <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-cal"/></svg><span data-t="1788">2026年度 第3回（従来型）：一次 <b>2027年1月24日</b>／二次 <b>2月28日 または 3月7日</b><small>申し込みは12月14日まで。期限ができると、臨場感が生まれます（ちなコーチ）</small></span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-cal"/></svg><span data-t="1788" data-until="2027-03-07" data-expired="※この回の日程は終わりました。次の回は、英検の公式サイトで確かめてください。">2026年度 第3回（従来型）：一次 <b>2027年1月24日</b>／二次 <b>2月28日 または 3月7日</b><small>申し込みは12月14日まで。期限ができると、臨場感が生まれます（ちなコーチ）</small></span></li>
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1789">1問1点ではなく、<b>技能ごとのスコアの合計</b>で合否が決まります<small>だから、得意な技能で苦手な技能をカバーできます（リスニングでリーディングをカバー、など）</small></span></li>
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-voice"/></svg><span data-t="1790">3級から、<b>書く（ライティング）と話す（面接）</b>が入ります<small>3級の例：一次はリーディング・ライティング65分＋リスニング約25分。一次に受かると、二次の面接（約5分）があります</small></span></li>
         </ul>
@@ -2242,9 +2311,15 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           </table>
           <p class="note" data-t="1796">合格点／満点です（セミナーの時点）。約2割は落としても大丈夫。準1級は、中学校の英語の先生でも持っている人が半分くらいの、英語を趣味として極めたい人のレベルです。</p>
         </div>
-        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="ek-study"><span data-t="1797">📚 勉強のしかたと、級ごとのおすすめ教材</span></button>
-        <div class="ts-more ts-box" id="ek-study" hidden>
-          <ol class="ts-steps">
+        <p class="note" data-t="1830">勉強のしかたは「<a class="in" href="#q-eiken-study">英検の勉強のしかた</a>」、当日のことは「<a class="in" href="#q-eiken-day">英検の当日</a>」を見てください。</p>
+        <p class="cheer" data-t="1814">英検は、時間に追われる試験ではありません。あせらず、自分の階段をひとつずつのぼっていきましょうね。</p>
+      </div>
+    </details>
+    <details id="q-eiken-study" data-y="えいけん えーけん べんきょう たいさく かこもん たんごちょう ぱすたん でるじゅん らいてぃんぐ かた めんせつ れんしゅう きんちょう きょうざい さんきゅう じゅんにきゅう にきゅう よめなくなった" data-k="英検 勉強 対策 過去問 単語帳 パス単 出る順 ライティング 型 面接 練習 緊張 教材 3級 準2級 2級">
+      <summary data-t="1831">英検の勉強のしかた（級ごとのおすすめ教材）</summary>
+      <div class="ans">
+        <p class="lead" data-t="1832">過去問・単語・ライティングの型・面接の練習の4つです（11/28のセミナーより）。</p>
+        <ol class="ts-steps">
             <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-book"/></svg><span data-t="1798"><b>過去問</b>を買って、早めに形式になれる<small>「どうしてこの答えになるのか」を言えるくらいまでやりこみます。きれいな日本語でなくて大丈夫。解説も、のっています</small></span></li>
             <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><span data-t="1799"><b>単語</b>は毎日少しずつ<small>準2級からは単語帳がおすすめ。3級は、むりに単語帳をやらなくても大丈夫です</small></span></li>
             <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1800"><b>ライティングは「型」</b>を覚える<small>試験の1か月前くらいからで大丈夫。それまでは、読む・聞くを勉強します</small></span></li>
@@ -2259,10 +2334,13 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <p class="note" data-t="1803"><b>3級は読めたのに、準2級から読めなくなった</b>ときは、原因をふりかえると次の勉強が決まります。①単語が分からない　②単語は分かるのに、長い文をかたまり（チャンク）で読めていない　③見たことのある単語なのに、とっさに出てこない。</p>
           <p class="note" data-t="1804"><b>面接で緊張する</b>ときは、まず二次試験の過去問（6回分）をやりこみます。苦手なタイプの質問が見えてきたら、AIに同じタイプの問題を作ってもらうのもプラスになります。</p>
           <p class="note" data-t="1805">英検の公式サイトには、最近の過去問が（少なくとも1回分）のっています。本を買わなくても、ためしに解いてみられます（「英検 3級 過去問」のように検索してください）。</p>
-        </div>
-        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="ek-day"><span data-t="1806">🎒 当日の持ち物・すごし方</span></button>
-        <div class="ts-more ts-box" id="ek-day" hidden>
-          <p class="note" data-t="1807">セミナーで、受けたことがある方から出た話です。会場や時期でちがうことがあるので、<b>受験の案内で確かめてください</b>。</p>
+        <p class="note" data-t="1833">日程や合格点は「<a class="in" href="#q-eiken">英検の受け方・合格点・次の日程</a>」を見てください。</p>
+      </div>
+    </details>
+    <details id="q-eiken-day" data-y="えいけん えーけん とうじつ もちもの とけい あっぷるうぉっち のみもの たべもの ざぶとん ぶらんけっと かきこみ じこさいてん そくほう めんせつ しつもん えすしーびーてぃー ぱそこん かいじょう いやほん" data-k="英検 当日 持ち物 時計 Apple Watch 飲み物 食べ物 座布団 ブランケット 書き込み 自己採点 速報 面接 質問 SCBT パソコン 会場 イヤホン">
+      <summary data-t="1834">英検の当日の持ち物・すごし方</summary>
+      <div class="ans">
+        <p class="note" data-t="1807">セミナーで、受けたことがある方から出た話です。会場や時期でちがうことがあるので、<b>受験の案内で確かめてください</b>。</p>
           <ul class="ts-points">
             <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1808">机の上は、ペンと消しゴムくらい。<b>時計は使えます</b><small>会場に時計がないこともあるので、持っていくと安心。Apple Watch のような時計が使えるかどうかは、受験の案内で確かめてください</small></span></li>
             <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1809">食事は前にすませておく。飲み物は、始まる前に飲んでからバッグへ<small>座布団やブランケットは、会場のルールを確かめて。厚着で調節するのも手です</small></span></li>
@@ -2271,8 +2349,6 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
             <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-win"/></svg><span data-t="1812">SCBT型（パソコン）は、とても厳重<small>筆記用具は会場のもの。自分の物や飲み物は持ちこめなかったそうです。メモ用紙はもらえます</small></span></li>
           </ul>
           <p class="note" data-t="1813">3級の面接で聞かれたこと（受けた方の記憶）：「どんな季節が好きですか？」「昨日何を食べましたか？」など、中1〜中2くらいの文法で答えられる質問でした。公式サイトに、面接のサンプルもあります。</p>
-        </div>
-        <p class="cheer" data-t="1814">英検は、時間に追われる試験ではありません。あせらず、自分の階段をひとつずつのぼっていきましょうね。</p>
       </div>
     </details>
     <details id="q-toeic" data-y="とーいっく とーいく すこあ てんすう なんてん きゅうひゃくきゅうじゅう ごひゃくてん こうかいてすと あいぴーてすと すぴーきんぐ らいてぃんぐ えすあんどだぶりゅー こうしきもんだいしゅう ぎんのふれーず きんのふれーず ぎんふれ きんふれ たんごちょう じかんがたりない はやい しょうしん しごと てんしょく" data-k="TOEIC トーイック スコア 点数 何点 990 500点 公開テスト IPテスト スピーキング ライティング S&amp;W 公式問題集 銀のフレーズ 金のフレーズ 銀フレ 金フレ 単語帳 時間が足りない 速い 昇進 仕事 転職">
@@ -2316,7 +2392,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       </div>
     </details>
 
-
+    <h3 class="sub-h" id="st-ai">🤖 AI</h3>
     <details id="q-t41" data-y="ちゃっとじーぴーてぃー ちゃっぴー じぇみに えーあい" data-k="ChatGPT チャッピー Gemini AI">
       <summary data-t="41">ChatGPTやGemini（AI）を使ってもいい？</summary>
       <div class="ans">
@@ -2330,7 +2406,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1551066239026335847" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
-<details id="q-ai-start" data-y="えーあい えーあいがくしゅう えーあいとふくしゅう ちゃっぴー ちゃっとじーぴーてぃー じぇみに つかいかた どうやって にっぽう てんさく もんだい じどう あなろぐ わからない たっせーこうし こうしのたっせー たっせーせんせい" data-k="AI AI学習 AIと復習 チャッピー ChatGPT Gemini 使い方 日報 添削 問題 自動 復習 タッセー講師 講師のタッセーさん 良質なアウトプット">
+    <details id="q-ai-start" data-y="えーあい えーあいがくしゅう えーあいとふくしゅう ちゃっぴー ちゃっとじーぴーてぃー じぇみに つかいかた どうやって にっぽう てんさく もんだい じどう あなろぐ わからない たっせーこうし こうしのたっせー たっせーせんせい" data-k="AI AI学習 AIと復習 チャッピー ChatGPT Gemini 使い方 日報 添削 問題 自動 復習 タッセー講師 講師のタッセーさん 良質なアウトプット">
       <summary data-t="1739">日報でよく見る「AI学習」って、なに？どうやって使うの？</summary>
       <div class="ans">
         <p class="lead" data-t="1740">AIが、自分に合った勉強を<b>自動で出してくれるわけではありません</b>。「こんな練習をしたい」と、<b>自分からお願いして</b>使います。</p>
@@ -2358,45 +2434,6 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
       </div>
     </details>
 
-    <details id="q-t42" data-y="おなじしつもん かこ けんさく さがす しらべる まえのしつもん しつもんべや" data-k="同じ質問 過去 検索 探す Can I a the when many some">
-      <summary data-t="42">同じ疑問を、前にだれかが聞いていないか探したい</summary>
-      <div class="ans">
-        <p class="lead" data-t="113"><a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">質問部屋</a>には、ちなコーチがこれまでにていねいに答えてきた質問がたくさんあります。</p>
-        <div class="ts-panel">
-          <ol class="ts-steps">
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1440">右上の<b>検索（虫めがね）</b>に、気になることばを入れる<small>例：「Can I」「when」「a と the」</small></span></li>
-            <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-menu"/></svg><span data-t="240">「特定のチャンネルで投稿」を選んで、質問部屋にしぼります。</span></li>
-          </ol>
-        </div>
-        <p class="note" data-t="114">よく聞かれているのは、a と the／Can I と Can you／when の位置／many と a lot of／some と any です。</p>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>質問部屋（英語について）を開く</a>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>質問部屋（システムについて）を開く</a>
-      </div>
-    </details>
-
-    <details id="q-question" data-y="しつもん どこで しつもんべや きく ききたい わからない そうだん しつもんのしかた かきかた こつ ぺーじ だれに めんしょん あっと たっせー たっせーこうし こうしのたっせー たっせーせんせい" data-k="質問 どこで 質問部屋 聞きたい 質問のしかた 書き方 コツ ページ だれに メンション @ タッセー タッセー講師 講師のタッセーさん">
-      <summary data-t="43">英語の質問はどこでするの？</summary>
-      <div class="ans">
-        <p class="lead" data-t="115">Discordの「<a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">質問部屋</a>」です。</p>
-        <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1451">部屋は2つ：「<a class="in" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top">英語について</a>」と「<a class="in" href="https://discord.com/channels/1214839485364305960/1443454925433606317" target="_top">システムについて</a>」</span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-search"/></svg><span data-t="1452">ほかの人の質問と答えも読める<small>さかのぼると、解決することもあります</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-check"/></svg><span data-t="1453">送る前に、英文や教材のページを<b>もう一度見直す</b><small>まちがいがないと、正しく答えやすくなります</small></span></li>
-        </ul>
-        <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="qq-how"><span data-t="1454">✏️ 答えてもらいやすい質問のしかた</span></button>
-        <div class="ts-more ts-box" id="qq-how" hidden>
-        <ul class="words">
-          <li data-t="770">教材の名前と、ページやLessonの番号を書く。</li>
-          <li data-t="771">問題文・テキストの答え・自分の答えを、いっしょに書く。</li>
-          <li data-t="772">分かっているところと、分からないところを書く。自分はどうしようと考えているかも書くと、もっと的確に答えてもらえます。</li>
-        </ul>
-        </div>
-        <p class="note" data-t="1110"><b>だれに聞けばいい？</b>　質問するときは、これまでどおり、ちなコーチに「@」をつけて大丈夫です。内容によっては、講師の<a class="in" href="#q-tasse">タッセーさん</a>が代わりに答えることもあります。「どっちに聞けばいいんだろう」と迷わなくて大丈夫です。</p>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317/1564795517777743943" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>質問部屋（英語について）を開く</a>
-        <a class="btn" href="https://discord.com/channels/1214839485364305960/1443454925433606317" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>質問部屋（システムについて）を開く</a>
-      </div>
-    </details>
   </section>
 
   <section id="kufu">
@@ -2568,7 +2605,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="kf-kufu-drill"><span data-t="1600">💡 ほかの工夫も見る（あと8件）</span></button>
         <div class="ts-more" id="kf-kufu-drill" hidden>
         <ul class="ts-points">
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1021">瞬間英作文アプリのカウント音をオフにすると、あせらされる感じがなくなって落ち着いて答えられた。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1463142420006047846" target="_top">投稿を見る</a></div></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1021">瞬間英作文アプリのカウント音をオフにすると、あせらされる感じがなくなって落ち着いて答えられた。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1433009767965528074/1463142420006047846" target="_top">投稿を見る</a></div></li>
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-app"/></svg><div><span data-t="1023">瞬間英作文アプリは、文法ごと→グループで量を増やす→通常→シャッフルの順に。ポーズも「ふつう」から「超速」へ少しずつ短く。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1528542940023226478" target="_top">投稿を見る</a></div></li>
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><div><span data-t="1024">楽しくなるように、好きな映画スターの口調をまねしたり、部屋で一人コントをしながら瞬間英作文。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1452572740547641445/1539423261841031248" target="_top">投稿を見る</a></div></li>
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-repeat"/></svg><div><span data-t="1025">瞬間英作文は10問を10分前後で。中1→中2→中3を4周ずつしてから中1に戻ると、サクサク答えられた。</span> <a class="in kf" href="https://discord.com/channels/1214839485364305960/1249989567998590977/1519661550393364612" target="_top">投稿を見る</a></div></li>
@@ -3161,7 +3198,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
           <li>Is the book (<b>which</b>) he wants to read expensive?</li>
           <li>the sleeping baby ／ the baby sleeping in the car</li>
         </ul>
-        <ul class="ts-points">
+        <ul class="ts-points">
         </ul>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1446102491371540502" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
@@ -3210,7 +3247,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <a class="btn" href="https://app.the-online-class.com/lessons/owM4gjMzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ラジオ「忙しい時期に、自分を責めずに英語を続けるコツ」</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/owN5YTNzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ラジオ「頑張りすぎて疲れてしまう…」から抜け出すスモールステップ</a>
         <a class="btn" href="https://app.the-online-class.com/lessons/ogMxUzMzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ラジオ「量が大事なのはわかった。でも時間も気力もない…」</a>
-        <a class="btn" href="https://app.the-online-class.com/lessons/oQO2ETMzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ラジオ「忙しさと孤独に押しつぶされそうな日は…」</a>
+        <a class="btn" href="https://app.the-online-class.com/lessons/oQO2ETMzUDI6I2Y" target="_top"><svg aria-hidden="true"><use href="#i-video"/></svg>ラジオ「忙しさと孤独に押しつぶされそうな日は…」</a>
         <a class="btn" href="https://discord.com/channels/1214839485364305960/1389188765729165393/1528959618120814732" target="_top"><svg aria-hidden="true"><use href="#i-link"/></svg>ちなコーチの回答をぜんぶ読む（質問部屋）</a>
       </div>
     </details>
@@ -3431,7 +3468,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <p class="lead" data-t="564">余裕があるときは、ぜひのぞいてみてください。</p>
         <ul class="ts-points">
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-books"/></svg><span data-t="1508"><a class="in" href="https://discord.com/channels/1214839485364305960/1214839485364305963" target="_top">日報</a>や<a class="in" href="https://discord.com/channels/1214839485364305960/1277162300217757738" target="_top">90audioのアウトプット</a>には、<b>学習の工夫</b>がたくさん<small>先に進んでいる人のやり方も見られます</small></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-graph"/></svg><span data-t="1509">成長を感じてきたら、「<a class="in" href="https://discord.com/channels/1214839485364305960/1468817160670548103" target="_top">じわじわ成長中</a>」にも投稿してみてください</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-graph"/></svg><span data-t="1509">成長を感じてきたら、「<a class="in" href="https://discord.com/channels/1214839485364305960/1468817160670548103" target="_top">じわじわ成長中</a>」にも投稿してみてください</span></li>
         </ul>
         <p class="note" data-t="568">Discordの中では、怖がらずに、いろいろやってみてください。まちがえても大丈夫です。できることから、やってみてくださいね。</p>
         <p class="cheer" data-t="569">あなたの一歩が、仲間の一歩にもつながっています。</p>
@@ -3736,7 +3773,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <div class="cw-box"><p class="note" data-t="535"><b>ちなコーチって、こんな人</b></p>
         <ul class="steps">
           <li><span data-t="536">実は、人前で話すのは苦手だそうです。</span></li>
-          <li><span data-t="537">15年前、カナダに7か月留学しました。</span></li>
+          <li><span data-t="537">15年前、カナダに7か月留学しました。</span></li>
         </ul></div>
         <p class="note" data-t="543">Discordの「<a class="in" href="https://discord.com/channels/1214839485364305960/1538371130669138060" target="_top">ちなの楽屋トーク</a>」では、ちなコーチが海外での暮らしや、ふとした気づきを、気軽につぶやいています。</p>
         </div>
@@ -3755,13 +3792,13 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         </ul>
         <button type="button" class="ts-more-btn" aria-expanded="false" aria-controls="ts-ayumi"><span data-t="1699">📖 タッセーさんの歩み（くわしく）</span></button>
         <div class="ts-more ts-box" id="ts-ayumi" hidden>
-        <ul class="ts-points">
+        <ul class="ts-points">
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-back"/></svg><span data-t="1091"><b>最初は、うまくいきませんでした。</b>自己流でオンライン英会話を40回ほど受けましたが、伸びませんでした。「文法の基礎がないまま話そうとしていた。山に登ったことがないのに、いきなりエベレストに行くような感じだった」と話しています。</span></li>
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-pen"/></svg><span data-t="1093"><b>いちばん苦労したのは、瞬間英作文。</b>2冊をそれぞれ100時間、合計200時間。「正」の字を書いて回数を数えながら、くり返しました。</span></li>
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-star"/></svg><span data-t="1094"><b>手応えを感じたのは、300〜500時間のころ。</b>瞬間英作文の文が、頭に残るようになってきたそうです。</span></li>
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-clock"/></svg><span data-t="1095"><b>続けるコツは「朝いちばん」と「毎日」。</b>「英語が終わるまで、次の仕事をしない」と決めて、毎日続けています。週3回や週5回のときは続かなかったのに、毎日にしたら「休むかどうかを考えなくなって、かえって楽になった」そうです。忙しい日は10分、5分の日もあります。</span></li>
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-up"/></svg><span data-t="1096"><b>少しずつ、変わってきました。</b>前は、英語の場面になるとちなコーチの後ろに隠れていたのが、今は一人で美容院にも行けるように。自信がついて、声も大きくなりました。</span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1097"><b>目標は「友だちの相談を聞ける人」になること。</b>英語を学んで、話を聞いてくれる人のありがたさに気づいたそうです。</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-chat"/></svg><span data-t="1097"><b>目標は「友だちの相談を聞ける人」になること。</b>英語を学んで、話を聞いてくれる人のありがたさに気づいたそうです。</span></li>
         </ul>
         </div>
         <div class="cw-box"><p class="note" data-t="1098"><b>タッセーさんから、みんなへ</b></p>
@@ -3776,7 +3813,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
         <p class="lead" data-t="527">90プログラムとは別の、ちなコーチがもっと近くで伴走するコースです。</p>
         <ul class="ts-points">
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-person"/></svg><span data-t="1625">ちなコーチと<b>マンツーマンで個別相談</b></span></li>
-          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-cal"/></svg><span data-t="1626">少人数の<b>With youコースだけのセミナー</b>を定期的に</span></li>
+          <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-cal"/></svg><span data-t="1626">少人数の<b>With youコースだけのセミナー</b>を定期的に</span></li>
           <li><svg class="ts-ic" aria-hidden="true"><use href="#ts-linemsg"/></svg><span data-t="1628">気になる方は、<b>受講生LINEにひとこと</b></span></li>
         </ul>
         <p class="note" data-t="532">「もっと近くで見てほしい」と思ったときの道のひとつとして、知っておいてくださいね。</p>
@@ -3924,7 +3961,7 @@ ul.ts-points small{display:block;font-size:17px;color:var(--sub);font-weight:500
   document.getElementById('hits-clear').addEventListener('click',function(){ q.value=''; run(); window.scrollTo({top:0,behavior:'smooth'}); });
   document.querySelectorAll('a[href^="#q-"]').forEach(function(a){ a.addEventListener('click',function(e){ var t=document.getElementById(a.getAttribute('href').slice(1)); if(!t) return; e.preventDefault(); if(q.value){ q.value=''; run(); } t.open=true; t.scrollIntoView({behavior:'smooth',block:'start'}); }); });
 document.getElementById('pick').addEventListener('click',function(){
-    var d=document.querySelector('#study details'); if(d){ d.open=true; }
+    var d=document.getElementById('q-typelist'); if(d){ d.open=true; }
   });
   // オンクラスなどから「戻る」で帰ってきたとき、さっき見ていた項目を開き直す
   var KEY='komatta-last2';
@@ -3935,17 +3972,17 @@ document.getElementById('pick').addEventListener('click',function(){
   });
   // テーマから探す：ボタンを押すと、そのテーマの項目を一覧（検索結果と同じ箱）に並べる。1つの項目が複数のテーマに入ってよい
   var THEMES=[
-    ['📱','iPhone の人',['q-tacho-script','q-eigomimi','q-whoreact','q-radiohow','q-t10','q-t17','q-t4','q-t15','q-t14','q-t49','q-studyplus','q-shunkan','q-shunkan-ver','q-t36','q-listening','q-ultlisten'],null,'ios'],
-    ['🤖','Android の人',['q-tacho-script','q-eigomimi','q-whoreact','q-radiohow','q-t10','q-t17','q-t4','q-t15','q-t49','q-studyplus','q-t36','q-listening','q-ultlisten'],null,'android'],
+    ['📱','iPhone の人',['q-tacho-script','q-eigomimi-audio','q-whoreact','q-radiohow','q-t10','q-t17','q-t4','q-t15','q-t14','q-t49','q-studyplus','q-shunkan','q-shunkan-ver','q-t36','q-listening','q-ultlisten'],null,'ios'],
+    ['🤖','Android の人',['q-tacho-script','q-eigomimi-audio','q-whoreact','q-radiohow','q-t10','q-t17','q-t4','q-t15','q-t49','q-studyplus','q-t36','q-listening','q-ultlisten'],null,'android'],
     ['🔰','はじめたばかり',['q-t18','q-tools','q-t8','q-t12','q-t13','q-typelist','q-t29','q-master','q-drill','q-studyplus','q-all','q-words','q-t28']],
-    ['📅','90日を過ぎたら',['q-day90','q-t47','q-t48','q-audioagain','q-t34','q-reading','q-t36','q-readhow','q-tadoku','q-listening','q-ultlisten','q-tango','q-exam','q-eiken','q-toeic','q-othertext','q-hanon']],
+    ['📅','90日を過ぎたら',['q-day90','q-t47','q-t48','q-audioagain','q-t34','q-reading','q-t36','q-readhow','q-tadoku','q-listening','q-ultlisten','q-tango','q-exam','q-eiken','q-eiken-study','q-eiken-day','q-toeic','q-othertext','q-hanon']],
     ['💬','Discordの使い方',['q-t7','q-t401','q-t8','q-t9','q-t10','q-whoreact','q-mymention','q-wrongroom','q-edit','q-t17','q-t50','q-nippo','q-others','q-weekly','q-question','q-t42']],
     ['🎧','90audio（毎朝の音声）',['q-90audio','q-day90','q-audioagain','q-audiotime','q-t49','q-goal','q-t48']],
     ['💻','オンクラス・LINE',['q-tools','q-t12','q-t13','q-t14','q-t15','q-t16','q-archive','q-bangai','q-t54','q-tacho-script']],
     ['📘','文法ドリル・マスター講座',['q-master','q-drill','q-t30','q-t31','q-drillaudio','q-howdeep','q-level','q-t32','q-bangai','q-t33','q-t27']],
     ['🗣️','瞬間英作文',['q-shunkan','q-shunkan-ver','q-t24','q-t23','q-otherans','q-t25','q-shunkan-many','q-t26','q-whose','q-e-we','q-t34']],
-    ['📖','読む・聞く・発音',['q-skipahead','q-reading','q-t36','q-readhow','q-tadoku','q-wpm','q-ultlisten','q-listening','q-intonation','q-tacho','q-tacho-script','q-t38','q-phonetic','q-eigomimi','q-tasse-eigomimi','q-japanese','q-t39']],
-    ['📝','単語・AI・資格試験',['q-tango','q-duo','q-duoex','q-ownwords','q-exam','q-eiken','q-toeic','q-t41','q-ai-start','q-othertext','q-hanon']],
+    ['📖','読む・聞く・発音',['q-skipahead','q-reading','q-t36','q-readhow','q-tadoku','q-wpm','q-ultlisten','q-listening','q-intonation','q-tacho','q-tacho-script','q-t38','q-phonetic','q-eigomimi','q-eigomimi-audio','q-tasse-eigomimi','q-japanese','q-t39']],
+    ['📝','単語・AI・資格試験',['q-tango','q-duo','q-duoex','q-ownwords','q-exam','q-eiken','q-eiken-study','q-eiken-day','q-toeic','q-t41','q-ai-start','q-othertext','q-hanon']],
     ['🔤','英語の疑問（文法）',['q-otherans','q-e-article','q-e-cani','q-e-we','q-e-polite','q-e-many','q-e-see','q-e-gohome','q-e-have','q-e-when','q-e-than','q-e-toing','q-e-in','q-e-would','q-e-best','q-e-your','q-e-prep','q-e-bedo','q-e-good','q-e-meet','q-e-fine','q-e-spell','q-e-told','q-e-omit']],
     ['🌱','気持ち・続け方',['q-t44','q-bored','q-anxious','q-noresult','q-stuckhard','q-phone','q-negative','q-sick','q-dayskip','q-compare','q-forget','q-comeback','q-drive']],
     ["🌷","仲間の工夫",["q-kufu-start","q-kufu-time","q-kufu-place","q-kufu-keep","q-kufu-tired","q-kufu-drill","q-kufu-memory","q-kufu-talk","q-kufu-ai","q-kufu-words"],"kufu"],
@@ -4480,8 +4517,9 @@ var DIAL=null;
 
   // ---- 4. recently added / changed ----
   var NEWS=[
+    ['11/29','q-typelist','「勉強の進め方」を8つの小部屋に分けて、上に目次をつけました。「英検のこと」「英語耳」は、知りたいところへすぐ行けるように分けました。検索らんの下に「よく調べられることば」のボタンも足しました'],
     ['11/29','q-t1','ガイド全体を見直しました。元が確かめられない文や、言いすぎの言葉を直し、Discordの部屋へのリンクを足しました。仲間の工夫も、もとの投稿と1件ずつ照らし合わせました'],
-    ['11/28','q-eiken','11/28のセミナー「英語の資格試験」の内容を入れました。「英検のこと（受け方・合格点・次の日程・勉強のしかた・当日）」と「TOEICのこと」が新しく入り、「英検やTOEICは、受けたほうがいい？どれから受ける？」もくわしくなりました'],
+    ['11/28','q-eiken','q-eiken-study','q-eiken-day','11/28のセミナー「英語の資格試験」の内容を入れました。「英検のこと（受け方・合格点・次の日程・勉強のしかた・当日）」と「TOEICのこと」が新しく入り、「英検やTOEICは、受けたほうがいい？どれから受ける？」もくわしくなりました'],
     ['11/27','q-hanon','新しく「英語のハノンは、紙の本と電子書籍、どちらがいい？」と「瞬間英作文の we は、なぜ you じゃないの？」を入れました。多聴voiceの項目にちなコーチの言葉、セミナーの項目に「Discordの名前で入る」、仲間のAIの工夫も1つふえました'],
     ['11/24','q-ai-start','新しく「日報でよく見る『AI学習』って、なに？どうやって使うの？」を入れました（AIの使い方と、はじめの一歩）。仲間のAIの工夫も1つふえました'],
     ['11/21','puchi','いちばん下が、いろんな形の「プチプチ」になりました。どこか1つにプレゼントがかくれています🎁'],
@@ -4677,5 +4715,24 @@ var DIAL=null;
     [b5,box].forEach(function(x){ if(x) io.observe(x); });
   }
   if(hits) new MutationObserver(upd).observe(hits,{attributes:true,attributeFilter:['hidden']});
+})();
+</script>
+
+<script>
+/* 2026-11-29：期限が過ぎた日にちに印をつける・よく調べられることばのボタン */
+(function(){
+  var today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
+  document.querySelectorAll('[data-until]').forEach(function(e){
+    if(today>e.getAttribute('data-until') && !e.querySelector('.expired')){
+      var s=document.createElement('span'); s.className='expired'; s.textContent=e.getAttribute('data-expired'); e.appendChild(s);
+    }
+  });
+  var q=document.getElementById('q'), f=document.getElementById('sform');
+  document.querySelectorAll('.qchips button').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(!q||!f) return; q.value=b.getAttribute('data-q');
+      var btn=f.querySelector('.sbtn'); if(btn) btn.click();
+    });
+  });
 })();
 </script>
